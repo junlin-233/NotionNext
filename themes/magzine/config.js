@@ -39,15 +39,11 @@ const CONFIG = {
   // 页脚菜单
   MAGZINE_FOOTER_LINKS: [
     {
-      name: '友情链接',
+      name: '有事请发送邮件',
       menus: [
         {
-          title: 'candlest',
-          href: 'https://blog.candlest.cc/'
-        },
-        {
-          title: 'Yim1ngs',
-          href: 'https://Yim1ngs.github.io'
+          title: 'junlin-233',
+          href: 'junlin-233@foxmail.com'
         }
       ]
     }
