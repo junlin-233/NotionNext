@@ -43,7 +43,7 @@ const CONFIG = {
       menus: [
         {
           title: 'junlin-233',
-          href: 'junlin-233@foxmail.com'
+          href: 'mailto:junlin-233@foxmail.com'
         }
       ]
     }
