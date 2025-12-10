@@ -39,7 +39,7 @@ const CONFIG = {
   // 页脚菜单
   MAGZINE_FOOTER_LINKS: [
     {
-      name: '有事请发送邮件',
+      name: '联系我',
       menus: [
         {
           title: 'junlin-233',
