@@ -10,7 +10,7 @@ import useAdjustStyle from '@/hooks/useAdjustStyle'
 import { GlobalContextProvider } from '@/lib/global'
 import { getBaseLayoutByTheme } from '@/themes/theme'
 import { useRouter } from 'next/router'
-import { useCallback, useMemo } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import { getQueryParam } from '../lib/utils'
 
 // 各种扩展插件 这个要阻塞引入
@@ -23,6 +23,28 @@ import dynamic from 'next/dynamic'
 const ClerkProvider = dynamic(() =>
   import('@clerk/nextjs').then(m => m.ClerkProvider)
 )
+
+const STALE_DEPLOYMENT_RELOAD_KEY = '__notionnext_stale_deployment_reload__'
+
+function isStaleDeploymentRouteError(err) {
+  if (!err || err.cancelled) return false
+
+  const name = err?.name || ''
+  const message = err?.message || ''
+
+  return (
+    name === 'ChunkLoadError' ||
+    message.includes('Loading chunk') ||
+    message.includes('ChunkLoadError') ||
+    message.includes('Failed to load static props') ||
+    message.includes('Failed to fetch dynamically imported module') ||
+    message.includes('Failed to load script')
+  )
+}
+
+function getReloadKey(url) {
+  return `${STALE_DEPLOYMENT_RELOAD_KEY}:${url}`
+}
 
 /**
  * App挂载DOM 入口文件
@@ -50,6 +72,35 @@ const MyApp = ({ Component, pageProps }) => {
     },
     [theme]
   )
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    // A successful render means the current route no longer needs the stale-build fallback.
+    window.sessionStorage.removeItem(getReloadKey(route.asPath))
+  }, [route.asPath])
+
+  useEffect(() => {
+    const handleRouteError = (err, url) => {
+      if (typeof window === 'undefined') return
+      if (!isStaleDeploymentRouteError(err)) return
+
+      const targetUrl = typeof url === 'string' && url ? url : route.asPath
+      const reloadKey = getReloadKey(targetUrl)
+
+      if (window.sessionStorage.getItem(reloadKey)) {
+        return
+      }
+
+      window.sessionStorage.setItem(reloadKey, '1')
+      window.location.assign(targetUrl)
+    }
+
+    route.events.on('routeChangeError', handleRouteError)
+    return () => {
+      route.events.off('routeChangeError', handleRouteError)
+    }
+  }, [route])
 
   const enableClerk = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
   const content = (
