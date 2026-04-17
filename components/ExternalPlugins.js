@@ -1,25 +1,35 @@
 import { siteConfig } from '@/lib/config'
+import { useGlobal } from '@/lib/global'
 import { convertInnerUrl } from '@/lib/db/notion/convertInnerUrl'
-import { isBrowser, loadExternalResource } from '@/lib/utils'
+import { loadExternalResource } from '@/lib/utils'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
+import ExternalScript from './ExternalScript'
 import { GlobalStyle } from './GlobalStyle'
 import { initGoogleAdsense } from './GoogleAdsense'
-
-import Head from 'next/head'
-import ExternalScript from './ExternalScript'
-import WebWhiz from './Webwhiz'
-import { useGlobal } from '@/lib/global'
 import IconFont from './IconFont'
+import WebWhiz from './Webwhiz'
+
+function normalizeExternalResources(value) {
+  if (Array.isArray(value)) {
+    return [...new Set(value.map(item => `${item}`.trim()).filter(Boolean))]
+  }
+
+  if (typeof value === 'string' && value.trim()) {
+    return [value.trim()]
+  }
+
+  return []
+}
 
 /**
- * 各种插件脚本
+ * 鍚勭鎻掍欢鑴氭湰
  * @param {*} props
  * @returns
  */
 const ExternalPlugin = props => {
-  // 读取自Notion的配置
   const { NOTION_CONFIG } = props
   const { lang } = useGlobal()
   const DISABLE_PLUGIN = siteConfig('DISABLE_PLUGIN', null, NOTION_CONFIG)
@@ -118,7 +128,6 @@ const ExternalPlugin = props => {
     null,
     NOTION_CONFIG
   )
-  // 默认关闭NProgress
   const ENABLE_NPROGRSS = siteConfig('ENABLE_NPROGRSS', false)
   const COZE_BOT_ID = siteConfig('COZE_BOT_ID')
   const HILLTOP_ADS_META_ID = siteConfig(
@@ -126,20 +135,23 @@ const ExternalPlugin = props => {
     null,
     NOTION_CONFIG
   )
-
   const ENABLE_ICON_FONT = siteConfig('ENABLE_ICON_FONT', false)
-
   const UMAMI_HOST = siteConfig('UMAMI_HOST', null, NOTION_CONFIG)
   const UMAMI_ID = siteConfig('UMAMI_ID', null, NOTION_CONFIG)
 
-  // 自定义样式css和js引入
-  if (isBrowser) {
-    // 初始化AOS动画
-    // 静态导入本地自定义样式
+  const customExternalCss = useMemo(
+    () => normalizeExternalResources(CUSTOM_EXTERNAL_CSS),
+    [CUSTOM_EXTERNAL_CSS]
+  )
+  const customExternalJs = useMemo(
+    () => normalizeExternalResources(CUSTOM_EXTERNAL_JS),
+    [CUSTOM_EXTERNAL_JS]
+  )
+
+  useEffect(() => {
     loadExternalResource('/css/custom.css', 'css')
     loadExternalResource('/js/custom.js', 'js')
 
-    // 自动添加图片阴影
     if (IMG_SHADOW) {
       loadExternalResource('/css/img-shadow.css', 'css')
     }
@@ -148,44 +160,55 @@ const ExternalPlugin = props => {
       loadExternalResource(ANIMATE_CSS_URL, 'css')
     }
 
-    // 导入外部自定义脚本
-    if (CUSTOM_EXTERNAL_JS && CUSTOM_EXTERNAL_JS.length > 0) {
-      for (const url of CUSTOM_EXTERNAL_JS) {
-        loadExternalResource(url, 'js')
-      }
-    }
+    customExternalJs.forEach(url => {
+      loadExternalResource(url, 'js')
+    })
 
-    // 导入外部自定义样式
-    if (CUSTOM_EXTERNAL_CSS && CUSTOM_EXTERNAL_CSS.length > 0) {
-      for (const url of CUSTOM_EXTERNAL_CSS) {
-        loadExternalResource(url, 'css')
-      }
-    }
-  }
+    customExternalCss.forEach(url => {
+      loadExternalResource(url, 'css')
+    })
+  }, [ANIMATE_CSS_URL, IMG_SHADOW, customExternalCss, customExternalJs])
 
   const router = useRouter()
   useEffect(() => {
-    // 异步渲染谷歌广告
+    let adsenseTimer
+    let innerUrlTimer
+
     if (ADSENSE_GOOGLE_ID) {
-      setTimeout(() => {
+      adsenseTimer = window.setTimeout(() => {
         initGoogleAdsense(ADSENSE_GOOGLE_ID)
       }, 3000)
     }
 
-    setTimeout(() => {
-      // 映射url
-      convertInnerUrl({ allPages: props?.allNavPages, lang: lang })
+    innerUrlTimer = window.setTimeout(() => {
+      convertInnerUrl({ allPages: props?.allNavPages, lang })
     }, 500)
-  }, [router])
+
+    return () => {
+      window.clearTimeout(adsenseTimer)
+      window.clearTimeout(innerUrlTimer)
+    }
+  }, [ADSENSE_GOOGLE_ID, lang, props?.allNavPages, router.asPath])
 
   useEffect(() => {
-    // 执行注入脚本
-    // eslint-disable-next-line no-eval
-    if (GLOBAL_JS && GLOBAL_JS.trim() !== '') {
-      // console.log('Inject JS:', GLOBAL_JS);
+    if (!GLOBAL_JS || !GLOBAL_JS.trim()) {
+      return
     }
-    eval(GLOBAL_JS)
-  })
+
+    try {
+      const script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.dataset.source = 'global-js'
+      script.text = GLOBAL_JS
+      document.body.appendChild(script)
+
+      return () => {
+        script.remove()
+      }
+    } catch (error) {
+      console.error('Failed to execute GLOBAL_JS', error)
+    }
+  }, [GLOBAL_JS])
 
   if (DISABLE_PLUGIN) {
     return null
@@ -193,7 +216,6 @@ const ExternalPlugin = props => {
 
   return (
     <>
-      {/* 全局样式嵌入 */}
       <GlobalStyle />
       {ENABLE_ICON_FONT && <IconFont />}
       {MOUSE_FOLLOW && <MouseFollow />}
@@ -283,7 +305,7 @@ const ExternalPlugin = props => {
 
       {COMMENT_DAO_VOICE_ID && (
         <>
-          {/* DaoVoice 反馈 */}
+          {/* DaoVoice 鍙嶉 */}
           <script
             async
             dangerouslySetInnerHTML={{
@@ -322,7 +344,6 @@ const ExternalPlugin = props => {
         </>
       )}
 
-      {/* HILLTOP广告验证 */}
       {HILLTOP_ADS_META_ID && (
         <Head>
           <meta name={HILLTOP_ADS_META_ID} content={HILLTOP_ADS_META_ID} />
@@ -332,7 +353,6 @@ const ExternalPlugin = props => {
       {AD_WWADS_ID && (
         <>
           <Head>
-            {/* 提前连接到广告服务器 */}
             <link rel='preconnect' href='https://cdn.wwads.cn' />
           </Head>
           <ExternalScript
@@ -342,15 +362,12 @@ const ExternalPlugin = props => {
         </>
       )}
 
-      {/* {COMMENT_TWIKOO_ENV_ID && <script defer src={COMMENT_TWIKOO_CDN_URL} />} */}
-
       {COMMENT_ARTALK_SERVER && <script defer src={COMMENT_ARTALK_JS} />}
 
       {COMMENT_TIDIO_ID && (
         <script async src={`//code.tidio.co/${COMMENT_TIDIO_ID}.js`} />
       )}
 
-      {/* gitter聊天室 */}
       {COMMENT_GITTER_ROOM && (
         <>
           <script
@@ -371,7 +388,6 @@ const ExternalPlugin = props => {
         </>
       )}
 
-      {/* 百度统计 */}
       {ANALYTICS_BAIDU_ID && (
         <script
           async
@@ -381,7 +397,7 @@ const ExternalPlugin = props => {
           (function() {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?${ANALYTICS_BAIDU_ID}";
-            var s = document.getElementsByTagName("script")[0]; 
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
           })();
           `
@@ -389,7 +405,6 @@ const ExternalPlugin = props => {
         />
       )}
 
-      {/* 站长统计 */}
       {ANALYTICS_CNZZ_ID && (
         <script
           async
@@ -401,12 +416,10 @@ const ExternalPlugin = props => {
         />
       )}
 
-      {/* UMAMI 统计 */}
       {UMAMI_ID && (
         <script async defer src={UMAMI_HOST} data-website-id={UMAMI_ID}></script>
       )}
 
-      {/* 谷歌统计 */}
       {ANALYTICS_GOOGLE_ID && (
         <>
           <script
@@ -429,7 +442,6 @@ const ExternalPlugin = props => {
         </>
       )}
 
-      {/* Matomo 统计 */}
       {MATOMO_HOST_URL && MATOMO_SITE_ID && (
         <script
           async
@@ -489,7 +501,9 @@ const Analytics = dynamic(
     }),
   { ssr: false }
 )
-const MusicPlayer = dynamic(() => import('@/components/Player'), { ssr: false })
+const MusicPlayer = dynamic(() => import('@/components/Player'), {
+  ssr: false
+})
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 const Busuanzi = dynamic(() => import('@/components/Busuanzi'), { ssr: false })

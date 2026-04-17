@@ -1,15 +1,20 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData, getPostBlocks } from '@/lib/db/SiteDataApi'
+import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
+import { generateRedirectJson } from '@/lib/utils/redirect'
 import { generateRobotsTxt } from '@/lib/utils/robots.txt'
 import { generateRss } from '@/lib/utils/rss'
 import { generateSitemapXml } from '@/lib/utils/sitemap.xml'
 import { DynamicLayout } from '@/themes/theme'
-import { generateRedirectJson } from '@/lib/utils/redirect'
-import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
+
+const shouldGenerateStaticArtifacts =
+  process.env.npm_lifecycle_event === 'build' ||
+  process.env.npm_lifecycle_event === 'export' ||
+  BLOG.ENABLE_RUNTIME_GENERATED_FILES
 
 /**
- * 首页布局
+ * 棣栭〉甯冨眬
  * @param {*} props
  * @returns
  */
@@ -18,8 +23,21 @@ const Index = props => {
   return <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
 }
 
+async function generateStaticArtifacts(props) {
+  generateRobotsTxt(props)
+  generateSitemapXml(props)
+
+  if (siteConfig('ENABLE_RSS', BLOG.ENABLE_RSS, props?.NOTION_CONFIG)) {
+    await generateRss(props)
+  }
+
+  if (siteConfig('UUID_REDIRECT', false, props?.NOTION_CONFIG)) {
+    generateRedirectJson(props)
+  }
+}
+
 /**
- * SSG 获取数据
+ * SSG 鑾峰彇鏁版嵁
  * @returns
  */
 export async function getStaticProps(req) {
@@ -35,9 +53,9 @@ export async function getStaticProps(req) {
     page => page.type === 'Post' && page.status === 'Published'
   )
 
-  // 处理分页
+  // 澶勭悊鍒嗛〉
   if (siteConfig('POST_LIST_STYLE') === 'scroll') {
-    // 滚动列表默认给前端返回所有数据
+    // 婊氬姩鍒楄〃榛樿缁欏墠绔繑鍥炴墍鏈夋暟鎹?
   } else if (siteConfig('POST_LIST_STYLE') === 'page') {
     props.posts = props.posts?.slice(
       0,
@@ -45,7 +63,7 @@ export async function getStaticProps(req) {
     )
   }
 
-  // 预览文章内容
+  // 棰勮鏂囩珷鍐呭
   if (siteConfig('POST_LIST_PREVIEW', false, props?.NOTION_CONFIG)) {
     for (const i in props.posts) {
       const post = props.posts[i]
@@ -56,20 +74,12 @@ export async function getStaticProps(req) {
     }
   }
 
-  // 生成robotTxt
-  generateRobotsTxt(props)
-  // 生成Feed订阅
-  generateRss(props)
-  // 生成
-  generateSitemapXml(props)
-  // 检查数据是否需要从algolia删除
-  checkDataFromAlgolia(props)
-  if (siteConfig('UUID_REDIRECT', false, props?.NOTION_CONFIG)) {
-    // 生成重定向 JSON
-    generateRedirectJson(props)
+  if (shouldGenerateStaticArtifacts) {
+    await generateStaticArtifacts(props)
   }
 
-  // 生成全文索引 - 仅在 yarn build 时执行 && process.env.npm_lifecycle_event === 'build'
+  // 妫€鏌ユ暟鎹槸鍚﹂渶瑕佷粠algolia鍒犻櫎
+  await checkDataFromAlgolia(props)
 
   delete props.allPages
 
