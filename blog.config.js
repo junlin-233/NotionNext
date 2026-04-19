@@ -31,7 +31,7 @@ const BLOG = {
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客',
   BLOG_FAVICON:
     process.env.NEXT_PUBLIC_FAVICON ||
-    'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f680.svg',
+    '/favicon.svg',
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '',
   BEI_AN_LINK:
     process.env.NEXT_PUBLIC_BEI_AN_LINK || 'https://beian.miit.gov.cn/',
