@@ -319,6 +319,11 @@ function getTopPosts({ latestPosts, allNavPages }) {
 function TodayCard({ cRef, siteInfo }) {
   const router = useRouter()
   const link = siteConfig('HEO_HERO_TITLE_LINK', null, CONFIG)
+  const cover = siteConfig(
+    'HEO_HERO_RECOMMEND_COVER',
+    siteInfo?.pageCover,
+    CONFIG
+  )
   const { locale } = useGlobal()
   // 卡牌是否盖住下层
   const [isCoverUp, setIsCoverUp] = useState(true)
@@ -396,7 +401,7 @@ function TodayCard({ cRef, siteInfo }) {
         {/* 封面图 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={siteInfo?.pageCover}
+          src={cover}
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
