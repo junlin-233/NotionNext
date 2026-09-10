@@ -1,6 +1,6 @@
 import { siteConfig } from '@/lib/config'
 import { isMobile, loadExternalResource } from '@/lib/utils'
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 /**
  * 网页动画
@@ -9,14 +9,56 @@ import { useEffect } from 'react'
 export default function Live2D() {
   const showPet = siteConfig('WIDGET_PET')
   const petLink = siteConfig('WIDGET_PET_LINK')
+  const [shouldLoad, setShouldLoad] = useState(false)
+  const [initialized, setInitialized] = useState(false)
+  const canvasRef = useRef(null)
 
   useEffect(() => {
-    if (!showPet || isMobile() || window.__notionNextLive2DInitialized) {
+    if (!showPet || isMobile()) {
       return
     }
 
-    let timerId
+    if (!window.IntersectionObserver) {
+      setShouldLoad(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          setShouldLoad(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '240px 0px' }
+    )
+
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [showPet])
+
+  useEffect(() => {
+    if (
+      !showPet ||
+      !shouldLoad ||
+      isMobile() ||
+      initialized ||
+      window.__notionNextLive2DInitialized
+    ) {
+      return
+    }
+
     let cancelled = false
+    let timerId
+    const canvas = canvasRef.current
+
+    if (!canvas) {
+      return
+    }
+
     const load = async () => {
       try {
         await loadExternalResource(
@@ -24,32 +66,24 @@ export default function Live2D() {
           'js'
         )
 
-        if (
-          cancelled ||
-          typeof window.loadlive2d !== 'function' ||
-          !document.getElementById('live2d')
-        ) {
+        if (cancelled || typeof window.loadlive2d !== 'function' || !canvas) {
           return
         }
 
         window.loadlive2d('live2d', petLink)
         window.__notionNextLive2DInitialized = true
+        setInitialized(true)
       } catch (error) {
-        console.error('读取PET模型', error)
+        console.warn('读取PET模型失败', error)
       }
     }
 
     if ('requestIdleCallback' in window) {
-      timerId = window.requestIdleCallback(
-        () => {
-          void load()
-        },
-        { timeout: 1500 }
-      )
+      timerId = window.requestIdleCallback(() => void load(), {
+        timeout: 1500
+      })
     } else {
-      timerId = window.setTimeout(() => {
-        void load()
-      }, 1000)
+      timerId = window.setTimeout(() => void load(), 1000)
     }
 
     return () => {
@@ -60,7 +94,7 @@ export default function Live2D() {
         window.clearTimeout(timerId)
       }
     }
-  }, [petLink, showPet])
+  }, [initialized, petLink, shouldLoad, showPet])
 
   if (!showPet) {
     return <></>
@@ -69,9 +103,11 @@ export default function Live2D() {
   return (
     <canvas
       id='live2d'
+      ref={canvasRef}
       width='280'
       height='250'
       className='cursor-grab'
+      aria-label='Live2D widget'
       onMouseDown={e => e.target.classList.add('cursor-grabbing')}
       onMouseUp={e => e.target.classList.remove('cursor-grabbing')}
     />

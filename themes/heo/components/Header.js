@@ -1,8 +1,7 @@
 import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
-import throttle from 'lodash.throttle'
 import { useRouter } from 'next/router'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import DarkModeButton from './DarkModeButton'
 import Logo from './Logo'
 import { MenuListTop } from './MenuListTop'
@@ -32,42 +31,43 @@ const Header = props => {
   /**
    * 根据滚动条，切换导航栏样式
    */
-  const scrollTrigger = useMemo(
-    () =>
-      throttle(() => {
-        const scrollS = window.scrollY
-        // 导航栏设置 白色背景
-        if (scrollS <= 1) {
-          setFixedNav(false)
-          setBgWhite(false)
-          setTextWhite(false)
+  const scrollTrigger = () => {
+    const scrollS = window.scrollY
+    const atTop = scrollS <= 1
+    const hasPostBackground = Boolean(document?.querySelector('#post-bg'))
 
-          // 文章详情页特殊处理
-          if (document?.querySelector('#post-bg')) {
-            setFixedNav(true)
-            setTextWhite(true)
-          }
-        } else {
-          // 向下滚动后的导航样式
-          setFixedNav(true)
-          setTextWhite(false)
-          setBgWhite(true)
-        }
-      }, 100),
-    []
-  )
+    setFixedNav(!atTop || hasPostBackground)
+    setBgWhite(!atTop)
+    setTextWhite(atTop && hasPostBackground)
+  }
+
   useEffect(() => {
     scrollTrigger()
-  }, [router.asPath, scrollTrigger])
+  }, [router.asPath])
 
   // 监听滚动
   useEffect(() => {
-    window.addEventListener('scroll', scrollTrigger)
-    return () => {
-      window.removeEventListener('scroll', scrollTrigger)
-      scrollTrigger.cancel?.()
+    let frameId = null
+
+    const handleScroll = () => {
+      if (frameId !== null) {
+        return
+      }
+
+      frameId = window.requestAnimationFrame(() => {
+        frameId = null
+        scrollTrigger()
+      })
     }
-  }, [scrollTrigger])
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId)
+      }
+    }
+  }, [])
 
   // 导航栏根据滚动轮播菜单内容
   useEffect(() => {

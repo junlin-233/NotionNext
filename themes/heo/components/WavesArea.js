@@ -22,7 +22,7 @@ export default function WavesArea() {
     handleResize()
 
     // Add event listener for window resize
-    window.addEventListener('resize', handleResize)
+    window.addEventListener('resize', handleResize, { passive: true })
 
     // Cleanup event listener on component unmount
     return () => {
@@ -62,6 +62,9 @@ export default function WavesArea() {
           .parallax > use {
             animation: move-forever 30s cubic-bezier(0.55, 0.5, 0.45, 0.5)
               infinite;
+          }
+          .parallax > use:nth-child(n + 2) {
+            animation: none;
           }
           .parallax > use:nth-child(1) {
             animation-delay: -2s;

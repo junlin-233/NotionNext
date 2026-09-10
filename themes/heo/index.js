@@ -17,7 +17,7 @@ import WWAds from '@/components/WWAds'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import { isBrowser } from '@/lib/utils'
-import { Transition } from '@headlessui/react'
+import dynamic from 'next/dynamic'
 import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -43,6 +43,11 @@ import { Style } from './style'
 import AISummary from '@/components/AISummary'
 import ArticleExpirationNotice from '@/components/ArticleExpirationNotice'
 import ScrollReveal from '@/components/ScrollReveal'
+
+const Transition = dynamic(
+  () => import('@headlessui/react').then(module => module.Transition),
+  { ssr: false }
+)
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏

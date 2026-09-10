@@ -31,8 +31,7 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
           height: 100%;
           top: 0;
           left: 0;
-          box-shadow: 110px -130px 500px 100px
-            ${isDarkMode ? '#CA8A04' : '#0060e0'} inset;
+          box-shadow: inset 0 0 220px 40px ${isDarkMode ? '#CA8A04' : '#0060e0'};
         }
       `}</style>
 
@@ -42,7 +41,7 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
         <div
           id='post-cover-wrapper'
           style={{
-            filter: 'blur(15px)'
+            filter: 'blur(8px)'
           }}
           className='coverdiv lg:opacity-50 lg:translate-x-96 lg:rotate-12'>
           <LazyImage

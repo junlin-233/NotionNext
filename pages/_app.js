@@ -15,12 +15,9 @@ import { useEffect } from 'react'
 // 各种扩展插件 这个要阻塞引入
 import ExternalPlugins from '@/components/ExternalPlugins'
 import SEO from '@/components/SEO'
-import { zhCN } from '@clerk/localizations'
 import dynamic from 'next/dynamic'
-// import { ClerkProvider } from '@clerk/nextjs'
-const ClerkProvider = dynamic(() =>
-  import('@clerk/nextjs').then(m => m.ClerkProvider)
-)
+
+const ClerkBoundary = dynamic(() => import('@/components/ClerkBoundary'))
 
 const STALE_DEPLOYMENT_RELOAD_KEY = '__notionnext_stale_deployment_reload__'
 
@@ -93,15 +90,7 @@ const MyApp = ({ Component, pageProps }) => {
       <ExternalPlugins {...pageProps} />
     </GlobalContextProvider>
   )
-  return (
-    <>
-      {enableClerk ? (
-        <ClerkProvider localization={zhCN}>{content}</ClerkProvider>
-      ) : (
-        content
-      )}
-    </>
-  )
+  return <>{enableClerk ? <ClerkBoundary>{content}</ClerkBoundary> : content}</>
 }
 
 export default MyApp

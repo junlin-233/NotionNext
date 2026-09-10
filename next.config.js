@@ -243,30 +243,6 @@ const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     config.resolve.alias['@'] = path.resolve(__dirname)
 
-    // 性能优化配置
-    if (!dev && !isServer) {
-      // 生产环境优化
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all'
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              enforce: true
-            }
-          }
-        }
-      }
-    }
-
     // Enable source maps in development mode
     if (dev || process.env.NODE_ENV_API === 'development') {
       // config.devtool = 'source-map'
