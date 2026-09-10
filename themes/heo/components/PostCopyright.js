@@ -15,7 +15,7 @@ export default function PostCopyright() {
   const [path, setPath] = useState(siteConfig('LINK') + router.asPath)
   useEffect(() => {
     setPath(window.location.href)
-  })
+  }, [router.asPath])
 
   const { locale } = useGlobal()
 

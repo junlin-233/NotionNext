@@ -6,7 +6,7 @@ module.exports = {
     './pages/**/*.js',
     './components/**/*.js',
     './layouts/**/*.js',
-    './themes/**/*.js'
+    './themes/heo/**/*.js'
   ],
   darkMode: BLOG.APPEARANCE === 'class' ? 'media' : 'class', // or 'media' or 'class'
   theme: {

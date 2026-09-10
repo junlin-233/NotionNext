@@ -4,7 +4,7 @@
 
 ### 环境要求
 
-- Node.js >= 16.0.0
+- Node.js >= 20.0.0
 - npm >= 8.0.0
 - Git
 
@@ -89,11 +89,10 @@ NotionNext/
 │   ├── utils/          # 工具函数
 │   ├── middleware/     # 中间件
 │   └── cache/          # 缓存相关
-├── themes/             # 主题文件
+├── themes/heo/         # 当前 Heo 主题
 ├── conf/               # 配置文件
 ├── scripts/            # 构建和开发脚本
 ├── types/              # TypeScript类型定义
-├── .vscode/            # VSCode配置
 └── docs/               # 项目文档
 ```
 
@@ -185,15 +184,6 @@ git push origin feature/your-feature-name
 
 ## 调试指南
 
-### VSCode调试
-
-项目已配置VSCode调试环境，支持以下调试模式:
-
-- **Next.js: debug server-side** - 调试服务端代码
-- **Next.js: debug client-side** - 调试客户端代码
-- **Next.js: debug full stack** - 全栈调试
-- **Jest: debug tests** - 调试测试
-
 ### 浏览器调试
 
 ```bash
@@ -210,8 +200,8 @@ npm run dev
 # 分析包大小
 npm run bundle-report
 
-# 生成性能报告
-npm run analyze
+# 生成包分析报告
+npm run dev-tools analyze
 ```
 
 ## 环境变量

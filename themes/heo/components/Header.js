@@ -2,7 +2,7 @@ import { siteConfig } from '@/lib/config'
 import { isBrowser } from '@/lib/utils'
 import throttle from 'lodash.throttle'
 import { useRouter } from 'next/router'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import DarkModeButton from './DarkModeButton'
 import Logo from './Logo'
 import { MenuListTop } from './MenuListTop'
@@ -32,59 +32,63 @@ const Header = props => {
   /**
    * 根据滚动条，切换导航栏样式
    */
-  const scrollTrigger = useCallback(
-    throttle(() => {
-      const scrollS = window.scrollY
-      // 导航栏设置 白色背景
-      if (scrollS <= 1) {
-        setFixedNav(false)
-        setBgWhite(false)
-        setTextWhite(false)
+  const scrollTrigger = useMemo(
+    () =>
+      throttle(() => {
+        const scrollS = window.scrollY
+        // 导航栏设置 白色背景
+        if (scrollS <= 1) {
+          setFixedNav(false)
+          setBgWhite(false)
+          setTextWhite(false)
 
-        // 文章详情页特殊处理
-        if (document?.querySelector('#post-bg')) {
+          // 文章详情页特殊处理
+          if (document?.querySelector('#post-bg')) {
+            setFixedNav(true)
+            setTextWhite(true)
+          }
+        } else {
+          // 向下滚动后的导航样式
           setFixedNav(true)
-          setTextWhite(true)
+          setTextWhite(false)
+          setBgWhite(true)
         }
-      } else {
-        // 向下滚动后的导航样式
-        setFixedNav(true)
-        setTextWhite(false)
-        setBgWhite(true)
-      }
-    }, 100)
+      }, 100),
+    []
   )
   useEffect(() => {
     scrollTrigger()
-  }, [router])
+  }, [router.asPath, scrollTrigger])
 
   // 监听滚动
   useEffect(() => {
     window.addEventListener('scroll', scrollTrigger)
     return () => {
       window.removeEventListener('scroll', scrollTrigger)
+      scrollTrigger.cancel?.()
     }
-  }, [])
+  }, [scrollTrigger])
 
   // 导航栏根据滚动轮播菜单内容
   useEffect(() => {
     let prevScrollY = 0
     let ticking = false
+    let frameId = null
 
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY
-          if (currentScrollY > prevScrollY) {
-            setActiveIndex(1) // 向下滚动时设置activeIndex为1
-          } else {
-            setActiveIndex(0) // 向上滚动时设置activeIndex为0
-          }
-          prevScrollY = currentScrollY
-          ticking = false
-        })
-        ticking = true
-      }
+      if (ticking) return
+
+      frameId = window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY
+        const nextIndex = currentScrollY > prevScrollY ? 1 : 0
+        setActiveIndex(currentIndex =>
+          currentIndex === nextIndex ? currentIndex : nextIndex
+        )
+        prevScrollY = currentScrollY
+        ticking = false
+        frameId = null
+      })
+      ticking = true
     }
 
     if (isBrowser) {
@@ -94,6 +98,9 @@ const Header = props => {
     return () => {
       if (isBrowser) {
         window.removeEventListener('scroll', handleScroll)
+      }
+      if (frameId) {
+        window.cancelAnimationFrame(frameId)
       }
     }
   }, [])
@@ -169,11 +176,9 @@ const Header = props => {
           <div className='flex flex-shrink-0 justify-end items-center w-48'>
             <RandomPostButton {...props} />
             <SearchButton {...props} />
-            {!JSON.parse(siteConfig('THEME_SWITCH')) && (
-              <div className='hidden md:block'>
-                <DarkModeButton {...props} />
-              </div>
-            )}
+            <div className='hidden md:block'>
+              <DarkModeButton {...props} />
+            </div>
             <ReadingProgress />
 
             {/* 移动端菜单按钮 */}

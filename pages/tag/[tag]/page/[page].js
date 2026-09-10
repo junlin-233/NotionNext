@@ -1,11 +1,10 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutPostList } from '@/themes/heo'
 
 const Tag = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutPostList' {...props} />
+  return <LayoutPostList {...props} />
 }
 
 export async function getStaticProps({ params: { tag, page }, locale }) {
@@ -41,7 +40,9 @@ export async function getStaticProps({ params: { tag, page }, locale }) {
 
 export async function getStaticPaths() {
   const from = 'tag-page-static-path'
-  const { tagOptions, allPages, NOTION_CONFIG } = await fetchGlobalAllData({ from })
+  const { tagOptions, allPages, NOTION_CONFIG } = await fetchGlobalAllData({
+    from
+  })
   const paths = []
   tagOptions?.forEach(tag => {
     // 过滤状态类型

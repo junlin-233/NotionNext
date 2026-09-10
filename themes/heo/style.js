@@ -47,23 +47,8 @@ const Style = () => {
       * {
         box-sizing: border-box;
       }
-
-      // 标签滚动动画
-      .tags-group-wrapper {
-        animation: rowup 60s linear infinite;
-      }
-
-      @keyframes rowup {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
     `}</style>
   )
 }
 
 export { Style }
-

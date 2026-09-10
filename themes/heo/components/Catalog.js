@@ -1,7 +1,7 @@
 import { useGlobal } from '@/lib/global'
 import throttle from 'lodash.throttle'
 import { uuidToId } from 'notion-utils'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 /**
  * 目录导航组件
@@ -11,50 +11,61 @@ import { useCallback, useEffect, useRef, useState } from 'react'
  */
 const Catalog = ({ toc }) => {
   const { locale } = useGlobal()
-  // 监听滚动事件
+  const tRef = useRef(null)
+  const [activeSection, setActiveSection] = useState(null)
+  const activeSectionRef = useRef(null)
+  const lastTocIndexRef = useRef(-1)
+  const tocIds = useMemo(
+    () => (toc || []).map(item => uuidToId(item.id)),
+    [toc]
+  )
+
+  const actionSectionScrollSpy = useMemo(
+    () =>
+      throttle(() => {
+        const sections = document.getElementsByClassName('notion-h')
+        let prevBBox = null
+        let currentSectionId = activeSectionRef.current
+        for (let i = 0; i < sections.length; ++i) {
+          const section = sections[i]
+          if (!section || !(section instanceof Element)) continue
+          if (!currentSectionId) {
+            currentSectionId = section.getAttribute('data-id')
+          }
+          const bbox = section.getBoundingClientRect()
+          const prevHeight = prevBBox ? bbox.top - prevBBox.bottom : 0
+          const offset = Math.max(150, prevHeight / 4)
+          // GetBoundingClientRect returns values relative to viewport
+          if (bbox.top - offset < 0) {
+            currentSectionId = section.getAttribute('data-id')
+            prevBBox = bbox
+            continue
+          }
+          // No need to continue loop, if last element has been detected
+          break
+        }
+        if (activeSectionRef.current !== currentSectionId) {
+          activeSectionRef.current = currentSectionId
+          setActiveSection(currentSectionId)
+        }
+
+        const index = Math.max(0, tocIds.indexOf(currentSectionId))
+        if (lastTocIndexRef.current !== index) {
+          lastTocIndexRef.current = index
+          tRef?.current?.scrollTo({ top: 28 * index, behavior: 'auto' })
+        }
+      }, 200),
+    [tocIds]
+  )
+
   useEffect(() => {
-    window.addEventListener('scroll', actionSectionScrollSpy)
     actionSectionScrollSpy()
+    window.addEventListener('scroll', actionSectionScrollSpy, { passive: true })
     return () => {
       window.removeEventListener('scroll', actionSectionScrollSpy)
+      actionSectionScrollSpy.cancel?.()
     }
-  }, [])
-
-  // 目录自动滚动
-  const tRef = useRef(null)
-  const tocIds = []
-
-  // 同步选中目录事件
-  const [activeSection, setActiveSection] = useState(null)
-
-  const actionSectionScrollSpy = useCallback(
-    throttle(() => {
-      const sections = document.getElementsByClassName('notion-h')
-      let prevBBox = null
-      let currentSectionId = activeSection
-      for (let i = 0; i < sections.length; ++i) {
-        const section = sections[i]
-        if (!section || !(section instanceof Element)) continue
-        if (!currentSectionId) {
-          currentSectionId = section.getAttribute('data-id')
-        }
-        const bbox = section.getBoundingClientRect()
-        const prevHeight = prevBBox ? bbox.top - prevBBox.bottom : 0
-        const offset = Math.max(150, prevHeight / 4)
-        // GetBoundingClientRect returns values relative to viewport
-        if (bbox.top - offset < 0) {
-          currentSectionId = section.getAttribute('data-id')
-          prevBBox = bbox
-          continue
-        }
-        // No need to continue loop, if last element has been detected
-        break
-      }
-      setActiveSection(currentSectionId)
-      const index = tocIds.indexOf(currentSectionId) || 0
-      tRef?.current?.scrollTo({ top: 28 * index, behavior: 'smooth' })
-    }, 200)
-  )
+  }, [actionSectionScrollSpy])
 
   // 无目录就直接返回空
   if (!toc || toc.length < 1) {
@@ -73,7 +84,6 @@ const Catalog = ({ toc }) => {
         <nav className='h-full'>
           {toc?.map(tocItem => {
             const id = uuidToId(tocItem.id)
-            tocIds.push(id)
             return (
               <a
                 key={id}

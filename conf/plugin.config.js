@@ -17,16 +17,6 @@ module.exports = {
   AI_SUMMARY_CACHE_TIME: toNumber(process.env.AI_SUMMARY_CACHE_TIME, 1800), // 缂撳瓨鏃堕棿锛屽崟浣嶇
   AI_SUMMARY_WORD_LIMIT: toNumber(process.env.AI_SUMMARY_WORD_LIMIT, 1000),
 
-  //   ********鎸備欢缁勪欢鐩稿叧********
-  // AI 鏂囩珷鎽樿鐢熸垚 @see https://docs_s.tianli0.top/
-  TianliGPT_CSS:
-    process.env.NEXT_PUBLIC_TIANLI_GPT_CSS ||
-    'https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.css',
-  TianliGPT_JS:
-    process.env.NEXT_PUBLIC_TIANLI_GPT_JS ||
-    'https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.js',
-  TianliGPT_KEY: process.env.NEXT_PUBLIC_TIANLI_GPT_KEY || '',
-
   // 閭欢
   MAILCHIMP_LIST_ID: process.env.MAILCHIMP_LIST_ID || null, // 寮€鍚痬ailichimp閭欢璁㈤槄 瀹㈡埛鍒楄〃ID 锛屽叿浣撲娇鐢ㄦ柟娉曞弬闃呮枃妗?
   MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY || null // 寮€鍚痬ailichimp閭欢璁㈤槄 APIkey

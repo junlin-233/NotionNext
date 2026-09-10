@@ -1,7 +1,6 @@
 # Contributing
 
 - [Setup](#setup)
-- [Creating new themes](#creating-new-themes)
 - [Adding localizations](#adding-localizations)
 - [Environment Variables](#environment-variables)
 
@@ -25,12 +24,6 @@ Here are some commands that you can use:
 - `yarn dev`: compile and hot-reload for development
 - `yarn build`: compile and minify for production
 - `yarn start`: serve the compiled build in production mode
-
-## Creating new themes
-
-If you want to submit your custom theme to NotionNext, copy a new folder in
-[`themes`][themes-dir] from [`example`][example]. The folder name  will be the
-theme's key. 
 
 ## Adding localizations
 
@@ -59,8 +52,6 @@ The configuration priority is:
 [fork]: https://github.com/tangly1024/NotionNext/fork
 [pr]: https://github.com/tangly1024/NotionNext/compare
 [next.js]: https://github.com/vercel/next.js
-[themes-dir]: themes
-[example]: themes/example
 [lang-dir]: lib/lang
 [en-US.js]: lib/lang/en-US.js
 [lang.js]: lib/lang.js

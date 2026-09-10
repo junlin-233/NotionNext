@@ -1,8 +1,7 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
-import { useRouter } from 'next/router'
+import { LayoutTagIndex } from '@/themes/heo'
 
 /**
  * 标签首页
@@ -10,9 +9,7 @@ import { useRouter } from 'next/router'
  * @returns
  */
 const TagIndex = props => {
-  const router = useRouter()
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutTagIndex' {...props} />
+  return <LayoutTagIndex {...props} />
 }
 
 export async function getStaticProps(req) {

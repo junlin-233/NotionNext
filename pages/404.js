@@ -1,7 +1,7 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { Layout404 } from '@/themes/heo'
 
 /**
  * 404
@@ -9,8 +9,7 @@ import { DynamicLayout } from '@/themes/theme'
  * @returns
  */
 const NoFound = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='Layout404' {...props} />
+  return <Layout404 {...props} />
 }
 
 export async function getStaticProps(req) {

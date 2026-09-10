@@ -70,7 +70,6 @@ export interface SiteConfig {
   description: string
   author: string
   lang: string
-  theme: string
   domain: string
   path: string
   since: number
@@ -86,16 +85,6 @@ export interface SiteConfig {
     provider: string
     config: Record<string, any>
   }
-}
-
-// 主题配置类型
-export interface ThemeConfig {
-  name: string
-  version: string
-  description?: string
-  author?: string
-  preview?: string
-  config?: Record<string, any>
 }
 
 // 用户类型
@@ -183,22 +172,6 @@ export interface SEOProps {
   tags?: string[]
 }
 
-// 性能监控类型
-export interface WebVitalsMetric {
-  name: 'FCP' | 'LCP' | 'FID' | 'CLS' | 'TTFB'
-  value: number
-  id: string
-  delta: number
-  entries: PerformanceEntry[]
-}
-
-export interface PerformanceBudget {
-  FCP: number
-  LCP: number
-  FID: number
-  CLS: number
-}
-
 // 错误类型
 export interface ErrorInfo {
   message: string
@@ -228,7 +201,6 @@ export type DeepPartial<T> = {
 // 环境变量类型
 export interface EnvironmentVariables {
   NODE_ENV: 'development' | 'production' | 'test'
-  NEXT_PUBLIC_THEME: string
   NEXT_PUBLIC_LANG: string
   NOTION_PAGE_ID: string
   REDIS_URL?: string
@@ -239,4 +211,3 @@ export interface EnvironmentVariables {
 // 导出所有类型
 // export * from './blog'
 // export * from './notion'
-// export * from './theme'

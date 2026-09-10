@@ -17,7 +17,7 @@ export const PostLock = props => {
       const tips = document.getElementById('tips')
       if (tips) {
         tips.innerHTML = ''
-        tips.innerHTML = `<div class='text-red-500 animate__shakeX animate__animated'>${locale.COMMON.PASSWORD_ERROR}</div>`
+        tips.innerHTML = `<div class='text-red-500 animate__animated animate__fadeIn'>${locale.COMMON.PASSWORD_ERROR}</div>`
       }
     }
   }

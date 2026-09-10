@@ -3,7 +3,7 @@ import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
 import { isBrowser } from '@/lib/utils'
 import { formatDateFmt } from '@/lib/utils/formatDate'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutArchive } from '@/themes/heo'
 import { useEffect } from 'react'
 
 /**
@@ -25,9 +25,7 @@ const ArchiveIndex = props => {
       }
     }
   }, [])
-
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutArchive' {...props} />
+  return <LayoutArchive {...props} />
 }
 
 export async function getStaticProps({ locale }) {
@@ -38,7 +36,7 @@ export async function getStaticProps({ locale }) {
   )
   delete props.allPages
 
-  const postsSortByDate = Object.create(props.posts)
+  const postsSortByDate = [...props.posts]
 
   postsSortByDate.sort((a, b) => {
     return b?.publishDate - a?.publishDate

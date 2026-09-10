@@ -2,12 +2,11 @@ import BLOG from '@/blog.config'
 import { getDataFromCache } from '@/lib/cache/cache_manager'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutSearch } from '@/themes/heo'
 import { getPageContentText } from '@/lib/db/notion/getPageContentText'
 
 const Index = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutSearch' {...props} />
+  return <LayoutSearch {...props} />
 }
 
 /**
@@ -40,6 +39,7 @@ export async function getStaticProps({ params: { keyword }, locale }) {
     props.posts = props.posts?.slice(0, POSTS_PER_PAGE)
   }
   props.keyword = keyword
+  delete props.allPages
   return {
     props,
     revalidate: process.env.EXPORT
@@ -75,18 +75,24 @@ async function filterByMemCache(allPosts, keyword) {
     const page = await getDataFromCache(cacheKey, true)
     const tagContent =
       post?.tags && Array.isArray(post?.tags) ? post?.tags.join(' ') : ''
-    const categoryContent =
-      post.category && Array.isArray(post.category)
-        ? post.category.join(' ')
-        : ''
-    const articleInfo = post.title + post.summary + tagContent + categoryContent
+    const categoryContent = Array.isArray(post?.category)
+      ? post.category.join(' ')
+      : post?.category || ''
+    const articleInfo = [
+      post?.title,
+      post?.summary,
+      tagContent,
+      categoryContent
+    ]
+      .filter(Boolean)
+      .join(' ')
     let hit = articleInfo.toLowerCase().indexOf(keyword) > -1
-    const contentTextList = getPageContentText(post, page)
+    const contentText = getPageContentText(post, page)
+    const contentTextList = contentText ? [contentText] : []
     // console.log('全文搜索缓存', cacheKey, page != null)
     post.results = []
     let hitCount = 0
-    for (const i of contentTextList) {
-      const c = contentTextList[i]
+    for (const c of contentTextList) {
       if (!c) {
         continue
       }
@@ -96,7 +102,10 @@ async function filterByMemCache(allPosts, keyword) {
         hitCount += 1
         post.results.push(c)
       } else {
-        if ((post.results.length - 1) / hitCount < 3 || i === 0) {
+        if (
+          (post.results.length - 1) / hitCount < 3 ||
+          c === contentTextList[0]
+        ) {
           post.results.push(c)
         }
       }

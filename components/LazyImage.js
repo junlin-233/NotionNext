@@ -24,23 +24,31 @@ export default function LazyImage({
   const maxWidth = siteConfig('IMAGE_COMPRESS_WIDTH')
   const defaultPlaceholderSrc = siteConfig('IMG_LAZY_LOAD_PLACEHOLDER')
   const imageRef = useRef(null)
+  const loadedRef = useRef(false)
   const [currentSrc, setCurrentSrc] = useState(
     placeholderSrc || defaultPlaceholderSrc
   )
+
+  const notifyLoaded = () => {
+    if (loadedRef.current) {
+      return
+    }
+
+    loadedRef.current = true
+    if (typeof onLoad === 'function') {
+      onLoad()
+    }
+  }
 
   /**
    * 占位图加载成功
    */
   const handleThumbnailLoaded = () => {
-    if (typeof onLoad === 'function') {
-      // onLoad() // 触发传递的onLoad回调函数
-    }
+    notifyLoaded()
   }
   // 原图加载完成
-  const handleImageLoaded = img => {
-    if (typeof onLoad === 'function') {
-      onLoad() // 触发传递的onLoad回调函数
-    }
+  const handleImageLoaded = () => {
+    notifyLoaded()
     // 移除占位符类名
     if (imageRef.current) {
       imageRef.current.classList.remove('lazy-image-placeholder')
@@ -67,6 +75,10 @@ export default function LazyImage({
   useEffect(() => {
     const adjustedImageSrc =
       adjustImgSize(src, maxWidth) || defaultPlaceholderSrc
+
+    if (!src) {
+      return undefined
+    }
 
     // 如果是优先级图片，直接加载
     if (priority) {
@@ -154,10 +166,6 @@ export default function LazyImage({
 
   if (id) imgProps.id = id
   if (title) imgProps.title = title
-
-  if (!src) {
-    return null
-  }
 
   return (
     <>

@@ -1,0 +1,117 @@
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fast {
+  animation-duration: 800ms;
+}
+
+.animate__faster {
+  animation-duration: 500ms;
+}
+
+.animate__fadeIn {
+  animation-name: animateFadeIn;
+}
+
+.animate__fadeOut {
+  animation-name: animateFadeOut;
+}
+
+.scroll-fade-in-up {
+  animation-name: animateFadeInUp;
+}
+
+.animate__slideInRight {
+  animation-name: animateSlideInRight;
+}
+
+.animate__slideOutRight {
+  animation-name: animateSlideOutRight;
+}
+
+.animate__slideInLeft {
+  animation-name: animateSlideInLeft;
+}
+
+.animate__slideOutLeft {
+  animation-name: animateSlideOutLeft;
+}
+
+@keyframes animateFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animateFadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animateSlideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animateSlideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes animateSlideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animateSlideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate__animated {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

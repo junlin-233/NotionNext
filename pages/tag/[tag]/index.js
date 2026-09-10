@@ -1,7 +1,7 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutPostList } from '@/themes/heo'
 
 /**
  * 标签下的文章列表
@@ -9,8 +9,7 @@ import { DynamicLayout } from '@/themes/theme'
  * @returns
  */
 const Tag = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutPostList' {...props} />
+  return <LayoutPostList {...props} />
 }
 
 export async function getStaticProps({ params: { tag }, locale }) {

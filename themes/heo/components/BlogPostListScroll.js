@@ -23,6 +23,7 @@ const BlogPostListScroll = ({
   const [page, updatePage] = useState(1)
   const POSTS_PER_PAGE = siteConfig('POSTS_PER_PAGE', null, NOTION_CONFIG)
   const postsToShow = getListByPage(posts, page, POSTS_PER_PAGE)
+  const targetRef = useRef(null)
 
   let hasMore = false
   if (posts) {
@@ -32,33 +33,33 @@ const BlogPostListScroll = ({
 
   const handleGetMore = () => {
     if (!hasMore) return
-    updatePage(page + 1)
+    updatePage(currentPage => currentPage + 1)
   }
 
   // 监听滚动自动分页加载
-  const scrollTrigger = () => {
-    requestAnimationFrame(() => {
-      const scrollS = window.scrollY + window.outerHeight
-      const clientHeight = targetRef
-        ? targetRef.current
-          ? targetRef.current.clientHeight
-          : 0
-        : 0
-      if (scrollS > clientHeight + 100) {
-        handleGetMore()
-      }
-    })
-  }
-
-  // 监听滚动
   useEffect(() => {
-    window.addEventListener('scroll', scrollTrigger)
-    return () => {
-      window.removeEventListener('scroll', scrollTrigger)
+    if (!hasMore || !targetRef.current || !window.IntersectionObserver) {
+      return
     }
-  })
 
-  const targetRef = useRef(null)
+    const sentinel = targetRef.current.querySelector('[data-load-more]')
+    if (!sentinel) {
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          handleGetMore()
+        }
+      },
+      { rootMargin: '320px 0px' }
+    )
+
+    observer.observe(sentinel)
+    return () => observer.disconnect()
+  }, [hasMore, page])
+
   const POST_TWO_COLS = siteConfig('HEO_HOME_POST_TWO_COLS', true, CONFIG)
   if (!postsToShow || postsToShow.length === 0) {
     return <BlogPostListEmpty currentSearch={currentSearch} />
@@ -82,6 +83,7 @@ const BlogPostListScroll = ({
         {/* 更多按钮 */}
         <div>
           <div
+            data-load-more
             onClick={() => {
               handleGetMore()
             }}

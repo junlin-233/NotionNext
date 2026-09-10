@@ -1,7 +1,7 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutSlug } from '@/themes/heo'
 
 /**
  * 注册
@@ -9,8 +9,7 @@ import { DynamicLayout } from '@/themes/theme'
  * @returns
  */
 const SignUp = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutSignUp' {...props} />
+  return <LayoutSlug {...props} />
 }
 
 export async function getStaticProps(req) {

@@ -1,5 +1,4 @@
 ARG NOTION_PAGE_ID
-ARG NEXT_PUBLIC_THEME
 
 FROM node:20-alpine AS base
 
@@ -7,13 +6,15 @@ FROM node:20-alpine AS base
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
+RUN corepack enable
 WORKDIR /app
-COPY package.json ./
+COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
 # 2. Rebuild the source code only when needed
 FROM base AS builder
 ARG NOTION_PAGE_ID
+ENV NOTION_PAGE_ID=$NOTION_PAGE_ID
 ENV NEXT_BUILD_STANDALONE=true
 
 WORKDIR /app

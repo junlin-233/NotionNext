@@ -1,7 +1,7 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { resolvePostProps } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutSlug } from '@/themes/heo'
 import PropTypes from 'prop-types'
 
 /**
@@ -11,19 +11,17 @@ import PropTypes from 'prop-types'
  * @returns
  */
 const Dashboard = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props?.NOTION_CONFIG)
-
   Dashboard.propTypes = {
     NOTION_CONFIG: PropTypes.object
   }
-  return <DynamicLayout theme={theme} layoutName='LayoutDashboard' {...props} />
+  return <LayoutSlug {...props} />
 }
 
 export async function getStaticProps({ locale }) {
   const prefix = 'dashboard'
   const props = await resolvePostProps({
     prefix,
-    locale,
+    locale
   })
 
   return {
@@ -31,10 +29,10 @@ export async function getStaticProps({ locale }) {
     revalidate: process.env.EXPORT
       ? undefined
       : siteConfig(
-        'NEXT_REVALIDATE_SECOND',
-        BLOG.NEXT_REVALIDATE_SECOND,
-        props.NOTION_CONFIG
-      )
+          'NEXT_REVALIDATE_SECOND',
+          BLOG.NEXT_REVALIDATE_SECOND,
+          props.NOTION_CONFIG
+        )
   }
 }
 

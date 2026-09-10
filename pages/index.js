@@ -6,7 +6,7 @@ import { generateRedirectJson } from '@/lib/utils/redirect'
 import { generateRobotsTxt } from '@/lib/utils/robots.txt'
 import { generateRss } from '@/lib/utils/rss'
 import { generateSitemapXml } from '@/lib/utils/sitemap.xml'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutIndex } from '@/themes/heo'
 
 const shouldGenerateStaticArtifacts =
   process.env.npm_lifecycle_event === 'build' ||
@@ -19,8 +19,7 @@ const shouldGenerateStaticArtifacts =
  * @returns
  */
 const Index = props => {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
+  return <LayoutIndex {...props} />
 }
 
 async function generateStaticArtifacts(props) {
@@ -70,7 +69,10 @@ export async function getStaticProps(req) {
       if (post.password && post.password !== '') {
         continue
       }
-      post.blockMap = await getPostBlocks(post.id, 'slug', POST_PREVIEW_LINES)
+      props.posts[i] = {
+        ...post,
+        blockMap: await getPostBlocks(post.id, 'slug', POST_PREVIEW_LINES)
+      }
     }
   }
 

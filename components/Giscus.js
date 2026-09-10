@@ -2,7 +2,6 @@ import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import { loadExternalResource } from '@/lib/utils'
 import { useEffect } from 'react'
-// import Giscus from '@giscus/react'
 
 /**
  * Giscus评论 @see https://giscus.app/zh-CN

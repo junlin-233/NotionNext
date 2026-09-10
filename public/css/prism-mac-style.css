@@ -12,10 +12,10 @@
 }
 
 .collapse-wrapper .code-toolbar {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.toolbar-item{
+.toolbar-item {
   white-space: nowrap;
 }
 
@@ -25,9 +25,8 @@
 
 pre[class*='language-'] {
   margin-top: 0rem !important;
-  // margin-bottom: 0rem !important;
+  /* margin-bottom: 0rem !important; */
   padding-top: 1.5rem !important;
-
 }
 
 .pre-mac {

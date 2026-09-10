@@ -18,17 +18,38 @@ const NotionPage = ({ post, className }) => {
   const POST_DISABLE_GALLERY_CLICK = siteConfig('POST_DISABLE_GALLERY_CLICK')
   const POST_DISABLE_DATABASE_CLICK = siteConfig('POST_DISABLE_DATABASE_CLICK')
   const SPOILER_TEXT_TAG = siteConfig('SPOILER_TEXT_TAG')
+  const IMAGE_ZOOM_IN_WIDTH = siteConfig('IMAGE_ZOOM_IN_WIDTH', 1200)
+  const zoomRef = useRef(null)
 
-  const zoom =
-    isBrowser &&
-    mediumZoom({
-      //   container: '.notion-viewport',
+  useEffect(() => {
+    if (!isBrowser || !POST_DISABLE_GALLERY_CLICK) {
+      return
+    }
+
+    const zoom = mediumZoom({
       background: 'rgba(0, 0, 0, 0.2)',
       margin: getMediumZoomMargin()
     })
 
-  const zoomRef = useRef(zoom ? zoom.clone() : null)
-  const IMAGE_ZOOM_IN_WIDTH = siteConfig('IMAGE_ZOOM_IN_WIDTH', 1200)
+    const handleZoomOpened = event => {
+      const zoomedImage = event?.detail?.zoom?.getZoomedImage?.()
+      const src = zoomedImage?.getAttribute('src')
+
+      if (src && zoomedImage) {
+        zoomedImage.setAttribute('src', compressImage(src, IMAGE_ZOOM_IN_WIDTH))
+      }
+    }
+
+    zoomRef.current = zoom
+    zoom.on('opened', handleZoomOpened)
+
+    return () => {
+      zoom.off('opened', handleZoomOpened)
+      zoom.detach()
+      zoomRef.current = null
+    }
+  }, [IMAGE_ZOOM_IN_WIDTH, POST_DISABLE_GALLERY_CLICK])
+
   // 页面首次打开时执行的勾子
   useEffect(() => {
     // 检测当前的url并自动滚动到对应目标
@@ -37,10 +58,12 @@ const NotionPage = ({ post, className }) => {
 
   // 页面文章发生变化时会执行的勾子
   useEffect(() => {
+    let galleryTimer
+
     // 相册视图点击禁止跳转，只能放大查看图片
     if (POST_DISABLE_GALLERY_CLICK) {
       // 针对页面中的gallery视图，点击后是放大图片还是跳转到gallery的内部页面
-      processGalleryImg(zoomRef?.current)
+      galleryTimer = processGalleryImg(zoomRef.current)
     }
 
     // 页内数据库点击禁止跳转，只能查看
@@ -48,54 +71,27 @@ const NotionPage = ({ post, className }) => {
       processDisableDatabaseUrl()
     }
 
-    /**
-     * 放大查看图片时替换成高清图像
-     */
-    const observer = new MutationObserver((mutationsList, observer) => {
-      mutationsList.forEach(mutation => {
-        if (
-          mutation.type === 'attributes' &&
-          mutation.attributeName === 'class'
-        ) {
-          if (mutation.target.classList.contains('medium-zoom-image--opened')) {
-            // 等待动画完成后替换为更高清的图像
-            setTimeout(() => {
-              // 获取该元素的 src 属性
-              const src = mutation?.target?.getAttribute('src')
-              //   替换为更高清的图像
-              mutation?.target?.setAttribute(
-                'src',
-                compressImage(src, IMAGE_ZOOM_IN_WIDTH)
-              )
-            }, 800)
-          }
-        }
-      })
-    })
-
-    // 监视页面元素和属性变化
-    observer.observe(document.body, {
-      attributes: true,
-      subtree: true,
-      attributeFilter: ['class']
-    })
-
     return () => {
-      observer.disconnect()
+      if (galleryTimer) {
+        window.clearTimeout(galleryTimer)
+      }
     }
-  }, [post])
+  }, [
+    IMAGE_ZOOM_IN_WIDTH,
+    POST_DISABLE_DATABASE_CLICK,
+    POST_DISABLE_GALLERY_CLICK,
+    post
+  ])
 
   useEffect(() => {
     // Spoiler文本功能
     if (SPOILER_TEXT_TAG) {
-      import('lodash/escapeRegExp').then(escapeRegExp => {
-        Promise.all([
-          loadExternalResource('/js/spoilerText.js', 'js'),
-          loadExternalResource('/css/spoiler-text.css', 'css')
-        ]).then(() => {
-          window.textToSpoiler &&
-            window.textToSpoiler(escapeRegExp.default(SPOILER_TEXT_TAG))
-        })
+      const escapedTag = escapeRegExp(SPOILER_TEXT_TAG)
+      Promise.all([
+        loadExternalResource('/js/spoilerText.js', 'js'),
+        loadExternalResource('/css/spoiler-text.css', 'css')
+      ]).then(() => {
+        window.textToSpoiler && window.textToSpoiler(escapedTag)
       })
     }
 
@@ -114,7 +110,7 @@ const NotionPage = ({ post, className }) => {
 
     // 清理定时器，防止组件卸载时执行
     return () => clearTimeout(timer)
-  }, [post])
+  }, [SPOILER_TEXT_TAG, post])
 
   // const cleanBlockMap = cleanBlocksWithWarn(post?.blockMap);
   // console.log('NotionPage render with post:', post);
@@ -143,7 +139,6 @@ const NotionPage = ({ post, className }) => {
   )
 }
 
-
 /**
  * 页面的数据库链接禁止跳转，只能查看
  */
@@ -160,15 +155,10 @@ const processDisableDatabaseUrl = () => {
  * gallery视图，点击后是放大图片还是跳转到gallery的内部页面
  */
 const processGalleryImg = zoom => {
-  setTimeout(() => {
+  return window.setTimeout(() => {
     if (isBrowser) {
-      const imgList = document?.querySelectorAll(
-        '.notion-collection-card-cover img'
-      )
-      if (imgList && zoom) {
-        for (let i = 0; i < imgList.length; i++) {
-          zoom.attach(imgList[i])
-        }
+      if (zoom) {
+        zoom.attach('.notion-collection-card-cover img')
       }
 
       const cards = document.getElementsByClassName('notion-collection-card')
@@ -227,6 +217,10 @@ function getMediumZoomMargin() {
   } else {
     return 72
   }
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
 // 代码

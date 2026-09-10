@@ -52,3 +52,7 @@ package-lock.json
 # yarn.lock
 
 .notion-api-lock
+*.tsbuildinfo
+quality-report.json
+validation-report.json
+health-report.json

@@ -8,7 +8,7 @@ import CONFIG from '../config'
  * @returns
  */
 export default function TouchMeCard() {
-  if (!JSON.parse(siteConfig('HEO_SOCIAL_CARD', null, CONFIG))) {
+  if (!siteConfig('HEO_SOCIAL_CARD', null, CONFIG)) {
     return <></>
   }
   return (

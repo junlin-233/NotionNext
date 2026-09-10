@@ -136,7 +136,7 @@ function TagsGroupBar() {
                   'tags-group-icon w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
                 }>
                 <LazyImage
-                  priority={true}
+                  priority={index < 2}
                   src={g.img_1}
                   title={g.title_1}
                   className='w-2/3 hidden xl:block'
@@ -148,7 +148,7 @@ function TagsGroupBar() {
                   'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
                 }>
                 <LazyImage
-                  priority={true}
+                  priority={index < 2}
                   src={g.img_2}
                   title={g.title_2}
                   className='w-2/3 hidden xl:block'
@@ -239,7 +239,9 @@ function TopGroup(props) {
         className='w-full flex space-x-3 xl:space-x-0 xl:grid xl:grid-cols-3 xl:gap-3 xl:h-[342px]'>
         {topPosts?.map((p, index) => {
           return (
-            <SmartLink href={`${siteConfig('SUB_PATH', '')}/${p?.slug}`} key={index}>
+            <SmartLink
+              href={`${siteConfig('SUB_PATH', '')}/${p?.slug}`}
+              key={index}>
               <div className='cursor-pointer h-[164px] group relative flex flex-col w-52 xl:w-full overflow-hidden shadow bg-white dark:bg-black dark:text-white rounded-xl'>
                 <LazyImage
                   priority={index === 0}
@@ -281,18 +283,14 @@ function getTopPosts({ latestPosts, allNavPages }) {
   let sortPosts = []
 
   // 排序方式
-  if (
-    JSON.parse(
-      siteConfig('HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME', null, CONFIG)
-    )
-  ) {
-    sortPosts = Object.create(allNavPages).sort((a, b) => {
+  if (siteConfig('HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME', null, CONFIG)) {
+    sortPosts = [...allNavPages].sort((a, b) => {
       const dateA = new Date(a?.lastEditedDate)
       const dateB = new Date(b?.lastEditedDate)
       return dateB - dateA
     })
   } else {
-    sortPosts = Object.create(allNavPages)
+    sortPosts = [...allNavPages]
   }
 
   const topPosts = []

@@ -1,7 +1,5 @@
-import useWindowSize from '@/hooks/useWindowSize'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
-import { THEMES, saveDarkModeToLocalStorage } from '@/themes/theme'
 import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
@@ -14,11 +12,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 export default function CustomContextMenu(props) {
   const [position, setPosition] = useState({ x: '0px', y: '0px' })
   const [show, setShow] = useState(false)
-  const { isDarkMode, updateDarkMode, locale } = useGlobal()
+  const { isDarkMode, toggleDarkMode, locale } = useGlobal()
   const menuRef = useRef(null)
-  const windowSize = useWindowSize()
   const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
 
   const { allNavPages } = props
   const router = useRouter()
@@ -32,26 +28,24 @@ export default function CustomContextMenu(props) {
   }
 
   useLayoutEffect(() => {
-    setWidth(menuRef.current.offsetWidth)
-    setHeight(menuRef.current.offsetHeight)
+    if (menuRef.current) {
+      setWidth(menuRef.current.offsetWidth)
+    }
   }, [])
 
   useEffect(() => {
     setShow(false)
-  }, [router])
+  }, [router.asPath])
 
   useEffect(() => {
     const handleContextMenu = event => {
       event.preventDefault()
       // 计算点击位置加菜单宽高是否超出屏幕，如果超出则贴边弹出
       const x =
-        event.clientX < windowSize.width - width
+        event.clientX < window.innerWidth - width
           ? event.clientX
-          : windowSize.width - width
-      const y =
-        event.clientY < windowSize.height - height
-          ? event.clientY
-          : windowSize.height - height
+          : window.innerWidth - width
+      const y = Math.min(event.clientY, window.innerHeight - 160)
       setPosition({ y: `${y}px`, x: `${x}px` })
       setShow(true)
     }
@@ -70,7 +64,7 @@ export default function CustomContextMenu(props) {
       window.removeEventListener('contextmenu', handleContextMenu)
       window.removeEventListener('click', handleClick)
     }
-  }, [windowSize])
+  }, [width])
 
   function handleBack() {
     window.history.back()
@@ -102,28 +96,22 @@ export default function CustomContextMenu(props) {
   }
 
   /**
-   * 切换主题
-   */
-  function handleChangeTheme() {
-    const randomTheme = THEMES[Math.floor(Math.random() * THEMES.length)] // 从THEMES数组中 随机取一个主题
-    const query = router.query
-    query.theme = randomTheme
-    router.push({ pathname: router.pathname, query })
-  }
-
-  /**
    * 复制内容
    */
   function handleCopy() {
     const selectedText = document.getSelection().toString()
     if (selectedText) {
-      const tempInput = document.createElement('input');
-      tempInput.value = selectedText;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      document.execCommand('copy');
-      if (tempInput && tempInput.parentNode && tempInput.parentNode.contains(tempInput)) {
-        tempInput.parentNode.removeChild(tempInput);
+      const tempInput = document.createElement('input')
+      tempInput.value = selectedText
+      document.body.appendChild(tempInput)
+      tempInput.select()
+      document.execCommand('copy')
+      if (
+        tempInput &&
+        tempInput.parentNode &&
+        tempInput.parentNode.contains(tempInput)
+      ) {
+        tempInput.parentNode.removeChild(tempInput)
       }
       // alert("Text copied: " + selectedText);
     } else {
@@ -132,12 +120,7 @@ export default function CustomContextMenu(props) {
   }
 
   function handleChangeDarkMode() {
-    const newStatus = !isDarkMode
-    saveDarkModeToLocalStorage(newStatus)
-    updateDarkMode(newStatus)
-    const htmlElement = document.getElementsByTagName('html')[0]
-    htmlElement.classList?.remove(newStatus ? 'light' : 'dark')
-    htmlElement.classList?.add(newStatus ? 'dark' : 'light')
+    toggleDarkMode()
   }
 
   // 一些配置变量
@@ -156,9 +139,6 @@ export default function CustomContextMenu(props) {
   )
   const CUSTOM_RIGHT_CLICK_CONTEXT_MENU_DARK_MODE = siteConfig(
     'CUSTOM_RIGHT_CLICK_CONTEXT_MENU_DARK_MODE'
-  )
-  const CUSTOM_RIGHT_CLICK_CONTEXT_MENU_THEME_SWITCH = siteConfig(
-    'CUSTOM_RIGHT_CLICK_CONTEXT_MENU_THEME_SWITCH'
   )
   return (
     <div
@@ -257,18 +237,6 @@ export default function CustomContextMenu(props) {
               <div className='whitespace-nowrap'>
                 {' '}
                 {isDarkMode ? locale.MENU.LIGHT_MODE : locale.MENU.DARK_MODE}
-              </div>
-            </div>
-          )}
-
-          {CUSTOM_RIGHT_CLICK_CONTEXT_MENU_THEME_SWITCH && (
-            <div
-              onClick={handleChangeTheme}
-              title={locale.MENU.THEME_SWITCH}
-              className='w-full px-2 h-10 flex justify-start items-center flex-nowrap cursor-pointer hover:bg-blue-600 hover:text-white rounded-lg duration-200 transition-all'>
-              <i className='fa-solid fa-palette mr-2' />
-              <div className='whitespace-nowrap'>
-                {locale.MENU.THEME_SWITCH}
               </div>
             </div>
           )}

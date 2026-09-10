@@ -1,7 +1,7 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
-import { DynamicLayout } from '@/themes/theme'
+import { LayoutCategoryIndex } from '@/themes/heo'
 
 /**
  * 分类首页
@@ -9,14 +9,14 @@ import { DynamicLayout } from '@/themes/theme'
  * @returns
  */
 export default function Category(props) {
-  const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return (
-    <DynamicLayout theme={theme} layoutName='LayoutCategoryIndex' {...props} />
-  )
+  return <LayoutCategoryIndex {...props} />
 }
 
 export async function getStaticProps({ locale }) {
-  const props = await fetchGlobalAllData({ from: 'category-index-props', locale })
+  const props = await fetchGlobalAllData({
+    from: 'category-index-props',
+    locale
+  })
   delete props.allPages
   return {
     props,
