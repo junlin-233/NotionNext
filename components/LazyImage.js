@@ -118,6 +118,26 @@ export default function LazyImage({
     }
   }, [adjustedImageSrc, priority, src])
 
+  // 图片可能在 React 接管之前就已经加载完（SSR 输出的 img 标签、或浏览器缓存命中），
+  // 这种情况下 onLoad 不会再触发，骨架底色会一直留着，这里补一次检查。
+  useEffect(() => {
+    const image = imageRef.current
+    if (!image || imageLoaded) {
+      return undefined
+    }
+
+    const syncIfLoaded = () => {
+      if (image.complete && image.naturalWidth > 0) {
+        setImageLoaded(true)
+        image.classList.remove('lazy-image-placeholder')
+      }
+    }
+
+    syncIfLoaded()
+    const timer = setTimeout(syncIfLoaded, 300)
+    return () => clearTimeout(timer)
+  }, [currentSrc, imageLoaded])
+
   const notifyLoaded = () => {
     if (loadedRef.current) {
       return

@@ -300,7 +300,9 @@ img {
 .lazy-image-placeholder {
   background: linear-gradient(90deg, #0001 33%, #0005 50%, #0001 66%) #f2f2f2;
   background-size: 300% 100%;
-  animation: l1 1s infinite linear;
+  /* 这里原本是 animation: l1 1s infinite linear，骨架流光无限循环。
+     首页二十多张图（含视口外还没开始加载的）会同时跑这个动画，
+     白白占用渲染和 GPU。改成静态骨架，加载完再靠 JS 摘掉底色。 */
 }
 @keyframes l1 {
   0% {
