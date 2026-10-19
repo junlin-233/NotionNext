@@ -7,7 +7,8 @@ import { useEffect, useRef, useState } from 'react'
  * @returns
  */
 export default function Live2D() {
-  const showPet = siteConfig('WIDGET_PET')
+  const petConfig = siteConfig('WIDGET_PET')
+  const showPet = petConfig === true || petConfig === 'true'
   const petLink = siteConfig('WIDGET_PET_LINK')
   const [shouldLoad, setShouldLoad] = useState(false)
   const [initialized, setInitialized] = useState(false)
