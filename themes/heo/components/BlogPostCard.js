@@ -34,7 +34,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
         data-reveal-delay='.2s'
         className={
           (POST_TWO_COLS ? '2xl:h-96 2xl:flex-col' : '') +
-          ' scroll-reveal scroll-fade-in-up border bg-white dark:bg-[#1e1e1e] flex mb-4 flex-col h-[23rem] md:h-52 md:flex-row  group w-full dark:border-gray-600 hover:border-indigo-600  dark:hover:border-yellow-600 duration-300 transition-colors justify-between overflow-hidden rounded-xl'
+          ' scroll-reveal scroll-fade-in-up border bg-white dark:bg-[#1e1e1e] flex mb-4 flex-col h-[23rem] md:h-52 md:flex-row  group w-full dark:border-gray-600 hover:border-indigo-600  dark:hover:border-yellow-600 duration-300 transition-colors justify-between overflow-hidden rounded-xl relative'
         }>
         {/* 图片封面 */}
         {showPageCover && (
@@ -68,18 +68,20 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 <SmartLink
                   passHref
                   href={`/category/${normalizedPost.category}`}
-                  className='cursor-pointer text-xs font-normal menu-link '>
+                  className='relative z-10 cursor-pointer text-xs font-normal menu-link '>
                   {normalizedPost.category}
                 </SmartLink>
               </div>
             )}
 
-            {/* 标题和图标 */}
+            {/* 标题和图标。
+                标题链接的 ::after 铺满整张卡片，这样点卡片任意空白处都能进文章；
+                分类和标签链接各自加了 relative + z-10，仍然点得到自己。 */}
             <SmartLink
               href={normalizedPost?.href}
               passHref
               className={
-                ' group-hover:text-indigo-700 dark:hover:text-yellow-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100  line-clamp-2 replace cursor-pointer text-xl font-extrabold leading-tight'
+                " group-hover:text-indigo-700 dark:hover:text-yellow-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100  line-clamp-2 replace cursor-pointer text-xl font-extrabold leading-tight after:absolute after:inset-0 after:content-['']"
               }>
               {siteConfig('POST_TITLE_ICON') && (
                 <NotionIcon

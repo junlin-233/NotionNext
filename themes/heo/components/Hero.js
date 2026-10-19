@@ -20,7 +20,10 @@ const Hero = props => {
   return (
     <div
       id='hero-wrapper'
-      className='recent-top-post-group w-full overflow-hidden select-none px-5 mb-4'>
+      /* Hero 渲染在 <header> 里，不经过 main 的 max-w + px-5 约束，
+         大屏时会比下面的正文卡片各宽出 20px，看起来左右都没对齐。
+         这里补上和 main 一致的宽度规则（86rem 居中 + 20px 内边距）。 */
+      className='recent-top-post-group w-full max-w-[86rem] mx-auto overflow-hidden select-none px-5 mb-4'>
       <div
         id='hero'
         style={{ zIndex: 1 }}
