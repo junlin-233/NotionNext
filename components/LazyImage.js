@@ -75,6 +75,10 @@ export default function LazyImage({
   const fallbackSrc = placeholderSrc || defaultPlaceholderSrc
   const imageRef = useRef(null)
   const loadedRef = useRef(false)
+  // 图片加载完就把骨架动画摘掉。之前只在 onLoad 里改 DOM class，
+  // 组件一旦重新渲染，className 又把 lazy-image-placeholder 写回去，
+  // 结果加载完的图还在跑 1 秒循环的流光动画，几十张一起跑白白占渲染。
+  const [imageLoaded, setImageLoaded] = useState(false)
   const [currentSrc, setCurrentSrc] = useState(
     placeholderSrc || defaultPlaceholderSrc
   )
@@ -83,6 +87,7 @@ export default function LazyImage({
 
   useEffect(() => {
     loadedRef.current = false
+    setImageLoaded(false)
 
     if (!src) {
       return undefined
@@ -126,10 +131,11 @@ export default function LazyImage({
 
   const handleImageLoaded = event => {
     notifyLoaded()
+    setImageLoaded(true)
 
-    if (event.currentTarget.src === adjustedImageSrc) {
-      event.currentTarget.classList.remove('lazy-image-placeholder')
-    }
+    // 不比较 src：src 被浏览器转成绝对地址后和 adjustedImageSrc 对不上，
+    // 原来的比较会让 class 永远摘不掉。
+    event.currentTarget?.classList?.remove('lazy-image-placeholder')
   }
 
   const handleImageError = event => {
@@ -154,7 +160,7 @@ export default function LazyImage({
     'data-src': src,
     onLoad: handleImageLoaded,
     onError: handleImageError,
-    className: `${className || ''} lazy-image-placeholder`,
+    className: `${className || ''}${imageLoaded ? '' : ' lazy-image-placeholder'}`,
     style,
     width: width || 'auto',
     height: height || 'auto',
