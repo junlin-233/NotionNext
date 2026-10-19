@@ -13,7 +13,6 @@ export function AnalyticsCard(props) {
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) // 将毫秒数差值转换为天数差值
   const postCountTitle = siteConfig('HEO_POST_COUNT_TITLE', null, CONFIG)
   const siteTimeTitle = siteConfig('HEO_SITE_TIME_TITLE', null, CONFIG)
-  const siteVisitTitle = siteConfig('HEO_SITE_VISIT_TITLE', null, CONFIG)
   const siteVisitorTitle = siteConfig('HEO_SITE_VISITOR_TITLE', null, CONFIG)
 
   const { postCount } = props
@@ -29,12 +28,6 @@ export function AnalyticsCard(props) {
                 <div className='flex justify-between'>
                     <div>{siteTimeTitle}</div>
                     <div>{diffDays} 天</div>
-                </div>
-            </div>
-            <div className='hidden busuanzi_container_page_pv'>
-                <div className='flex justify-between'>
-                    <div>{siteVisitTitle}</div>
-                    <div className='busuanzi_value_page_pv' />
                 </div>
             </div>
             <div className='hidden busuanzi_container_site_uv'>
