@@ -16,7 +16,12 @@ import SlideOver from './SlideOver'
  * @returns
  */
 const Header = props => {
-  const [fixedNav, setFixedNav] = useState(false)
+  // 文章页的导航栏要浮在封面上，一上来就该是 fixed。
+  // 原来初始值固定写死 false，服务端渲染出来 nav 占着 64px，
+  // 等浏览器接管后 scrollTrigger 才把它切成 fixed，这 64px 一消失，
+  // 整页内容就往上跳一次（CLS 的主要来源）。
+  // 用 post 是否存在判断文章页，让首屏渲染直接就是最终状态。
+  const [fixedNav, setFixedNav] = useState(Boolean(props?.post))
   const [textWhite, setTextWhite] = useState(false)
   const [navBgWhite, setBgWhite] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -139,10 +144,12 @@ const Header = props => {
         }
       `}</style>
 
-      {/* fixed时留白高度 */}
-      {fixedNav && !document?.querySelector('#post-bg') && (
-        <div className='h-16'></div>
-      )}
+      {/* fixed时留白高度。
+          文章页有 #post-bg 封面，导航栏浮在图上不占位，所以不留白。
+          服务端没有 document，用 typeof 判断，否则这里会抛 ReferenceError。 */}
+      {fixedNav &&
+        typeof document !== 'undefined' &&
+        !document.querySelector('#post-bg') && <div className='h-16'></div>}
 
       {/* 顶部导航菜单栏 */}
       <nav
