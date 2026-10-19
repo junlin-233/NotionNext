@@ -1,10 +1,10 @@
 const { toBoolean, toStringArray } = require('./env-tools')
 
-const defaultFontUrls = [
-  'https://fonts.googleapis.com/css?family=Bitter:300,400,700&display=swap',
-  'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap',
-  'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&display=swap'
-]
+// 默认不加载任何远程字体。
+// 原因：Noto Sans SC / Noto Serif SC 各 4 个字重，会给首屏塞进约 900KB 的阻塞 CSS
+// 和 800 多个 woff2 分片，而字体栈首位本来就是系统字体 PingFang SC，这些下载基本用不上。
+// 需要自定义字体时，用 NEXT_PUBLIC_FONT_URL 传一个字体 CSS 地址即可覆盖。
+const defaultFontUrls = []
 
 const defaultSansFonts = [
   '"PingFang SC"',

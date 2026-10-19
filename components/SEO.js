@@ -189,7 +189,10 @@ const SEO = props => {
         }}
       />
 
-      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      {/* 没有用到 Google Fonts 时就别让浏览器去解析它的 DNS，国内这一下会慢 */}
+      {hasGoogleFonts && (
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      )}
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       <link rel='dns-prefetch' href='//www.googletagmanager.com' />
 

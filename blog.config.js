@@ -9,9 +9,12 @@ const BLOG = {
   SINCE: toNumber(process.env.NEXT_PUBLIC_SINCE, 2026),
 
   PSEUDO_STATIC: toBoolean(process.env.NEXT_PUBLIC_PSEUDO_STATIC, false),
+  // 页面缓存有效期。原来 60 秒，等于每分钟都要找 Notion 重新生成一次，
+  // 每次生成要串行打好几轮 Notion 接口，第一个访客就得等 5 秒以上。
+  // 改到 600 秒：发布新文章最多 10 分钟生效，换取绝大多数请求直接命中缓存。
   NEXT_REVALIDATE_SECOND: toNumber(
     process.env.NEXT_PUBLIC_REVALIDATE_SECOND,
-    60
+    600
   ),
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light',
   APPEARANCE_DARK_TIME: toNumberArray(
