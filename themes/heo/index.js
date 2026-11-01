@@ -37,6 +37,7 @@ import PostHeader from './components/PostHeader'
 import { PostLock } from './components/PostLock'
 import PostRecommend from './components/PostRecommend'
 import SearchNav from './components/SearchNav'
+import SearchResultsPagefind from './components/SearchResultsPagefind'
 import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { Style } from './style'
@@ -201,13 +202,7 @@ const LayoutSearch = props => {
         {!currentSearch ? (
           <SearchNav {...props} />
         ) : (
-          <div id='posts-wrapper'>
-            {siteConfig('POST_LIST_STYLE') === 'page' ? (
-              <BlogPostListPage {...props} />
-            ) : (
-              <BlogPostListScroll {...props} />
-            )}
-          </div>
+          <SearchResultsPagefind keyword={currentSearch} />
         )}
       </div>
     </div>

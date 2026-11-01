@@ -1,1 +1,21 @@
 .next*
+node_modules
+
+# Notion 文件缓存（永不过期，绝不能打进镜像，否则线上永久读旧数据）
+data.json
+
+# 构建期临时产物
+.pagefind-cache
+.snapshot
+
+# 本地/编辑器
+.git
+.github
+.workbuddy
+.vscode
+.idea
+*.log
+.env.local
+.env
+coverage
+lhci.db*

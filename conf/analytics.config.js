@@ -1,4 +1,4 @@
-const { toBoolean } = require('./env-tools')
+const { toBoolean, toNumber } = require('./env-tools')
 
 /**
  * 站点统计插件
@@ -7,8 +7,8 @@ module.exports = {
   ANALYTICS_VERCEL: toBoolean(process.env.NEXT_PUBLIC_ANALYTICS_VERCEL, false), // vercel自带的统计
   ANALYTICS_BUSUANZI_ENABLE: toBoolean(
     process.env.NEXT_PUBLIC_ANALYTICS_BUSUANZI_ENABLE,
-    true
-  ), // 展示网站阅读量、访问数
+    false
+  ), // 展示网站阅读量、访问数（已由 Umami 自托管统计替代，默认关闭）
   ANALYTICS_BAIDU_ID: process.env.NEXT_PUBLIC_ANALYTICS_BAIDU_ID || '', // e.g 只需要填写百度统计的id，[baidu_id] -> https://hm.baidu.com/hm.js?[baidu_id]
   ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // 只需要填写站长统计的id, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id=[cnzz_id]&web_id=[cnzz_id]
   ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || '', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
@@ -37,9 +37,13 @@ module.exports = {
   // 微软 Clarity 站点分析
   CLARITY_ID: process.env.NEXT_PUBLIC_CLARITY_ID || null, // 只需要复制Clarity脚本中的ID部分，ID是一个十位的英文数字组合
 
-  UMAMI_HOST:
-    process.env.NEXT_PUBLIC_UMAMI_HOST || 'https://cloud.umami.is/script.js', // umami的服务地址
-  UMAMI_ID: process.env.NEXT_PUBLIC_UMAMI_ID || '' // umami的id
-
-  // <---- 站点统计
+  // Umami 自托管统计（推荐，替代 busuanzi）
+  // UMAMI_HOST 为自托管实例地址（不带末尾斜杠），如 https://umami.junlin-233.top
+  UMAMI_HOST: process.env.NEXT_PUBLIC_UMAMI_HOST || '',
+  // UMAMI_ID 为该实例中本站的 website ID
+  UMAMI_ID: process.env.NEXT_PUBLIC_UMAMI_ID || '',
+  // 服务端 API Token（仅服务端使用，用于阅读数代理接口，不要加 NEXT_PUBLIC 前缀）
+  UMAMI_API_TOKEN: process.env.UMAMI_API_TOKEN || '',
+  // 统计起点（毫秒时间戳），默认 2020-01-01，阅读量统计的时间范围下限
+  UMAMI_STATS_SINCE: toNumber(process.env.UMAMI_STATS_SINCE, 1577836800000)
 }

@@ -61,6 +61,17 @@ class MyDocument extends Document {
             </>
           )}
 
+          {/* Umami 自托管统计脚本 */}
+          {BLOG.UMAMI_HOST && BLOG.UMAMI_ID && (
+            <script
+              id='umami-script'
+              async
+              defer
+              src={`${BLOG.UMAMI_HOST.replace(/\/$/, '')}/script.js`}
+              data-website-id={BLOG.UMAMI_ID}
+            />
+          )}
+
           {/* 预先设置深色模式，避免闪烁 */}
           <script dangerouslySetInnerHTML={{ __html: darkModeScript }} />
         </Head>

@@ -8,10 +8,6 @@ import LatestPostsGroupMini from './LatestPostsGroupMini'
 import TagGroups from './TagGroups'
 import TouchMeCard from './TouchMeCard'
 
-const FaceBookPage = dynamic(() => import('@/components/FacebookPage'), {
-  ssr: false
-})
-
 /**
  * Hexo主题右侧栏
  * @param {*} props
@@ -50,7 +46,6 @@ export default function SideRight(props) {
 
         {rightAreaSlot}
 
-        <FaceBookPage />
         <Live2D />
 
         {/* 标签和成绩 */}

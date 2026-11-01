@@ -187,6 +187,29 @@ const nextConfig = {
                 key: 'Access-Control-Allow-Headers',
                 value:
                   'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+              },
+              // CSP 观察模式：先只报告不拦截，观察一周控制台/上报无异常后再转强制
+              // 转强制时把 key 改为 Content-Security-Policy
+              {
+                key: 'Content-Security-Policy-Report-Only',
+                value: [
+                  "default-src 'self'",
+                  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://npm.elemecdn.com https://cdnjs.cloudflare.com https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com https://hm.baidu.com https://s9.cnzz.com https://s4.zstatic.net",
+                  "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://npm.elemecdn.com https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com",
+                  "img-src 'self' data: blob: https:",
+                  "font-src 'self' data: https:",
+                  "connect-src 'self' https:",
+                  "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://player.bilibili.com",
+                  "media-src 'self' https:",
+                  "object-src 'none'",
+                  "base-uri 'self'",
+                  "form-action 'self'",
+                  process.env.CSP_REPORT_URI
+                    ? `report-uri ${process.env.CSP_REPORT_URI}`
+                    : ''
+                ]
+                  .filter(Boolean)
+                  .join('; ')
               }
               // 安全头部 相关配置，谨慎开启
               //   { key: 'X-Frame-Options', value: 'DENY' },

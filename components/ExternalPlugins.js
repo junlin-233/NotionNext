@@ -21,6 +21,9 @@ const ExternalPlugin = props => {
     null,
     NOTION_CONFIG
   )
+  const ANALYTICS_UMAMI_ENABLE = Boolean(
+    siteConfig('UMAMI_HOST') && siteConfig('UMAMI_ID')
+  )
   const CUSTOM_RIGHT_CLICK_CONTEXT_MENU = siteConfig(
     'CUSTOM_RIGHT_CLICK_CONTEXT_MENU',
     null,
@@ -73,6 +76,7 @@ const ExternalPlugin = props => {
   return (
     <>
       <GlobalStyle />
+      {ANALYTICS_UMAMI_ENABLE && <UmamiAnalytics />}
       {ANALYTICS_BUSUANZI_ENABLE && <Busuanzi />}
       {CUSTOM_RIGHT_CLICK_CONTEXT_MENU && <CustomContextMenu {...props} />}
       {!CAN_COPY && <DisableCopy />}
@@ -82,6 +86,9 @@ const ExternalPlugin = props => {
 }
 
 const Busuanzi = dynamic(() => import('@/components/Busuanzi'), { ssr: false })
+const UmamiAnalytics = dynamic(() => import('@/components/UmamiAnalytics'), {
+  ssr: false
+})
 const CustomContextMenu = dynamic(
   () => import('@/components/CustomContextMenu'),
   { ssr: false }

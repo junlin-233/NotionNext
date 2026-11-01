@@ -1,7 +1,6 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData, getPostBlocks } from '@/lib/db/SiteDataApi'
-import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
 import { generateRedirectJson } from '@/lib/utils/redirect'
 import { generateRobotsTxt } from '@/lib/utils/robots.txt'
 import { generateRss } from '@/lib/utils/rss'
@@ -80,8 +79,6 @@ export async function getStaticProps(req) {
     await generateStaticArtifacts(props)
   }
 
-  // 妫€鏌ユ暟鎹槸鍚﹂渶瑕佷粠algolia鍒犻櫎
-  await checkDataFromAlgolia(props)
 
   delete props.allPages
 

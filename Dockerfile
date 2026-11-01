@@ -23,6 +23,13 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN yarn build
 
+# 生成 Pagefind 搜索索引：把静态资源放进 standalone 目录后临时起服爬取
+# 索引失败不阻断镜像构建，站点搜索会提示索引未生成
+RUN cp -r public .next/standalone/public \
+    && cp -r .next/static .next/standalone/.next/static \
+    && (yarn build:search || echo "warn: pagefind index skipped") \
+    && rm -rf .next/standalone/public .next/standalone/.next/static
+
 # 3. Production image, copy all the files and run next
 FROM base AS runner
 ENV NODE_ENV=production

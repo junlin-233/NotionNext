@@ -1,3 +1,4 @@
+import 'katex/dist/katex.min.css'
 import * as React from 'react'
 
 import Katex from '@/components/KatexReact'

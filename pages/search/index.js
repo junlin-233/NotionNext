@@ -50,11 +50,9 @@ export async function getStaticProps({ locale }) {
     from: 'search-props',
     locale
   })
-  const { allPages } = props
-  props.posts = allPages?.filter(
-    page => page.type === 'Post' && page.status === 'Published'
-  )
+  // 搜索结果由客户端 Pagefind 索引提供，页面本身只需布局数据
   delete props.allPages
+  props.posts = []
   return {
     props,
     revalidate: process.env.EXPORT

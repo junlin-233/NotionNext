@@ -1,8 +1,6 @@
 import { siteConfig } from '@/lib/config'
 import { compressImage, mapImgUrl } from '@/lib/db/notion/mapImage'
 import { isBrowser, loadExternalResource } from '@/lib/utils'
-import mediumZoom from '@fisch0920/medium-zoom'
-import 'katex/dist/katex.min.css'
 import dynamic from 'next/dynamic'
 import { useEffect, useRef } from 'react'
 import { NotionRenderer } from 'react-notion-x'
@@ -26,26 +24,38 @@ const NotionPage = ({ post, className }) => {
       return
     }
 
-    const zoom = mediumZoom({
-      background: 'rgba(0, 0, 0, 0.2)',
-      margin: getMediumZoomMargin()
+    let disposed = false
+    let zoomInstance = null
+    let openedHandler = null
+
+    // 图片缩放库按需加载，不进文章页首屏 bundle
+    import('@fisch0920/medium-zoom').then(({ default: mediumZoom }) => {
+      if (disposed) return
+      const zoom = mediumZoom({
+        background: 'rgba(0, 0, 0, 0.2)',
+        margin: getMediumZoomMargin()
+      })
+
+      openedHandler = event => {
+        const zoomedImage = event?.detail?.zoom?.getZoomedImage?.()
+        const src = zoomedImage?.getAttribute('src')
+
+        if (src && zoomedImage) {
+          zoomedImage.setAttribute('src', compressImage(src, IMAGE_ZOOM_IN_WIDTH))
+        }
+      }
+
+      zoomRef.current = zoom
+      zoomInstance = zoom
+      zoom.on('opened', openedHandler)
     })
 
-    const handleZoomOpened = event => {
-      const zoomedImage = event?.detail?.zoom?.getZoomedImage?.()
-      const src = zoomedImage?.getAttribute('src')
-
-      if (src && zoomedImage) {
-        zoomedImage.setAttribute('src', compressImage(src, IMAGE_ZOOM_IN_WIDTH))
-      }
-    }
-
-    zoomRef.current = zoom
-    zoom.on('opened', handleZoomOpened)
-
     return () => {
-      zoom.off('opened', handleZoomOpened)
-      zoom.detach()
+      disposed = true
+      if (zoomInstance) {
+        if (openedHandler) zoomInstance.off('opened', openedHandler)
+        zoomInstance.detach()
+      }
       zoomRef.current = null
     }
   }, [IMAGE_ZOOM_IN_WIDTH, POST_DISABLE_GALLERY_CLICK])

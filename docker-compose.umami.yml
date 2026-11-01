@@ -1,0 +1,48 @@
+# Umami 自托管统计（配合 NotionNext 的 NEXT_PUBLIC_UMAMI_* 配置使用）
+# 部署：docker compose -f docker-compose.umami.yml up -d
+# 首次访问 https://umami.<你的域名> 初始化 admin 账号，
+# 然后添加 Website（域名填博客域名），拿到 Website ID 填入 NEXT_PUBLIC_UMAMI_ID。
+# 在 Settings -> API Keys 创建一个仅读 key 填入 UMAMI_API_TOKEN。
+services:
+  umami:
+    image: umami/umami:postgresql-latest
+    container_name: umami
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD:?请设置数据库密码}@umami-db:5432/umami
+      DATABASE_TYPE: postgresql
+      # 随机长字符串，用于加密会话
+      APP_SECRET: ${UMAMI_APP_SECRET:?请设置 APP_SECRET}
+      # 收集脚本基础路径，默认即可
+      # COLLECT_API_ENDPOINT: /api/send
+    ports:
+      - '127.0.0.1:3001:3000' # 只监听本机，由外部 Nginx/Caddy 反代并加 TLS
+    depends_on:
+      umami-db:
+        condition: service_healthy
+    networks:
+      - umami-net
+
+  umami-db:
+    image: postgres:16-alpine
+    container_name: umami-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD:?请设置数据库密码}
+    volumes:
+      - umami-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U umami -d umami']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - umami-net
+
+volumes:
+  umami-db-data:
+
+networks:
+  umami-net:
