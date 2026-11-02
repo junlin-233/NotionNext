@@ -1,0 +1,45 @@
+name: busuanzi 统计归档
+
+# busuanzi 只暴露「当前累计值」，没有历史。这里每天抓一次存进
+# analytics/history.json，相邻两天相减就是当天增量。
+
+on:
+  schedule:
+    # 23:50 北京时间（UTC 15:50），赶在当天结束前记最后一次读数
+    - cron: '50 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: busuanzi-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 抓取并归档
+        env:
+          SITE_ORIGIN: https://www.junlin-233.top
+        run: node scripts/analytics/snapshot-busuanzi.js
+
+      - name: 提交变化
+        run: |
+          if [ -z "$(git status --porcelain analytics/history.json)" ]; then
+            echo "今天的数据没有变化，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analytics/history.json
+          git commit -m "chore(analytics): 归档 $(date -u +%F) busuanzi 数据"
+          git push
