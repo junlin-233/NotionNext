@@ -28,7 +28,8 @@ RUN yarn build
 RUN cp -r public .next/standalone/public \
     && cp -r .next/static .next/standalone/.next/static \
     && (yarn build:search || echo "warn: pagefind index skipped") \
-    && rm -rf .next/standalone/public .next/standalone/.next/static
+    && rm -rf .next/standalone/public .next/standalone/.next/static \
+    && mkdir -p .snapshot
 
 # 3. Production image, copy all the files and run next
 FROM base AS runner
@@ -42,6 +43,9 @@ COPY --from=builder /app/public ./public
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
+
+# 快照降级层（P2.1）：构建期落盘的 Notion 数据，运行时拉取失败时兜底
+COPY --from=builder /app/.snapshot ./.snapshot
 
 # 个人仓库把将配置好的.env.local文件放到项目根目录，可自动使用环境变量
 # COPY --from=builder /app/.env.local ./
