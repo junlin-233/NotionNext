@@ -89,5 +89,5 @@ curl -s http://localhost:3000/api/status   # degraded:true，files>0
 | 5.2 图片自托管第一步（`NOTION_HOST` 反代） | 未开始 | 需要一台挂反代的机器（Nginx / Edge Function）+ 域名，本机无 Docker |
 | 5.3 客户端 JS 减负第二批 | 未开始 | 改动量在 `NotionPage.js` 与 heo 首屏组件，但本机无法构建，改了也没法对比 First Load JS |
 | P0.1 / P0.2 基线数字 | 仍未补齐 | `lighthouse.yml` 只挂 PR 触发，实际都是直推 main，从未跑过；需手动触发一次 |
-| Cloudflare 统计接入 | 代码已就绪，未配 token | 需在 CF 开 Web Analytics + 建 API Token，再配 3 个 Vercel 环境变量，见 `docs/analytics-setup.md` |
+| 每日归档 workflow | 文件已就绪，**未提交** | 当前 git 凭据缺 `workflow` scope，GitHub 拒绝推送 `.github/workflows/busuanzi-archive.yml`；需 `gh auth refresh -s workflow` 或在网页端新建 |
 | Notion `LINK` 字段 | 未修 | 仍是模板域名，污染 canonical / og:url / 动态 OG 卡 |
