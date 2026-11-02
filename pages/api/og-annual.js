@@ -39,7 +39,11 @@ export default async function handler(req, res) {
   let totalPosts = 0
   let totalPv = 0
   try {
-    const { allPages } = await fetchGlobalAllData()
+    const locale = req.query.locale || 'zh-CN'
+    const { allPages } = await fetchGlobalAllData({
+      from: 'api/og-annual',
+      locale
+    })
     const posts = (allPages || []).filter(p => p?.type?.[0] === 'Post')
     totalPosts = posts.length
   } catch (e) {
