@@ -44,16 +44,8 @@ export default async function handler(req, res) {
       from: 'api/og-annual',
       locale
     })
-    const posts = (result?.allPages || []).filter(p => p?.type?.[0] === 'Post')
-    console.log(
-      '[api/og-annual] allPages:',
-      result?.allPages?.length,
-      'posts:',
-      posts.length,
-      'noticeKeys:',
-      Object.keys(result || {}).join(',')
-    )
-    totalPosts = posts.length
+    // 运行时 allPages 的条目不带 type 数组（构建期才有），直接用 postCount
+    totalPosts = Number(result?.postCount) || 0
   } catch (e) {
     console.warn('[api/og-annual] 取文章数失败:', e?.message || e)
   }
