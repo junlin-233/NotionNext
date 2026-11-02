@@ -164,11 +164,12 @@ function runPagefind() {
     'npx',
     [
       '--yes',
-      'pagefind',
-      '--source',
-      CACHE_DIR,
-      '--bundle-path',
-      BUNDLE_DIR,
+      // 锁版本：pagefind 1.6 起 --source/--bundle-path 改名为 --site/--output-path
+      'pagefind@1.6.0',
+      '--site',
+      path.relative(ROOT, CACHE_DIR) || '.',
+      '--output-path',
+      path.relative(ROOT, BUNDLE_DIR) || 'public/pagefind',
       '--force-language',
       'zh',
       // 去掉站内导航/页脚/侧栏等重复文本，避免污染搜索摘要

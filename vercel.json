@@ -1,4 +1,5 @@
 {
+  "buildCommand": "npm run build && (npm run build:search || echo '[pagefind] index build failed, deployment continues without search index')",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": []
