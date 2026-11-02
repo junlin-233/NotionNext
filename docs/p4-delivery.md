@@ -93,3 +93,4 @@ SSE 协议：`{"type":"citations"}` → 若干 `{"type":"delta"}` → `[DONE]`�
 | Lighthouse PWA 实测 | 本机没有 Chrome，`lhci` 只能在 CI 跑；`skipWaiting` 与离线页行为需要真机确认 |
 | RAG 端到端 | 需要配 `AI_CHAT_API_KEY` + 跑一次 `build:embeddings`；本机无 Key，只验证了降级路径 |
 | 年度报告数据完整度 | 统计归档从 2026-11-02 开始，年度增量要等累积一段时间才有意义 |
+RAG 线上配置：AI_CHAT_BASE_URL/AI_CHAT_API_KEY/AI_CHAT_MODEL(DeepSeek)，NEXT_PUBLIC_AI_CHAT_ENABLE=true；检索为文本模式（lib/ai/knowledge.js），向量模式备用。
