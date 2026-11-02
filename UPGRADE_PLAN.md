@@ -61,7 +61,7 @@ P4 智能与体验    2–4 周    RAG 问答 + 年度报告 + PWA 离线阅读
 
 ### 4.1 站点统计（优先级最高，数据积累从今天开始）
 
-> 2026-11-02 决策变更：Umami 官方云需付费、自托管维护成本不划算，数据源改为解析 Nginx / 网关访问日志。实现见 `scripts/analytics/parse-access-log.js` 与 `docs/analytics-setup.md`，口径与验收要求不变：PV/UV/页面 PV 落一份 JSON，年度报告直接读它。
+> 2026-11-02 决策变更：Umami 付费方案取消。线上在 Vercel Hobby、拿不到 access log，数据源改为 Cloudflare Web Analytics（GraphQL API，免费，保留 6 个月）。实现见 `lib/analytics/cloudflare.js`、`scripts/analytics/parse-access-log.js`（自建 Nginx 备用）与 `docs/analytics-setup.md`。接口按 Umami → Cloudflare → 日志文件 → 204 四级降级，输出统一 stats 结构，年度报告直接读它。
 
 - **部署：** Docker Compose 起一个 Umami 实例（已有 Docker 基建），复用现有 Redis 或给 Umami 配 PostgreSQL。
 - **接入：** `conf/analytics.config.js` 的 `UMAMI_HOST`/`UMAMI_ID` 已有入口；替换 `components/Busuanzi.js` 为 Umami 脚本注入。

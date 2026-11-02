@@ -1,5 +1,9 @@
 import BLOG from '@/blog.config'
 import { getPageStats } from '@/lib/analytics/local-stats'
+import {
+  getCloudflarePageStats,
+  isCloudflareConfigured
+} from '@/lib/analytics/cloudflare'
 
 /**
  * 站点统计接口
@@ -8,8 +12,9 @@ import { getPageStats } from '@/lib/analytics/local-stats'
  *
  * 数据源优先级：
  * 1. Umami（配置了 HOST + ID + TOKEN 时）
- * 2. 访问日志统计文件（scripts/analytics/parse-access-log.js 生成）
- * 3. 都没有：204，前端静默隐藏
+ * 2. Cloudflare Web Analytics（配置了 token/account/siteTag 时，站点在 Vercel 的默认路径）
+ * 3. 访问日志统计文件（自建 Nginx 时用 scripts/analytics/parse-access-log.js 生成）
+ * 4. 都没有：204，前端静默隐藏
  *
  * 两种源的返回结构一致，前端组件无需区分。
  */
@@ -45,7 +50,15 @@ export default async function handler(req, res) {
     return serveUmami({ res, path, UMAMI_HOST, UMAMI_ID, UMAMI_API_TOKEN, UMAMI_STATS_SINCE })
   }
 
-  // 无 Umami 时走访问日志统计
+  if (isCloudflareConfigured()) {
+    const cf = await getCloudflarePageStats(path)
+    if (cf) {
+      res.status(200).json(cf)
+      return
+    }
+  }
+
+  // 无 Umami / Cloudflare 时走访问日志统计
   const local = getPageStats(path)
   if (!local) {
     res.status(204).end()

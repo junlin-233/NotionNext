@@ -31,15 +31,16 @@
 
 原问题有三处：多 worker 抢同一个锁文件互相等待；陈旧锁只在第一次获取时判定，前一个进程被 kill 后永久排队；`finally` 里无条件 `releaseLock`，可能删掉别的进程的锁。
 
-### 1.3 统计数据源改为访问日志（Umami 方案取消）
+### 1.3 统计数据源：Umami 取消，改 Cloudflare Web Analytics
 
-Umami 官方云需付费，自托管要额外维护一套 Postgres，决定不用。改成解析 Nginx / 网关访问日志，零成本、数据留在自己手里。
+Umami 官方云付费、自托管要养 Postgres，不用了。**注意：线上跑在 Vercel Hobby，没有 access log 可读**（log drain 要 Pro），所以主路径改成 Cloudflare Web Analytics（域名 DNS 已在 CF，免费、有 GraphQL API）；访问日志解析器保留，迁 VPS 时直接可用。接口三源降级：Umami → Cloudflare → 日志文件 → 204。
 
 | 文件 | 变更 |
 |---|---|
 | `scripts/analytics/parse-access-log.js` | 新增：解析 combined / JSON 行日志，支持 gz 轮转；过滤静态资源、爬虫、非 2xx；按天聚出 PV/UV、页面 PV、Top 50 |
 | `lib/analytics/local-stats.js` | 新增：读统计 JSON，按 mtime 缓存 5 分钟，文件缺失或开关关闭时返回 null |
-| `pages/api/stats.js` | 数据源改为 Umami（配了才用）→ 日志统计 → 204 三级降级，返回结构不变 |
+| `lib/analytics/cloudflare.js` | 新增：GraphQL 取 `rumPageloadEventsAdaptiveGroups`，映射成统一 stats 结构，10 分钟进程内缓存 |
+| `pages/api/stats.js` | Umami → Cloudflare → 日志统计 → 204 四级降级，返回结构不变 |
 | `components/ViewStats.js` | 替换 `UmamiAnalytics.js`：只回填阅读数 DOM，不再注入跟踪脚本 |
 | `components/ExternalPlugins.js` | 挂载条件改为「配了 Umami 或开启统计」 |
 | `conf/analytics.config.js`、`.env.example`、`docs/analytics-setup.md` | 新增 `ANALYTICS_STATS_ENABLE` / `ANALYTICS_STATS_FILE`，附接入与验证步骤 |
@@ -88,5 +89,5 @@ curl -s http://localhost:3000/api/status   # degraded:true，files>0
 | 5.2 图片自托管第一步（`NOTION_HOST` 反代） | 未开始 | 需要一台挂反代的机器（Nginx / Edge Function）+ 域名，本机无 Docker |
 | 5.3 客户端 JS 减负第二批 | 未开始 | 改动量在 `NotionPage.js` 与 heo 首屏组件，但本机无法构建，改了也没法对比 First Load JS |
 | P0.1 / P0.2 基线数字 | 仍未补齐 | `lighthouse.yml` 只挂 PR 触发，实际都是直推 main，从未跑过；需手动触发一次 |
-| 访问日志统计接入 | 代码已就绪，未上服务器 | 需要宿主机跑 cron + 挂载 `.analytics/`，见 `docs/analytics-setup.md` |
+| Cloudflare 统计接入 | 代码已就绪，未配 token | 需在 CF 开 Web Analytics + 建 API Token，再配 3 个 Vercel 环境变量，见 `docs/analytics-setup.md` |
 | Notion `LINK` 字段 | 未修 | 仍是模板域名，污染 canonical / og:url / 动态 OG 卡 |

@@ -46,6 +46,12 @@ module.exports = {
   // 统计结果文件路径，默认 <项目根>/.analytics/stats.json
   ANALYTICS_STATS_FILE: process.env.ANALYTICS_STATS_FILE || '',
 
+  // Cloudflare Web Analytics（站点托管在 Vercel 时用这个）
+  // 面板：Cloudflare → Web Analytics → 站点 → JS 片段里的 data-cf-beacon token
+  CLOUDFLARE_API_TOKEN: process.env.CLOUDFLARE_API_TOKEN || '',
+  CLOUDFLARE_ACCOUNT_ID: process.env.CLOUDFLARE_ACCOUNT_ID || '',
+  CLOUDFLARE_SITE_TAG: process.env.CLOUDFLARE_SITE_TAG || '',
+
   // Umami 自托管统计（可选，配置后优先于访问日志统计）
   // UMAMI_HOST 为自托管实例地址（不带末尾斜杠），如 https://umami.junlin-233.top
   UMAMI_HOST: process.env.NEXT_PUBLIC_UMAMI_HOST || '',

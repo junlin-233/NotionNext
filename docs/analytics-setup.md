@@ -1,95 +1,116 @@
-# 访问日志统计接入（替代 Umami / busuanzi）
+# 站点统计接入（Cloudflare Web Analytics）
 
-> 2026-11-02 ｜ 数据源：Nginx / 网关 access log ｜ 无需第三方服务、无月费
+> 2026-11-02 ｜ 站点托管在 Vercel Hobby，域名 DNS 在 Cloudflare
 
-## 一、怎么工作
+## 一、为什么是这条路
+
+先排掉走不通的：
+
+| 方案 | 结论 |
+|---|---|
+| Umami | 官方云付费，自托管要养一套 Postgres，不划算 |
+| Nginx access log | **不成立**：站点在 Vercel，Hobby 没有 log drain（要 Pro），压根拿不到原始访问日志 |
+| Vercel Web Analytics | Hobby 免费额度小，面板看得到、长期导出受限 |
+| busuanzi | 免费但只有当前 PV，无历史无 API，年度报告做不了 |
+| **Cloudflare Web Analytics** | 域名 DNS 已在 CF；免费、无采样上限、有 GraphQL API，数据保留 6 个月 |
+
+代码实现是**三源降级**，日志解析那条路没有白写——将来迁到自己的 VPS 时直接可用：
 
 ```
-access.log ──[scripts/analytics/parse-access-log.js]──> .analytics/stats.json
-                                                              │
-                                             /api/stats 读取 ──┴──> 页面显示阅读数
+/api/stats
+  ├─ 1. Umami（配了才用）
+  ├─ 2. Cloudflare Web Analytics（当前线上走这条）
+  ├─ 3. 访问日志统计文件（自建 Nginx 时用）
+  └─ 4. 都没有 → 204，前端隐藏数字
 ```
 
-- 解析脚本在**宿主机**跑（cron / systemd timer），只读日志、写一份 JSON。
-- Next 容器通过 `ANALYTICS_STATS_FILE` 指向挂载进来的 JSON，接口 5 分钟粒度感知更新。
-- 前端组件 `components/ViewStats.js` 回填原 busuanzi 的 DOM 节点，主题零改动。
+## 二、你要做的两步
 
-## 二、日志格式要求
+### 1. Cloudflare 开 Web Analytics
 
-用 nginx 默认的 `combined` 即可，关键字段：`$remote_addr`、`$request`、`$status`、`$http_user_agent`。
+Cloudflare 面板 → **Analytics & Logs → Web Analytics → Add a site** → 填 `www.junlin-233.top` → 拿到 **JavaScript snippet token**（beacon token）。
 
-```nginx
-log_format main '$remote_addr - $remote_user [$time_local] "$request" '
-                '$status $body_bytes_sent "$http_referer" "$http_user_agent"';
-access_log /var/log/nginx/access.log main;
+站点没走 CF 代理（橘色云朵是灰的），所以 CF **不会自动注入**页面脚本。但不需要它注入——我们只拿 token 走 API 取数，页面上一行脚本都不用加。
+
+顺手记下 **Account ID**（面板右侧栏，或 URL 里 `/accounts/<id>/`）。
+
+### 2. 建一个有读权限的 API Token
+
+Cloudflare 面板 → My Profile → **API Tokens → Create Token** → 自定义：
+
+- 权限：`Account` → `Account Analytics` → **Read**
+- 资源：你的账户
+
+拿到 token 后，在 Vercel 项目里加三个环境变量（Production + Preview 都要）：
+
+```ini
+CLOUDFLARE_API_TOKEN=<token>
+CLOUDFLARE_ACCOUNT_ID=<account id>
+CLOUDFLARE_SITE_TAG=<Web Analytics 的 beacon token>
 ```
 
-缺 `$http_user_agent` 时爬虫过滤失效，统计量会虚高。网关/API 网关输出 JSON 行也能解析，字段名支持 `remote_addr|ip|client_ip`、`http_user_agent|ua`、`request_uri|uri|path`、`time_iso8601|time|timestamp`。
+三个都配齐，`/api/stats` 才走 CF；少一个自动降级。
 
-**用了 CDN 必须配真实 IP**，否则所有访问来自 CDN 节点，UV 直接失真：
-
-```nginx
-set_real_ip_from 0.0.0.0/0;      # 换成 CDN 回源段
-real_ip_header X-Forwarded-For;
-real_ip_recursive on;
-```
-
-## 三、接入步骤
+## 三、验证
 
 ```bash
-# 1) 手动跑一次，确认口径
-node scripts/analytics/parse-access-log.js \
-  --log "/var/log/nginx/access.log*" \
-  --out /opt/blog/.analytics/stats.json
-
-# 输出示例：
-# [stats] 4 个文件 / 1289043 行，计入 21338 次访问
-# [stats] PV 21338 · UV 4127 · 页面 96 个
-# [stats] 跳过：静态资源 1186421 · 爬虫 39118 · 非 2xx 2130 · 非 GET 44 · 无法解析 1923
+# 配置齐全后应返回真实数字，而不是 204
+curl -s "https://www.junlin-233.top/api/stats?path=/article/notionnext"
+# {"pagePv":42,"sitePv":21338,"siteUv":4127,"generatedAt":"2026-11-02T08:00:00.000Z"}
 ```
 
-口径自查：`计入` 应远小于总行数（静态资源占绝大多数）；`无法解析` 若超过 5%，说明日志格式不是 combined/json，需要调 `--format`。
+- 返回 204 → 三个变量没配全，或 token 权限不对
+- 返回数字但全 0 → Web Analytics 刚开、还没收到 beacon，等第一次真实访问后再看
+- 接口自身缓存 10 分钟，CF 侧通常几分钟内可见
+
+## 四、口径（和日志方案不同，必须知道）
+
+| 指标 | Cloudflare 口径 |
+|---|---|
+| PV | `count`，一次页面加载算一次。只统计 HTML 页面，天然不含静态资源与爬虫 |
+| UV | `sum.visits`，**会话数**。CF 不做独立访客去重，这是最接近的可比值，不是严格唯一用户 |
+| 页面 PV | 按 `requestPath` 分组，最多取 500 个路径 |
+| 抽样 | 7 天内原始数据；更早的聚合到约 10%，`source.sampleInterval` 给出当前查询的抽样粒度 |
+| 保留 | **只有最近 6 个月** |
+
+因为 6 个月这个硬限制，年度报告要留全年数据就得自己存档。解析器和统一结构都已备好：
 
 ```bash
-# 2) cron：每小时更新一次
-0 * * * * cd /opt/blog && /usr/bin/node scripts/analytics/parse-access-log.js \
+node scripts/analytics/parse-access-log.js --log "/var/log/nginx/access.log*"
+```
+
+`stats.json` 结构（两种来源一致，靠 `source.provider` 区分）：
+
+```json
+{
+  "totals": { "pv": 21338, "uv": 4127 },
+  "daily": [{ "date": "2026-11-01", "pv": 120, "uv": 80 }],
+  "pages": { "/article/notionnext": 42 },
+  "top": [{ "path": "/article/notionnext", "pv": 42 }]
+}
+```
+
+P4 年度报告直接读这份结构，不需要再引数据源。
+
+## 五、备用：自建 Nginx 时怎么用日志
+
+迁到自己机器后，CF 那三个变量不配，改用：
+
+```ini
+ANALYTICS_STATS_FILE=/app/.analytics/stats.json
+ACCESS_LOG_PATH=/var/log/nginx/access.log
+```
+
+日志必须是 nginx 默认 `combined`（要带 `$http_user_agent`，否则爬虫过滤失效）。用了 CDN 还要配 `set_real_ip_from` + `real_ip_header`，否则 UV 会塌成个位数。
+
+```bash
+# 每小时更新
+0 * * * * cd /opt/blog && node scripts/analytics/parse-access-log.js \
   --log "/var/log/nginx/access.log*" --out /opt/blog/.analytics/stats.json --quiet
 
-# 3) 容器挂载 + 环境变量
-docker run -d ... \
-  -e ANALYTICS_STATS_FILE=/app/.analytics/stats.json \
-  -v /opt/blog/.analytics:/app/.analytics:ro \
-  ghcr.io/junlin-233/notionnext:latest
+# 容器挂载
+docker run ... -e ANALYTICS_STATS_FILE=/app/.analytics/stats.json \
+  -v /opt/blog/.analytics:/app/.analytics:ro ...
 ```
 
-`/var/log/nginx` 通常只有 root / adm 组可读，cron 跑在 root 下最省事；用普通用户时把该用户加进 `adm` 组。
-
-## 四、验证
-
-```bash
-# 接口应返回真实数字，而不是 204
-curl -s "https://www.junlin-233.top/api/stats?path=/article/notionnext"
-# {"pagePv":42,"sitePv":21338,"siteUv":4127,"generatedAt":"2026-11-02T07:20:00.000Z"}
-
-# 页面底部应出现访问量
-curl -s https://www.junlin-233.top/ | grep -c busuanzi_container_site_pv
-```
-
-返回 204 表示统计文件没读到：先确认文件存在且容器内路径对得上，再看容器日志里的 `[stats] 读取统计文件失败`。
-
-## 五、口径说明
-
-| 指标 | 定义 |
-|---|---|
-| PV | 计入的有效请求数（2xx/3xx、GET/HEAD、非静态资源、非爬虫） |
-| UV | 按 `sha256(盐 + IP + UA + 日期)` 前缀去重，跨天不累计，不落原始 IP |
-| 页面 PV | 路径归一后的计数：去 query、去末尾斜杠、可剥站点子路径前缀 |
-| 跳过 | 静态资源、UA 命中的爬虫、4xx/5xx、非 GET/HEAD、无法解析的行 |
-
-爬虫名单在 `scripts/analytics/parse-access-log.js` 的 `BOT_UA` 常量里，误杀或漏杀改这一处。
-
-## 六、和 P4 年度报告的关系
-
-`stats.json` 里已经备好年度报告要的全部字段：`totals`、`daily`（按天 PV/UV）、`pages`（全站页面 × PV）、`top`（Top 50）。年度报告直接读这份文件即可，不需要再引数据源。
-
-代价：**从现在开始跑才有数据**。日志被轮转删除的日期永远补不回来，建议 `logrotate` 保留 400 天以上。
+爬虫名单在 `scripts/analytics/parse-access-log.js` 的 `BOT_UA` 常量，误杀漏杀改这一处。
