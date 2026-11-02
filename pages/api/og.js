@@ -1,18 +1,23 @@
+import { verifyOgParams } from '@/lib/og/sign'
 import { ImageResponse } from 'next/og'
+import fs from 'fs'
+import path from 'path'
 
 /**
  * 动态 OG 分享卡
- * GET /api/og?title=文章标题&sub=摘要&tag=标签1,标签2&date=2026-11-01&site=站点名
+ * GET /api/og?title=文章标题&sub=摘要&tag=标签1,标签2&date=2026-11-01&site=站点名&sign=HMAC签名
  *
  * 设计取舍：
- * - Edge Runtime：ImageResponse 原生支持，字体走同源 fetch，无需 fs
+ * - Node Runtime（默认）：原 Edge Runtime 在 Vercel 的新函数平台上抛
+ *   "Invalid URL string"（next-url.js 适配层，发生在进 handler 前），改走 Node
  * - 纯排版卡片，不拉取封面图（生成快、无外部依赖、不受 Notion CDN 影响）
  * - 中文字体为子集化 Noto Sans SC（public/fonts/og-title.ttf ≈780KB），按 isolate 缓存
  * - 参数做长度限制，防止被当作任意内容渲染服务滥用
+ * - 配 OG_SIGN_KEY 时强制 HMAC 验签，未签名请求 302 兜底图
  */
 
 export const config = {
-  runtime: 'edge'
+  maxDuration: 30
 }
 
 const WIDTH = 1200
@@ -26,75 +31,34 @@ const clamp = (value, max) => {
 }
 
 let fontCache = null
-async function loadFont(reqUrl) {
+function loadFont() {
   if (fontCache) return fontCache
-  const fontUrl = new URL('/fonts/og-title.ttf', reqUrl)
-  const res = await fetch(fontUrl)
-  if (!res.ok) throw new Error(`字体加载失败: ${res.status}`)
-  fontCache = await res.arrayBuffer()
+  fontCache = fs.readFileSync(
+    path.join(process.cwd(), 'public', 'fonts', 'og-title.ttf')
+  )
   return fontCache
 }
-
-// ---- HMAC 验签（与 lib/og/sign.js 同口径：除 sign 外参数按 key 排序，"k=v" 逐行 join('\n')）----
-async function hmacHex(message, key) {
-  const enc = new TextEncoder()
-  const keyData = await crypto.subtle.importKey(
-    'raw',
-    enc.encode(key),
-    { name: 'HMAC', hash: 'SHA-256' },
-    false,
-    ['sign']
-  )
-  const sig = await crypto.subtle.sign('HMAC', keyData, enc.encode(message))
-  return Array.from(new Uint8Array(sig))
-    .map(b => b.toString(16).padStart(2, '0'))
-    .join('')
-}
-
-async function verifySignature(searchParams) {
-  const key = process.env.OG_SIGN_KEY
-  if (!key) return true // 未配 Key 时端点保持开放（本地 / 未配 Key 的部署）
-  const provided = (searchParams.get('sign') || '').toLowerCase()
-  if (!/^[0-9a-f]{64}$/.test(provided)) return false
-  const entries = []
-  for (const [k, v] of searchParams.entries()) {
-    if (k !== 'sign' && v !== '') entries.push([k, v])
-  }
-  entries.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0))
-  const expected = await hmacHex(
-    entries.map(([k, v]) => `${k}=${v}`).join('\n'),
-    key
-  )
-  return provided === expected
-}
-
-const fallbackResponse = () =>
-  new Response(null, {
-    status: 302,
-    headers: { Location: '/bg_image.jpg' }
-  })
 
 // 同一 isolate 内缓存已生成的图，key -> ArrayBuffer
 const imageCache = new Map()
 
-export default async function handler(req) {
-  const { searchParams } = new URL(req.url)
-
+export default async function handler(req, res) {
   // 配了 OG_SIGN_KEY 时，未签名或签名错误的请求一律走兜底图
-  if (!(await verifySignature(searchParams))) {
-    return fallbackResponse()
+  if (!verifyOgParams(req.query || {})) {
+    res.redirect(302, '/bg_image.jpg')
+    return
   }
 
-  const title = clamp(searchParams.get('title'), 60) || 'junlin 的博客'
-  const sub = clamp(searchParams.get('sub'), 90)
-  const tags = clamp(searchParams.get('tag'), 60)
+  const title = clamp(req.query.title, 60) || 'junlin 的博客'
+  const sub = clamp(req.query.sub, 90)
+  const tags = clamp(req.query.tag, 60)
     .split(',')
     .map(t => t.trim())
     .filter(Boolean)
     .slice(0, 3)
-  const date = clamp(searchParams.get('date'), 12)
+  const date = clamp(req.query.date, 12)
   const siteName =
-    clamp(searchParams.get('site'), 24) ||
+    clamp(req.query.site, 24) ||
     process.env.NEXT_PUBLIC_TITLE ||
     'junlin 的博客'
   const domain = (process.env.NEXT_PUBLIC_LINK || 'https://www.junlin-233.top')
@@ -102,18 +66,20 @@ export default async function handler(req) {
     .replace(/\/$/, '')
 
   const cacheKey = JSON.stringify([title, sub, tags, date, siteName])
-  const headers = {
-    'Content-Type': 'image/png',
-    'Cache-Control': 'public, max-age=86400, s-maxage=31536000, immutable'
-  }
+  res.setHeader('Content-Type', 'image/png')
+  res.setHeader(
+    'Cache-Control',
+    'public, max-age=86400, s-maxage=31536000, immutable'
+  )
 
   const cached = imageCache.get(cacheKey)
   if (cached) {
-    return new Response(cached, { headers })
+    res.status(200).end(cached)
+    return
   }
 
   try {
-    const fontData = await loadFont(req.url)
+    const fontData = loadFont()
 
     const image = new ImageResponse(
       (
@@ -243,16 +209,16 @@ export default async function handler(req) {
       }
     )
 
-    const buffer = await image.arrayBuffer()
+    const buffer = Buffer.from(await image.arrayBuffer())
 
     if (imageCache.size >= CACHE_LIMIT) {
       imageCache.clear()
     }
     imageCache.set(cacheKey, buffer)
 
-    return new Response(buffer, { headers })
+    res.status(200).end(buffer)
   } catch (e) {
     console.warn('[api/og] 生成失败:', e?.message || e)
-    return fallbackResponse()
+    res.redirect(302, '/bg_image.jpg')
   }
 }

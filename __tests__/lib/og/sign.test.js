@@ -1,4 +1,4 @@
-import { withOgSign, signOgParams, isOgSignEnabled } from '@/lib/og/sign'
+import { withOgSign, signOgParams, verifyOgParams, isOgSignEnabled } from '@/lib/og/sign'
 import crypto from 'crypto'
 
 describe('lib/og/sign', () => {
@@ -39,5 +39,15 @@ describe('lib/og/sign', () => {
     const out = withOgSign({ title: 'x' })
     expect(out.title).toBe('x')
     expect(out.sign).toMatch(/^[0-9a-f]{64}$/)
+  })
+
+  test('verifyOgParams：签名正确通过、篡改拒绝、未配 Key 恒真', () => {
+    const signed = withOgSign({ title: 't', sub: 's' })
+    expect(verifyOgParams(signed)).toBe(true)
+    expect(verifyOgParams({ ...signed, title: '篡改' })).toBe(false)
+    expect(verifyOgParams({ title: 't' })).toBe(false)
+    delete process.env.OG_SIGN_KEY
+    expect(verifyOgParams({ title: 't' })).toBe(true)
+    process.env.OG_SIGN_KEY = KEY
   })
 })
