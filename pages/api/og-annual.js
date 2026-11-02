@@ -40,11 +40,19 @@ export default async function handler(req, res) {
   let totalPv = 0
   try {
     const locale = req.query.locale || 'zh-CN'
-    const { allPages } = await fetchGlobalAllData({
+    const result = await fetchGlobalAllData({
       from: 'api/og-annual',
       locale
     })
-    const posts = (allPages || []).filter(p => p?.type?.[0] === 'Post')
+    const posts = (result?.allPages || []).filter(p => p?.type?.[0] === 'Post')
+    console.log(
+      '[api/og-annual] allPages:',
+      result?.allPages?.length,
+      'posts:',
+      posts.length,
+      'noticeKeys:',
+      Object.keys(result || {}).join(',')
+    )
     totalPosts = posts.length
   } catch (e) {
     console.warn('[api/og-annual] 取文章数失败:', e?.message || e)
