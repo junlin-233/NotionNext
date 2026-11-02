@@ -28,9 +28,14 @@ const BUNDLE_DIR = path.join(ROOT, 'public', 'pagefind')
 const CONTENT_DIR = path.join(ROOT, 'content')
 
 const args = process.argv.slice(2)
+// 同时支持 --source md 与 --source=md 两种写法
 const getArg = (name, fallback) => {
-  const i = args.indexOf(`--${name}`)
-  return i > -1 && args[i + 1] ? args[i + 1] : fallback
+  const spaced = args.indexOf(`--${name}`)
+  if (spaced > -1 && args[spaced + 1]) return args[spaced + 1]
+  const eqPrefix = `--${name}=`
+  const eq = args.find(a => a.startsWith(eqPrefix))
+  if (eq) return eq.slice(eqPrefix.length)
+  return fallback
 }
 const hasFlag = name => args.includes(`--${name}`)
 
