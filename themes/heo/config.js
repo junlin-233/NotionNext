@@ -27,15 +27,20 @@ const CONFIG = {
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随便逛逛',
 
-  // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '心情随笔', url: '/tag/心情随笔' },
-  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门文章' },
+  // 英雄区三个快捷入口（url 必须指向真实存在的内容，否则点进去是空列表）
+  // 定位是「内容专题」，跟下面的分类条分工：卡＝去哪个专题，条＝按分类筛
+  // 所以这里不要放分类（心情随笔、技术分享），否则跟分类条重复
+  HEO_HERO_CATEGORY_1: { title: '推荐', url: '/tag/推荐' },
+  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/hot' },
   HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/实用教程' },
+
+  // 热门文章页展示条数（按站内阅读量排序，数据来自 REDIS_URL 计数器）
+  HEO_HOT_POST_COUNT: 20,
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '推荐',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: true,
-  HEO_HERO_RECOMMEND_COVER: '/images/custom/heo-hero-cover.jpg', // 推荐文章排序，为`true`时将强制按最后修改时间倒序
+  HEO_HERO_RECOMMEND_COVER: '/images/custom/heo-hero-cover.webp', // 英雄区右侧大卡封面（紫色渐变 + 玻璃代码窗口，与站内主题色一致）
   //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
@@ -128,6 +133,18 @@ const CONFIG = {
   HEO_MENU_TAG: true, // 显示标签
   HEO_MENU_ARCHIVE: true, // 显示归档
   HEO_MENU_SEARCH: true, // 显示搜索
+
+  // 顶部菜单覆盖：按菜单标题匹配，直接改写跳转地址、砍掉下拉。
+  // 菜单本身还是从 Notion 读，「往期整理」原来挂着历史归档 / 文章分类 / 文章标签三个下拉，
+  // 现在点它直接进历史归档。想恢复成下拉，把这个 key 删掉就行。
+  HEO_MENU_OVERRIDE: {
+    往期整理: { href: '/archive', subMenus: [] }
+  },
+
+  // 分类条第一个 tab 的文案：指向归档时间线，表示「不筛分类，看全部文章」
+  HEO_CATEGORY_BAR_ALL_TITLE: '全部',
+  // 分类页、标签页沿用归档页的按月时间线，避免从归档点进分类后样式突变
+  HEO_LIST_ARCHIVE_STYLE: true,
 
   HEO_POST_LIST_COVER: true, // 列表显示文章封面
   HEO_POST_LIST_COVER_HOVER_ENLARGE: false, // 列表鼠标悬停放大

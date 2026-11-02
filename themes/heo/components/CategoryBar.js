@@ -1,20 +1,49 @@
 import { ChevronDoubleLeft, ChevronDoubleRight } from '@/components/HeroIcons'
+import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import CONFIG from '../config'
 
 /**
  * 博客列表上方嵌入条
+ * 第一个 tab 是「全部」，指向归档时间线；点分类只换数据，不换视图。
  * @param {*} props
  * @returns
  */
 export default function CategoryBar(props) {
   const { categoryOptions, border = true } = props
   const { locale } = useGlobal()
+  const router = useRouter()
   const [scrollRight, setScrollRight] = useState(false)
+  const [overflow, setOverflow] = useState(false)
   // 创建一个ref引用
   const categoryBarItemsRef = useRef(null)
+
+  const allTitle = siteConfig('HEO_CATEGORY_BAR_ALL_TITLE', '全部', CONFIG)
+  // 首页上第一个 tab 就是首页本身；其他列表页的「全部」回到归档
+  const isHome = router.pathname === '/'
+  const firstItem = isHome
+    ? { href: '/', name: locale.NAV.INDEX, active: true }
+    : {
+        href: '/archive',
+        name: allTitle,
+        active: router.pathname === '/archive'
+      }
+
+  // 分类装得下就不显示左右滚动箭头，省得点了一个没反应的按钮
+  useEffect(() => {
+    const el = categoryBarItemsRef.current
+    if (!el) return
+    const measure = () => {
+      setOverflow(el.scrollWidth - el.clientWidth > 4)
+    }
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [categoryOptions])
 
   // 点击#right时，滚动#category-bar-items到最右边
   const handleToggleScroll = () => {
@@ -33,34 +62,35 @@ export default function CategoryBar(props) {
     <div
       id='category-bar'
       className={`scroll-reveal scroll-fade-in-up flex flex-nowrap justify-between items-center h-12 mb-4 space-x-2 w-full lg:bg-white dark:lg:bg-[#1e1e1e]
-            ${border ? 'lg:border lg:hover:border dark:lg:border-gray-800 hover:border-indigo-600 dark:hover:border-yellow-600 ' : ''}  py-2 lg:px-2 rounded-xl transition-colors duration-200`}>
+            ${border ? 'lg:border lg:hover:border dark:lg:border-gray-800 hover:border-indigo-600 dark:hover:border-yellow-600 ' : ''}  py-2 lg:px-3 rounded-xl transition-colors duration-200`}>
       <div
         id='category-bar-items'
         ref={categoryBarItemsRef}
         className='scroll-smooth max-w-4xl rounded-lg scroll-hidden flex justify-start flex-nowrap items-center overflow-x-scroll'>
-        <MenuItem href='/' name={locale.NAV.INDEX} />
+        <MenuItem
+          href={firstItem.href}
+          name={firstItem.name}
+          active={firstItem.active}
+        />
         {categoryOptions?.map((c, index) => (
           <MenuItem key={index} href={`/category/${c.name}`} name={c.name} />
         ))}
       </div>
 
-      <div id='category-bar-next' className='flex items-center justify-center'>
-        <div
-          id='right'
-          className='cursor-pointer mx-2 dark:text-gray-300 dark:hover:text-yellow-600 hover:text-indigo-600'
-          onClick={handleToggleScroll}>
-          {scrollRight ? (
-            <ChevronDoubleLeft className={'w-5 h-5'} />
-          ) : (
-            <ChevronDoubleRight className={'w-5 h-5'} />
-          )}
+      {overflow && (
+        <div id='category-bar-next' className='flex items-center justify-center'>
+          <div
+            id='right'
+            className='cursor-pointer mx-2 dark:text-gray-300 dark:hover:text-yellow-600 hover:text-indigo-600'
+            onClick={handleToggleScroll}>
+            {scrollRight ? (
+              <ChevronDoubleLeft className={'w-5 h-5'} />
+            ) : (
+              <ChevronDoubleRight className={'w-5 h-5'} />
+            )}
+          </div>
         </div>
-        <SmartLink
-          href='/category'
-          className='whitespace-nowrap font-bold text-gray-900 dark:text-white transition-colors duration-200 hover:text-indigo-600 dark:hover:text-yellow-600'>
-          {locale.MENU.CATEGORY}
-        </SmartLink>
-      </div>
+      )}
     </div>
   )
 }
@@ -70,14 +100,19 @@ export default function CategoryBar(props) {
  * @param {*} param0
  * @returns
  */
-const MenuItem = ({ href, name }) => {
+const MenuItem = ({ href, name, active }) => {
   const router = useRouter()
   const { category } = router.query
-  const selected = category === name
+  const selected = active !== undefined ? active : category === name
+  // 选中态实心，悬停态只铺浅底：两者同色的话鼠标划过就分不清当前在哪个分类
+  const stateClass = selected
+    ? 'text-white bg-indigo-600 dark:bg-yellow-600'
+    : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:text-yellow-600 dark:hover:bg-yellow-600/15'
   return (
-    <div
-      className={`whitespace-nowrap mr-2 duration-200 transition-all font-bold px-2 py-0.5 rounded-md text-gray-900 dark:text-white hover:text-white hover:bg-indigo-600 dark:hover:bg-yellow-600 ${selected ? 'text-white bg-indigo-600 dark:bg-yellow-600' : ''}`}>
-      <SmartLink href={href}>{name}</SmartLink>
-    </div>
+    <SmartLink
+      href={href}
+      className={`whitespace-nowrap mr-2 duration-200 transition-colors font-bold px-2 py-0.5 rounded-md ${stateClass}`}>
+      {name}
+    </SmartLink>
   )
 }

@@ -22,6 +22,7 @@ import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import BlogPostArchive from './components/BlogPostArchive'
+import BlogPostHot from './components/BlogPostHot'
 import BlogPostListPage from './components/BlogPostListPage'
 import BlogPostListScroll from './components/BlogPostListScroll'
 import CategoryBar from './components/CategoryBar'
@@ -40,6 +41,7 @@ import SearchNav from './components/SearchNav'
 import SearchResultsPagefind from './components/SearchResultsPagefind'
 import SideRight from './components/SideRight'
 import CONFIG from './config'
+import { groupPostsByMonth } from './lib/archive'
 import { Style } from './style'
 import AISummary from '@/components/AISummary'
 import ArticleExpirationNotice from '@/components/ArticleExpirationNotice'
@@ -158,15 +160,50 @@ const LayoutIndex = props => {
  * @returns
  */
 const LayoutPostList = props => {
+  const { posts = [], siteInfo } = props
+  const router = useRouter()
+  const { locale } = useGlobal()
+  // 分类、标签这类「筛选」视图：沿用归档页的按月时间线，点标签不再换一套样式
+  const archiveStyle = siteConfig('HEO_LIST_ARCHIVE_STYLE', true, CONFIG)
+  const isFilterView = /^\/(category|tag)/.test(router.pathname || '')
+
+  if (!archiveStyle || !isFilterView) {
+    return (
+      <div id='post-outer-wrapper' className='px-5  md:px-0'>
+        {/* 文章分类条 */}
+        <CategoryBar {...props} />
+        {siteConfig('POST_LIST_STYLE') === 'page' ? (
+          <BlogPostListPage {...props} />
+        ) : (
+          <BlogPostListScroll {...props} />
+        )}
+      </div>
+    )
+  }
+
+  const groups = groupPostsByMonth(posts)
+
   return (
-    <div id='post-outer-wrapper' className='px-5  md:px-0'>
+    <div className='p-5 rounded-xl border dark:border-gray-600 max-w-6xl w-full bg-white dark:bg-[#1e1e1e]'>
       {/* 文章分类条 */}
-      <CategoryBar {...props} />
-      {siteConfig('POST_LIST_STYLE') === 'page' ? (
-        <BlogPostListPage {...props} />
-      ) : (
-        <BlogPostListScroll {...props} />
-      )}
+      <CategoryBar {...props} border={false} />
+
+      <div className='px-3'>
+        {posts.length === 0 ? (
+          <div className='py-20 text-center text-gray-400'>
+            {locale.COMMON.NO_MORE}
+          </div>
+        ) : (
+          Object.keys(groups).map(title => (
+            <BlogPostArchive
+              key={title}
+              posts={groups[title]}
+              archiveTitle={title}
+              siteInfo={siteInfo}
+            />
+          ))
+        )}
+      </div>
     </div>
   )
 }
@@ -492,11 +529,50 @@ const LayoutTagIndex = props => {
   )
 }
 
+/**
+ * 热门文章（按站内阅读量排序）
+ * @param {*} props
+ * @returns
+ */
+const LayoutHot = props => {
+  const { hotPosts = [], viewsEnabled } = props
+  const { locale } = useGlobal()
+
+  return (
+    <div className='p-5 rounded-xl border dark:border-gray-600 max-w-6xl w-full bg-white dark:bg-[#1e1e1e]'>
+      <div className='flex flex-wrap items-baseline justify-between pb-4'>
+        <div className='text-2xl font-extrabold dark:text-gray-100'>热门文章</div>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>
+          {viewsEnabled ? '按站内阅读量排序' : '阅读统计未启用，暂按更新时间排序'}
+        </div>
+      </div>
+
+      <div className='px-3'>
+        {hotPosts.length === 0 ? (
+          <div className='py-20 text-center text-gray-400'>
+            {locale.COMMON.NO_MORE}
+          </div>
+        ) : (
+          hotPosts.map((post, index) => (
+            <BlogPostHot
+              key={post.id}
+              post={post}
+              rank={index + 1}
+              showViews={viewsEnabled}
+            />
+          ))
+        )}
+      </div>
+    </div>
+  )
+}
+
 export {
   Layout404,
   LayoutArchive,
   LayoutBase,
   LayoutCategoryIndex,
+  LayoutHot,
   LayoutIndex,
   LayoutPostList,
   LayoutSearch,

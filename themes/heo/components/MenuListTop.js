@@ -1,6 +1,7 @@
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import CONFIG from '../config'
+import { applyMenuOverride } from '../lib/menu'
 import { MenuItemDrop } from './MenuItemDrop'
 
 export const MenuListTop = props => {
@@ -39,6 +40,9 @@ export const MenuListTop = props => {
   if (siteConfig('CUSTOM_MENU')) {
     links = customMenu
   }
+
+  // 菜单覆盖：把 Notion 里配的下拉结构改写成单个跳转
+  links = applyMenuOverride(links)
 
   if (!links || links.length === 0) {
     return null

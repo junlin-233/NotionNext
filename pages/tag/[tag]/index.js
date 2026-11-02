@@ -24,15 +24,7 @@ export async function getStaticProps({ params: { tag }, locale }) {
   // 处理文章页数
   props.postCount = props.posts.length
 
-  // 处理分页
-  if (siteConfig('POST_LIST_STYLE') === 'scroll') {
-    // 滚动列表 给前端返回所有数据
-  } else if (siteConfig('POST_LIST_STYLE') === 'page') {
-    props.posts = props.posts?.slice(
-      0,
-      siteConfig('POSTS_PER_PAGE', 12, props?.NOTION_CONFIG)
-    )
-  }
+  // 标签页同样走归档时间线，展示全部文章（时间线没有分页入口，截断等于吞文章）
 
   props.tag = tag
   delete props.allPages

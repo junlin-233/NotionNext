@@ -28,7 +28,7 @@ const Hero = props => {
         id='hero'
         style={{ zIndex: 1 }}
         className={`${HEO_HERO_REVERSE ? 'xl:flex-row-reverse' : ''}
-           recent-post-top rounded-[12px] 2xl:px-5 recent-top-post-group max-w-[86rem] overflow-x-scroll w-full mx-auto flex-row flex-nowrap flex relative`}>
+           recent-post-top rounded-[12px] recent-top-post-group max-w-[86rem] overflow-x-scroll w-full mx-auto flex-row flex-nowrap flex relative`}>
         {/* 左侧banner组 */}
         <BannerGroup {...props} />
 
@@ -318,8 +318,6 @@ function getTopPosts({ latestPosts, allNavPages }) {
  * @returns
  */
 function TodayCard({ cRef, siteInfo }) {
-  const router = useRouter()
-  const link = siteConfig('HEO_HERO_TITLE_LINK', null, CONFIG)
   const cover = siteConfig(
     'HEO_HERO_RECOMMEND_COVER',
     siteInfo?.pageCover,
@@ -350,11 +348,12 @@ function TodayCard({ cRef, siteInfo }) {
   }
 
   /**
-   * 点击卡片跳转的链接
+   * 点击封面：展开下面的推荐文章，不跳转
    * @param {*} e
    */
   function handleCardClick(e) {
-    router.push(link)
+    e.stopPropagation()
+    setIsCoverUp(false)
   }
 
   return (
@@ -404,10 +403,14 @@ function TodayCard({ cRef, siteInfo }) {
         <img
           src={cover}
           id='today-card-cover'
+          alt=''
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
           } hover:scale-110 duration-1000 object-cover cursor-pointer today-card-cover absolute w-full h-full top-0`}
         />
+
+        {/* 底部压暗：封面图换成浅色以后，白色按钮和文字会糊成一片 */}
+        <div className='pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 via-black/15 to-transparent' />
       </div>
     </div>
   )

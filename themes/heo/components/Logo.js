@@ -1,28 +1,19 @@
 import { Home } from '@/components/HeroIcons'
-import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
 import SmartLink from '@/components/SmartLink'
 
-const Logo = props => {
-  const { siteInfo } = props
+/**
+ * 左上角 Logo
+ * 房子图标的形状保持原样，底色换成白底黑线、暗色下反过来。
+ */
+const Logo = () => {
   return (
     <SmartLink href='/' passHref legacyBehavior>
-      <div className='flex flex-nowrap items-center cursor-pointer font-extrabold'>
-        <LazyImage
-          src={siteInfo?.icon}
-          width={24}
-          height={24}
-          alt={siteConfig('AUTHOR')}
-          className='mr-4 hidden md:block'
-        />
-        <div id='logo-text' className='group rounded-2xl flex-none relative'>
-          <div className='logo group-hover:opacity-0 opacity-100 visible group-hover:invisible text-lg my-auto rounded dark:border-white duration-200'>
-            {siteConfig('TITLE')}
-          </div>
-          <div className='flex justify-center rounded-2xl group-hover:bg-indigo-600 w-full group-hover:opacity-100 opacity-0 invisible group-hover:visible absolute top-0 py-1 duration-200'>
-            <Home className={'w-6 h-6 stroke-white stroke-2 '} />
-          </div>
-        </div>
+      <div
+        id='logo-home'
+        title={siteConfig('TITLE')}
+        className='flex flex-none items-center justify-center w-16 md:w-[70px] h-10 md:h-11 rounded-2xl bg-white ring-1 ring-black/[0.07] shadow-[0_2px_6px_rgba(16,24,40,0.08)] hover:ring-black/10 hover:shadow-[0_4px_14px_rgba(16,24,40,0.14)] dark:bg-[#23232b] dark:ring-white/10 dark:hover:ring-white/20 duration-200 transition-all cursor-pointer'>
+        <Home className={'w-6 h-6 stroke-black dark:stroke-white stroke-2'} />
       </div>
     </SmartLink>
   )

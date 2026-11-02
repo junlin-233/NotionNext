@@ -1,6 +1,7 @@
 import { HashTag } from '@/components/HeroIcons'
 import LazyImage from '@/components/LazyImage'
 import NotionIcon from '@/components/NotionIcon'
+import PostViewCount from '@/components/PostViewCount'
 import WordCount from '@/components/WordCount'
 import { siteConfig } from '@/lib/config'
 import { formatDateFmt } from '@/lib/utils/formatDate'
@@ -18,9 +19,6 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
   }
   // 文章头图
   const headerImage = post?.pageCover ? post.pageCover : siteInfo?.pageCover
-  const ANALYTICS_BUSUANZI_ENABLE =
-    siteConfig('ANALYTICS_BUSUANZI_ENABLE') ||
-    Boolean(siteConfig('UMAMI_HOST') && siteConfig('UMAMI_ID'))
   return (
     <div
       id='post-bg'
@@ -128,13 +126,11 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
               </div>
             </div>
 
-            {/* 阅读统计 */}
-            {ANALYTICS_BUSUANZI_ENABLE && (
-              <div className='hidden busuanzi_container_page_pv font-light mr-2'>
-                <i className='fa-solid fa-fire-flame-curved'></i>{' '}
-                <span className='mr-2 busuanzi_value_page_pv' />
-              </div>
-            )}
+            {/* 阅读统计：站内自建计数器（/api/views），未启用时不渲染 */}
+            <PostViewCount
+              slug={post.slug}
+              className='font-light ml-1 mr-2'
+            />
           </section>
         </div>
 
