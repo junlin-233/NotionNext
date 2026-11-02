@@ -72,6 +72,11 @@ class MyDocument extends Document {
             />
           )}
 
+          {/* PWA：manifest 走接口，站名跟 blog.config 走 */}
+          <link rel='manifest' href='/api/manifest' />
+          <meta name='theme-color' content='#c0392b' />
+          <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
+
           {/* 预先设置深色模式，避免闪烁 */}
           <script dangerouslySetInnerHTML={{ __html: darkModeScript }} />
         </Head>

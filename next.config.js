@@ -69,6 +69,31 @@ const nextConfig = {
   output: getOutput(),
   staticPageGenerationTimeout: 300,
 
+  /**
+   * Service Worker 必须每次回源校验，否则改了 sw.js 用户一年都拿不到新版本。
+   * 其余 /icons、/images 是带内容 hash 或长期不变的资源，交给 CDN 长缓存。
+   */
+  async headers() {
+    return [
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-cache, no-store, must-revalidate'
+          },
+          { key: 'Service-Worker-Allowed', value: '/' }
+        ]
+      },
+      {
+        source: '/icons/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      }
+    ]
+  },
+
   // 性能优化配置
   compress: true,
   poweredByHeader: false,

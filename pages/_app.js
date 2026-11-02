@@ -18,6 +18,10 @@ import SEO from '@/components/SEO'
 import dynamic from 'next/dynamic'
 
 const ClerkBoundary = dynamic(() => import('@/components/ClerkBoundary'))
+const ServiceWorkerRegister = dynamic(
+  () => import('@/components/ServiceWorker'),
+  { ssr: false }
+)
 
 const STALE_DEPLOYMENT_RELOAD_KEY = '__notionnext_stale_deployment_reload__'
 
@@ -88,6 +92,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
       </LayoutBase>
       <ExternalPlugins {...pageProps} />
+      <ServiceWorkerRegister />
     </GlobalContextProvider>
   )
   return <>{enableClerk ? <ClerkBoundary>{content}</ClerkBoundary> : content}</>
