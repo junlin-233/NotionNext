@@ -1,6 +1,8 @@
 import {
   buildContext,
+  hasEmbeddingKnowledge,
   searchKnowledge,
+  searchKnowledgeByText,
   toCitations
 } from '@/lib/ai/knowledge'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
@@ -33,6 +35,13 @@ const BASE_URL = (process.env.AI_CHAT_BASE_URL || 'https://api.openai.com/v1').r
 )
 const API_KEY = process.env.AI_CHAT_API_KEY || ''
 const CHAT_MODEL = process.env.AI_CHAT_MODEL || 'gpt-4o-mini'
+const EMBEDDING_BASE_URL = (
+  process.env.EMBEDDING_BASE_URL ||
+  process.env.AI_CHAT_BASE_URL ||
+  'https://api.openai.com/v1'
+).replace(/\/+$/, '')
+const EMBEDDING_API_KEY =
+  process.env.EMBEDDING_API_KEY || process.env.AI_CHAT_API_KEY || ''
 const EMBEDDING_MODEL =
   process.env.EMBEDDING_MODEL || 'text-embedding-3-small'
 
@@ -91,11 +100,11 @@ async function loadHrefMap() {
 }
 
 async function embedQuestion(question) {
-  const res = await fetch(`${BASE_URL}/embeddings`, {
+  const res = await fetch(`${EMBEDDING_BASE_URL}/embeddings`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${API_KEY}`
+      Authorization: `Bearer ${EMBEDDING_API_KEY}`
     },
     body: JSON.stringify({ model: EMBEDDING_MODEL, input: question })
   })
@@ -104,6 +113,24 @@ async function embedQuestion(question) {
   }
   const json = await res.json()
   return json?.data?.[0]?.embedding || null
+}
+
+/**
+ * 检索：向量模式（有 embedding 文件 + Key）优先，失败或缺失时走文本模式。
+ * 文本模式用中文二元分词覆盖率匹配，不需要 embedding 接口，
+ * 兼容 DeepSeek 这类只提供 chat 的供应商。
+ */
+async function retrieveChunks(question) {
+  if (hasEmbeddingKnowledge() && EMBEDDING_API_KEY) {
+    try {
+      const vector = await embedQuestion(question)
+      const chunks = searchKnowledge(vector, 5)
+      if (chunks.length) return chunks
+    } catch (error) {
+      console.warn('[ai-chat] 向量检索失败，降级文本检索:', error.message)
+    }
+  }
+  return searchKnowledgeByText(question, 5)
 }
 
 function send(res, payload) {
@@ -216,8 +243,7 @@ export default async function handler(req, res) {
     // 引用链接用站点自己算的 href（带 URL_PREFIX/多语言前缀），不要自己拼
     const hrefById = await loadHrefMap()
 
-    const vector = await embedQuestion(question)
-    const chunks = searchKnowledge(vector, 5)
+    const chunks = await retrieveChunks(question)
 
     if (!chunks.length) {
       send(res, {
