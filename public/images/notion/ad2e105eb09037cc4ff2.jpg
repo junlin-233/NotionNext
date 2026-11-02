@@ -1,0 +1,23 @@
+<div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; font-family: sans-serif;">
+  <h3>ROI 预估计算器</h3>
+  <label>每月节省时间 (小时):</label>
+  <input type="number" id="hours" value="10" style="margin-bottom: 15px; width: 100%; padding: 8px;" />
+  
+  <label>员工时薪 ($):</label>
+  <input type="number" id="rate" value="50" style="margin-bottom: 15px; width: 100%; padding: 8px;" />
+  
+  <button onclick="calculate()" style="background: #000; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">
+    计算每月节省
+  </button>
+  
+  <p id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></p>
+</div>
+
+<script>
+  function calculate() {
+    var hours = document.getElementById('hours').value;
+    var rate = document.getElementById('rate').value;
+    var total = hours * rate * 4; // 假设一个月4周
+    document.getElementById('result').innerText = "每月节省成本: $" + total;
+  }
+</script>

@@ -1,0 +1,2433 @@
+{
+  "__version__": 3,
+  "block": {
+    "8ad7813b-4b67-43e3-bb17-96e37ecccd7e": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "version": 11,
+          "type": "page",
+          "properties": {
+            "Dj]h": [
+              [
+                "fas fa-tag"
+              ]
+            ],
+            "NX\\Q": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2021-07-02"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "`gQ~": [
+              [
+                "SubMenu"
+              ]
+            ],
+            "d]hq": [
+              [
+                "/tag"
+              ]
+            ],
+            "title": [
+              [
+                "Tags"
+              ]
+            ],
+            "f211bdc0-ee00-4186-9a7d-f68c055ec2ee": [
+              [
+                "Published"
+              ]
+            ]
+          },
+          "content": [
+            "fca5cba2-eea9-4ed7-ba51-4a8d49da2502",
+            "65058ec9-8dee-4d07-b62d-349e45bcb4f7",
+            "890c5a69-639f-4067-8cac-e2d8eeea151f",
+            "ae7cc55d-ff71-4ebb-a027-a5257c8fba55",
+            "06abd774-0fb9-4f26-893d-b946ce89d95c",
+            "29acd467-02d6-4978-bd88-d39d3dfe9213",
+            "8eb96cb9-411c-4ee0-a160-259c53631603",
+            "51333453-c7a4-42ff-85b2-923cf575fbc0",
+            "ba1e5a47-b4c1-4dd3-8639-4dff781c5005",
+            "9c17ed84-249a-4c1b-822a-7222b8b04fed",
+            "f2130bd5-e399-4a6a-b13d-e3c556476f86",
+            "b719dd5a-0897-41b6-a4c1-e0f725dc6d53",
+            "14cf1dcc-ccf1-46f3-b67e-84cc3b50e3ea",
+            "b98a228a-d9dd-48da-89e6-b4cb6b363c2d",
+            "bec54618-5a9c-43ce-9a5c-58ebb3d4cd29",
+            "b6355499-5332-4aec-93db-9c2688afafda",
+            "c92688ed-c0cc-42fb-b759-e4bffc28f802"
+          ],
+          "format": {
+            "page_font": "mono",
+            "page_icon": "🗒️",
+            "block_locked": false,
+            "block_locked_by": "27074aef-7216-41ed-baef-d9b53addd870",
+            "copied_from_pointer": {
+              "id": "0bfc2813-a121-4fd1-a7bb-738f6357892c",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647409,
+          "last_edited_time": 1712561990791,
+          "parent_id": "c0406872-449f-49ab-9f18-e752d92490d5",
+          "parent_table": "collection",
+          "alive": true,
+          "copied_from": "0bfc2813-a121-4fd1-a7bb-738f6357892c",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "x4SxccIDwUZAoV5H5JdDfg,\"start\",\"end\"",
+              "n": {
+                "x4SxccIDwUZAoV5H5JdDfg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "x4SxccIDwUZAoV5H5JdDfg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "ERroyvAYqWms",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 4,
+                        "c": "Tags"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "7c1d5706-6175-4c8f-bc56-8e00a01fd70e": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "7c1d5706-6175-4c8f-bc56-8e00a01fd70e",
+          "version": 44,
+          "type": "collection_view_page",
+          "content": [
+            "8315f923-c7c7-4569-a0c4-12954149c1cb"
+          ],
+          "view_ids": [
+            "8c801924-de38-40b3-814a-ea6f13c8484f",
+            "8c8e56df-0e30-4a19-b637-9cc84124d51a",
+            "ccad4c50-2dae-4307-a1f4-e668e5266584",
+            "41dcb831-dcc0-4aab-9843-c483276ab9a5"
+          ],
+          "collection_id": "c0406872-449f-49ab-9f18-e752d92490d5",
+          "format": {
+            "site_id": "1b596b44-beb9-8174-b32b-0079d1c91eb8",
+            "block_locked": false,
+            "block_locked_by": "27074aef-7216-41ed-baef-d9b53addd870",
+            "collection_pointer": {
+              "id": "c0406872-449f-49ab-9f18-e752d92490d5",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "copied_from_pointer": {
+              "id": "02ab3b86-7800-4aa6-9e9e-415905ef32a5",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "page_cover_position": 0.6
+          },
+          "permissions": [
+            {
+              "role": "reader",
+              "type": "public_permission",
+              "is_site": true,
+              "added_timestamp": 1712549710423
+            }
+          ],
+          "created_time": 1712549666657,
+          "last_edited_time": 1718244690600,
+          "parent_id": "8991aef4-e3d8-4f18-9a70-d447fe4d47c7",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "02ab3b86-7800-4aa6-9e9e-415905ef32a5",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "5HzvSqqIYe3xY8pnmPBHlQ,\"start\",\"end\"",
+              "n": {
+                "5HzvSqqIYe3xY8pnmPBHlQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "5HzvSqqIYe3xY8pnmPBHlQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "8991aef4-e3d8-4f18-9a70-d447fe4d47c7": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    },
+    "6b25c0c0-5330-4883-8835-eeb44bacfb48": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    },
+    "fca5cba2-eea9-4ed7-ba51-4a8d49da2502": {
+      "value": {
+        "value": {
+          "id": "fca5cba2-eea9-4ed7-ba51-4a8d49da2502",
+          "version": 2,
+          "type": "quote",
+          "properties": {
+            "title": [
+              [
+                "文章来源说明"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "4895833c-e41a-41b2-9ca0-95fab8775280",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "4895833c-e41a-41b2-9ca0-95fab8775280",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "WE7P-vKAMpPedYhvzCKV2A,\"start\",\"end\"",
+              "n": {
+                "WE7P-vKAMpPedYhvzCKV2A,\"start\",\"end\"": {
+                  "s": {
+                    "x": "WE7P-vKAMpPedYhvzCKV2A",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Ff_us45iuhFy",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 6,
+                        "c": "文章来源说明"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "65058ec9-8dee-4d07-b62d-349e45bcb4f7": {
+      "value": {
+        "value": {
+          "id": "65058ec9-8dee-4d07-b62d-349e45bcb4f7",
+          "version": 2,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "🤔 一个简单的开头"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "666fe742-af44-4adb-866a-0241d757093c",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "666fe742-af44-4adb-866a-0241d757093c",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "eZzO6ndNZ0F1wHiqzl0Ppw,\"start\",\"end\"",
+              "n": {
+                "eZzO6ndNZ0F1wHiqzl0Ppw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "eZzO6ndNZ0F1wHiqzl0Ppw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "DJKVTcPUv0d7",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 10,
+                        "c": "🤔 一个简单的开头"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "890c5a69-639f-4067-8cac-e2d8eeea151f": {
+      "value": {
+        "value": {
+          "id": "890c5a69-639f-4067-8cac-e2d8eeea151f",
+          "version": 2,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "问题、目标、人物、背景是什么？"
+              ]
+            ]
+          },
+          "content": [
+            "04069ee6-94ca-415a-8f12-e14af2d4cde4"
+          ],
+          "format": {
+            "copied_from_pointer": {
+              "id": "ed122c6c-fe98-4735-ae73-8a22726d4da6",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "ed122c6c-fe98-4735-ae73-8a22726d4da6",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "a-WyXERJhwVEBH175is9Pg,\"start\",\"end\"",
+              "n": {
+                "a-WyXERJhwVEBH175is9Pg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "a-WyXERJhwVEBH175is9Pg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "HLDOREafw4cR",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 15,
+                        "c": "问题、目标、人物、背景是什么？"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "ae7cc55d-ff71-4ebb-a027-a5257c8fba55": {
+      "value": {
+        "value": {
+          "id": "ae7cc55d-ff71-4ebb-a027-a5257c8fba55",
+          "version": 2,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "阻碍、努力、结果"
+              ]
+            ]
+          },
+          "content": [
+            "1b5223d0-4385-469b-ba4c-6791d0ac90f2"
+          ],
+          "format": {
+            "copied_from_pointer": {
+              "id": "4c9ade44-d312-4462-b894-4b464018a482",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "4c9ade44-d312-4462-b894-4b464018a482",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "VrTCn4_7Hf3GzbNFypS5QA,\"start\",\"end\"",
+              "n": {
+                "VrTCn4_7Hf3GzbNFypS5QA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "VrTCn4_7Hf3GzbNFypS5QA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "OkzNc7lwxOGa",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 8,
+                        "c": "阻碍、努力、结果"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "06abd774-0fb9-4f26-893d-b946ce89d95c": {
+      "value": {
+        "value": {
+          "id": "06abd774-0fb9-4f26-893d-b946ce89d95c",
+          "version": 2,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "意外、转弯"
+              ]
+            ]
+          },
+          "content": [
+            "df70f061-449d-47b3-8561-48995b38781a"
+          ],
+          "format": {
+            "copied_from_pointer": {
+              "id": "1bbbea16-d889-4629-9438-e18a9815df69",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1bbbea16-d889-4629-9438-e18a9815df69",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "TGxnSffVd4sYoh8EFmC-Gg,\"start\",\"end\"",
+              "n": {
+                "TGxnSffVd4sYoh8EFmC-Gg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "TGxnSffVd4sYoh8EFmC-Gg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "tiPYExqvA27d",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "意外、转弯"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "29acd467-02d6-4978-bd88-d39d3dfe9213": {
+      "value": {
+        "value": {
+          "id": "29acd467-02d6-4978-bd88-d39d3dfe9213",
+          "version": 2,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "📝主旨内容"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "fb39aa46-9f29-4115-a130-5a2e843f9a75",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647419,
+          "last_edited_time": 1712549647419,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "fb39aa46-9f29-4115-a130-5a2e843f9a75",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "c1Q3ZLbYywFQbjCfZ9e5ew,\"start\",\"end\"",
+              "n": {
+                "c1Q3ZLbYywFQbjCfZ9e5ew,\"start\",\"end\"": {
+                  "s": {
+                    "x": "c1Q3ZLbYywFQbjCfZ9e5ew",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "SuHmUvGec0-A",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 6,
+                        "c": "📝主旨内容"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "8eb96cb9-411c-4ee0-a160-259c53631603": {
+      "value": {
+        "value": {
+          "id": "8eb96cb9-411c-4ee0-a160-259c53631603",
+          "version": 2,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "观点1"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "bdbc9a2b-7cf2-44b7-901c-3b850f0937cd",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "bdbc9a2b-7cf2-44b7-901c-3b850f0937cd",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "CBa4nhb7gqNr5vr8Ffk_6Q,\"start\",\"end\"",
+              "n": {
+                "CBa4nhb7gqNr5vr8Ffk_6Q,\"start\",\"end\"": {
+                  "s": {
+                    "x": "CBa4nhb7gqNr5vr8Ffk_6Q",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "3X-7VufRJnIb",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 3,
+                        "c": "观点1"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "51333453-c7a4-42ff-85b2-923cf575fbc0": {
+      "value": {
+        "value": {
+          "id": "51333453-c7a4-42ff-85b2-923cf575fbc0",
+          "version": 2,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "观点2"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "b73a1958-7e8a-494c-b789-1b9c923ff824",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "b73a1958-7e8a-494c-b789-1b9c923ff824",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "BSwg1FL_IGr3HJ2sTE41Jw,\"start\",\"end\"",
+              "n": {
+                "BSwg1FL_IGr3HJ2sTE41Jw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "BSwg1FL_IGr3HJ2sTE41Jw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "5lr9ClsBxwcF",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 3,
+                        "c": "观点2"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "ba1e5a47-b4c1-4dd3-8639-4dff781c5005": {
+      "value": {
+        "value": {
+          "id": "ba1e5a47-b4c1-4dd3-8639-4dff781c5005",
+          "version": 2,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "🤗总结归纳"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "c222d44e-6f11-4de2-90b3-5b49cd6a5b16",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "c222d44e-6f11-4de2-90b3-5b49cd6a5b16",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "ZhHinYewf9j0ImgShpe1Cw,\"start\",\"end\"",
+              "n": {
+                "ZhHinYewf9j0ImgShpe1Cw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "ZhHinYewf9j0ImgShpe1Cw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "3PkBYRd-hF-Q",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 6,
+                        "c": "🤗总结归纳"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "9c17ed84-249a-4c1b-822a-7222b8b04fed": {
+      "value": {
+        "value": {
+          "id": "9c17ed84-249a-4c1b-822a-7222b8b04fed",
+          "version": 2,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "6269c8c6-75a6-4a0e-9de5-bd81a4b2d9f5",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "6269c8c6-75a6-4a0e-9de5-bd81a4b2d9f5",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "IvZJfUAID3CjIa5_Y2paPQ,\"start\",\"end\"",
+              "n": {
+                "IvZJfUAID3CjIa5_Y2paPQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "IvZJfUAID3CjIa5_Y2paPQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "f2130bd5-e399-4a6a-b13d-e3c556476f86": {
+      "value": {
+        "value": {
+          "id": "f2130bd5-e399-4a6a-b13d-e3c556476f86",
+          "version": 2,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "参考文章"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "5396f792-3b64-4740-8ccb-501d8c1163da",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "5396f792-3b64-4740-8ccb-501d8c1163da",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "hkxCp9NeGyxVRP2MdE-Tew,\"start\",\"end\"",
+              "n": {
+                "hkxCp9NeGyxVRP2MdE-Tew,\"start\",\"end\"": {
+                  "s": {
+                    "x": "hkxCp9NeGyxVRP2MdE-Tew",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "IrrthZbpY72I",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 4,
+                        "c": "参考文章"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b719dd5a-0897-41b6-a4c1-e0f725dc6d53": {
+      "value": {
+        "value": {
+          "id": "b719dd5a-0897-41b6-a4c1-e0f725dc6d53",
+          "version": 2,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "6da70472-db52-4383-af68-55d181d55c51",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "6da70472-db52-4383-af68-55d181d55c51",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "wV_4W1pH92-Bs2J6dgUCwQ,\"start\",\"end\"",
+              "n": {
+                "wV_4W1pH92-Bs2J6dgUCwQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "wV_4W1pH92-Bs2J6dgUCwQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "14cf1dcc-ccf1-46f3-b67e-84cc3b50e3ea": {
+      "value": {
+        "value": {
+          "id": "14cf1dcc-ccf1-46f3-b67e-84cc3b50e3ea",
+          "version": 2,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "47c9ec5d-9a11-4b21-a16d-49217fa21507",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "47c9ec5d-9a11-4b21-a16d-49217fa21507",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "HBBTpf0AyD53XX47PGUULg,\"start\",\"end\"",
+              "n": {
+                "HBBTpf0AyD53XX47PGUULg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "HBBTpf0AyD53XX47PGUULg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b98a228a-d9dd-48da-89e6-b4cb6b363c2d": {
+      "value": {
+        "value": {
+          "id": "b98a228a-d9dd-48da-89e6-b4cb6b363c2d",
+          "version": 2,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "致谢："
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "5c131306-6f03-431c-ad67-32817fce2e00",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "5c131306-6f03-431c-ad67-32817fce2e00",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "zHyrLRGRDhWi4tUuzss52Q,\"start\",\"end\"",
+              "n": {
+                "zHyrLRGRDhWi4tUuzss52Q,\"start\",\"end\"": {
+                  "s": {
+                    "x": "zHyrLRGRDhWi4tUuzss52Q",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-bbacaUYBD-I",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 3,
+                        "c": "致谢："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "bec54618-5a9c-43ce-9a5c-58ebb3d4cd29": {
+      "value": {
+        "value": {
+          "id": "bec54618-5a9c-43ce-9a5c-58ebb3d4cd29",
+          "version": 2,
+          "type": "callout",
+          "properties": {
+            "title": [
+              [
+                "有关Notion安装或者使用上的问题，欢迎您在底部评论区留言，一起交流~"
+              ]
+            ]
+          },
+          "format": {
+            "page_icon": "💡",
+            "block_color": "gray_background",
+            "copied_from_pointer": {
+              "id": "a4a7ee5b-b8ef-4ecf-9a96-5ff036b24e35",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "a4a7ee5b-b8ef-4ecf-9a96-5ff036b24e35",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "HDY4N22fo5Vng11SHGXESQ,\"start\",\"end\"",
+              "n": {
+                "HDY4N22fo5Vng11SHGXESQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "HDY4N22fo5Vng11SHGXESQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "qV6FoWaLoJJm",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 36,
+                        "c": "有关Notion安装或者使用上的问题，欢迎您在底部评论区留言，一起交流~"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b6355499-5332-4aec-93db-9c2688afafda": {
+      "value": {
+        "value": {
+          "id": "b6355499-5332-4aec-93db-9c2688afafda",
+          "version": 2,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "45f31069-3fb4-4384-b6e2-584237826bf8",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "45f31069-3fb4-4384-b6e2-584237826bf8",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "wiIaC3OWNjCKQC3D5RwZxw,\"start\",\"end\"",
+              "n": {
+                "wiIaC3OWNjCKQC3D5RwZxw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "wiIaC3OWNjCKQC3D5RwZxw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "c92688ed-c0cc-42fb-b759-e4bffc28f802": {
+      "value": {
+        "value": {
+          "id": "c92688ed-c0cc-42fb-b759-e4bffc28f802",
+          "version": 2,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "06cbd8b4-c8a7-495e-aec8-a829ffa194c9",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647418,
+          "last_edited_time": 1712549647418,
+          "parent_id": "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "06cbd8b4-c8a7-495e-aec8-a829ffa194c9",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "Uinpskh8i39-b--Rz6p9ZQ,\"start\",\"end\"",
+              "n": {
+                "Uinpskh8i39-b--Rz6p9ZQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Uinpskh8i39-b--Rz6p9ZQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "04069ee6-94ca-415a-8f12-e14af2d4cde4": {
+      "value": {
+        "value": {
+          "id": "04069ee6-94ca-415a-8f12-e14af2d4cde4",
+          "version": 2,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "为什么读者会对其有兴趣？"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "9f9194fa-6653-40db-a5b9-8f20a20b3376",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647447,
+          "last_edited_time": 1712549647447,
+          "parent_id": "890c5a69-639f-4067-8cac-e2d8eeea151f",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "9f9194fa-6653-40db-a5b9-8f20a20b3376",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "lXVEb-zMQf0d29oqN4_ShA,\"start\",\"end\"",
+              "n": {
+                "lXVEb-zMQf0d29oqN4_ShA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "lXVEb-zMQf0d29oqN4_ShA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "PHP3L3Wn5GPW",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 12,
+                        "c": "为什么读者会对其有兴趣？"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "1b5223d0-4385-469b-ba4c-6791d0ac90f2": {
+      "value": {
+        "value": {
+          "id": "1b5223d0-4385-469b-ba4c-6791d0ac90f2",
+          "version": 2,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "展示你的主要成果"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "a49c2e6d-85fa-4223-8db5-aadfc422b444",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647443,
+          "last_edited_time": 1712549647443,
+          "parent_id": "ae7cc55d-ff71-4ebb-a027-a5257c8fba55",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "a49c2e6d-85fa-4223-8db5-aadfc422b444",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "29VEK0l5bUcPL8arNAxVUg,\"start\",\"end\"",
+              "n": {
+                "29VEK0l5bUcPL8arNAxVUg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "29VEK0l5bUcPL8arNAxVUg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "TazQKm1OrXWM",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 8,
+                        "c": "展示你的主要成果"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "df70f061-449d-47b3-8561-48995b38781a": {
+      "value": {
+        "value": {
+          "id": "df70f061-449d-47b3-8561-48995b38781a",
+          "version": 2,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "说说你的故事"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "bb9f11df-1a59-4160-ad74-91714faa13e0",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            }
+          },
+          "created_time": 1712549647438,
+          "last_edited_time": 1712549647438,
+          "parent_id": "06abd774-0fb9-4f26-893d-b946ce89d95c",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "bb9f11df-1a59-4160-ad74-91714faa13e0",
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "1dYpz-wd9vKI9FfoVBep3w,\"start\",\"end\"",
+              "n": {
+                "1dYpz-wd9vKI9FfoVBep3w,\"start\",\"end\"": {
+                  "s": {
+                    "x": "1dYpz-wd9vKI9FfoVBep3w",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "ZXnWRlv00P4g",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 6,
+                        "c": "说说你的故事"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "collection": {
+    "c0406872-449f-49ab-9f18-e752d92490d5": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "c0406872-449f-49ab-9f18-e752d92490d5",
+          "version": 24,
+          "name": [
+            [
+              "Notion Blog - EN"
+            ]
+          ],
+          "description": [
+            [
+              "NotionNext Blog"
+            ]
+          ],
+          "schema": {
+            "@NcA": {
+              "name": "password",
+              "type": "text"
+            },
+            "Dj]h": {
+              "name": "icon",
+              "type": "text"
+            },
+            "NX\\Q": {
+              "name": "date",
+              "type": "date",
+              "date_format": "YYYY/MM/DD"
+            },
+            "`gQ~": {
+              "name": "type",
+              "type": "select",
+              "options": [
+                {
+                  "id": "5aff2f95-fd1e-489b-8840-bf10bc9519cb",
+                  "color": "purple",
+                  "value": "Post"
+                },
+                {
+                  "id": "374d2bc6-a144-4832-8ca4-474aaae0ea1f",
+                  "color": "orange",
+                  "value": "Page"
+                },
+                {
+                  "id": "95b7fea5-98b3-476e-892f-79e8f36d0633",
+                  "color": "brown",
+                  "value": "Notice"
+                },
+                {
+                  "id": "2287395b-9f64-4852-b46f-ff3df4b4acef",
+                  "color": "yellow",
+                  "value": "Menu"
+                },
+                {
+                  "id": "50fefd65-c28e-4806-9183-aa12995f11f3",
+                  "color": "pink",
+                  "value": "SubMenu"
+                },
+                {
+                  "id": "b945f57d-dbcc-4603-9fab-5cfe447aad1b",
+                  "color": "red",
+                  "value": "Config"
+                }
+              ]
+            },
+            "bB{M": {
+              "name": "category",
+              "type": "select",
+              "options": [
+                {
+                  "id": "a4dcd33a-34a7-4c33-b9c2-92d3a5248f06",
+                  "color": "pink",
+                  "value": "Knowledge"
+                },
+                {
+                  "id": "8282ff59-f160-40c3-ab7e-6e970a0a64d5",
+                  "color": "purple",
+                  "value": "Technology"
+                },
+                {
+                  "id": "edd604ab-fda7-4d9b-964a-e7de536c05a0",
+                  "color": "orange",
+                  "value": "Essays"
+                }
+              ]
+            },
+            "d]hq": {
+              "name": "slug",
+              "type": "text"
+            },
+            "sD^m": {
+              "name": "tags",
+              "type": "multi_select",
+              "options": [
+                {
+                  "id": "d9f66761-0396-4e80-be5c-2ab6c7f8ba86",
+                  "color": "red",
+                  "value": "Recommend"
+                },
+                {
+                  "id": "ee932bde-0023-446f-9bb4-17d2022121c9",
+                  "color": "brown",
+                  "value": "Text"
+                },
+                {
+                  "id": "438bae9c-df52-4fb0-8288-791c5ee8625c",
+                  "color": "yellow",
+                  "value": "Reflection"
+                },
+                {
+                  "id": "4ae52b3d-6ee9-4af5-9b79-0b7644adf259",
+                  "color": "orange",
+                  "value": "News"
+                },
+                {
+                  "id": "25b1074b-a3fa-49f5-82cd-a37d85c5666f",
+                  "color": "pink",
+                  "value": "Tools"
+                },
+                {
+                  "id": "1e90f00e-8f1b-4665-8e69-92f0791bde56",
+                  "color": "pink",
+                  "value": "Development"
+                },
+                {
+                  "id": "2382b30f-9881-4a8b-ae7f-2d34979c4fb9",
+                  "color": "brown",
+                  "value": "Website building"
+                },
+                {
+                  "id": "569a8035-8738-40e8-a317-d6a6375f0b35",
+                  "color": "green",
+                  "value": "Money"
+                },
+                {
+                  "id": "b39c0d81-6d40-4474-83fe-d8f44746a2d1",
+                  "color": "pink",
+                  "value": "Health"
+                }
+              ]
+            },
+            "wz|S": {
+              "name": "summary",
+              "type": "text"
+            },
+            "title": {
+              "name": "title",
+              "type": "title"
+            },
+            "f211bdc0-ee00-4186-9a7d-f68c055ec2ee": {
+              "name": "status",
+              "type": "select",
+              "options": [
+                {
+                  "id": "7abc61d4-b405-480d-b699-12588755fa65",
+                  "color": "red",
+                  "value": "Published"
+                },
+                {
+                  "id": "d1242312-e0a8-456d-b8f0-6e998e2c4fb2",
+                  "color": "orange",
+                  "value": "Invisible"
+                },
+                {
+                  "id": "41d5f5c6-b53c-42bc-8e0f-fc9402048480",
+                  "color": "yellow",
+                  "value": "Draft"
+                }
+              ]
+            }
+          },
+          "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/6c096b44-beb9-48ee-8f92-1efdde47f3a3/29db38d2-d5fa-4fa6-8a92-3b527cfe80d1/favicon.svg",
+          "cover": "/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg",
+          "format": {
+            "copied_from_pointer": {
+              "id": "4379bc14-5d22-453b-a153-12639616fc01",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "property_visibility": [
+              {
+                "property": "`gQ~",
+                "visibility": "show"
+              },
+              {
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee",
+                "visibility": "show"
+              },
+              {
+                "property": "NX\\Q",
+                "visibility": "show"
+              },
+              {
+                "property": "d]hq",
+                "visibility": "show"
+              },
+              {
+                "property": "wz|S",
+                "visibility": "show"
+              },
+              {
+                "property": "sD^m",
+                "visibility": "show"
+              },
+              {
+                "property": "bB{M",
+                "visibility": "show"
+              },
+              {
+                "property": "Dj]h",
+                "visibility": "hide_if_empty"
+              },
+              {
+                "property": "uHoD",
+                "visibility": "show"
+              },
+              {
+                "property": "kiCR",
+                "visibility": "hide"
+              }
+            ],
+            "collection_cover_position": 0.3,
+            "collection_page_properties": [
+              {
+                "visible": false,
+                "property": "`gQ~"
+              },
+              {
+                "visible": false,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "visible": true,
+                "property": "Dj]h"
+              },
+              {
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "visible": true,
+                "property": "ckw_"
+              }
+            ],
+            "collection_default_template": {
+              "template_page_id": "882e7659-6ffb-4ff3-9d33-093cad321379"
+            }
+          },
+          "parent_id": "7c1d5706-6175-4c8f-bc56-8e00a01fd70e",
+          "parent_table": "block",
+          "alive": true,
+          "file_ids": [
+            "6cf3dc36-2f98-4f0e-9679-1bdbb1485129",
+            "5520bd92-e709-4c0d-ad58-06923f23f7e9",
+            "624d393a-62e3-4464-a1bf-1c79ecd4fbda",
+            "d52f6766-3e32-4c3d-8529-46e1f214360f",
+            "abe3a0aa-2aff-4274-81bb-c2443d4ef9e2",
+            "a2a32795-101d-46aa-a7f6-eb35b8750166",
+            "29db38d2-d5fa-4fa6-8a92-3b527cfe80d1"
+          ],
+          "copied_from": "4379bc14-5d22-453b-a153-12639616fc01",
+          "template_pages": [
+            "882e7659-6ffb-4ff3-9d33-093cad321379"
+          ],
+          "migrated": true,
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+        },
+        "role": "reader"
+      }
+    },
+    "05805658-775d-47b7-b5f7-3c1873696ebd": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    }
+  },
+  "collection_view": {
+    "8c801924-de38-40b3-814a-ea6f13c8484f": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "8c801924-de38-40b3-814a-ea6f13c8484f",
+          "version": 7,
+          "type": "table",
+          "name": "Table",
+          "format": {
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 254,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 323,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "c0406872-449f-49ab-9f18-e752d92490d5",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "table_frozen_column_index": -1,
+            "collection_view_default_template": {
+              "template_page_id": "882e7659-6ffb-4ff3-9d33-093cad321379"
+            }
+          },
+          "parent_id": "7c1d5706-6175-4c8f-bc56-8e00a01fd70e",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "cc459e5b-0f15-4a0c-83db-bb6bf2001aa3",
+            "a9bfecc8-9761-4987-9aca-af79d4ebbd0c",
+            "7aa40ad8-1e69-4d56-b245-d135d3101cec",
+            "e4eefa7d-e2f2-44ed-83f6-fd6951d50900",
+            "0f9b7a0d-ad15-4ece-8a8b-948d96b50ff7",
+            "58a216ce-4d8d-4b60-906c-6097c5fd8d41",
+            "b824f35b-aee9-4a22-81c9-d44b65f99f43",
+            "ba565c08-0d2f-46cb-9fcb-5eeface44dfb",
+            "560c76dd-c69f-429b-827d-7974407bb23f",
+            "0533a861-81cc-40fa-8ab8-5be721800b86",
+            "3578fa31-ea0a-4e07-82dc-28704e0dc685",
+            "f2625c60-ca69-493b-858c-bf38979f468c",
+            "96b14e20-e592-42f6-b7d2-357f4693f18c",
+            "fe8fafec-6d1b-4fbb-8a7a-fb079a6bb8e4",
+            "9345db3a-b8bd-4e02-b296-9734958eddb6",
+            "26e8ddc4-10b4-4765-a96d-e87290556164",
+            "840f0871-b58b-428d-8a28-0861947974b4",
+            "5787bc4f-06a4-4158-a27f-6c81fb9b1efe",
+            "e1bff221-486f-42c8-9cf3-6379f83f3510",
+            "2db01777-47d0-4230-bbe8-ef65ab694707",
+            "ab0d5acb-9230-4656-9c49-1aff13aba865",
+            "98330ff5-71d2-4ea9-945a-ba76fc282e9d",
+            "fe399f12-7891-4e46-8cef-f8b3a9e15d1d",
+            "496bcc18-a74d-4ab2-84d4-37ef4a4f4ffe",
+            "5127215a-3051-4513-aec0-a678e0073a76",
+            "a82e88c6-c737-4796-a887-830f1e334e27",
+            "6f414124-3a8f-4878-b07e-5d1a9fcdd703",
+            "56cce11d-2347-4ae6-b8e4-a382b3cbf844",
+            "ee99f2c2-d6a4-4054-a5b0-27463f1d3488",
+            "57cb9b33-db50-4b6f-a363-d9f2c6b84654",
+            "54259497-8c1c-49a9-ae4c-ea970f375250",
+            "5ac82b42-0726-4f5a-9cff-b7b3000f5879",
+            "38d1cb35-dfab-41d6-9620-66360108890d",
+            "c4fe8170-c1be-4ed8-a3e5-680d2fa189d6",
+            "fbb04c01-62cd-44b8-9d14-2ba5621eec8a",
+            "ce720858-10b7-4c0c-8083-906f29150a81",
+            "f6656d78-c801-40f3-9815-cd47a77a0f52",
+            "0eacdb86-a8d0-44c3-b5d1-a1ad8dbcc64b",
+            "4194acae-3f4b-4c08-98b9-907a0b5bd4b9",
+            "a0b1e93c-bccd-4003-8af8-68696b844cd4",
+            "fbb4be84-193c-4fc3-a410-899b934b08d7",
+            "59d92675-3841-406e-aafa-be27fed65c00",
+            "16795b53-2fb2-4226-b630-1df31e61ffbb",
+            "a6b86365-e4f0-4084-87d4-787b461bb066",
+            "e58ab418-8bca-49b8-b803-1b895de653a5",
+            "f3550fb0-346c-4212-b57f-86433738b50b",
+            "203169ff-77a8-44e9-b709-bcae05cd1a90",
+            "01847992-c841-4b53-97c6-9c45e32b6787",
+            "248fbc7d-97f7-4f47-a86b-a80ba2e43d99",
+            "d3eb5496-843e-4b76-9a24-0fc717d29068",
+            "1ffb90ba-821d-4d16-8520-e46604a470d7",
+            "adc7c47b-6dd7-439f-9e06-6075256c91a7",
+            "1f911e56-1a45-45fa-a4eb-ef34188a6eec",
+            "fd0b958d-e5d9-424b-b3bd-eb5211bde2df",
+            "454b88fb-f48e-41a7-a390-d2eec8e25ee4",
+            "8ad7813b-4b67-43e3-bb17-96e37ecccd7e",
+            "4629ce55-90c6-4cbb-8772-2be71644df05",
+            "96ae7ffd-d46d-4105-939c-44a91c880d9b",
+            "9e017f37-5917-4cda-afb8-92072abdbdba",
+            "8aafeb2c-85b4-4c4e-af36-3b9efacb167c",
+            "6d0e0705-57f3-4223-8745-a27295245029",
+            "dec89a30-7004-499f-a99e-05b2842cad2b",
+            "7efc83d4-2645-4578-b588-a9cffb15524a",
+            "1769e8de-bebe-4687-a28a-34c15859ed98",
+            "203f2c30-a3cd-4f70-95b3-07df9f996428",
+            "2a0b435c-6f77-4db8-be6b-831d177bd762",
+            "eac01009-c323-46fd-8339-09c282e6597e",
+            "c4b37f96-4ab0-4a0b-a16e-55bac3e32990",
+            "4ad5c69e-0dab-4d66-b548-360da7d53568",
+            "72d89744-ac04-4dd4-be8b-9d629acd7c11",
+            "32dc3358-e954-4934-9e71-cf1dfbca5b91",
+            "961e45bd-8bed-4ebc-b3d8-1f0e63736d04"
+          ],
+          "query2": {
+            "aggregations": [
+              {
+                "property": "title",
+                "aggregator": "count"
+              }
+            ]
+          },
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+        },
+        "role": "reader"
+      }
+    },
+    "8c8e56df-0e30-4a19-b637-9cc84124d51a": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "8c8e56df-0e30-4a19-b637-9cc84124d51a",
+          "version": 2,
+          "type": "gallery",
+          "name": "Post Gallery",
+          "format": {
+            "gallery_cover": {
+              "type": "page_cover"
+            },
+            "property_filters": [
+              {
+                "id": "e5e69a48-8053-4d20-9e5a-73e8b24dab16",
+                "filter": {
+                  "filter": {
+                    "value": {
+                      "type": "exact",
+                      "value": "Post"
+                    },
+                    "operator": "enum_is"
+                  },
+                  "property": "`gQ~"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 155,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_groups": [
+              {
+                "value": {
+                  "type": "select",
+                  "value": "心情随笔"
+                },
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "技术分享"
+                },
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "知行合一"
+                },
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select"
+                },
+                "hidden": true,
+                "property": "bB{M"
+              }
+            ],
+            "collection_pointer": {
+              "id": "c0406872-449f-49ab-9f18-e752d92490d5",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "gallery_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              },
+              {
+                "visible": false,
+                "property": "`gQ~"
+              }
+            ],
+            "collection_group_by": {
+              "sort": {
+                "type": "manual"
+              },
+              "type": "select",
+              "property": "bB{M"
+            },
+            "table_subitem_toggle_column": "title",
+            "collection_group_aggregation": {
+              "aggregator": "count",
+              "enforceMaxAggregationLimit": true
+            }
+          },
+          "parent_id": "7c1d5706-6175-4c8f-bc56-8e00a01fd70e",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+        },
+        "role": "reader"
+      }
+    },
+    "ccad4c50-2dae-4307-a1f4-e668e5266584": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "ccad4c50-2dae-4307-a1f4-e668e5266584",
+          "version": 1,
+          "type": "board",
+          "name": "Post Board",
+          "format": {
+            "board_columns": [
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Draft"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Invisible"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Published"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              }
+            ],
+            "board_columns_by": {
+              "sort": {
+                "type": "manual"
+              },
+              "type": "select",
+              "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+            },
+            "board_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "`gQ~"
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 155,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "c0406872-449f-49ab-9f18-e752d92490d5",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "table_subitem_toggle_column": "title"
+          },
+          "parent_id": "7c1d5706-6175-4c8f-bc56-8e00a01fd70e",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+        },
+        "role": "reader"
+      }
+    },
+    "41dcb831-dcc0-4aab-9843-c483276ab9a5": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "value": {
+          "id": "41dcb831-dcc0-4aab-9843-c483276ab9a5",
+          "version": 1,
+          "type": "table",
+          "name": "Config",
+          "format": {
+            "gallery_cover": {
+              "type": "page_content"
+            },
+            "list_properties": [
+              {
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              }
+            ],
+            "property_filters": [
+              {
+                "id": "b54a6c88-635d-4de4-946e-5a855a1f4069",
+                "filter": {
+                  "filter": {
+                    "value": [
+                      {
+                        "type": "exact",
+                        "value": "Notice"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Menu"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Config"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "SubMenu"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Page"
+                      }
+                    ],
+                    "operator": "enum_is"
+                  },
+                  "property": "`gQ~"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 116,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 118,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 326,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "c0406872-449f-49ab-9f18-e752d92490d5",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "gallery_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              }
+            ],
+            "table_frozen_column_index": -1,
+            "table_subitem_toggle_column": "title"
+          },
+          "parent_id": "7c1d5706-6175-4c8f-bc56-8e00a01fd70e",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+        },
+        "role": "reader"
+      }
+    },
+    "c7ba09b5-9679-4e1b-99ee-57710915d447": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    },
+    "95291d8d-e273-469c-a59d-a13b3111356c": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    },
+    "7030f083-12ac-47e7-8437-78d103d3d0f9": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    },
+    "1423991b-788a-4c5d-a888-ef14c8f79dfd": {
+      "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3",
+      "value": {
+        "role": "none"
+      }
+    }
+  },
+  "notion_user": {},
+  "collection_query": {},
+  "signed_urls": {}
+}
