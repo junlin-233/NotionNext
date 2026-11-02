@@ -87,14 +87,21 @@ function generateLocalesSitemap(link, allPages, locale) {
   ]
   const postFields =
     allPages
-      ?.filter(p => p.status === BLOG.NOTION_PROPERTY_NAME.status_publish)
+      ?.filter(
+        p =>
+          p.status === BLOG.NOTION_PROPERTY_NAME.status_publish &&
+          typeof p?.slug === 'string' &&
+          p.slug.length > 0
+      )
       ?.map(post => {
-        const slugWithoutLeadingSlash = post?.slug.startsWith('/')
-          ? post?.slug?.slice(1)
-          : post.slug
+        // Page / Menu 这类页面没有 publishDay，直接 new Date().toISOString() 会抛
+        // RangeError 让整个 sitemap 返回 500，这里兜底成今天
+        const published = new Date(post?.publishDay ?? Date.now())
         return {
-          loc: `${link}${locale}/${slugWithoutLeadingSlash}`,
-          lastmod: new Date(post?.publishDay).toISOString().split('T')[0],
+          loc: `${link}${locale}/${post.slug.startsWith('/') ? post.slug.slice(1) : post.slug}`,
+          lastmod: Number.isNaN(published.getTime())
+            ? dateNow
+            : published.toISOString().split('T')[0],
           changefreq: 'daily',
           priority: '0.7'
         }
@@ -117,4 +124,6 @@ function getUniqueFields(fields) {
   return Array.from(uniqueFieldsMap.values());
 }
 
-export default () => {}
+const SitemapPlaceholder = () => {}
+
+export default SitemapPlaceholder

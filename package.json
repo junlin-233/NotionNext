@@ -22,6 +22,7 @@
     "post-build": "next-sitemap --config next-sitemap.config.js",
     "build:search": "node scripts/build-search-index.js",
     "stats": "node scripts/analytics/parse-access-log.js",
+    "stats:archive": "node scripts/analytics/snapshot-busuanzi.js",
     "build:full": "yarn build && yarn build:search",
     "export": "cross-env BUILD_MODE=true EXPORT=true next build && next-sitemap --config next-sitemap.config.js",
     "bundle-report": "cross-env ANALYZE=true next build",

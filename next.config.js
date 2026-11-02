@@ -194,7 +194,7 @@ const nextConfig = {
                 key: 'Content-Security-Policy-Report-Only',
                 value: [
                   "default-src 'self'",
-                  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://npm.elemecdn.com https://cdnjs.cloudflare.com https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com https://hm.baidu.com https://s9.cnzz.com https://s4.zstatic.net",
+                  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://npm.elemecdn.com https://cdnjs.cloudflare.com https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com https://hm.baidu.com https://s9.cnzz.com https://s4.zstatic.net https://busuanzi.ibruce.info",
                   "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://npm.elemecdn.com https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com",
                   "img-src 'self' data: blob: https:",
                   "font-src 'self' data: https:",

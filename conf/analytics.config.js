@@ -7,8 +7,8 @@ module.exports = {
   ANALYTICS_VERCEL: toBoolean(process.env.NEXT_PUBLIC_ANALYTICS_VERCEL, false), // vercel自带的统计
   ANALYTICS_BUSUANZI_ENABLE: toBoolean(
     process.env.NEXT_PUBLIC_ANALYTICS_BUSUANZI_ENABLE,
-    false
-  ), // 展示网站阅读量、访问数（已由 Umami 自托管统计替代，默认关闭）
+    true
+  ), // 展示网站阅读量、访问数（默认开启；历史数据由 scripts/analytics/snapshot-busuanzi.js 定时归档）
   ANALYTICS_BAIDU_ID: process.env.NEXT_PUBLIC_ANALYTICS_BAIDU_ID || '', // e.g 只需要填写百度统计的id，[baidu_id] -> https://hm.baidu.com/hm.js?[baidu_id]
   ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // 只需要填写站长统计的id, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id=[cnzz_id]&web_id=[cnzz_id]
   ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || '', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
