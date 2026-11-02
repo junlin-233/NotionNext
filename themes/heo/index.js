@@ -5,15 +5,12 @@
  *  更多说明参考此[文档](https://docs.tangly1024.com/article/notionnext-heo)
  */
 
-import Comment from '@/components/Comment'
 import { AdSlot } from '@/components/GoogleAdsense'
 import { HashTag } from '@/components/HeroIcons'
 import LazyImage from '@/components/LazyImage'
-import LoadingCover from '@/components/LoadingCover'
 import replaceSearchResult from '@/components/Mark'
 import NotionPage from '@/components/NotionPage'
 import ShareBar from '@/components/ShareBar'
-import WWAds from '@/components/WWAds'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import { isBrowser } from '@/lib/utils'
@@ -26,20 +23,16 @@ import BlogPostHot from './components/BlogPostHot'
 import BlogPostListPage from './components/BlogPostListPage'
 import BlogPostListScroll from './components/BlogPostListScroll'
 import CategoryBar from './components/CategoryBar'
-import FloatTocButton from './components/FloatTocButton'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import LatestPostsGroup from './components/LatestPostsGroup'
 import { NoticeBar } from './components/NoticeBar'
-import PostAdjacent from './components/PostAdjacent'
-import PostCopyright from './components/PostCopyright'
 import PostHeader from './components/PostHeader'
+import PostCopyright from './components/PostCopyright'
 import { PostLock } from './components/PostLock'
-import PostRecommend from './components/PostRecommend'
 import SearchNav from './components/SearchNav'
 import SearchResultsPagefind from './components/SearchResultsPagefind'
-import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { groupPostsByMonth } from './lib/archive'
 import { Style } from './style'
@@ -51,6 +44,34 @@ const Transition = dynamic(
   () => import('@headlessui/react').then(module => module.Transition),
   { ssr: false }
 )
+
+/**
+ * 首屏之外的组件全部拆成独立 chunk，不进文章页首屏 JS：
+ * - 右侧栏：<xl 屏幕本来就不显示
+ * - 评论：自带 IntersectionObserver，进视口才加载，但模块本身不该在首屏
+ * - 广告 / 相关推荐 / 回顶 / 载入遮罩：纯装饰，晚一步出现没有感知
+ */
+const SideRight = dynamic(() => import('./components/SideRight'), {
+  ssr: false
+})
+const Comment = dynamic(() => import('@/components/Comment'), { ssr: false })
+const WWAds = dynamic(() => import('@/components/WWAds'), { ssr: false })
+const PostRecommend = dynamic(() => import('./components/PostRecommend'), {
+  ssr: false
+})
+const LoadingCover = dynamic(() => import('@/components/LoadingCover'), {
+  ssr: false
+})
+const FloatTocButton = dynamic(() => import('./components/FloatTocButton'), {
+  ssr: false
+})
+const PostAdjacent = dynamic(() => import('./components/PostAdjacent'), {
+  ssr: false
+})
+// 站内问答入口：没配 NEXT_PUBLIC_AI_CHAT_ENABLE 时组件自身返回 null，不占位
+const AIChatWidget = dynamic(() => import('@/components/AIChatWidget'), {
+  ssr: false
+})
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -130,6 +151,8 @@ const LayoutBase = props => {
       <Footer />
 
       {HEO_LOADING_COVER && <LoadingCover />}
+
+      <AIChatWidget />
     </div>
   )
 }

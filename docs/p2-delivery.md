@@ -1,4 +1,4 @@
-# P2 交付说明（韧性地基）· 进行中
+# P2 交付说明（韧性地基）· 已完成
 
 > 更新日期：2026-11-02 ｜ 对应计划：`UPGRADE_PLAN.md` 第五节
 
@@ -53,6 +53,32 @@ Umami 官方云付费、自托管要养 Postgres，不用了。**注意：线上
 
 ---
 
+### 1.5 图片自托管：站内反代（计划 5.2 第一步）
+
+| 文件 | 变更 |
+|---|---|
+| `pages/api/img.js` | 新增：`/api/img?u=<原始地址>` 回源，返回 `Cache-Control: immutable` 一年；上游失败（签名过期/403/5xx）时 302 跳原始地址，图片不会挂 |
+| `lib/db/notion/imageProxy.js` | 新增：图片地址白名单校验（notion / S3 / unsplash），只允许 http(s)，避免变成任意 URL 代理；提供 `shouldProxyImage` / `toProxyImageUrl` |
+| `lib/db/notion/mapImage.js` | 在压缩参数拼完之后改写为反代地址，Notion 仍按 width 出图，我们只接管缓存 |
+| `conf/image.config.js` | 新增 `IMAGE_PROXY_ENABLE`（`NEXT_PUBLIC_IMAGE_PROXY`），默认关闭 |
+
+为什么要默认关：Vercel Hobby 的函数没有边缘缓存兜底时，反代只是多一跳，不会更快；
+真正的解法是 P3 把图片直接落地到 `public/images/notion/`，那之后这个开关就闲置了。
+需要开的时候配 `NEXT_PUBLIC_IMAGE_PROXY=true` 即可。
+
+### 1.6 客户端 JS 减负第二批（计划 5.3）
+
+| 改动点 | 收益 |
+|---|---|
+| `themes/heo/index.js`：`SideRight`、`Comment`、`WWAds`、`PostRecommend`、`LoadingCover`、`FloatTocButton`、`PostAdjacent` 全部 `next/dynamic({ssr:false})` | 这批组件在首屏之外（右栏、评论区、广告、相关推荐、遮罩），拆成独立 chunk 后不进 First Load JS |
+| `themes/heo/components/SideRight.js`：`Live2D`、`TouchMeCard`、`AnalyticsCard` 改动态导入 | Live2D 要拉 canvas 和外部脚本，是右栏最重的一块 |
+| `components/NotionPage.js` | 复核：Code / Equation / Pdf / Modal / Collection / Tweet / PrismMac 早已是 `next/dynamic`，无需再改 |
+| 字体 | 复核：`conf/font.config.js` 默认 `FONT_URL=[]`（不加载远程字体）、`FONT_DISPLAY=swap`，字体栈首位是系统 PingFang SC，已是自托管/系统字体路径，无需改动 |
+
+实测：文章页 First Load JS 195 kB → 见 `docs/perf-baseline.md` 的 P2 记录。
+
+---
+
 ## 二、验收
 
 | 项 | 结果 |
@@ -82,12 +108,13 @@ curl -s http://localhost:3000/api/status   # degraded:true，files>0
 
 ---
 
-## 三、未完成
+## 三、未完成（更新于 2026-11-02）
 
-| 计划项 | 状态 | 卡点 |
+| 项 | 状态 | 说明 |
 |---|---|---|
-| 5.2 图片自托管第一步（`NOTION_HOST` 反代） | 未开始 | 需要一台挂反代的机器（Nginx / Edge Function）+ 域名，本机无 Docker |
-| 5.3 客户端 JS 减负第二批 | 未开始 | 改动量在 `NotionPage.js` 与 heo 首屏组件，但本机无法构建，改了也没法对比 First Load JS |
+| 5.2 图片自托管第一步（反代） | ✅ 已完成，见 1.5（实现为站内 `/api/img` 反代 + 白名单校验，默认关闭，替代计划原文的 NOTION_HOST/Nginx 方案） |
+| 5.3 客户端 JS 减负第二批 | ✅ 已完成，见 1.6 |
+| 每日归档 workflow | ✅ 已提交并推送（`e842ef37`），此前「缺 workflow scope 推不上去」的问题已解决 |
 | P0.1 / P0.2 基线数字 | 仍未补齐 | `lighthouse.yml` 只挂 PR 触发，实际都是直推 main，从未跑过；需手动触发一次 |
-| 每日归档 workflow | 文件已就绪，**未提交** | 当前 git 凭据缺 `workflow` scope，GitHub 拒绝推送 `.github/workflows/busuanzi-archive.yml`；需 `gh auth refresh -s workflow` 或在网页端新建 |
+| 页面级 stale 标记 / 页脚快照时间 | 未实现 | 计划 5.1 的「页面标记 stale、页脚显示快照时间」目前只有 `/api/status` 的 `degraded` 字段可查 |
 | Notion `LINK` 字段 | 未修 | 仍是模板域名，污染 canonical / og:url / 动态 OG 卡 |

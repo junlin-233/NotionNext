@@ -1,12 +1,19 @@
-import Live2D from '@/components/Live2D'
 import dynamic from 'next/dynamic'
-import { AnalyticsCard } from './AnalyticsCard'
 import Card from './Card'
 import Catalog from './Catalog'
 import { InfoCard } from './InfoCard'
 import LatestPostsGroupMini from './LatestPostsGroupMini'
 import TagGroups from './TagGroups'
-import TouchMeCard from './TouchMeCard'
+
+// 侧栏里这些块都在首屏之外的折叠区，且没有 SEO 价值：
+// Live2D 要拉 canvas 与外部脚本，TouchMeCard/AnalyticsCard 只是装饰性卡片。
+// 拆成独立 chunk 后延迟加载，不进首屏 JS。
+const Live2D = dynamic(() => import('@/components/Live2D'), { ssr: false })
+const TouchMeCard = dynamic(() => import('./TouchMeCard'), { ssr: false })
+const AnalyticsCardLazy = dynamic(
+  () => import('./AnalyticsCard').then(m => m.AnalyticsCard),
+  { ssr: false }
+)
 
 /**
  * Hexo主题右侧栏
@@ -55,7 +62,7 @@ export default function SideRight(props) {
           }>
           <TagGroups tags={sortedTags} currentTag={currentTag} />
           <hr className='mx-1 flex border-dashed relative my-4' />
-          <AnalyticsCard {...props} />
+          <AnalyticsCardLazy {...props} />
         </Card>
       </div>
     </div>

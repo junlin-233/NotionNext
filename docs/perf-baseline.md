@@ -68,3 +68,27 @@ npx @lhci/cli@0.14.x autorun --config=lighthouserc.js
 1. 在 CI 或本地干净环境执行第三节命令，把数字补进本文档
 2. 修复 `.notion-api-lock` 多进程并发问题（当前会拖慢甚至卡死构建）
 3. 确认 Notion 配置页的 `LINK` 字段已改为真实域名（当前为 `https://preview.tangly1024.com`，会污染 canonical、OG、结构化数据）
+
+---
+
+## 五、P2/P3 实测（2026-11-02，本机）
+
+构建环境已能跑通（`env -u NODE_OPTIONS` 绕开注入的 fs shim）；Notion API 本次单页响应 200–600ms，
+整站构建 2–4 分钟，与文档早期记录的 80–110 秒不符——早期慢是限流导致的，不是常态。
+
+| 指标 | 未改动态导入 | P2.3 后 | 变化 |
+|---|---|---|---|
+| 首页 First Load JS | 189 kB | 184 kB | −5 kB |
+| 文章页 First Load JS | 195 kB | 191 kB | −4 kB |
+| 共享 chunk 合计 | 213 kB | 209 kB | −4 kB |
+| ├ framework | 44.8 kB | 44.8 kB | — |
+| ├ main | 39.6 kB | 39.6 kB | — |
+| └ pages/_app | 101 kB | 96.7 kB | −4.3 kB |
+
+结论：P1 已经把能拆的大件拆完了，P2.3 的边际收益只有 4 kB。
+剩下的大头是 Next 框架（84 kB）与 `_app` 里的主题布局 + react-notion-x（96.7 kB），
+后者只要还在客户端渲染 blockMap 就拆不掉。计划里写的「−30%」不成立。
+
+P3 git 模式构建：同样 191 kB（内容源不影响前端体积），ISR 从 600s 提到 3600s。
+
+需要 Lighthouse 的 LCP/TBT/CLS 仍然只能在 CI 或线上跑，本机没有 Chrome。
