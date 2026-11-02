@@ -37,7 +37,8 @@
 
 | 文件 | 变更 |
 |---|---|
-| `pages/api/og.js` | 新增：`next/og` 生成 1200×630 卡片，参数长度限制 + 内存缓存 + 长 HTTP 缓存 |
+| `pages/api/og.js` | 新增：`next/og` 生成 1200×630 卡片，参数长度限制 + 内存缓存 + 长 HTTP 缓存。2026-11-02 补齐计划 4.3 的 HMAC 防滥用：配 `OG_SIGN_KEY` 后未签名/签名错误请求 302 兜底图，未配则端点开放 |
+| `lib/og/sign.js` | 新增：签名口径（除 sign 外参数按 key 排序、`k=v` 逐行 join、HMAC-SHA256 hex）；SEO.js 签名用 Node crypto，og.js 验签用 Edge Web Crypto，两端口径一致（有单测与对拍验证） |
 | `public/fonts/og-title.ttf` | 新增：子集化 Noto Sans SC（780KB，GB2312 一级字 + ASCII + 标点） |
 | `scripts/build-og-font.sh` | 新增：字体子集化脚本（需扩充字符集时重跑） |
 | `components/SEO.js` | 文章页 og:image 指向动态端点；og:image 统一转绝对地址 |

@@ -35,11 +35,55 @@ async function loadFont(reqUrl) {
   return fontCache
 }
 
+// ---- HMAC 验签（与 lib/og/sign.js 同口径：除 sign 外参数按 key 排序，"k=v" 逐行 join('\n')）----
+async function hmacHex(message, key) {
+  const enc = new TextEncoder()
+  const keyData = await crypto.subtle.importKey(
+    'raw',
+    enc.encode(key),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  )
+  const sig = await crypto.subtle.sign('HMAC', keyData, enc.encode(message))
+  return Array.from(new Uint8Array(sig))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('')
+}
+
+async function verifySignature(searchParams) {
+  const key = process.env.OG_SIGN_KEY
+  if (!key) return true // 未配 Key 时端点保持开放（本地 / 未配 Key 的部署）
+  const provided = (searchParams.get('sign') || '').toLowerCase()
+  if (!/^[0-9a-f]{64}$/.test(provided)) return false
+  const entries = []
+  for (const [k, v] of searchParams.entries()) {
+    if (k !== 'sign' && v !== '') entries.push([k, v])
+  }
+  entries.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0))
+  const expected = await hmacHex(
+    entries.map(([k, v]) => `${k}=${v}`).join('\n'),
+    key
+  )
+  return provided === expected
+}
+
+const fallbackResponse = () =>
+  new Response(null, {
+    status: 302,
+    headers: { Location: '/bg_image.jpg' }
+  })
+
 // 同一 isolate 内缓存已生成的图，key -> ArrayBuffer
 const imageCache = new Map()
 
 export default async function handler(req) {
   const { searchParams } = new URL(req.url)
+
+  // 配了 OG_SIGN_KEY 时，未签名或签名错误的请求一律走兜底图
+  if (!(await verifySignature(searchParams))) {
+    return fallbackResponse()
+  }
 
   const title = clamp(searchParams.get('title'), 60) || 'junlin 的博客'
   const sub = clamp(searchParams.get('sub'), 90)
@@ -209,9 +253,6 @@ export default async function handler(req) {
     return new Response(buffer, { headers })
   } catch (e) {
     console.warn('[api/og] 生成失败:', e?.message || e)
-    return new Response(null, {
-      status: 302,
-      headers: { Location: '/bg_image.jpg' }
-    })
+    return fallbackResponse()
   }
 }

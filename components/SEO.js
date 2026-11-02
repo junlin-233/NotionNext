@@ -1,5 +1,6 @@
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
+import { withOgSign } from '@/lib/og/sign'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -49,7 +50,9 @@ const SEO = props => {
     }
     if (meta.publishDay) ogParams.set('date', meta.publishDay)
     if (TITLE) ogParams.set('site', TITLE)
-    image = `/api/og?${ogParams.toString()}`
+    // 配了 OG_SIGN_KEY 时给文章 OG 卡加 HMAC 签名（api/og.js 验签，防滥用）
+    const signed = withOgSign(Object.fromEntries(ogParams.entries()))
+    image = `/api/og?${new URLSearchParams(signed).toString()}`
   }
 
   // og:image 必须是绝对地址
