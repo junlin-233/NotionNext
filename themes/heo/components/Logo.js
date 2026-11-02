@@ -4,7 +4,8 @@ import SmartLink from '@/components/SmartLink'
 
 /**
  * 左上角 Logo
- * 房子图标的形状保持原样，底色换成白底黑线、暗色下反过来。
+ * 不带底色，和右侧的搜索、暗色模式按钮同规格：40px 圆形热区 + 24px 线条图标，
+ * 颜色跟随导航栏文字，文章页封面上一并变白。
  */
 const Logo = () => {
   return (
@@ -12,8 +13,8 @@ const Logo = () => {
       <div
         id='logo-home'
         title={siteConfig('TITLE')}
-        className='flex flex-none items-center justify-center w-16 md:w-[70px] h-10 md:h-11 rounded-2xl bg-white ring-1 ring-black/[0.07] shadow-[0_2px_6px_rgba(16,24,40,0.08)] hover:ring-black/10 hover:shadow-[0_4px_14px_rgba(16,24,40,0.14)] dark:bg-[#23232b] dark:ring-white/10 dark:hover:ring-white/20 duration-200 transition-all cursor-pointer'>
-        <Home className={'w-6 h-6 stroke-black dark:stroke-white stroke-2'} />
+        className='cursor-pointer hover:bg-black hover:bg-opacity-10 rounded-full w-10 h-10 flex flex-none justify-center items-center duration-200 transition-all'>
+        <Home className='w-5 h-5' />
       </div>
     </SmartLink>
   )
