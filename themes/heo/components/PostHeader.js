@@ -91,8 +91,11 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
             )}
           </div>
 
-          {/* 文章Title */}
-          <div className='max-w-5xl font-bold text-3xl lg:text-5xl md:leading-snug shadow-text-md flex  justify-center md:justify-start text-white'>
+          {/* 文章Title。data-pagefind-meta 让搜索结果用文章名做标题，
+              否则每条结果都取 <title>，全是站点名 */}
+          <div
+            data-pagefind-meta='title'
+            className='max-w-5xl font-bold text-3xl lg:text-5xl md:leading-snug shadow-text-md flex  justify-center md:justify-start text-white'>
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
