@@ -1,0 +1,5938 @@
+{
+  "__version__": 3,
+  "block": {
+    "3fe5c572-e7e9-815a-b24a-e56066216f28": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "version": 17,
+          "type": "page",
+          "properties": {
+            "NX\\Q": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2026-04-18"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "`gQ~": [
+              [
+                "Post"
+              ]
+            ],
+            "bB{M": [
+              [
+                "技术分享"
+              ]
+            ],
+            "d]hq": [
+              [
+                "notionnext"
+              ]
+            ],
+            "sD^m": [
+              [
+                "实用教程,推荐"
+              ]
+            ],
+            "wz|S": [
+              [
+                "无需服务器、无需懂代码，借助 Notion 笔记 + NotionNext + Vercel，几分钟即可搭建一个完全属于自己的独立博客。本文梳理 NotionNext 建站的大致流程与关键思路。"
+              ]
+            ],
+            "title": [
+              [
+                "NotionNext：重新定义写博客这件事"
+              ]
+            ],
+            "f211bdc0-ee00-4186-9a7d-f68c055ec2ee": [
+              [
+                "Published"
+              ]
+            ]
+          },
+          "content": [
+            "ce8c7b42-4422-4579-99c3-50fc82d67fc6",
+            "f3f2d872-31c3-4506-b152-f7ca97db299c",
+            "262ffde2-3484-48d5-a545-675bcfffe180",
+            "12a3201a-c09e-4cad-ad05-e84258d8ecf6",
+            "b8247cea-54e1-49e4-8d4b-0ebde07feec5",
+            "bc71291b-caf0-46f7-a57f-431d952d79d6",
+            "5057352f-6538-4191-815e-8bee3e9f3669",
+            "76803088-c1b5-43f9-8a16-16a598d24d5c",
+            "b3bca5d9-8ed8-413b-b1ac-c7e4693bf01f",
+            "64fef498-b441-4283-8e83-1fcab1d6d0e3",
+            "5a9cc1df-04ca-4fe0-a68b-82dc5e9417a7",
+            "45f80951-8ff9-466b-afe7-3fbe1c49496d",
+            "e0e6ae9b-223d-42a7-bf11-68cccb80549f",
+            "9cc416b8-cf5d-4ac0-b23f-62a403428cd6",
+            "b1f97ddf-721b-4c12-bdd0-67909dc76e7b",
+            "264af07b-d379-46d5-821a-bd51cda324bc",
+            "66511250-a9a7-44b3-9237-0957b76d641b",
+            "063e50d1-4c7f-43ab-b35c-9c71f6df1edc",
+            "837883a2-3362-4a5c-8b44-b6571a321cf3",
+            "5ff82f44-0a3d-44e0-99b8-dc4e2934eab3",
+            "d90a7843-973d-4b68-b235-6737e5cb1664",
+            "9ffbe2fd-de50-49ac-862c-decf4d79282a",
+            "8bc66eca-5e7b-4da7-b235-9f0d837d003e",
+            "3d56c6dc-2e79-4c94-a0d8-c32c075c1d65",
+            "95c79a59-6d5b-45da-bdcc-bd2abaecae7b",
+            "1916c27e-fe54-4855-9bc0-431d70b623a5",
+            "7e33b611-5f7e-4850-bf61-c1afbf02bc34",
+            "43c34a17-2b7e-4e0f-b139-717f87e8d709",
+            "942170e6-f694-4538-9639-70f09c76cabb",
+            "d514acff-08ab-453e-aac2-b23ba1d21d47",
+            "13f0596e-7a51-4af5-9f9d-e7fce2074c3a",
+            "6ed44b5a-5fec-4f5f-b66c-89e3afe0f911",
+            "e91e63f0-2693-4aae-92e1-9b0bbd48f669",
+            "4cac87d7-28c1-43a2-922f-6aeeb8ecbc55",
+            "6ced7eca-f36d-4b7d-9e4d-eef805fac884"
+          ],
+          "format": {
+            "page_cover": "/images/notion/26083abff21427d87a9e.webp",
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695980,
+          "last_edited_time": 1792381102940,
+          "parent_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "parent_table": "collection",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "collection",
+          "nav_parent_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "crdt_data": {
+            "title": {
+              "r": "8lx_ZMlB6pzKBd3QwW673g,\"start\",\"end\"",
+              "n": {
+                "8lx_ZMlB6pzKBd3QwW673g,\"start\",\"end\"": {
+                  "s": {
+                    "x": "8lx_ZMlB6pzKBd3QwW673g",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WdIkXzA-Xb3T",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 21,
+                        "c": "NotionNext：重新定义写博客这件事"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-81a7-9844-f7aff6126774": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "version": 168,
+          "type": "collection_view_page",
+          "content": [
+            "2bc5c572-e7e9-811f-b1cc-c8e65c6e458e"
+          ],
+          "view_ids": [
+            "2bc5c572-e7e9-812e-ab10-000ce3d1b58e",
+            "2bc5c572-e7e9-8195-a20b-000cf6986f4c",
+            "2bc5c572-e7e9-8184-90a9-000c26f0c6f6",
+            "2bc5c572-e7e9-811a-8e80-000c1e21934b"
+          ],
+          "collection_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "format": {
+            "site_id": "3fe5c572-e7e9-8047-bbf6-007983586bba",
+            "page_icon": "🚀",
+            "page_cover": "/images/notion/07730a14c1ebc917a62b.webp",
+            "block_locked": false,
+            "block_locked_by": "27074aef-7216-41ed-baef-d9b53addd870",
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "collection_pointers": [
+              {
+                "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+                "table": "collection",
+                "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+              }
+            ],
+            "copied_from_pointer": {
+              "id": "02ab3b86-7800-4aa6-9e9e-415905ef32a5",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "page_cover_position": 0.5,
+            "social_media_image_preview_url": "/images/notion/ad1c55fe1f20d40f0ee1.png"
+          },
+          "permissions": [
+            {
+              "role": "reader",
+              "type": "public_permission",
+              "is_site": true,
+              "added_timestamp": 1764566992864,
+              "is_public_share_link": true
+            }
+          ],
+          "created_time": 1764566963679,
+          "last_edited_time": 1792391171679,
+          "parent_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "parent_table": "space",
+          "alive": true,
+          "copied_from": "02ab3b86-7800-4aa6-9e9e-415905ef32a5",
+          "file_ids": [
+            "b6fc2258-9d34-4d37-a91a-e7608843de00",
+            "17b6dced-3228-4bc7-97ae-698e69df1b1d",
+            "891f0225-d537-48fd-a017-7e8bfd1bbb7b",
+            "50e94f1c-9811-4026-988e-97fc46905d01",
+            "072cf205-95d0-444c-9fca-906be235db6e",
+            "5a94b619-0004-432c-a9ac-e5da3895f560",
+            "d5e1784f-065e-4c73-a8a7-423667550a43"
+          ],
+          "is_template": false,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "space",
+          "nav_parent_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_data": {
+            "title": {
+              "r": "emqc7rmUdvBjwZliL6tODQ,\"start\",\"end\"",
+              "n": {
+                "emqc7rmUdvBjwZliL6tODQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "emqc7rmUdvBjwZliL6tODQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4": {
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4",
+          "version": 6,
+          "type": "collection_view",
+          "view_ids": [
+            "2bc5c572-e7e9-8020-9bcd-000cea601509"
+          ],
+          "created_time": 1764572518653,
+          "last_edited_time": 1764572530897,
+          "parent_id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+          "parent_table": "layout",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "Mh9Fusfe3welYZaR2Rup2A,\"start\",\"end\"",
+              "n": {
+                "Mh9Fusfe3welYZaR2Rup2A,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Mh9Fusfe3welYZaR2Rup2A",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "ce8c7b42-4422-4579-99c3-50fc82d67fc6": {
+      "value": {
+        "value": {
+          "id": "ce8c7b42-4422-4579-99c3-50fc82d67fc6",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "💡"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "mQae9clv3n6-LjFj8mS00Q,\"start\",\"end\"",
+              "n": {
+                "mQae9clv3n6-LjFj8mS00Q,\"start\",\"end\"": {
+                  "s": {
+                    "x": "mQae9clv3n6-LjFj8mS00Q",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "w2AE7Eu_Kl0e",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 2,
+                        "c": "💡"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "f3f2d872-31c3-4506-b152-f7ca97db299c": {
+      "value": {
+        "value": {
+          "id": "f3f2d872-31c3-4506-b152-f7ca97db299c",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "如果你厌倦了传统的md文件写博客，想要一种更简便更高效的办法，那么我强烈推荐使用这套NotionNext部署博客，在notion里写的文章无感同步到你的网站，即便不懂代码也能快速上手。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "Mcjkq6Af3VvUtzmxLdfRmQ,\"start\",\"end\"",
+              "n": {
+                "Mcjkq6Af3VvUtzmxLdfRmQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Mcjkq6Af3VvUtzmxLdfRmQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "heBpHY3BJeCL",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 92,
+                        "c": "如果你厌倦了传统的md文件写博客，想要一种更简便更高效的办法，那么我强烈推荐使用这套NotionNext部署博客，在notion里写的文章无感同步到你的网站，即便不懂代码也能快速上手。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "262ffde2-3484-48d5-a545-675bcfffe180": {
+      "value": {
+        "value": {
+          "id": "262ffde2-3484-48d5-a545-675bcfffe180",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "什么是 NotionNext"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "Dhv9Lh4THtYrL36rEpKSUA,\"start\",\"end\"",
+              "n": {
+                "Dhv9Lh4THtYrL36rEpKSUA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Dhv9Lh4THtYrL36rEpKSUA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "mkTRp1Cr5jf0",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 14,
+                        "c": "什么是 NotionNext"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "12a3201a-c09e-4cad-ad05-e84258d8ecf6": {
+      "value": {
+        "value": {
+          "id": "12a3201a-c09e-4cad-ad05-e84258d8ecf6",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "NotionNext 是一个基于 Next.js 的开源 Notion 建站工具，它会把你的 Notion 笔记实时渲染成一个静态博客站点。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "s1w8GzJFZYoZjvMLq60Tlg,\"start\",\"end\"",
+              "n": {
+                "s1w8GzJFZYoZjvMLq60Tlg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "s1w8GzJFZYoZjvMLq60Tlg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "itKsima-dSqz",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 70,
+                        "c": "NotionNext 是一个基于 Next.js 的开源 Notion 建站工具，它会把你的 Notion 笔记实时渲染成一个静态博客站点。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b8247cea-54e1-49e4-8d4b-0ebde07feec5": {
+      "value": {
+        "value": {
+          "id": "b8247cea-54e1-49e4-8d4b-0ebde07feec5",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "核心特点："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "dZ08wezlstvcWWazW8pAdQ,\"start\",\"end\"",
+              "n": {
+                "dZ08wezlstvcWWazW8pAdQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "dZ08wezlstvcWWazW8pAdQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Vteya5unQur-",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "核心特点："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "bc71291b-caf0-46f7-a57f-431d952d79d6": {
+      "value": {
+        "value": {
+          "id": "bc71291b-caf0-46f7-a57f-431d952d79d6",
+          "version": 5,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "写作在 Notion",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：所有文章都在 Notion 数据库里编辑，发布即同步。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "yGJJbhXevAOFFqSTTdCDqA,\"start\",\"end\"",
+              "n": {
+                "yGJJbhXevAOFFqSTTdCDqA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "yGJJbhXevAOFFqSTTdCDqA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "nCDwI0HR3ycL",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 10,
+                        "c": "写作在 Notion",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "yGJJbhXevAOFFqSTTdCDqA",
+                            "l": "",
+                            "i": [
+                              "nCDwI0HR3ycL",
+                              39
+                            ],
+                            "s": {
+                              "i": [
+                                "nCDwI0HR3ycL",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "nCDwI0HR3ycL",
+                                11
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "nCDwI0HR3ycL",
+                          11
+                        ],
+                        "o": [
+                          "nCDwI0HR3ycL",
+                          10
+                        ],
+                        "l": 28,
+                        "c": "：所有文章都在 Notion 数据库里编辑，发布即同步。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "5057352f-6538-4191-815e-8bee3e9f3669": {
+      "value": {
+        "value": {
+          "id": "5057352f-6538-4191-815e-8bee3e9f3669",
+          "version": 10,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "免费开源",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：源码托管在 "
+              ],
+              [
+                "GitHub",
+                [
+                  [
+                    "a",
+                    "https://github.com/tangly1024/NotionNext"
+                  ]
+                ]
+              ],
+              [
+                "，可自行fork后修改。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792381102940,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "7qllYqrN-xeWTqtf2A_Z7g,\"start\",\"end\"",
+              "n": {
+                "7qllYqrN-xeWTqtf2A_Z7g,\"start\",\"end\"": {
+                  "s": {
+                    "x": "7qllYqrN-xeWTqtf2A_Z7g",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "oN6Fw6qPLsxq",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 4,
+                        "c": "免费开源",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "7qllYqrN-xeWTqtf2A_Z7g",
+                            "l": "",
+                            "i": [
+                              "oN6Fw6qPLsxq",
+                              30
+                            ],
+                            "s": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                5
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          },
+                          {
+                            "t": "r",
+                            "x": "7qllYqrN-xeWTqtf2A_Z7g",
+                            "l": "",
+                            "i": [
+                              "60YRY6kHQ06F",
+                              31
+                            ],
+                            "s": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                5
+                              ],
+                              "a": "b"
+                            },
+                            "k": "b"
+                          },
+                          {
+                            "t": "a",
+                            "x": "7qllYqrN-xeWTqtf2A_Z7g",
+                            "l": "",
+                            "i": [
+                              "60YRY6kHQ06F",
+                              32
+                            ],
+                            "s": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                5
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "oN6Fw6qPLsxq",
+                          5
+                        ],
+                        "o": [
+                          "oN6Fw6qPLsxq",
+                          4
+                        ],
+                        "l": 7,
+                        "c": "：源码托管在 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "oN6Fw6qPLsxq",
+                          12
+                        ],
+                        "o": [
+                          "oN6Fw6qPLsxq",
+                          11
+                        ],
+                        "l": 6,
+                        "c": "GitHub",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "7qllYqrN-xeWTqtf2A_Z7g",
+                            "l": "",
+                            "i": [
+                              "60YRY6kHQ06F",
+                              33
+                            ],
+                            "s": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                12
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "oN6Fw6qPLsxq",
+                                17
+                              ],
+                              "a": "a"
+                            },
+                            "a": [
+                              "a",
+                              "https://github.com/tangly1024/NotionNext"
+                            ]
+                          }
+                        ],
+                        "a": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "oN6Fw6qPLsxq",
+                          18
+                        ],
+                        "o": [
+                          "oN6Fw6qPLsxq",
+                          17
+                        ],
+                        "l": 12,
+                        "c": "，可自行fork后修改。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "76803088-c1b5-43f9-8a16-16a598d24d5c": {
+      "value": {
+        "value": {
+          "id": "76803088-c1b5-43f9-8a16-16a598d24d5c",
+          "version": 5,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "无需服务器",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：通常部署到 Vercel，免费额度足够个人博客使用。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "TcRkflMlGcGOcapbP7vSDQ,\"start\",\"end\"",
+              "n": {
+                "TcRkflMlGcGOcapbP7vSDQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "TcRkflMlGcGOcapbP7vSDQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "qI6yytYEoiF0",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "无需服务器",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "TcRkflMlGcGOcapbP7vSDQ",
+                            "l": "",
+                            "i": [
+                              "qI6yytYEoiF0",
+                              33
+                            ],
+                            "s": {
+                              "i": [
+                                "qI6yytYEoiF0",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "qI6yytYEoiF0",
+                                6
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "qI6yytYEoiF0",
+                          6
+                        ],
+                        "o": [
+                          "qI6yytYEoiF0",
+                          5
+                        ],
+                        "l": 27,
+                        "c": "：通常部署到 Vercel，免费额度足够个人博客使用。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b3bca5d9-8ed8-413b-b1ac-c7e4693bf01f": {
+      "value": {
+        "value": {
+          "id": "b3bca5d9-8ed8-413b-b1ac-c7e4693bf01f",
+          "version": 5,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "多主题可选",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：内置数十款主题，覆盖博客、文档、导航站、落地页、相册等场景。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "HCEeWzedceAZ1rxaach6CA,\"start\",\"end\"",
+              "n": {
+                "HCEeWzedceAZ1rxaach6CA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "HCEeWzedceAZ1rxaach6CA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aY-YVZIOIT_X",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "多主题可选",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "HCEeWzedceAZ1rxaach6CA",
+                            "l": "",
+                            "i": [
+                              "aY-YVZIOIT_X",
+                              37
+                            ],
+                            "s": {
+                              "i": [
+                                "aY-YVZIOIT_X",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "aY-YVZIOIT_X",
+                                6
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aY-YVZIOIT_X",
+                          6
+                        ],
+                        "o": [
+                          "aY-YVZIOIT_X",
+                          5
+                        ],
+                        "l": 31,
+                        "c": "：内置数十款主题，覆盖博客、文档、导航站、落地页、相册等场景。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "64fef498-b441-4283-8e83-1fcab1d6d0e3": {
+      "value": {
+        "value": {
+          "id": "64fef498-b441-4283-8e83-1fcab1d6d0e3",
+          "version": 5,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "SEO 友好",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：基于 Next.js 服务端渲染，有利于被搜索引擎收录。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "uOufbZNmP1RMUnVjzmkV0g,\"start\",\"end\"",
+              "n": {
+                "uOufbZNmP1RMUnVjzmkV0g,\"start\",\"end\"": {
+                  "s": {
+                    "x": "uOufbZNmP1RMUnVjzmkV0g",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "S-KKMFfP3nZ-",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 6,
+                        "c": "SEO 友好",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "uOufbZNmP1RMUnVjzmkV0g",
+                            "l": "",
+                            "i": [
+                              "S-KKMFfP3nZ-",
+                              36
+                            ],
+                            "s": {
+                              "i": [
+                                "S-KKMFfP3nZ-",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "S-KKMFfP3nZ-",
+                                7
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "S-KKMFfP3nZ-",
+                          7
+                        ],
+                        "o": [
+                          "S-KKMFfP3nZ-",
+                          6
+                        ],
+                        "l": 29,
+                        "c": "：基于 Next.js 服务端渲染，有利于被搜索引擎收录。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "5a9cc1df-04ca-4fe0-a68b-82dc5e9417a7": {
+      "value": {
+        "value": {
+          "id": "5a9cc1df-04ca-4fe0-a68b-82dc5e9417a7",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "搭建博客的大致流程"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "isqRCasbPB8wtzdO7o7tWg,\"start\",\"end\"",
+              "n": {
+                "isqRCasbPB8wtzdO7o7tWg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "isqRCasbPB8wtzdO7o7tWg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "4ZJ5qIwF0jt1",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 9,
+                        "c": "搭建博客的大致流程"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "45f80951-8ff9-466b-afe7-3fbe1c49496d": {
+      "value": {
+        "value": {
+          "id": "45f80951-8ff9-466b-afe7-3fbe1c49496d",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "由于官方的教程文档写的足够详细，所以本文就简要带过。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "faoOZnkOxORvYzUxTX_tmQ,\"start\",\"end\"",
+              "n": {
+                "faoOZnkOxORvYzUxTX_tmQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "faoOZnkOxORvYzUxTX_tmQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "NL4bNQ1iuAgB",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 26,
+                        "c": "由于官方的教程文档写的足够详细，所以本文就简要带过。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "e0e6ae9b-223d-42a7-bf11-68cccb80549f": {
+      "value": {
+        "value": {
+          "id": "e0e6ae9b-223d-42a7-bf11-68cccb80549f",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "整体流程可以概括为下面这张图："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "v0RVXxjTh1cEWZufIfSxZg,\"start\",\"end\"",
+              "n": {
+                "v0RVXxjTh1cEWZufIfSxZg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "v0RVXxjTh1cEWZufIfSxZg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "7fPO0xy5_5M0",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 15,
+                        "c": "整体流程可以概括为下面这张图："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "9cc416b8-cf5d-4ac0-b23f-62a403428cd6": {
+      "value": {
+        "value": {
+          "id": "9cc416b8-cf5d-4ac0-b23f-62a403428cd6",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "简要说明："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695995,
+          "last_edited_time": 1792379695995,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "ftN1ZCJdOCkuCupzLVywDA,\"start\",\"end\"",
+              "n": {
+                "ftN1ZCJdOCkuCupzLVywDA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "ftN1ZCJdOCkuCupzLVywDA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "h7vbSX6d5_fb",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "简要说明："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b1f97ddf-721b-4c12-bdd0-67909dc76e7b": {
+      "value": {
+        "value": {
+          "id": "b1f97ddf-721b-4c12-bdd0-67909dc76e7b",
+          "version": 5,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "准备账号",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：Notion、GitHub、Vercel，最好再加一个自己的域名。"
+              ]
+            ]
+          },
+          "format": {
+            "list_format": "numbers",
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "PUaIpjBFoTVWrFsrQPwwqA,\"start\",\"end\"",
+              "n": {
+                "PUaIpjBFoTVWrFsrQPwwqA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "PUaIpjBFoTVWrFsrQPwwqA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Y1SCPMbZDuc2",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 4,
+                        "c": "准备账号",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "PUaIpjBFoTVWrFsrQPwwqA",
+                            "l": "",
+                            "i": [
+                              "Y1SCPMbZDuc2",
+                              39
+                            ],
+                            "s": {
+                              "i": [
+                                "Y1SCPMbZDuc2",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "Y1SCPMbZDuc2",
+                                5
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Y1SCPMbZDuc2",
+                          5
+                        ],
+                        "o": [
+                          "Y1SCPMbZDuc2",
+                          4
+                        ],
+                        "l": 34,
+                        "c": "：Notion、GitHub、Vercel，最好再加一个自己的域名。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "264af07b-d379-46d5-821a-bd51cda324bc": {
+      "value": {
+        "value": {
+          "id": "264af07b-d379-46d5-821a-bd51cda324bc",
+          "version": 7,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "复制模板 + 部署",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：复制官方 Notion 模板拿到 Page ID，Fork NotionNext 仓库后在 Vercel 里导入，填入 "
+              ],
+              [
+                "NOTION_PAGE_ID",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "，点 Deploy 即可拿到一个 "
+              ],
+              [
+                "xxx.vercel.app",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 的站点。"
+              ]
+            ]
+          },
+          "format": {
+            "list_format": "numbers",
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "B3UoFtmLDoSE9SSyIsiyEQ,\"start\",\"end\"",
+              "n": {
+                "B3UoFtmLDoSE9SSyIsiyEQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "B3UoFtmLDoSE9SSyIsiyEQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WR3Hvf1SsMma",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 9,
+                        "c": "复制模板 + 部署",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "B3UoFtmLDoSE9SSyIsiyEQ",
+                            "l": "",
+                            "i": [
+                              "WR3Hvf1SsMma",
+                              121
+                            ],
+                            "s": {
+                              "i": [
+                                "WR3Hvf1SsMma",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "WR3Hvf1SsMma",
+                                10
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WR3Hvf1SsMma",
+                          10
+                        ],
+                        "o": [
+                          "WR3Hvf1SsMma",
+                          9
+                        ],
+                        "l": 61,
+                        "c": "：复制官方 Notion 模板拿到 Page ID，Fork NotionNext 仓库后在 Vercel 里导入，填入 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WR3Hvf1SsMma",
+                          71
+                        ],
+                        "o": [
+                          "WR3Hvf1SsMma",
+                          70
+                        ],
+                        "l": 14,
+                        "c": "NOTION_PAGE_ID",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "B3UoFtmLDoSE9SSyIsiyEQ",
+                            "l": "",
+                            "i": [
+                              "WR3Hvf1SsMma",
+                              122
+                            ],
+                            "s": {
+                              "i": [
+                                "WR3Hvf1SsMma",
+                                71
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "WR3Hvf1SsMma",
+                                85
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WR3Hvf1SsMma",
+                          85
+                        ],
+                        "o": [
+                          "WR3Hvf1SsMma",
+                          84
+                        ],
+                        "l": 17,
+                        "c": "，点 Deploy 即可拿到一个 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WR3Hvf1SsMma",
+                          102
+                        ],
+                        "o": [
+                          "WR3Hvf1SsMma",
+                          101
+                        ],
+                        "l": 14,
+                        "c": "xxx.vercel.app",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "B3UoFtmLDoSE9SSyIsiyEQ",
+                            "l": "",
+                            "i": [
+                              "WR3Hvf1SsMma",
+                              123
+                            ],
+                            "s": {
+                              "i": [
+                                "WR3Hvf1SsMma",
+                                102
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "WR3Hvf1SsMma",
+                                116
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "WR3Hvf1SsMma",
+                          116
+                        ],
+                        "o": [
+                          "WR3Hvf1SsMma",
+                          115
+                        ],
+                        "l": 5,
+                        "c": " 的站点。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "66511250-a9a7-44b3-9237-0957b76d641b": {
+      "value": {
+        "value": {
+          "id": "66511250-a9a7-44b3-9237-0957b76d641b",
+          "version": 6,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "配置 + 域名",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：在 Notion 的 Config 页和代码里的 "
+              ],
+              [
+                "blog.config.js",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 改站点名、主题、菜单等；建议在 Vercel 里绑定自己的域名。"
+              ]
+            ]
+          },
+          "format": {
+            "list_format": "numbers",
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "7gPCIFeoLPRseQ1dIsX1gg,\"start\",\"end\"",
+              "n": {
+                "7gPCIFeoLPRseQ1dIsX1gg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "7gPCIFeoLPRseQ1dIsX1gg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wV-Qm9sz4cIf",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 7,
+                        "c": "配置 + 域名",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "7gPCIFeoLPRseQ1dIsX1gg",
+                            "l": "",
+                            "i": [
+                              "wV-Qm9sz4cIf",
+                              81
+                            ],
+                            "s": {
+                              "i": [
+                                "wV-Qm9sz4cIf",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "wV-Qm9sz4cIf",
+                                8
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wV-Qm9sz4cIf",
+                          8
+                        ],
+                        "o": [
+                          "wV-Qm9sz4cIf",
+                          7
+                        ],
+                        "l": 26,
+                        "c": "：在 Notion 的 Config 页和代码里的 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wV-Qm9sz4cIf",
+                          34
+                        ],
+                        "o": [
+                          "wV-Qm9sz4cIf",
+                          33
+                        ],
+                        "l": 14,
+                        "c": "blog.config.js",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "7gPCIFeoLPRseQ1dIsX1gg",
+                            "l": "",
+                            "i": [
+                              "wV-Qm9sz4cIf",
+                              82
+                            ],
+                            "s": {
+                              "i": [
+                                "wV-Qm9sz4cIf",
+                                34
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "wV-Qm9sz4cIf",
+                                48
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wV-Qm9sz4cIf",
+                          48
+                        ],
+                        "o": [
+                          "wV-Qm9sz4cIf",
+                          47
+                        ],
+                        "l": 33,
+                        "c": " 改站点名、主题、菜单等；建议在 Vercel 里绑定自己的域名。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "063e50d1-4c7f-43ab-b35c-9c71f6df1edc": {
+      "value": {
+        "value": {
+          "id": "063e50d1-4c7f-43ab-b35c-9c71f6df1edc",
+          "version": 9,
+          "type": "numbered_list",
+          "properties": {
+            "title": [
+              [
+                "开始写作",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "：在 Notion 文章数据库里新建页面，把 "
+              ],
+              [
+                "type",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 设为 "
+              ],
+              [
+                "Post",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "、"
+              ],
+              [
+                "status",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 设为 "
+              ],
+              [
+                "Published",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "，保存后站点会自动同步。"
+              ]
+            ]
+          },
+          "format": {
+            "list_format": "numbers",
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "LrC4TiqHmp80RilDaRMLNQ,\"start\",\"end\"",
+              "n": {
+                "LrC4TiqHmp80RilDaRMLNQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "LrC4TiqHmp80RilDaRMLNQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 4,
+                        "c": "开始写作",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "LrC4TiqHmp80RilDaRMLNQ",
+                            "l": "",
+                            "i": [
+                              "aq6xxBAa6-jS",
+                              72
+                            ],
+                            "s": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                5
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          5
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          4
+                        ],
+                        "l": 23,
+                        "c": "：在 Notion 文章数据库里新建页面，把 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          28
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          27
+                        ],
+                        "l": 4,
+                        "c": "type",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "LrC4TiqHmp80RilDaRMLNQ",
+                            "l": "",
+                            "i": [
+                              "aq6xxBAa6-jS",
+                              73
+                            ],
+                            "s": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                28
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                32
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          32
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          31
+                        ],
+                        "l": 4,
+                        "c": " 设为 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          36
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          35
+                        ],
+                        "l": 4,
+                        "c": "Post",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "LrC4TiqHmp80RilDaRMLNQ",
+                            "l": "",
+                            "i": [
+                              "aq6xxBAa6-jS",
+                              74
+                            ],
+                            "s": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                36
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                40
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          40
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          39
+                        ],
+                        "l": 1,
+                        "c": "、",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          41
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          40
+                        ],
+                        "l": 6,
+                        "c": "status",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "LrC4TiqHmp80RilDaRMLNQ",
+                            "l": "",
+                            "i": [
+                              "aq6xxBAa6-jS",
+                              75
+                            ],
+                            "s": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                41
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                47
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          47
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          46
+                        ],
+                        "l": 4,
+                        "c": " 设为 ",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          51
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          50
+                        ],
+                        "l": 9,
+                        "c": "Published",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "LrC4TiqHmp80RilDaRMLNQ",
+                            "l": "",
+                            "i": [
+                              "aq6xxBAa6-jS",
+                              76
+                            ],
+                            "s": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                51
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "aq6xxBAa6-jS",
+                                60
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "c"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "aq6xxBAa6-jS",
+                          60
+                        ],
+                        "o": [
+                          "aq6xxBAa6-jS",
+                          59
+                        ],
+                        "l": 12,
+                        "c": "，保存后站点会自动同步。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "837883a2-3362-4a5c-8b44-b6571a321cf3": {
+      "value": {
+        "value": {
+          "id": "837883a2-3362-4a5c-8b44-b6571a321cf3",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "进阶方向"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "YicwS9DYjBXEPpSBBJl17w,\"start\",\"end\"",
+              "n": {
+                "YicwS9DYjBXEPpSBBJl17w,\"start\",\"end\"": {
+                  "s": {
+                    "x": "YicwS9DYjBXEPpSBBJl17w",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "qaaXFMi97KWj",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 4,
+                        "c": "进阶方向"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "5ff82f44-0a3d-44e0-99b8-dc4e2934eab3": {
+      "value": {
+        "value": {
+          "id": "5ff82f44-0a3d-44e0-99b8-dc4e2934eab3",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "在过去，折腾博客主题基本是技术爱好者的专利——普通人想在模板上改点东西不仅费时费力，还可能直接把站点改崩。但在 LLM 时代，这些都不是问题。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "rbJsBHt_HfPJKge8eWr3YA,\"start\",\"end\"",
+              "n": {
+                "rbJsBHt_HfPJKge8eWr3YA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "rbJsBHt_HfPJKge8eWr3YA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "SlwF6UwLUAo2",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 71,
+                        "c": "在过去，折腾博客主题基本是技术爱好者的专利——普通人想在模板上改点东西不仅费时费力，还可能直接把站点改崩。但在 LLM 时代，这些都不是问题。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "d90a7843-973d-4b68-b235-6737e5cb1664": {
+      "value": {
+        "value": {
+          "id": "d90a7843-973d-4b68-b235-6737e5cb1664",
+          "version": 4,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "个性化你的博客"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "e-ocnK9Pq9uyk3uuDRTARw,\"start\",\"end\"",
+              "n": {
+                "e-ocnK9Pq9uyk3uuDRTARw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "e-ocnK9Pq9uyk3uuDRTARw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "VuaoC_wIcrQS",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 7,
+                        "c": "个性化你的博客"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "9ffbe2fd-de50-49ac-862c-decf4d79282a": {
+      "value": {
+        "value": {
+          "id": "9ffbe2fd-de50-49ac-862c-decf4d79282a",
+          "version": 7,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "步骤其实很简单：你只需要把fork的项目存到本地，无论用"
+              ],
+              [
+                "codex桌面版",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "（对无代码基础的同学更友好，强烈推荐），"
+              ],
+              [
+                "claude code",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "还是"
+              ],
+              [
+                "opencode",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "，只需告诉AI你的需求（相信我，现在的LLM水平足够创建出你想要的博客），等它工作完再推送到github仓库，就这么简单，唯一比较烧脑的部分是你需要让AI明白你的需求（你在提示词花费的时间绝对物超所值）。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "XcLiHGI_m1NAJAYaxNytEQ,\"start\",\"end\"",
+              "n": {
+                "XcLiHGI_m1NAJAYaxNytEQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "XcLiHGI_m1NAJAYaxNytEQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 28,
+                        "c": "步骤其实很简单：你只需要把fork的项目存到本地，无论用"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          29
+                        ],
+                        "o": [
+                          "wUEAZF4ELpA8",
+                          28
+                        ],
+                        "l": 8,
+                        "c": "codex桌面版",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "XcLiHGI_m1NAJAYaxNytEQ",
+                            "l": "",
+                            "i": [
+                              "wUEAZF4ELpA8",
+                              180
+                            ],
+                            "s": {
+                              "i": [
+                                "wUEAZF4ELpA8",
+                                29
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "wUEAZF4ELpA8",
+                                37
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          37
+                        ],
+                        "o": [
+                          "wUEAZF4ELpA8",
+                          36
+                        ],
+                        "l": 20,
+                        "c": "（对无代码基础的同学更友好，强烈推荐），",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          57
+                        ],
+                        "o": [
+                          "wUEAZF4ELpA8",
+                          56
+                        ],
+                        "l": 11,
+                        "c": "claude code",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "XcLiHGI_m1NAJAYaxNytEQ",
+                            "l": "",
+                            "i": [
+                              "wUEAZF4ELpA8",
+                              181
+                            ],
+                            "s": {
+                              "i": [
+                                "wUEAZF4ELpA8",
+                                57
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "wUEAZF4ELpA8",
+                                68
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          68
+                        ],
+                        "o": [
+                          "wUEAZF4ELpA8",
+                          67
+                        ],
+                        "l": 2,
+                        "c": "还是",
+                        "b": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          70
+                        ],
+                        "o": [
+                          "wUEAZF4ELpA8",
+                          69
+                        ],
+                        "l": 8,
+                        "c": "opencode",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "XcLiHGI_m1NAJAYaxNytEQ",
+                            "l": "",
+                            "i": [
+                              "wUEAZF4ELpA8",
+                              182
+                            ],
+                            "s": {
+                              "i": [
+                                "wUEAZF4ELpA8",
+                                70
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "wUEAZF4ELpA8",
+                                78
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "wUEAZF4ELpA8",
+                          78
+                        ],
+                        "o": [
+                          "wUEAZF4ELpA8",
+                          77
+                        ],
+                        "l": 102,
+                        "c": "，只需告诉AI你的需求（相信我，现在的LLM水平足够创建出你想要的博客），等它工作完再推送到github仓库，就这么简单，唯一比较烧脑的部分是你需要让AI明白你的需求（你在提示词花费的时间绝对物超所值）。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "8bc66eca-5e7b-4da7-b235-9f0d837d003e": {
+      "value": {
+        "value": {
+          "id": "8bc66eca-5e7b-4da7-b235-9f0d837d003e",
+          "version": 4,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "让 AI 帮你写文章"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "seY9tTO1XjvNnjPxjKYToA,\"start\",\"end\"",
+              "n": {
+                "seY9tTO1XjvNnjPxjKYToA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "seY9tTO1XjvNnjPxjKYToA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "4_DsGNpYFoOa",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 10,
+                        "c": "让 AI 帮你写文章"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "3d56c6dc-2e79-4c94-a0d8-c32c075c1d65": {
+      "value": {
+        "value": {
+          "id": "3d56c6dc-2e79-4c94-a0d8-c32c075c1d65",
+          "version": 5,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "此外如果你像我一样连文章都懒得全部手打了，无论是用notion内置的LLM还是用notion mcp（"
+              ],
+              [
+                "codex桌面版",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "完美适配）都可以帮助你快速构建文章，当然，核心部分还是需要你打，不然就没有意义了，不是吗？"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "ePpQWFxCsJ9NUxuRcxJqCA,\"start\",\"end\"",
+              "n": {
+                "ePpQWFxCsJ9NUxuRcxJqCA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "ePpQWFxCsJ9NUxuRcxJqCA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "nstpyRfPe6WD",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 51,
+                        "c": "此外如果你像我一样连文章都懒得全部手打了，无论是用notion内置的LLM还是用notion mcp（"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "nstpyRfPe6WD",
+                          52
+                        ],
+                        "o": [
+                          "nstpyRfPe6WD",
+                          51
+                        ],
+                        "l": 8,
+                        "c": "codex桌面版",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "ePpQWFxCsJ9NUxuRcxJqCA",
+                            "l": "",
+                            "i": [
+                              "nstpyRfPe6WD",
+                              105
+                            ],
+                            "s": {
+                              "i": [
+                                "nstpyRfPe6WD",
+                                52
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "nstpyRfPe6WD",
+                                60
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "nstpyRfPe6WD",
+                          60
+                        ],
+                        "o": [
+                          "nstpyRfPe6WD",
+                          59
+                        ],
+                        "l": 45,
+                        "c": "完美适配）都可以帮助你快速构建文章，当然，核心部分还是需要你打，不然就没有意义了，不是吗？",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "95c79a59-6d5b-45da-bdcc-bd2abaecae7b": {
+      "value": {
+        "value": {
+          "id": "95c79a59-6d5b-45da-bdcc-bd2abaecae7b",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "小结"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "COQq1TpVE1jATTe712lt-A,\"start\",\"end\"",
+              "n": {
+                "COQq1TpVE1jATTe712lt-A,\"start\",\"end\"": {
+                  "s": {
+                    "x": "COQq1TpVE1jATTe712lt-A",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Uvtni9GLWQtK",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 2,
+                        "c": "小结"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "1916c27e-fe54-4855-9bc0-431d70b623a5": {
+      "value": {
+        "value": {
+          "id": "1916c27e-fe54-4855-9bc0-431d70b623a5",
+          "version": 5,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "回过头看，NotionNext 做的事情其实只有一件："
+              ],
+              [
+                "把 Notion 变成你博客的后台，把发布、渲染、部署这些脏活累活全部抽象掉",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "。你要做的，只是打开 Notion，写下今天想说的话。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "QIK3X61qBgYvgBuHvFiQJg,\"start\",\"end\"",
+              "n": {
+                "QIK3X61qBgYvgBuHvFiQJg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "QIK3X61qBgYvgBuHvFiQJg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-uorisk4QpcH",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 27,
+                        "c": "回过头看，NotionNext 做的事情其实只有一件："
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-uorisk4QpcH",
+                          28
+                        ],
+                        "o": [
+                          "-uorisk4QpcH",
+                          27
+                        ],
+                        "l": 38,
+                        "c": "把 Notion 变成你博客的后台，把发布、渲染、部署这些脏活累活全部抽象掉",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "QIK3X61qBgYvgBuHvFiQJg",
+                            "l": "",
+                            "i": [
+                              "-uorisk4QpcH",
+                              93
+                            ],
+                            "s": {
+                              "i": [
+                                "-uorisk4QpcH",
+                                28
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "-uorisk4QpcH",
+                                66
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-uorisk4QpcH",
+                          66
+                        ],
+                        "o": [
+                          "-uorisk4QpcH",
+                          65
+                        ],
+                        "l": 27,
+                        "c": "。你要做的，只是打开 Notion，写下今天想说的话。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "7e33b611-5f7e-4850-bf61-c1afbf02bc34": {
+      "value": {
+        "value": {
+          "id": "7e33b611-5f7e-4850-bf61-c1afbf02bc34",
+          "version": 5,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "对我来说，它的价值不在于\"又多了一个博客系统\"，而在于"
+              ],
+              [
+                "大幅降低了持续写作的门槛",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "tRsOjeydcOU8GHuAYdal5A,\"start\",\"end\"",
+              "n": {
+                "tRsOjeydcOU8GHuAYdal5A,\"start\",\"end\"": {
+                  "s": {
+                    "x": "tRsOjeydcOU8GHuAYdal5A",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-k1mUU7I17O3",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 27,
+                        "c": "对我来说，它的价值不在于\"又多了一个博客系统\"，而在于"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-k1mUU7I17O3",
+                          28
+                        ],
+                        "o": [
+                          "-k1mUU7I17O3",
+                          27
+                        ],
+                        "l": 12,
+                        "c": "大幅降低了持续写作的门槛",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "tRsOjeydcOU8GHuAYdal5A",
+                            "l": "",
+                            "i": [
+                              "-k1mUU7I17O3",
+                              41
+                            ],
+                            "s": {
+                              "i": [
+                                "-k1mUU7I17O3",
+                                28
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "-k1mUU7I17O3",
+                                40
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "-k1mUU7I17O3",
+                          40
+                        ],
+                        "o": [
+                          "-k1mUU7I17O3",
+                          39
+                        ],
+                        "l": 1,
+                        "c": "：",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "43c34a17-2b7e-4e0f-b139-717f87e8d709": {
+      "value": {
+        "value": {
+          "id": "43c34a17-2b7e-4e0f-b139-717f87e8d709",
+          "version": 4,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "不用切换编辑器，想到什么随手就能写；"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "3gZTihgUdGG5HKfimMVAVg,\"start\",\"end\"",
+              "n": {
+                "3gZTihgUdGG5HKfimMVAVg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "3gZTihgUdGG5HKfimMVAVg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "oEwT_7-rkWh9",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 18,
+                        "c": "不用切换编辑器，想到什么随手就能写；"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "942170e6-f694-4538-9639-70f09c76cabb": {
+      "value": {
+        "value": {
+          "id": "942170e6-f694-4538-9639-70f09c76cabb",
+          "version": 4,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "不用操心构建和部署，保存即发布；"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "S5G7zDlviD7ROFXYkV8P2w,\"start\",\"end\"",
+              "n": {
+                "S5G7zDlviD7ROFXYkV8P2w,\"start\",\"end\"": {
+                  "s": {
+                    "x": "S5G7zDlviD7ROFXYkV8P2w",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "lHSQ5mkfyJUq",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 16,
+                        "c": "不用操心构建和部署，保存即发布；"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "d514acff-08ab-453e-aac2-b23ba1d21d47": {
+      "value": {
+        "value": {
+          "id": "d514acff-08ab-453e-aac2-b23ba1d21d47",
+          "version": 4,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "配合 AI 工具，连主题魔改和选题灵感都能被加速。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "UH5AXBThCiS-YKSizHayRA,\"start\",\"end\"",
+              "n": {
+                "UH5AXBThCiS-YKSizHayRA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "UH5AXBThCiS-YKSizHayRA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "c7kcEYhEdzTc",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 25,
+                        "c": "配合 AI 工具，连主题魔改和选题灵感都能被加速。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "13f0596e-7a51-4af5-9f9d-e7fce2074c3a": {
+      "value": {
+        "value": {
+          "id": "13f0596e-7a51-4af5-9f9d-e7fce2074c3a",
+          "version": 5,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "但是工具再顺手，也只是放大器。真正决定这个博客能走多远的，是你愿不愿意"
+              ],
+              [
+                "持续地写下去",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "。NotionNext 帮你把路铺平了，剩下的那一步，只能靠你自己了。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695996,
+          "last_edited_time": 1792379695996,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "qy40ooQnzX8lOq5CNRKLpA,\"start\",\"end\"",
+              "n": {
+                "qy40ooQnzX8lOq5CNRKLpA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "qy40ooQnzX8lOq5CNRKLpA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_5w-fu5Q5a7R",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 35,
+                        "c": "但是工具再顺手，也只是放大器。真正决定这个博客能走多远的，是你愿不愿意"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_5w-fu5Q5a7R",
+                          36
+                        ],
+                        "o": [
+                          "_5w-fu5Q5a7R",
+                          35
+                        ],
+                        "l": 6,
+                        "c": "持续地写下去",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "qy40ooQnzX8lOq5CNRKLpA",
+                            "l": "",
+                            "i": [
+                              "_5w-fu5Q5a7R",
+                              77
+                            ],
+                            "s": {
+                              "i": [
+                                "_5w-fu5Q5a7R",
+                                36
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "_5w-fu5Q5a7R",
+                                42
+                              ],
+                              "a": "b"
+                            },
+                            "a": [
+                              "b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_5w-fu5Q5a7R",
+                          42
+                        ],
+                        "o": [
+                          "_5w-fu5Q5a7R",
+                          41
+                        ],
+                        "l": 35,
+                        "c": "。NotionNext 帮你把路铺平了，剩下的那一步，只能靠你自己了。",
+                        "b": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "6ed44b5a-5fec-4f5f-b66c-89e3afe0f911": {
+      "value": {
+        "value": {
+          "id": "6ed44b5a-5fec-4f5f-b66c-89e3afe0f911",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "📎 参考链接"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695997,
+          "last_edited_time": 1792379695997,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "Ph5M4BfBjdndlWKZta9lIw,\"start\",\"end\"",
+              "n": {
+                "Ph5M4BfBjdndlWKZta9lIw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Ph5M4BfBjdndlWKZta9lIw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "SwaXv8rflU8A",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 7,
+                        "c": "📎 参考链接"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "e91e63f0-2693-4aae-92e1-9b0bbd48f669": {
+      "value": {
+        "value": {
+          "id": "e91e63f0-2693-4aae-92e1-9b0bbd48f669",
+          "version": 9,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "NotionNext 官方文档",
+                [
+                  [
+                    "a",
+                    "https://docs.tangly1024.com/about"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695997,
+          "last_edited_time": 1792381102940,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "wCjtWymqPDy3LN7YhK-EXw,\"start\",\"end\"",
+              "n": {
+                "wCjtWymqPDy3LN7YhK-EXw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "wCjtWymqPDy3LN7YhK-EXw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Qxyj9sOQf8GG",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 15,
+                        "c": "NotionNext 官方文档",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "wCjtWymqPDy3LN7YhK-EXw",
+                            "l": "",
+                            "i": [
+                              "0sRyKPcbS5pO",
+                              16
+                            ],
+                            "s": {
+                              "i": [
+                                "Qxyj9sOQf8GG",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "Qxyj9sOQf8GG",
+                                15
+                              ],
+                              "a": "a"
+                            },
+                            "a": [
+                              "a",
+                              "https://docs.tangly1024.com/about"
+                            ]
+                          }
+                        ],
+                        "a": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "4cac87d7-28c1-43a2-922f-6aeeb8ecbc55": {
+      "value": {
+        "value": {
+          "id": "4cac87d7-28c1-43a2-922f-6aeeb8ecbc55",
+          "version": 9,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "NotionNext GitHub 仓库",
+                [
+                  [
+                    "a",
+                    "https://github.com/tangly1024/NotionNext"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695997,
+          "last_edited_time": 1792381102940,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "GqfyViglUUFnrF-6EL9oRg,\"start\",\"end\"",
+              "n": {
+                "GqfyViglUUFnrF-6EL9oRg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "GqfyViglUUFnrF-6EL9oRg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_ak3GZXOBf1a",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 20,
+                        "c": "NotionNext GitHub 仓库",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "GqfyViglUUFnrF-6EL9oRg",
+                            "l": "",
+                            "i": [
+                              "CHnPJYFY82t-",
+                              21
+                            ],
+                            "s": {
+                              "i": [
+                                "_ak3GZXOBf1a",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "_ak3GZXOBf1a",
+                                20
+                              ],
+                              "a": "a"
+                            },
+                            "a": [
+                              "a",
+                              "https://github.com/tangly1024/NotionNext"
+                            ]
+                          }
+                        ],
+                        "a": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "6ced7eca-f36d-4b7d-9e4d-eef805fac884": {
+      "value": {
+        "value": {
+          "id": "6ced7eca-f36d-4b7d-9e4d-eef805fac884",
+          "version": 9,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "Vercel 绑定自定义域名教程",
+                [
+                  [
+                    "a",
+                    "https://docs.tangly1024.com/article/vercel-domain"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379695997,
+          "last_edited_time": 1792381102940,
+          "parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-815a-b24a-e56066216f28",
+          "crdt_data": {
+            "title": {
+              "r": "J3Kb26WMbqit4ZjZ4lyU8g,\"start\",\"end\"",
+              "n": {
+                "J3Kb26WMbqit4ZjZ4lyU8g,\"start\",\"end\"": {
+                  "s": {
+                    "x": "J3Kb26WMbqit4ZjZ4lyU8g",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "c2Fhe97_YHz6",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 16,
+                        "c": "Vercel 绑定自定义域名教程",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "J3Kb26WMbqit4ZjZ4lyU8g",
+                            "l": "",
+                            "i": [
+                              "L10KWQeVUzLa",
+                              17
+                            ],
+                            "s": {
+                              "i": [
+                                "c2Fhe97_YHz6",
+                                1
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "c2Fhe97_YHz6",
+                                16
+                              ],
+                              "a": "a"
+                            },
+                            "a": [
+                              "a",
+                              "https://docs.tangly1024.com/article/vercel-domain"
+                            ]
+                          }
+                        ],
+                        "a": []
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "collection": {
+    "2bc5c572-e7e9-819a-8c77-000b07dda17d": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "version": 167,
+          "name": [
+            [
+              "junlin"
+            ]
+          ],
+          "description": [
+            [
+              "保持思考"
+            ]
+          ],
+          "schema": {
+            "@NcA": {
+              "name": "password",
+              "type": "text"
+            },
+            "Dj]h": {
+              "name": "icon",
+              "type": "text"
+            },
+            "NX\\Q": {
+              "name": "date",
+              "type": "date",
+              "date_format": "YYYY/MM/DD"
+            },
+            "`gQ~": {
+              "name": "type",
+              "type": "select",
+              "options": [
+                {
+                  "id": "5aff2f95-fd1e-489b-8840-bf10bc9519cb",
+                  "color": "purple",
+                  "value": "Post"
+                },
+                {
+                  "id": "374d2bc6-a144-4832-8ca4-474aaae0ea1f",
+                  "color": "orange",
+                  "value": "Page"
+                },
+                {
+                  "id": "95b7fea5-98b3-476e-892f-79e8f36d0633",
+                  "color": "brown",
+                  "value": "Notice"
+                },
+                {
+                  "id": "2287395b-9f64-4852-b46f-ff3df4b4acef",
+                  "color": "yellow",
+                  "value": "Menu"
+                },
+                {
+                  "id": "50fefd65-c28e-4806-9183-aa12995f11f3",
+                  "color": "pink",
+                  "value": "SubMenu"
+                },
+                {
+                  "id": "b945f57d-dbcc-4603-9fab-5cfe447aad1b",
+                  "color": "red",
+                  "value": "Config"
+                }
+              ]
+            },
+            "bB{M": {
+              "name": "category",
+              "type": "select",
+              "options": [
+                {
+                  "id": "a4dcd33a-34a7-4c33-b9c2-92d3a5248f06",
+                  "color": "red",
+                  "value": "学习笔记"
+                },
+                {
+                  "id": "8282ff59-f160-40c3-ab7e-6e970a0a64d5",
+                  "color": "purple",
+                  "value": "技术分享"
+                },
+                {
+                  "id": "edd604ab-fda7-4d9b-964a-e7de536c05a0",
+                  "color": "orange",
+                  "value": "心情随笔"
+                },
+                {
+                  "id": "43655966-cc7e-4f95-8aa2-ec3efe391f19",
+                  "color": "green",
+                  "value": "日常生活"
+                }
+              ]
+            },
+            "d]hq": {
+              "name": "slug",
+              "type": "text"
+            },
+            "sD^m": {
+              "name": "tags",
+              "type": "multi_select",
+              "options": [
+                {
+                  "id": "d9f66761-0396-4e80-be5c-2ab6c7f8ba86",
+                  "color": "red",
+                  "value": "推荐"
+                },
+                {
+                  "id": "ee932bde-0023-446f-9bb4-17d2022121c9",
+                  "color": "brown",
+                  "value": "文字"
+                },
+                {
+                  "id": "438bae9c-df52-4fb0-8288-791c5ee8625c",
+                  "color": "yellow",
+                  "value": "思考"
+                },
+                {
+                  "id": "4ae52b3d-6ee9-4af5-9b79-0b7644adf259",
+                  "color": "orange",
+                  "value": "新闻"
+                },
+                {
+                  "id": "25b1074b-a3fa-49f5-82cd-a37d85c5666f",
+                  "color": "gray",
+                  "value": "工具"
+                },
+                {
+                  "id": "1e90f00e-8f1b-4665-8e69-92f0791bde56",
+                  "color": "pink",
+                  "value": "开发"
+                },
+                {
+                  "id": "2382b30f-9881-4a8b-ae7f-2d34979c4fb9",
+                  "color": "brown",
+                  "value": "建站"
+                },
+                {
+                  "id": "1226bc5e-19d2-473c-842d-53b37ef4bad7",
+                  "color": "purple",
+                  "value": "实用教程"
+                },
+                {
+                  "id": "2b0bbf09-3da3-446c-89b7-64854fd027b0",
+                  "color": "blue",
+                  "value": "agent"
+                }
+              ]
+            },
+            "wz|S": {
+              "name": "summary",
+              "type": "text"
+            },
+            "title": {
+              "name": "title",
+              "type": "title"
+            },
+            "f211bdc0-ee00-4186-9a7d-f68c055ec2ee": {
+              "name": "status",
+              "type": "select",
+              "options": [
+                {
+                  "id": "7abc61d4-b405-480d-b699-12588755fa65",
+                  "color": "red",
+                  "value": "Published"
+                },
+                {
+                  "id": "d1242312-e0a8-456d-b8f0-6e998e2c4fb2",
+                  "color": "orange",
+                  "value": "Invisible"
+                },
+                {
+                  "id": "41d5f5c6-b53c-42bc-8e0f-fc9402048480",
+                  "color": "yellow",
+                  "value": "Draft"
+                }
+              ]
+            }
+          },
+          "icon": "💯",
+          "format": {
+            "layout_pointer": {
+              "id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+              "table": "layout",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "copied_from_pointer": {
+              "id": "4379bc14-5d22-453b-a153-12639616fc01",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "property_visibility": [
+              {
+                "property": "`gQ~",
+                "visibility": "show"
+              },
+              {
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee",
+                "visibility": "show"
+              },
+              {
+                "property": "NX\\Q",
+                "visibility": "show"
+              },
+              {
+                "property": "d]hq",
+                "visibility": "show"
+              },
+              {
+                "property": "wz|S",
+                "visibility": "show"
+              },
+              {
+                "property": "sD^m",
+                "visibility": "show"
+              },
+              {
+                "property": "bB{M",
+                "visibility": "show"
+              },
+              {
+                "property": "Dj]h",
+                "visibility": "hide_if_empty"
+              },
+              {
+                "property": "uHoD",
+                "visibility": "show"
+              },
+              {
+                "property": "kiCR",
+                "visibility": "hide"
+              }
+            ],
+            "ai_suggested_properties": [
+              {
+                "name": "created_by",
+                "type": "person"
+              },
+              {
+                "name": "last_updated",
+                "type": "date"
+              },
+              {
+                "name": "priority",
+                "type": "select",
+                "options": [
+                  {
+                    "id": "aaSo",
+                    "color": "gray",
+                    "value": "low"
+                  },
+                  {
+                    "id": "B:\\=",
+                    "color": "green",
+                    "value": "medium"
+                  },
+                  {
+                    "id": "r{E>",
+                    "color": "purple",
+                    "value": "high"
+                  }
+                ]
+              },
+              {
+                "name": "attachments",
+                "type": "file"
+              }
+            ],
+            "collection_page_properties": [
+              {
+                "visible": false,
+                "property": "`gQ~"
+              },
+              {
+                "visible": false,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "visible": true,
+                "property": "Dj]h"
+              },
+              {
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "visible": true,
+                "property": "ckw_"
+              }
+            ],
+            "collection_default_template": {
+              "template_page_id": "2bc5c572-e7e9-8175-ab37-d98f836b46b4"
+            }
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "file_ids": [
+            "6cf3dc36-2f98-4f0e-9679-1bdbb1485129",
+            "5520bd92-e709-4c0d-ad58-06923f23f7e9",
+            "624d393a-62e3-4464-a1bf-1c79ecd4fbda",
+            "d52f6766-3e32-4c3d-8529-46e1f214360f",
+            "abe3a0aa-2aff-4274-81bb-c2443d4ef9e2",
+            "a2a32795-101d-46aa-a7f6-eb35b8750166",
+            "29db38d2-d5fa-4fa6-8a92-3b527cfe80d1"
+          ],
+          "copied_from": "4379bc14-5d22-453b-a153-12639616fc01",
+          "template_pages": [
+            "2bc5c572-e7e9-8175-ab37-d98f836b46b4"
+          ],
+          "migrated": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764566955214,
+          "last_edited_time": 1792391171679,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "nav_parent_table": "block",
+          "nav_parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774"
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "layout": {
+    "2bc5c572-e7e9-8085-bc99-006e0b045a4d": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+          "version": 50,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "parent_table": "collection",
+          "parent_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "created_by_table": "notion_user",
+          "created_time": 1764572512581,
+          "last_edited_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "last_edited_by_table": "notion_user",
+          "last_edited_time": 1764572530897,
+          "modules": {
+            "page_layout_schema": [
+              {
+                "id": "cover",
+                "type": "cover"
+              },
+              {
+                "id": "pdPg",
+                "type": "titleWithIcon"
+              },
+              {
+                "id": "Gq_m",
+                "type": "properties"
+              },
+              {
+                "id": "discussions",
+                "type": "discussions"
+              },
+              {
+                "id": "editor",
+                "type": "editor"
+              }
+            ]
+          },
+          "blocks": [
+            "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4"
+          ],
+          "format": {
+            "page_full_width": true,
+            "previousViewsMainCollectionViewBlockPointer": {
+              "id": "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4",
+              "table": "block",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            }
+          }
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "collection_view": {
+    "2bc5c572-e7e9-812e-ab10-000ce3d1b58e": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-812e-ab10-000ce3d1b58e",
+          "version": 61,
+          "type": "table",
+          "name": "Table",
+          "format": {
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 288,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 141,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 229,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 253,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "collection_peek_mode": "full_page",
+            "table_frozen_column_index": -1,
+            "collection_view_default_template": {
+              "template_page_id": "2bc5c572-e7e9-8175-ab37-d98f836b46b4"
+            }
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "cc459e5b-0f15-4a0c-83db-bb6bf2001aa3",
+            "a9bfecc8-9761-4987-9aca-af79d4ebbd0c",
+            "7aa40ad8-1e69-4d56-b245-d135d3101cec",
+            "e4eefa7d-e2f2-44ed-83f6-fd6951d50900",
+            "0f9b7a0d-ad15-4ece-8a8b-948d96b50ff7",
+            "58a216ce-4d8d-4b60-906c-6097c5fd8d41",
+            "b824f35b-aee9-4a22-81c9-d44b65f99f43",
+            "ba565c08-0d2f-46cb-9fcb-5eeface44dfb",
+            "560c76dd-c69f-429b-827d-7974407bb23f",
+            "0533a861-81cc-40fa-8ab8-5be721800b86",
+            "3578fa31-ea0a-4e07-82dc-28704e0dc685",
+            "f2625c60-ca69-493b-858c-bf38979f468c",
+            "96b14e20-e592-42f6-b7d2-357f4693f18c",
+            "fe8fafec-6d1b-4fbb-8a7a-fb079a6bb8e4",
+            "9345db3a-b8bd-4e02-b296-9734958eddb6",
+            "26e8ddc4-10b4-4765-a96d-e87290556164",
+            "840f0871-b58b-428d-8a28-0861947974b4",
+            "5787bc4f-06a4-4158-a27f-6c81fb9b1efe",
+            "e1bff221-486f-42c8-9cf3-6379f83f3510",
+            "2db01777-47d0-4230-bbe8-ef65ab694707",
+            "ab0d5acb-9230-4656-9c49-1aff13aba865",
+            "98330ff5-71d2-4ea9-945a-ba76fc282e9d",
+            "2bc5c572-e7e9-8013-9240-d100b454bc9a",
+            "2bc5c572-e7e9-81d5-a98c-c068723b10ee",
+            "2bc5c572-e7e9-8133-b0df-c90ab6321aec",
+            "2bc5c572-e7e9-813f-93fb-d1994f6beec1",
+            "2bc5c572-e7e9-8136-a457-d2e865fec101",
+            "2bc5c572-e7e9-814a-bf2c-ca679d60df9d",
+            "2bc5c572-e7e9-810f-a321-d462d35b4d19",
+            "2bc5c572-e7e9-8150-9e51-ca717458c52b",
+            "2bc5c572-e7e9-8197-8d70-ebad4b3f92f5",
+            "2bc5c572-e7e9-81a9-bcb0-f8261b7f169f",
+            "2bc5c572-e7e9-8156-9ed3-ca7f47a15ae2",
+            "2bc5c572-e7e9-81b1-965c-c4663400497d",
+            "2bc5c572-e7e9-81fa-813c-d615a71f1ea7",
+            "2bc5c572-e7e9-81bb-9c1f-ea85bc069261",
+            "ce720858-10b7-4c0c-8083-906f29150a81",
+            "2bc5c572-e7e9-81fb-a3fd-c1a7d26504ec",
+            "2bc5c572-e7e9-81c9-8e8e-e1c700374421",
+            "4194acae-3f4b-4c08-98b9-907a0b5bd4b9",
+            "2bc5c572-e7e9-81ab-8706-d6577b4597a5",
+            "2bc5c572-e7e9-81c5-b014-c69568dbeac8",
+            "2bc5c572-e7e9-81a9-a4a1-ccf4c0de050f",
+            "f3550fb0-346c-4212-b57f-86433738b50b",
+            "2bc5c572-e7e9-8113-8bc5-d7e05d2901e4",
+            "2bc5c572-e7e9-81e8-827a-f957fdb532b2",
+            "2bc5c572-e7e9-8158-8646-d3fafa845520",
+            "2bc5c572-e7e9-81c0-bbfb-fc58f424fa9e",
+            "1ffb90ba-821d-4d16-8520-e46604a470d7",
+            "adc7c47b-6dd7-439f-9e06-6075256c91a7",
+            "2bc5c572-e7e9-8075-9408-c1971b64dd74",
+            "2bc5c572-e7e9-80e4-af65-ceeaa4c66af6",
+            "2bc5c572-e7e9-81d4-88f4-f0021077f493",
+            "2bc5c572-e7e9-8179-9a0d-d66a8b8f6be9",
+            "2bc5c572-e7e9-81e7-ad5a-cf576b51ac63",
+            "2bc5c572-e7e9-8183-8bfa-e177058d24f7",
+            "2bc5c572-e7e9-81b0-8439-d313d3e3cb3a",
+            "2bc5c572-e7e9-81f5-a922-c156bd90169b",
+            "2bc5c572-e7e9-8190-a45d-d1aea1043575",
+            "2bc5c572-e7e9-80ae-adf2-e05d12bc99d4",
+            "2bc5c572-e7e9-8002-8450-c68d06120c18",
+            "2be5c572-e7e9-8082-9c08-fd2dd1c44a18",
+            "2bc5c572-e7e9-81fa-add7-d9e3a76c5873",
+            "2bc5c572-e7e9-8128-b44d-db7c4d0fd616",
+            "2be5c572-e7e9-804a-8511-f8061bcb4f82",
+            "2cc5c572-e7e9-8067-b6ca-ff83db0c8d93",
+            "2be5c572-e7e9-808a-b96a-e3f3787f8ce6",
+            "2bc5c572-e7e9-808a-88bc-cab1d52ea7a7",
+            "2c85c572-e7e9-806b-a4a0-f66c790c8753",
+            "2ca5c572-e7e9-80bb-818b-d2f9def61c14",
+            "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+            "3fe5c572-e7e9-8125-beaa-d53951617ef0",
+            "3fe5c572-e7e9-81ea-bbe1-feefa98cd10a",
+            "3fe5c572-e7e9-81bd-99e6-de2c63825575",
+            "3fe5c572-e7e9-815a-b24a-e56066216f28",
+            "2c55c572-e7e9-8001-8abf-da458c637cf2",
+            "2c85c572-e7e9-800f-8c5b-fbc64041fd78",
+            "2be5c572-e7e9-80e6-804c-e97594a382b7",
+            "2be5c572-e7e9-80ec-829d-ea1c367df8a7",
+            "9e017f37-5917-4cda-afb8-92072abdbdba",
+            "8aafeb2c-85b4-4c4e-af36-3b9efacb167c",
+            "6d0e0705-57f3-4223-8745-a27295245029",
+            "dec89a30-7004-499f-a99e-05b2842cad2b",
+            "7efc83d4-2645-4578-b588-a9cffb15524a",
+            "1769e8de-bebe-4687-a28a-34c15859ed98",
+            "203f2c30-a3cd-4f70-95b3-07df9f996428",
+            "2a0b435c-6f77-4db8-be6b-831d177bd762",
+            "eac01009-c323-46fd-8339-09c282e6597e",
+            "c4b37f96-4ab0-4a0b-a16e-55bac3e32990",
+            "4ad5c69e-0dab-4d66-b548-360da7d53568",
+            "72d89744-ac04-4dd4-be8b-9d629acd7c11",
+            "32dc3358-e954-4934-9e71-cf1dfbca5b91",
+            "961e45bd-8bed-4ebc-b3d8-1f0e63736d04"
+          ],
+          "query2": {
+            "aggregations": [
+              {
+                "property": "title",
+                "aggregator": "count"
+              }
+            ]
+          },
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1765363859617,
+          "last_edited_time": 1792390936380,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "nav_parent_table": "block",
+          "nav_parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-8195-a20b-000cf6986f4c": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8195-a20b-000cf6986f4c",
+          "version": 42,
+          "type": "table",
+          "name": "Config",
+          "format": {
+            "gallery_cover": {
+              "type": "page_content"
+            },
+            "list_properties": [
+              {
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              }
+            ],
+            "property_filters": [
+              {
+                "id": "b54a6c88-635d-4de4-946e-5a855a1f4069",
+                "filter": {
+                  "filter": {
+                    "value": [
+                      {
+                        "type": "exact",
+                        "value": "Notice"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Menu"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Config"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "SubMenu"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Page"
+                      }
+                    ],
+                    "operator": "enum_is"
+                  },
+                  "property": "`gQ~"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 116,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 118,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 326,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "gallery_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              }
+            ],
+            "table_frozen_column_index": -1,
+            "table_subitem_toggle_column": "title"
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "2bc5c572-e7e9-81c5-b014-c69568dbeac8",
+            "2bc5c572-e7e9-8002-8450-c68d06120c18",
+            "2bc5c572-e7e9-8113-8bc5-d7e05d2901e4",
+            "2bc5c572-e7e9-81e8-827a-f957fdb532b2",
+            "2bc5c572-e7e9-81fa-add7-d9e3a76c5873",
+            "2bc5c572-e7e9-8133-b0df-c90ab6321aec",
+            "2bc5c572-e7e9-8190-a45d-d1aea1043575",
+            "2bc5c572-e7e9-81f5-a922-c156bd90169b",
+            "2bc5c572-e7e9-8068-8ca8-f12c51a815d2",
+            "2bc5c572-e7e9-8158-8646-d3fafa845520",
+            "2bc5c572-e7e9-81c0-bbfb-fc58f424fa9e",
+            "2bc5c572-e7e9-8075-9408-c1971b64dd74",
+            "2bc5c572-e7e9-80e4-af65-ceeaa4c66af6",
+            "2bc5c572-e7e9-81ab-8706-d6577b4597a5",
+            "2bc5c572-e7e9-81d4-88f4-f0021077f493",
+            "2bc5c572-e7e9-8179-9a0d-d66a8b8f6be9",
+            "2bc5c572-e7e9-81e7-ad5a-cf576b51ac63",
+            "2bc5c572-e7e9-8183-8bfa-e177058d24f7",
+            "2bc5c572-e7e9-8128-b44d-db7c4d0fd616",
+            "2bc5c572-e7e9-81a9-a4a1-ccf4c0de050f"
+          ],
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764570320279,
+          "last_edited_time": 1764571845001,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-8184-90a9-000c26f0c6f6": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8184-90a9-000c26f0c6f6",
+          "version": 25,
+          "type": "gallery",
+          "name": "Post Gallery",
+          "format": {
+            "gallery_cover": {
+              "type": "page_cover"
+            },
+            "property_filters": [
+              {
+                "id": "e5e69a48-8053-4d20-9e5a-73e8b24dab16",
+                "filter": {
+                  "filter": {
+                    "value": {
+                      "type": "exact",
+                      "value": "Post"
+                    },
+                    "operator": "enum_is"
+                  },
+                  "property": "`gQ~"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 155,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_groups": [
+              {
+                "value": {
+                  "type": "select",
+                  "value": "心情随笔"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "技术分享"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "学习笔记"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "日常生活"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "gallery_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              },
+              {
+                "visible": false,
+                "property": "`gQ~"
+              }
+            ],
+            "collection_group_by": {
+              "sort": {
+                "type": "manual"
+              },
+              "type": "select",
+              "property": "bB{M"
+            },
+            "table_subitem_toggle_column": "title",
+            "collection_group_aggregation": {
+              "aggregator": "count",
+              "enforceMaxAggregationLimit": true
+            }
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "2bc5c572-e7e9-8062-a657-d95e06790376",
+            "2bc5c572-e7e9-80ae-adf2-e05d12bc99d4",
+            "2bc5c572-e7e9-807e-a59b-e523edecf1e8",
+            "2bc5c572-e7e9-8072-977d-f62e652abc83",
+            "2bc5c572-e7e9-808a-88bc-cab1d52ea7a7",
+            "2be5c572-e7e9-8083-bf55-ffdad369fa58",
+            "2be5c572-e7e9-808a-b96a-e3f3787f8ce6"
+          ],
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764732735007,
+          "last_edited_time": 1764732821633,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-811a-8e80-000c1e21934b": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-811a-8e80-000c1e21934b",
+          "version": 13,
+          "type": "board",
+          "name": "Post Board",
+          "format": {
+            "board_columns": [
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Draft"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Invisible"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Published"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              }
+            ],
+            "board_columns_by": {
+              "sort": {
+                "type": "manual"
+              },
+              "type": "select",
+              "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+            },
+            "board_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "`gQ~"
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 155,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "table_subitem_toggle_column": "title"
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "2bc5c572-e7e9-81fa-add7-d9e3a76c5873",
+            "2bc5c572-e7e9-8075-9408-c1971b64dd74",
+            "2bc5c572-e7e9-8179-9a0d-d66a8b8f6be9",
+            "2bc5c572-e7e9-81ab-8706-d6577b4597a5",
+            "2bc5c572-e7e9-8158-8646-d3fafa845520",
+            "2bc5c572-e7e9-8183-8bfa-e177058d24f7",
+            "2bc5c572-e7e9-81c5-b014-c69568dbeac8",
+            "2bc5c572-e7e9-81d4-88f4-f0021077f493",
+            "2bc5c572-e7e9-81e7-ad5a-cf576b51ac63",
+            "2bc5c572-e7e9-81f5-a922-c156bd90169b",
+            "2bc5c572-e7e9-8128-b44d-db7c4d0fd616"
+          ],
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764570862162,
+          "last_edited_time": 1764570862162,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-8020-9bcd-000cea601509": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8020-9bcd-000cea601509",
+          "version": 7,
+          "type": "page",
+          "name": "内容",
+          "format": {
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "page_layout_pointer": {
+              "id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+              "table": "layout",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+              "views_main_tab_id": "view_tab_LsGP"
+            },
+            "hide_linked_collection_name": true
+          },
+          "parent_id": "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764572518655,
+          "last_edited_time": 1764572530897,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "notion_user": {},
+  "collection_query": {},
+  "signed_urls": {}
+}

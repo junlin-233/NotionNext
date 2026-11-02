@@ -1,0 +1,4379 @@
+{
+  "__version__": 3,
+  "block": {
+    "3fe5c572-e7e9-8177-a7d9-c5321a57a657": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "version": 25,
+          "type": "page",
+          "properties": {
+            "NX\\Q": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2026-06-11"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "`gQ~": [
+              [
+                "Post"
+              ]
+            ],
+            "bB{M": [
+              [
+                "心情随笔"
+              ]
+            ],
+            "d]hq": [
+              [
+                "37cd690a-d6d1-8049-aeec-ef1826a57ed0"
+              ]
+            ],
+            "sD^m": [
+              [
+                "推荐,思考"
+              ]
+            ],
+            "title": [
+              [
+                "半年度总结"
+              ]
+            ],
+            "f211bdc0-ee00-4186-9a7d-f68c055ec2ee": [
+              [
+                "Published"
+              ]
+            ]
+          },
+          "content": [
+            "fbd18d8c-40bc-4e52-918b-4ab40f6bb9ca",
+            "021ae149-5d76-4ff9-93ab-40817fae2a2f",
+            "3c83646a-7bbc-44cd-aafe-d89d6147b56a",
+            "d92ea407-4561-4d05-b0b9-6e40e4c6ed0c",
+            "3e08d257-1b33-4e88-9bad-fcd8d01537f9",
+            "2072a3fb-26f4-4876-b11e-3a789921e677",
+            "7c09ada2-afb5-43b7-ad2a-e340188e7256",
+            "0fc9440c-0270-4a5f-8382-5b713c68cb75",
+            "02a363f4-7b54-48ea-b678-cce0a52c56a9",
+            "79bd1649-ba50-4c65-ae57-5fff91950560",
+            "0382ab7f-eec8-4d26-948d-6f25f0541c2c",
+            "0a2ecd50-c300-4c11-a573-3c33ecac5aab",
+            "f7ed5ed0-03ab-4572-9b19-4e64ce2c4a69",
+            "34ca2844-60c5-42fb-83b2-4008a2388734",
+            "5082ddeb-f2f9-4ccc-84e5-feeb3e81633c",
+            "d62aece6-d9a7-4068-bebc-caa18e0ac985",
+            "97fffd02-a260-46bd-b56e-6c4fc5c88c9c",
+            "4410b798-71e3-4886-9ed1-8146aaeeb0b8",
+            "5177c87f-9a59-4a99-a19d-562919861bb5",
+            "b20026c3-2c67-445d-b10f-2d5fc69362b4",
+            "ce7e6f7a-0f16-4234-a3fb-1f8c187480cc",
+            "693231b9-11b9-4daa-a99a-c5aa756ec9c1",
+            "6a9c3356-7921-4c11-9e0d-b651d6fbd109",
+            "1b2028c0-3f73-44b7-8b4e-4468d013016f",
+            "b0717501-95e4-4a66-8c3e-a6f4c88e5fc0",
+            "919208c8-1c40-430e-8298-ab1fada26b2a",
+            "a5f4d7f5-a7da-4d96-97fc-3d3df899619b",
+            "fbe89a0f-c3cd-4925-9b5e-7ee66f5cef8d",
+            "b8f41245-0072-4111-856a-83c9fcec2c0d",
+            "f0b681c5-1e7e-4c8a-a20e-bb4aa268c4d2",
+            "594e4d9e-db9f-4082-9010-dad6f594092e",
+            "ea6590f8-5105-4bcf-936e-26b78d1a7aa5"
+          ],
+          "format": {
+            "page_cover": "/images/notion/5ae92a86829f7799d6ab.webp",
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767483,
+          "last_edited_time": 1792381687513,
+          "parent_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "parent_table": "collection",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "collection",
+          "nav_parent_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "crdt_data": {
+            "title": {
+              "r": "-Fjk3sUD-W-x_Xxll44uTQ,\"start\",\"end\"",
+              "n": {
+                "-Fjk3sUD-W-x_Xxll44uTQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "-Fjk3sUD-W-x_Xxll44uTQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Fq94CFlNnaBn",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "半年度总结"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-81a7-9844-f7aff6126774": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "version": 168,
+          "type": "collection_view_page",
+          "content": [
+            "2bc5c572-e7e9-811f-b1cc-c8e65c6e458e"
+          ],
+          "view_ids": [
+            "2bc5c572-e7e9-812e-ab10-000ce3d1b58e",
+            "2bc5c572-e7e9-8195-a20b-000cf6986f4c",
+            "2bc5c572-e7e9-8184-90a9-000c26f0c6f6",
+            "2bc5c572-e7e9-811a-8e80-000c1e21934b"
+          ],
+          "collection_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "format": {
+            "site_id": "3fe5c572-e7e9-8047-bbf6-007983586bba",
+            "page_icon": "🚀",
+            "page_cover": "/images/notion/07730a14c1ebc917a62b.webp",
+            "block_locked": false,
+            "block_locked_by": "27074aef-7216-41ed-baef-d9b53addd870",
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "collection_pointers": [
+              {
+                "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+                "table": "collection",
+                "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+              }
+            ],
+            "copied_from_pointer": {
+              "id": "02ab3b86-7800-4aa6-9e9e-415905ef32a5",
+              "table": "block",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "page_cover_position": 0.5,
+            "social_media_image_preview_url": "/images/notion/ad1c55fe1f20d40f0ee1.png"
+          },
+          "permissions": [
+            {
+              "role": "reader",
+              "type": "public_permission",
+              "is_site": true,
+              "added_timestamp": 1764566992864,
+              "is_public_share_link": true
+            }
+          ],
+          "created_time": 1764566963679,
+          "last_edited_time": 1792391171679,
+          "parent_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "parent_table": "space",
+          "alive": true,
+          "copied_from": "02ab3b86-7800-4aa6-9e9e-415905ef32a5",
+          "file_ids": [
+            "b6fc2258-9d34-4d37-a91a-e7608843de00",
+            "17b6dced-3228-4bc7-97ae-698e69df1b1d",
+            "891f0225-d537-48fd-a017-7e8bfd1bbb7b",
+            "50e94f1c-9811-4026-988e-97fc46905d01",
+            "072cf205-95d0-444c-9fca-906be235db6e",
+            "5a94b619-0004-432c-a9ac-e5da3895f560",
+            "d5e1784f-065e-4c73-a8a7-423667550a43"
+          ],
+          "is_template": false,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "space",
+          "nav_parent_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_data": {
+            "title": {
+              "r": "emqc7rmUdvBjwZliL6tODQ,\"start\",\"end\"",
+              "n": {
+                "emqc7rmUdvBjwZliL6tODQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "emqc7rmUdvBjwZliL6tODQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4": {
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4",
+          "version": 6,
+          "type": "collection_view",
+          "view_ids": [
+            "2bc5c572-e7e9-8020-9bcd-000cea601509"
+          ],
+          "created_time": 1764572518653,
+          "last_edited_time": 1764572530897,
+          "parent_id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+          "parent_table": "layout",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "crdt_data": {
+            "title": {
+              "r": "Mh9Fusfe3welYZaR2Rup2A,\"start\",\"end\"",
+              "n": {
+                "Mh9Fusfe3welYZaR2Rup2A,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Mh9Fusfe3welYZaR2Rup2A",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "fbd18d8c-40bc-4e52-918b-4ab40f6bb9ca": {
+      "value": {
+        "value": {
+          "id": "fbd18d8c-40bc-4e52-918b-4ab40f6bb9ca",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "前言"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "wQiXDUGsr7xkchR4W2VsOQ,\"start\",\"end\"",
+              "n": {
+                "wQiXDUGsr7xkchR4W2VsOQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "wQiXDUGsr7xkchR4W2VsOQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "W29Ge2YHUHSK",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 2,
+                        "c": "前言"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "021ae149-5d76-4ff9-93ab-40817fae2a2f": {
+      "value": {
+        "value": {
+          "id": "021ae149-5d76-4ff9-93ab-40817fae2a2f",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "先感谢企鹅给我这次实习机会，一路下来都很流畅，跟每个面试官聊的都很开心，有鹅选鹅！"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "xNUFCqwR1fJjcfIOniU81A,\"start\",\"end\"",
+              "n": {
+                "xNUFCqwR1fJjcfIOniU81A,\"start\",\"end\"": {
+                  "s": {
+                    "x": "xNUFCqwR1fJjcfIOniU81A",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "iNlbtc-OWatr",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 41,
+                        "c": "先感谢企鹅给我这次实习机会，一路下来都很流畅，跟每个面试官聊的都很开心，有鹅选鹅！"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "3c83646a-7bbc-44cd-aafe-d89d6147b56a": {
+      "value": {
+        "value": {
+          "id": "3c83646a-7bbc-44cd-aafe-d89d6147b56a",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "回头看这半年，可谓波澜起伏，虽然有些日子很难熬，也充满迷茫，但是一路下来成长了许多，有时候也不得不感概是命运推动了你的一步又一步，一月份的我绝对不会想到六月能拿到腾讯的offer，收到了很多好友的祝福，其实在这里也想跟大家澄清一下我说幸运真的也不是谦辞，找工作和相亲没啥区别，有时候你觉得无比合适但是人家就是看不上你，有时候你觉得没戏了但是人家偏偏就中意你，所以正在看这段文字的朋友们，面试挂是正常的，多面，多提升自己，总会有守得云开见月明的一天。当然，在幸运女神眷顾你之前，先做好准备。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "5V3pOAHnvCj-V7rYu5Qfeg,\"start\",\"end\"",
+              "n": {
+                "5V3pOAHnvCj-V7rYu5Qfeg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "5V3pOAHnvCj-V7rYu5Qfeg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "bbHPD9qdRiaU",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 244,
+                        "c": "回头看这半年，可谓波澜起伏，虽然有些日子很难熬，也充满迷茫，但是一路下来成长了许多，有时候也不得不感概是命运推动了你的一步又一步，一月份的我绝对不会想到六月能拿到腾讯的offer，收到了很多好友的祝福，其实在这里也想跟大家澄清一下我说幸运真的也不是谦辞，找工作和相亲没啥区别，有时候你觉得无比合适但是人家就是看不上你，有时候你觉得没戏了但是人家偏偏就中意你，所以正在看这段文字的朋友们，面试挂是正常的，多面，多提升自己，总会有守得云开见月明的一天。当然，在幸运女神眷顾你之前，先做好准备。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "d92ea407-4561-4d05-b0b9-6e40e4c6ed0c": {
+      "value": {
+        "value": {
+          "id": "d92ea407-4561-4d05-b0b9-6e40e4c6ed0c",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "1月~4月"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "YVzuOz87jW8-x64EpSKwZA,\"start\",\"end\"",
+              "n": {
+                "YVzuOz87jW8-x64EpSKwZA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "YVzuOz87jW8-x64EpSKwZA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "w1sS9eCOwis-",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "1月~4月"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "3e08d257-1b33-4e88-9bad-fcd8d01537f9": {
+      "value": {
+        "value": {
+          "id": "3e08d257-1b33-4e88-9bad-fcd8d01537f9",
+          "version": 9,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "说实话，我一开始没打算认真准备实习，就想着这次寒假有点长（快50天了），能不能随便投个公司看看，这个时候只有大创的项目，其它啥也没有，题目没刷，八股也没背，甚至还对安全行业抱有幻想。然后海投一通，越投越心凉，越投越觉得安全完蛋了（我水平不够，这个是基于我的水平得出的结论，大佬勿cue），那个时候也很焦虑，一开始以为自己有学历有项目就可以有恃无恐，经过真实的就业市场拷打，发现自己真的是困在信息茧房里，还活在华南第一学府的幻想里。越急投的就越杂，一开始还自视清高看不起小厂，后面直接老实了，啥都投，总算是有几个面试邀约了："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792381664481,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "mKPAWoroiaXdBbzIhIa_Cg,\"start\",\"end\"",
+              "n": {
+                "mKPAWoroiaXdBbzIhIa_Cg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "mKPAWoroiaXdBbzIhIa_Cg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "G6gWqtKKUkZ4",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 170,
+                        "c": "说实话，我一开始没打算认真准备实习，就想着这次寒假有点长（快50天了），能不能随便投个公司看看，这个时候只有大创的项目，其它啥也没有，题目没刷，八股也没背，甚至还对安全行业抱有幻想。然后海投一通，越投越心凉，越投越觉得安全完蛋了（我水平不够，这个是基于我的水平得出的结论，大佬勿cue），那个时候也很焦虑，一开始以为自己有学历有项目就可以有"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "G6gWqtKKUkZ4",
+                          171
+                        ],
+                        "o": [
+                          "G6gWqtKKUkZ4",
+                          170
+                        ],
+                        "l": -2
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "G6gWqtKKUkZ4",
+                          173
+                        ],
+                        "o": [
+                          "G6gWqtKKUkZ4",
+                          172
+                        ],
+                        "l": 1,
+                        "c": "恃"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Vnc2jXoswZsb",
+                          262
+                        ],
+                        "o": [
+                          "G6gWqtKKUkZ4",
+                          173
+                        ],
+                        "l": 2,
+                        "c": "无恐"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "G6gWqtKKUkZ4",
+                          174
+                        ],
+                        "o": [
+                          "G6gWqtKKUkZ4",
+                          173
+                        ],
+                        "l": 88,
+                        "c": "，经过真实的就业市场拷打，发现自己真的是困在信息茧房里，还活在华南第一学府的幻想里。越急投的就越杂，一开始还自视清高看不起小厂，后面直接老实了，啥都投，总算是有几个面试邀约了："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "2072a3fb-26f4-4876-b11e-3a789921e677": {
+      "value": {
+        "value": {
+          "id": "2072a3fb-26f4-4876-b11e-3a789921e677",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "小厂，Linux开发，一面挂"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "rF5jP27LDQCxSmQk8IryIg,\"start\",\"end\"",
+              "n": {
+                "rF5jP27LDQCxSmQk8IryIg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "rF5jP27LDQCxSmQk8IryIg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "BQoM01IuoM89",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 14,
+                        "c": "小厂，Linux开发，一面挂"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "7c09ada2-afb5-43b7-ad2a-e340188e7256": {
+      "value": {
+        "value": {
+          "id": "7c09ada2-afb5-43b7-ad2a-e340188e7256",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "vivo，互联网安全算法工程师（实际jd和算法关系不大应该是做风控的），一面挂（聊了五十多分钟，本来人家都不考我算法题，结果脑子一抽让人家来了一道，判断循环链表，结果啥也没写出来/(ㄒoㄒ)/~~）"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "oziMcFWYimrROYWCOF3_Sg,\"start\",\"end\"",
+              "n": {
+                "oziMcFWYimrROYWCOF3_Sg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "oziMcFWYimrROYWCOF3_Sg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Dd5-cmS0y_rE",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 99,
+                        "c": "vivo，互联网安全算法工程师（实际jd和算法关系不大应该是做风控的），一面挂（聊了五十多分钟，本来人家都不考我算法题，结果脑子一抽让人家来了一道，判断循环链表，结果啥也没写出来/(ㄒoㄒ)/~~）"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "0fc9440c-0270-4a5f-8382-5b713c68cb75": {
+      "value": {
+        "value": {
+          "id": "0fc9440c-0270-4a5f-8382-5b713c68cb75",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "小厂，全栈开发远程，一面挂"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "1Ra91FKtewwhzYgFM-ULNg,\"start\",\"end\"",
+              "n": {
+                "1Ra91FKtewwhzYgFM-ULNg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "1Ra91FKtewwhzYgFM-ULNg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "GfwHbQRzsne0",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 13,
+                        "c": "小厂，全栈开发远程，一面挂"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "02a363f4-7b54-48ea-b678-cce0a52c56a9": {
+      "value": {
+        "value": {
+          "id": "02a363f4-7b54-48ea-b678-cce0a52c56a9",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "初创公司， 游戏开发（实则全栈），入职"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792379767500,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "K_ujBFGaScpCeApPsbgN-w,\"start\",\"end\"",
+              "n": {
+                "K_ujBFGaScpCeApPsbgN-w,\"start\",\"end\"": {
+                  "s": {
+                    "x": "K_ujBFGaScpCeApPsbgN-w",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_9ZisL0p8Ntq",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 19,
+                        "c": "初创公司， 游戏开发（实则全栈），入职"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "79bd1649-ba50-4c65-ae57-5fff91950560": {
+      "value": {
+        "value": {
+          "id": "79bd1649-ba50-4c65-ae57-5fff91950560",
+          "version": 9,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "出于隐私考虑就不透露前司信息了。当时是boss上老板直接找我，我想着试试也不亏就加了v，面试过程很轻松，就聊了聊项目，了解了一下他想要做的ai游戏，不得不说，前老板还是很有口才的，直接把我忽悠来了，就这样子稀里糊涂的，入职前司。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792381664481,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "Tqn8sueB2FWeYy3AMZfxNA,\"start\",\"end\"",
+              "n": {
+                "Tqn8sueB2FWeYy3AMZfxNA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Tqn8sueB2FWeYy3AMZfxNA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "thJD8aWD1KRa",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 103,
+                        "c": "出于隐私考虑就不透露前司信息了。当时是boss上老板直接找我，我想着试试也不亏就加了v，面试过程很轻松，就聊了聊项目，了解了一下他想要做的ai游戏，不得不说，前老板还是很有口才的，直接把我忽悠来了，就这样子"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "b3JbKLWKG1fS",
+                          115
+                        ],
+                        "o": [
+                          "thJD8aWD1KRa",
+                          103
+                        ],
+                        "l": 1,
+                        "c": "稀"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "thJD8aWD1KRa",
+                          104
+                        ],
+                        "o": [
+                          "thJD8aWD1KRa",
+                          103
+                        ],
+                        "l": -1
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "thJD8aWD1KRa",
+                          105
+                        ],
+                        "o": [
+                          "thJD8aWD1KRa",
+                          104
+                        ],
+                        "l": 10,
+                        "c": "里糊涂的，入职前司。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "0382ab7f-eec8-4d26-948d-6f25f0541c2c": {
+      "value": {
+        "value": {
+          "id": "0382ab7f-eec8-4d26-948d-6f25f0541c2c",
+          "version": 14,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "第一个月是在A8音乐大厦工作，办公室很小，但是氛围很好，前老板的招人有一手，同事基本上都是名校，性格也都很好，那时候真的是嘻嘻哈哈的办公，早9：30晚6：30，没什么工作压力。入职之后才知道所谓的ai游戏只有一个demo，一切从0开始，0.0。不过也好，从0到1也是一个很有成就的过程。我在第一个月负责的是游戏地图的开发，偏前端，同时也参与了许多玩法的讨论，除了每天来回通勤三个小时，这段日子真的是无忧无虑，也很有盼头，那时候是真想把游戏做出来，希望陪着公司壮大。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767500,
+          "last_edited_time": 1792381687513,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "PXy02aM3vi_J1_MUXgisCQ,\"start\",\"end\"",
+              "n": {
+                "PXy02aM3vi_J1_MUXgisCQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "PXy02aM3vi_J1_MUXgisCQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "JnUUM_ApmCP0",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 74,
+                        "c": "第一个月是在A8音乐大厦工作，办公室很小，但是氛围很好，前老板的招人有一手，同事基本上都是名校，性格也都很好，那时候真的是嘻嘻哈哈的办公，早9：30"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "OAnlD1uoCN3r",
+                          234
+                        ],
+                        "o": [
+                          "JnUUM_ApmCP0",
+                          74
+                        ],
+                        "l": 1,
+                        "c": "晚"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "d6km0uALZiGY",
+                          233
+                        ],
+                        "o": [
+                          "JnUUM_ApmCP0",
+                          74
+                        ],
+                        "l": -1
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "JnUUM_ApmCP0",
+                          75
+                        ],
+                        "o": [
+                          "JnUUM_ApmCP0",
+                          74
+                        ],
+                        "l": -1
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "JnUUM_ApmCP0",
+                          76
+                        ],
+                        "o": [
+                          "JnUUM_ApmCP0",
+                          75
+                        ],
+                        "l": 157,
+                        "c": "6：30，没什么工作压力。入职之后才知道所谓的ai游戏只有一个demo，一切从0开始，0.0。不过也好，从0到1也是一个很有成就的过程。我在第一个月负责的是游戏地图的开发，偏前端，同时也参与了许多玩法的讨论，除了每天来回通勤三个小时，这段日子真的是无忧无虑，也很有盼头，那时候是真想把游戏做出来，希望陪着公司壮大。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "0a2ecd50-c300-4c11-a573-3c33ecac5aab": {
+      "value": {
+        "value": {
+          "id": "0a2ecd50-c300-4c11-a573-3c33ecac5aab",
+          "version": 14,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "可惜现实不是小说，时间不会定格在那一秒。过完年回来后，办公室换到金融科技大厦，和同事合租在丹华公馆，本以为百废俱兴，没想到新的彻彻底底，在“激烈”的大讨论后，前老板决定全力做一款ai游戏社区，游戏本体开发先放一边，然后就是不断开发，测试，重构，开发的循环，对于这个决策，毕竟所有东西都还没上线，好坏的结果我也不知，只是觉得以前在A8那会的气氛好像慢慢溜走了，没有以前那么快乐了。故事的转折点在一个同事的离开（下面简称s），前老板辞退s的消息像深水炸弹，炸开了我们平淡不经的生活，也抛下了一些不切实际的幻想。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792381687513,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "vRWO4J4p40iDC8z4x8iFdw,\"start\",\"end\"",
+              "n": {
+                "vRWO4J4p40iDC8z4x8iFdw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "vRWO4J4p40iDC8z4x8iFdw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_mbkGFLaMJzZ",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 153,
+                        "c": "可惜现实不是小说，时间不会定格在那一秒。过完年回来后，办公室换到金融科技大厦，和同事合租在丹华公馆，本以为百废俱兴，没想到新的彻彻底底，在“激烈”的大讨论后，前老板决定全力做一款ai游戏社区，游戏本体开发先放一边，然后就是不断开发，测试，重构，开发的循环，对于这个决策，毕竟所有东西都还没上线，好坏的结果我"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "2hB4l8IYfLWL",
+                          253
+                        ],
+                        "o": [
+                          "_mbkGFLaMJzZ",
+                          153
+                        ],
+                        "l": 1,
+                        "c": "也"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_mbkGFLaMJzZ",
+                          154
+                        ],
+                        "o": [
+                          "_mbkGFLaMJzZ",
+                          153
+                        ],
+                        "l": 2,
+                        "c": "不知"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "2hB4l8IYfLWL",
+                          254
+                        ],
+                        "o": [
+                          "_mbkGFLaMJzZ",
+                          155
+                        ],
+                        "l": -1
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_mbkGFLaMJzZ",
+                          156
+                        ],
+                        "o": [
+                          "_mbkGFLaMJzZ",
+                          155
+                        ],
+                        "l": 97,
+                        "c": "，只是觉得以前在A8那会的气氛好像慢慢溜走了，没有以前那么快乐了。故事的转折点在一个同事的离开（下面简称s），前老板辞退s的消息像深水炸弹，炸开了我们平淡不经的生活，也抛下了一些不切实际的幻想。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "f7ed5ed0-03ab-4572-9b19-4e64ce2c4a69": {
+      "value": {
+        "value": {
+          "id": "f7ed5ed0-03ab-4572-9b19-4e64ce2c4a69",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "s是哈工深的大四，这段实习是转正实习，尽管s本人不怎么在意，但是在4月份春招过半的时候辞退一个大四的学生还是让我们心里感觉到不舒服，诚然，对我个人而言前老板待我不薄，对我包括其它人是没得说的。具体辞退的原因暂且不知，没准是我们总开玩笑地说s啥都不干，说者无意听者有心，让前老板心里记了一笔。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "qwPTp9f1RYd3icV8js8-rQ,\"start\",\"end\"",
+              "n": {
+                "qwPTp9f1RYd3icV8js8-rQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "qwPTp9f1RYd3icV8js8-rQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "hZBPgUAbJ9os",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 145,
+                        "c": "s是哈工深的大四，这段实习是转正实习，尽管s本人不怎么在意，但是在4月份春招过半的时候辞退一个大四的学生还是让我们心里感觉到不舒服，诚然，对我个人而言前老板待我不薄，对我包括其它人是没得说的。具体辞退的原因暂且不知，没准是我们总开玩笑地说s啥都不干，说者无意听者有心，让前老板心里记了一笔。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "34ca2844-60c5-42fb-83b2-4008a2388734": {
+      "value": {
+        "value": {
+          "id": "34ca2844-60c5-42fb-83b2-4008a2388734",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "有人走就有人来，替代s的是一个正职，之前在字节工作，比起大学生来说更多了几分在社会上的成熟稳重，有经验的人在，项目也慢慢步入正轨，但是离开的种子在我们的心里悄然埋下。在前司，100%的开发都是vibe coding，人总是有惰性的，等待的时间大部分都用来摸鱼了，感觉学不到技术，项目也看不到光明的前景，加上s的离开，种种原因之下，在拿到了一个远程agent开发的实习时，我提出了离职。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "FQqfGfA_-bnknkeOK4ePkw,\"start\",\"end\"",
+              "n": {
+                "FQqfGfA_-bnknkeOK4ePkw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "FQqfGfA_-bnknkeOK4ePkw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "onMhpCW4pZgM",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 192,
+                        "c": "有人走就有人来，替代s的是一个正职，之前在字节工作，比起大学生来说更多了几分在社会上的成熟稳重，有经验的人在，项目也慢慢步入正轨，但是离开的种子在我们的心里悄然埋下。在前司，100%的开发都是vibe coding，人总是有惰性的，等待的时间大部分都用来摸鱼了，感觉学不到技术，项目也看不到光明的前景，加上s的离开，种种原因之下，在拿到了一个远程agent开发的实习时，我提出了离职。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "5082ddeb-f2f9-4ccc-84e5-feeb3e81633c": {
+      "value": {
+        "value": {
+          "id": "5082ddeb-f2f9-4ccc-84e5-feeb3e81633c",
+          "version": 9,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "说实话，离职很冲动，现在回过头来看，很多自以为是的原因，都是给离开找补，离开就是离开，哪需要那么多原因呢？我总是会想当然的觉得一些事，就像我想当然的觉得远程的氛围会和前司一样，结果没干两周就受不了了，一方面是和自己想找远程的初衷不符（轻松自在），另一方面是觉得这个公司提出来的东西总是很没理头的（一百块一天的工资，让我一天半写个测试平台？我呸），之前说好前三周是200一天，没想到最后结算的公司是100一天，现在想想也是气愤无比，有些东西失去了才懂得珍惜，前司的自由自在，或许很难在别的公司复刻了。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792381664481,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "cbauU4UefR6nlDft7smIeQ,\"start\",\"end\"",
+              "n": {
+                "cbauU4UefR6nlDft7smIeQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "cbauU4UefR6nlDft7smIeQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "8RgQFXI_4t5X",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 170,
+                        "c": "说实话，离职很冲动，现在回过头来看，很多自以为是的原因，都是给离开找补，离开就是离开，哪需要那么多原因呢？我总是会想当然的觉得一些事，就像我想当然的觉得远程的氛围会和前司一样，结果没干两周就受不了了，一方面是和自己想找远程的初衷不符（轻松自在），另一方面是觉得这个公司提出来的东西总是很没理头的（一百块一天的工资，让我一天半写个测试平台？我"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "m8DESZuqVD8e",
+                          250
+                        ],
+                        "o": [
+                          "8RgQFXI_4t5X",
+                          170
+                        ],
+                        "l": 1,
+                        "c": "呸"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "8RgQFXI_4t5X",
+                          171
+                        ],
+                        "o": [
+                          "8RgQFXI_4t5X",
+                          170
+                        ],
+                        "l": -1
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "8RgQFXI_4t5X",
+                          172
+                        ],
+                        "o": [
+                          "8RgQFXI_4t5X",
+                          171
+                        ],
+                        "l": 78,
+                        "c": "），之前说好前三周是200一天，没想到最后结算的公司是100一天，现在想想也是气愤无比，有些东西失去了才懂得珍惜，前司的自由自在，或许很难在别的公司复刻了。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "d62aece6-d9a7-4068-bebc-caa18e0ac985": {
+      "value": {
+        "value": {
+          "id": "d62aece6-d9a7-4068-bebc-caa18e0ac985",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "5月~6月"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "UiUjgstcJSFuStRnCM6zXA,\"start\",\"end\"",
+              "n": {
+                "UiUjgstcJSFuStRnCM6zXA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "UiUjgstcJSFuStRnCM6zXA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "P_zQF1fVjDrw",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 5,
+                        "c": "5月~6月"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "97fffd02-a260-46bd-b56e-6c4fc5c88c9c": {
+      "value": {
+        "value": {
+          "id": "97fffd02-a260-46bd-b56e-6c4fc5c88c9c",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "把工作都辞之后，不得不面对一个现实的问题，合租的房子还要不要继续呢？舍不得合租的生活，加上s的建议，正式开始了我的投递之旅："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "_K2nCcmzs1qSOdBAZKKiFw,\"start\",\"end\"",
+              "n": {
+                "_K2nCcmzs1qSOdBAZKKiFw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "_K2nCcmzs1qSOdBAZKKiFw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "930F-EHUGBy8",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 62,
+                        "c": "把工作都辞之后，不得不面对一个现实的问题，合租的房子还要不要继续呢？舍不得合租的生活，加上s的建议，正式开始了我的投递之旅："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "4410b798-71e3-4886-9ed1-8146aaeeb0b8": {
+      "value": {
+        "value": {
+          "id": "4410b798-71e3-4886-9ed1-8146aaeeb0b8",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "字节，ai全栈开发，二面挂"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "2v_7Dy4Fmq1yN8L1iAXUGA,\"start\",\"end\"",
+              "n": {
+                "2v_7Dy4Fmq1yN8L1iAXUGA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "2v_7Dy4Fmq1yN8L1iAXUGA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "pPJnwQfcc7eR",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 13,
+                        "c": "字节，ai全栈开发，二面挂"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "5177c87f-9a59-4a99-a19d-562919861bb5": {
+      "value": {
+        "value": {
+          "id": "5177c87f-9a59-4a99-a19d-562919861bb5",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "编程猫，ai产品经理，一面没去"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "W1FDgJlLGvI7e7YVLDAqVQ,\"start\",\"end\"",
+              "n": {
+                "W1FDgJlLGvI7e7YVLDAqVQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "W1FDgJlLGvI7e7YVLDAqVQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "V12_VhY1yqD8",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 15,
+                        "c": "编程猫，ai产品经理，一面没去"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b20026c3-2c67-445d-b10f-2d5fc69362b4": {
+      "value": {
+        "value": {
+          "id": "b20026c3-2c67-445d-b10f-2d5fc69362b4",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "第六大道，agent开发，一面挂"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "hBxDk6sE7w2fmzEeOVd6pw,\"start\",\"end\"",
+              "n": {
+                "hBxDk6sE7w2fmzEeOVd6pw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "hBxDk6sE7w2fmzEeOVd6pw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "1-1HKYSvWZ1J",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 16,
+                        "c": "第六大道，agent开发，一面挂"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "ce7e6f7a-0f16-4234-a3fb-1f8c187480cc": {
+      "value": {
+        "value": {
+          "id": "ce7e6f7a-0f16-4234-a3fb-1f8c187480cc",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "以及无数个知名厂的简历挂"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "RO0Mrt1vnvPTxvROoPruZg,\"start\",\"end\"",
+              "n": {
+                "RO0Mrt1vnvPTxvROoPruZg,\"start\",\"end\"": {
+                  "s": {
+                    "x": "RO0Mrt1vnvPTxvROoPruZg",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Zz9DyV-Rr8em",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 12,
+                        "c": "以及无数个知名厂的简历挂"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "693231b9-11b9-4daa-a99a-c5aa756ec9c1": {
+      "value": {
+        "value": {
+          "id": "693231b9-11b9-4daa-a99a-c5aa756ec9c1",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "腾讯，产品策划，offer"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "KLLNGaRclBF9mAqwov2yBQ,\"start\",\"end\"",
+              "n": {
+                "KLLNGaRclBF9mAqwov2yBQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "KLLNGaRclBF9mAqwov2yBQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "uKpybDgBogay",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 13,
+                        "c": "腾讯，产品策划，offer"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "6a9c3356-7921-4c11-9e0d-b651d6fbd109": {
+      "value": {
+        "value": {
+          "id": "6a9c3356-7921-4c11-9e0d-b651d6fbd109",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "投递的日子真的很难熬，比起寒假那会更加内耗，之前还可以安慰自己没啥东西，现在有了实习经历和含金量尚可的项目，结果还是海投一通没啥结果，那会真是不断的自我怀疑，质疑自己的学历，自己的能力，特别是字节二面，明明感觉自己表现的很好，但还是挂了，特别委屈，也无可奈何，好在最后腾讯收留了我，我知道这和我的努力离不开关系，我的面试表现也很从容不迫，但是，比我能力强的大有人在，还是感谢幸运女神，也感谢一直坚持不懈的自己！！！"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "1KnMOaQySP0hdzohhHoW5g,\"start\",\"end\"",
+              "n": {
+                "1KnMOaQySP0hdzohhHoW5g,\"start\",\"end\"": {
+                  "s": {
+                    "x": "1KnMOaQySP0hdzohhHoW5g",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "_1t6Mz4PkZk1",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 207,
+                        "c": "投递的日子真的很难熬，比起寒假那会更加内耗，之前还可以安慰自己没啥东西，现在有了实习经历和含金量尚可的项目，结果还是海投一通没啥结果，那会真是不断的自我怀疑，质疑自己的学历，自己的能力，特别是字节二面，明明感觉自己表现的很好，但还是挂了，特别委屈，也无可奈何，好在最后腾讯收留了我，我知道这和我的努力离不开关系，我的面试表现也很从容不迫，但是，比我能力强的大有人在，还是感谢幸运女神，也感谢一直坚持不懈的自己！！！"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "1b2028c0-3f73-44b7-8b4e-4468d013016f": {
+      "value": {
+        "value": {
+          "id": "1b2028c0-3f73-44b7-8b4e-4468d013016f",
+          "version": 4,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "个人的心得体会"
+              ]
+            ]
+          },
+          "format": {
+            "toggleable": false,
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "3n421o-lnUNW4FS0r8G5NQ,\"start\",\"end\"",
+              "n": {
+                "3n421o-lnUNW4FS0r8G5NQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "3n421o-lnUNW4FS0r8G5NQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "884fP_dXx9Vu",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 7,
+                        "c": "个人的心得体会"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b0717501-95e4-4a66-8c3e-a6f4c88e5fc0": {
+      "value": {
+        "value": {
+          "id": "b0717501-95e4-4a66-8c3e-a6f4c88e5fc0",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "说实话，从技术岗到产品岗需要很大的决心（虽然腾讯这个本质上是ai产品），但是针对我个人来说，也是深思熟虑之后的结果，以下是我对一些岗位的看法："
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "wEtjFLH2zGHMvLA5LR_8Jw,\"start\",\"end\"",
+              "n": {
+                "wEtjFLH2zGHMvLA5LR_8Jw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "wEtjFLH2zGHMvLA5LR_8Jw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "T0JcwM-vuHOR",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 71,
+                        "c": "说实话，从技术岗到产品岗需要很大的决心（虽然腾讯这个本质上是ai产品），但是针对我个人来说，也是深思熟虑之后的结果，以下是我对一些岗位的看法："
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "919208c8-1c40-430e-8298-ab1fada26b2a": {
+      "value": {
+        "value": {
+          "id": "919208c8-1c40-430e-8298-ab1fada26b2a",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "agent开发，今年的热门，前景尚可，本质上是agent＋后端，热度过去之后不会像现在这样子的高需求，对于27届实习26届校招来说是不错的选择，也正是红利期。但是投递下来针对28届的岗位很少，是我喜欢的岗位，可惜没机会。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "AKyy4FCiwR8PbUvrDcSniA,\"start\",\"end\"",
+              "n": {
+                "AKyy4FCiwR8PbUvrDcSniA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "AKyy4FCiwR8PbUvrDcSniA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "XRny-Itn0525",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 110,
+                        "c": "agent开发，今年的热门，前景尚可，本质上是agent＋后端，热度过去之后不会像现在这样子的高需求，对于27届实习26届校招来说是不错的选择，也正是红利期。但是投递下来针对28届的岗位很少，是我喜欢的岗位，可惜没机会。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "a5f4d7f5-a7da-4d96-97fc-3d3df899619b": {
+      "value": {
+        "value": {
+          "id": "a5f4d7f5-a7da-4d96-97fc-3d3df899619b",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "普通开发，ai时代开发的需求是增加的，但是很大一部分的工作都会交给ai了，开发工程师更多的是对项目的全局把控，架构评估，说人话就是开发岗暂时不会被ai取代，但是岗位数量会减少，门槛会提高。至于我的话，我这个臭学python，没用过redis，mq，纯纯被卡在门外。前端客户端这种我不熟悉，但是对于后端开发的话，学习go或java才是出路（尽管语言没有以前那么重要），最好实际设计一个有redis，mq这种后端八股常问的技术栈的项目，做过和背过，还是有本质区别的。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767501,
+          "last_edited_time": 1792379767501,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "P5OmEeS9SUk7vFsgnqtuWQ,\"start\",\"end\"",
+              "n": {
+                "P5OmEeS9SUk7vFsgnqtuWQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "P5OmEeS9SUk7vFsgnqtuWQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "IQTOYx-v4Zmo",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 231,
+                        "c": "普通开发，ai时代开发的需求是增加的，但是很大一部分的工作都会交给ai了，开发工程师更多的是对项目的全局把控，架构评估，说人话就是开发岗暂时不会被ai取代，但是岗位数量会减少，门槛会提高。至于我的话，我这个臭学python，没用过redis，mq，纯纯被卡在门外。前端客户端这种我不熟悉，但是对于后端开发的话，学习go或java才是出路（尽管语言没有以前那么重要），最好实际设计一个有redis，mq这种后端八股常问的技术栈的项目，做过和背过，还是有本质区别的。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "fbe89a0f-c3cd-4925-9b5e-7ee66f5cef8d": {
+      "value": {
+        "value": {
+          "id": "fbe89a0f-c3cd-4925-9b5e-7ee66f5cef8d",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "最后就是产品了，觉得自己适合产品的原因是感觉对技术的热情没有那么大，更喜欢做一些东西，而不是研究怎么做，也觉得在ai时代和业务贴合的岗不会那么容易被替代。当然有优点就会有缺点，产品对学历的门槛很高，据我在小红书的观察来看，文科基本上需要硕士加几段中大厂实习，技术背景的工科本科或许够用，实习也需要两三段，本质上产品不像技术岗有硬性门槛，需要卷学历，卷实习来证明自己的能力（目前的拙见，入职以后会有更清晰的看法）"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767502,
+          "last_edited_time": 1792379767502,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "AAzqDCL1YsgsTF100OTmwQ,\"start\",\"end\"",
+              "n": {
+                "AAzqDCL1YsgsTF100OTmwQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "AAzqDCL1YsgsTF100OTmwQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "rddrZrd1E2ko",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 205,
+                        "c": "最后就是产品了，觉得自己适合产品的原因是感觉对技术的热情没有那么大，更喜欢做一些东西，而不是研究怎么做，也觉得在ai时代和业务贴合的岗不会那么容易被替代。当然有优点就会有缺点，产品对学历的门槛很高，据我在小红书的观察来看，文科基本上需要硕士加几段中大厂实习，技术背景的工科本科或许够用，实习也需要两三段，本质上产品不像技术岗有硬性门槛，需要卷学历，卷实习来证明自己的能力（目前的拙见，入职以后会有更清晰的看法）"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "b8f41245-0072-4111-856a-83c9fcec2c0d": {
+      "value": {
+        "value": {
+          "id": "b8f41245-0072-4111-856a-83c9fcec2c0d",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "对于实习来说，技术岗更看重技术的熟练程度，我的建议是针对想投的岗位多做项目，多实践。产品岗更看重为什么的问题，平时多思辨一下，也锻炼一下个人的表达能力。不管什么岗，自信都很重要，要让面试官觉得你能够胜任这个岗位。此外，牛客和小红书有许多面经，也可以参考参考。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767502,
+          "last_edited_time": 1792379767502,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "pNcd3ULfKCJmVGt2Yxqi5g,\"start\",\"end\"",
+              "n": {
+                "pNcd3ULfKCJmVGt2Yxqi5g,\"start\",\"end\"": {
+                  "s": {
+                    "x": "pNcd3ULfKCJmVGt2Yxqi5g",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "uCcLV_KprCiU",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 129,
+                        "c": "对于实习来说，技术岗更看重技术的熟练程度，我的建议是针对想投的岗位多做项目，多实践。产品岗更看重为什么的问题，平时多思辨一下，也锻炼一下个人的表达能力。不管什么岗，自信都很重要，要让面试官觉得你能够胜任这个岗位。此外，牛客和小红书有许多面经，也可以参考参考。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "f0b681c5-1e7e-4c8a-a20e-bb4aa268c4d2": {
+      "value": {
+        "value": {
+          "id": "f0b681c5-1e7e-4c8a-a20e-bb4aa268c4d2",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "有些时候想多了全是问题，做多了都是答案，很多东西在你做的时候会明白。"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767502,
+          "last_edited_time": 1792379767502,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "9uJ_mJxPuoqJWptD_JqWTA,\"start\",\"end\"",
+              "n": {
+                "9uJ_mJxPuoqJWptD_JqWTA,\"start\",\"end\"": {
+                  "s": {
+                    "x": "9uJ_mJxPuoqJWptD_JqWTA",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "8oQovgKa5u9_",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 34,
+                        "c": "有些时候想多了全是问题，做多了都是答案，很多东西在你做的时候会明白。"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "594e4d9e-db9f-4082-9010-dad6f594092e": {
+      "value": {
+        "value": {
+          "id": "594e4d9e-db9f-4082-9010-dad6f594092e",
+          "version": 9,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "最后打个广，推荐一下腾讯二面面试官感兴趣的我的基于opencode的多agent编排插件："
+              ],
+              [
+                "junlin-233/oh-my-lite-openagent",
+                [
+                  [
+                    "a",
+                    "https://github.com/junlin-233/oh-my-lite-openagent"
+                  ]
+                ]
+              ],
+              [
+                ": Lite subagent plugin, compatible with OpenCode."
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767502,
+          "last_edited_time": 1792381115993,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "Dn0EmUcSr7dXuwpgTfD_lQ,\"start\",\"end\"",
+              "n": {
+                "Dn0EmUcSr7dXuwpgTfD_lQ,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Dn0EmUcSr7dXuwpgTfD_lQ",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Swo527r5mvWS",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 45,
+                        "c": "最后打个广，推荐一下腾讯二面面试官感兴趣的我的基于opencode的多agent编排插件："
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Swo527r5mvWS",
+                          46
+                        ],
+                        "o": [
+                          "Swo527r5mvWS",
+                          45
+                        ],
+                        "l": 31,
+                        "c": "junlin-233/oh-my-lite-openagent",
+                        "b": [
+                          {
+                            "t": "a",
+                            "x": "Dn0EmUcSr7dXuwpgTfD_lQ",
+                            "l": "",
+                            "i": [
+                              "4K-9LWWBJ4Pd",
+                              126
+                            ],
+                            "s": {
+                              "i": [
+                                "Swo527r5mvWS",
+                                46
+                              ],
+                              "a": "b"
+                            },
+                            "e": {
+                              "i": [
+                                "Swo527r5mvWS",
+                                76
+                              ],
+                              "a": "a"
+                            },
+                            "a": [
+                              "a",
+                              "https://github.com/junlin-233/oh-my-lite-openagent"
+                            ]
+                          }
+                        ],
+                        "a": []
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "Swo527r5mvWS",
+                          77
+                        ],
+                        "o": [
+                          "Swo527r5mvWS",
+                          76
+                        ],
+                        "l": 49,
+                        "c": ": Lite subagent plugin, compatible with OpenCode."
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    },
+    "ea6590f8-5105-4bcf-936e-26b78d1a7aa5": {
+      "value": {
+        "value": {
+          "id": "ea6590f8-5105-4bcf-936e-26b78d1a7aa5",
+          "version": 4,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "记得打个星标噢"
+              ]
+            ]
+          },
+          "format": {
+            "created_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            },
+            "last_edited_attribution": {
+              "source": {
+                "kind": "mcp",
+                "mcpClientType": "other"
+              },
+              "triggeredBy": {
+                "id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+                "table": "notion_user"
+              }
+            }
+          },
+          "created_time": 1792379767502,
+          "last_edited_time": 1792379767502,
+          "parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "crdt_format_version": 1,
+          "nav_parent_table": "block",
+          "nav_parent_id": "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+          "crdt_data": {
+            "title": {
+              "r": "Ws_2HoSEb7ldTk5wRJKORw,\"start\",\"end\"",
+              "n": {
+                "Ws_2HoSEb7ldTk5wRJKORw,\"start\",\"end\"": {
+                  "s": {
+                    "x": "Ws_2HoSEb7ldTk5wRJKORw",
+                    "i": [
+                      {
+                        "t": "s"
+                      },
+                      {
+                        "t": "t",
+                        "i": [
+                          "V6hJXzYjA3yl",
+                          1
+                        ],
+                        "o": "start",
+                        "l": 7,
+                        "c": "记得打个星标噢"
+                      },
+                      {
+                        "t": "e"
+                      }
+                    ],
+                    "l": ""
+                  },
+                  "c": []
+                }
+              }
+            }
+          }
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "collection": {
+    "2bc5c572-e7e9-819a-8c77-000b07dda17d": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "version": 167,
+          "name": [
+            [
+              "junlin"
+            ]
+          ],
+          "description": [
+            [
+              "保持思考"
+            ]
+          ],
+          "schema": {
+            "@NcA": {
+              "name": "password",
+              "type": "text"
+            },
+            "Dj]h": {
+              "name": "icon",
+              "type": "text"
+            },
+            "NX\\Q": {
+              "name": "date",
+              "type": "date",
+              "date_format": "YYYY/MM/DD"
+            },
+            "`gQ~": {
+              "name": "type",
+              "type": "select",
+              "options": [
+                {
+                  "id": "5aff2f95-fd1e-489b-8840-bf10bc9519cb",
+                  "color": "purple",
+                  "value": "Post"
+                },
+                {
+                  "id": "374d2bc6-a144-4832-8ca4-474aaae0ea1f",
+                  "color": "orange",
+                  "value": "Page"
+                },
+                {
+                  "id": "95b7fea5-98b3-476e-892f-79e8f36d0633",
+                  "color": "brown",
+                  "value": "Notice"
+                },
+                {
+                  "id": "2287395b-9f64-4852-b46f-ff3df4b4acef",
+                  "color": "yellow",
+                  "value": "Menu"
+                },
+                {
+                  "id": "50fefd65-c28e-4806-9183-aa12995f11f3",
+                  "color": "pink",
+                  "value": "SubMenu"
+                },
+                {
+                  "id": "b945f57d-dbcc-4603-9fab-5cfe447aad1b",
+                  "color": "red",
+                  "value": "Config"
+                }
+              ]
+            },
+            "bB{M": {
+              "name": "category",
+              "type": "select",
+              "options": [
+                {
+                  "id": "a4dcd33a-34a7-4c33-b9c2-92d3a5248f06",
+                  "color": "red",
+                  "value": "学习笔记"
+                },
+                {
+                  "id": "8282ff59-f160-40c3-ab7e-6e970a0a64d5",
+                  "color": "purple",
+                  "value": "技术分享"
+                },
+                {
+                  "id": "edd604ab-fda7-4d9b-964a-e7de536c05a0",
+                  "color": "orange",
+                  "value": "心情随笔"
+                },
+                {
+                  "id": "43655966-cc7e-4f95-8aa2-ec3efe391f19",
+                  "color": "green",
+                  "value": "日常生活"
+                }
+              ]
+            },
+            "d]hq": {
+              "name": "slug",
+              "type": "text"
+            },
+            "sD^m": {
+              "name": "tags",
+              "type": "multi_select",
+              "options": [
+                {
+                  "id": "d9f66761-0396-4e80-be5c-2ab6c7f8ba86",
+                  "color": "red",
+                  "value": "推荐"
+                },
+                {
+                  "id": "ee932bde-0023-446f-9bb4-17d2022121c9",
+                  "color": "brown",
+                  "value": "文字"
+                },
+                {
+                  "id": "438bae9c-df52-4fb0-8288-791c5ee8625c",
+                  "color": "yellow",
+                  "value": "思考"
+                },
+                {
+                  "id": "4ae52b3d-6ee9-4af5-9b79-0b7644adf259",
+                  "color": "orange",
+                  "value": "新闻"
+                },
+                {
+                  "id": "25b1074b-a3fa-49f5-82cd-a37d85c5666f",
+                  "color": "gray",
+                  "value": "工具"
+                },
+                {
+                  "id": "1e90f00e-8f1b-4665-8e69-92f0791bde56",
+                  "color": "pink",
+                  "value": "开发"
+                },
+                {
+                  "id": "2382b30f-9881-4a8b-ae7f-2d34979c4fb9",
+                  "color": "brown",
+                  "value": "建站"
+                },
+                {
+                  "id": "1226bc5e-19d2-473c-842d-53b37ef4bad7",
+                  "color": "purple",
+                  "value": "实用教程"
+                },
+                {
+                  "id": "2b0bbf09-3da3-446c-89b7-64854fd027b0",
+                  "color": "blue",
+                  "value": "agent"
+                }
+              ]
+            },
+            "wz|S": {
+              "name": "summary",
+              "type": "text"
+            },
+            "title": {
+              "name": "title",
+              "type": "title"
+            },
+            "f211bdc0-ee00-4186-9a7d-f68c055ec2ee": {
+              "name": "status",
+              "type": "select",
+              "options": [
+                {
+                  "id": "7abc61d4-b405-480d-b699-12588755fa65",
+                  "color": "red",
+                  "value": "Published"
+                },
+                {
+                  "id": "d1242312-e0a8-456d-b8f0-6e998e2c4fb2",
+                  "color": "orange",
+                  "value": "Invisible"
+                },
+                {
+                  "id": "41d5f5c6-b53c-42bc-8e0f-fc9402048480",
+                  "color": "yellow",
+                  "value": "Draft"
+                }
+              ]
+            }
+          },
+          "icon": "💯",
+          "format": {
+            "layout_pointer": {
+              "id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+              "table": "layout",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "copied_from_pointer": {
+              "id": "4379bc14-5d22-453b-a153-12639616fc01",
+              "table": "collection",
+              "spaceId": "6c096b44-beb9-48ee-8f92-1efdde47f3a3"
+            },
+            "property_visibility": [
+              {
+                "property": "`gQ~",
+                "visibility": "show"
+              },
+              {
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee",
+                "visibility": "show"
+              },
+              {
+                "property": "NX\\Q",
+                "visibility": "show"
+              },
+              {
+                "property": "d]hq",
+                "visibility": "show"
+              },
+              {
+                "property": "wz|S",
+                "visibility": "show"
+              },
+              {
+                "property": "sD^m",
+                "visibility": "show"
+              },
+              {
+                "property": "bB{M",
+                "visibility": "show"
+              },
+              {
+                "property": "Dj]h",
+                "visibility": "hide_if_empty"
+              },
+              {
+                "property": "uHoD",
+                "visibility": "show"
+              },
+              {
+                "property": "kiCR",
+                "visibility": "hide"
+              }
+            ],
+            "ai_suggested_properties": [
+              {
+                "name": "created_by",
+                "type": "person"
+              },
+              {
+                "name": "last_updated",
+                "type": "date"
+              },
+              {
+                "name": "priority",
+                "type": "select",
+                "options": [
+                  {
+                    "id": "aaSo",
+                    "color": "gray",
+                    "value": "low"
+                  },
+                  {
+                    "id": "B:\\=",
+                    "color": "green",
+                    "value": "medium"
+                  },
+                  {
+                    "id": "r{E>",
+                    "color": "purple",
+                    "value": "high"
+                  }
+                ]
+              },
+              {
+                "name": "attachments",
+                "type": "file"
+              }
+            ],
+            "collection_page_properties": [
+              {
+                "visible": false,
+                "property": "`gQ~"
+              },
+              {
+                "visible": false,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "visible": true,
+                "property": "Dj]h"
+              },
+              {
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "visible": true,
+                "property": "ckw_"
+              }
+            ],
+            "collection_default_template": {
+              "template_page_id": "2bc5c572-e7e9-8175-ab37-d98f836b46b4"
+            }
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "file_ids": [
+            "6cf3dc36-2f98-4f0e-9679-1bdbb1485129",
+            "5520bd92-e709-4c0d-ad58-06923f23f7e9",
+            "624d393a-62e3-4464-a1bf-1c79ecd4fbda",
+            "d52f6766-3e32-4c3d-8529-46e1f214360f",
+            "abe3a0aa-2aff-4274-81bb-c2443d4ef9e2",
+            "a2a32795-101d-46aa-a7f6-eb35b8750166",
+            "29db38d2-d5fa-4fa6-8a92-3b527cfe80d1"
+          ],
+          "copied_from": "4379bc14-5d22-453b-a153-12639616fc01",
+          "template_pages": [
+            "2bc5c572-e7e9-8175-ab37-d98f836b46b4"
+          ],
+          "migrated": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764566955214,
+          "last_edited_time": 1792391171679,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "nav_parent_table": "block",
+          "nav_parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774"
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "layout": {
+    "2bc5c572-e7e9-8085-bc99-006e0b045a4d": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+          "version": 50,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "parent_table": "collection",
+          "parent_id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "created_by_table": "notion_user",
+          "created_time": 1764572512581,
+          "last_edited_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "last_edited_by_table": "notion_user",
+          "last_edited_time": 1764572530897,
+          "modules": {
+            "page_layout_schema": [
+              {
+                "id": "cover",
+                "type": "cover"
+              },
+              {
+                "id": "pdPg",
+                "type": "titleWithIcon"
+              },
+              {
+                "id": "Gq_m",
+                "type": "properties"
+              },
+              {
+                "id": "discussions",
+                "type": "discussions"
+              },
+              {
+                "id": "editor",
+                "type": "editor"
+              }
+            ]
+          },
+          "blocks": [
+            "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4"
+          ],
+          "format": {
+            "page_full_width": true,
+            "previousViewsMainCollectionViewBlockPointer": {
+              "id": "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4",
+              "table": "block",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            }
+          }
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "collection_view": {
+    "2bc5c572-e7e9-812e-ab10-000ce3d1b58e": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-812e-ab10-000ce3d1b58e",
+          "version": 61,
+          "type": "table",
+          "name": "Table",
+          "format": {
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 288,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 141,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 229,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 253,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "collection_peek_mode": "full_page",
+            "table_frozen_column_index": -1,
+            "collection_view_default_template": {
+              "template_page_id": "2bc5c572-e7e9-8175-ab37-d98f836b46b4"
+            }
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "cc459e5b-0f15-4a0c-83db-bb6bf2001aa3",
+            "a9bfecc8-9761-4987-9aca-af79d4ebbd0c",
+            "7aa40ad8-1e69-4d56-b245-d135d3101cec",
+            "e4eefa7d-e2f2-44ed-83f6-fd6951d50900",
+            "0f9b7a0d-ad15-4ece-8a8b-948d96b50ff7",
+            "58a216ce-4d8d-4b60-906c-6097c5fd8d41",
+            "b824f35b-aee9-4a22-81c9-d44b65f99f43",
+            "ba565c08-0d2f-46cb-9fcb-5eeface44dfb",
+            "560c76dd-c69f-429b-827d-7974407bb23f",
+            "0533a861-81cc-40fa-8ab8-5be721800b86",
+            "3578fa31-ea0a-4e07-82dc-28704e0dc685",
+            "f2625c60-ca69-493b-858c-bf38979f468c",
+            "96b14e20-e592-42f6-b7d2-357f4693f18c",
+            "fe8fafec-6d1b-4fbb-8a7a-fb079a6bb8e4",
+            "9345db3a-b8bd-4e02-b296-9734958eddb6",
+            "26e8ddc4-10b4-4765-a96d-e87290556164",
+            "840f0871-b58b-428d-8a28-0861947974b4",
+            "5787bc4f-06a4-4158-a27f-6c81fb9b1efe",
+            "e1bff221-486f-42c8-9cf3-6379f83f3510",
+            "2db01777-47d0-4230-bbe8-ef65ab694707",
+            "ab0d5acb-9230-4656-9c49-1aff13aba865",
+            "98330ff5-71d2-4ea9-945a-ba76fc282e9d",
+            "2bc5c572-e7e9-8013-9240-d100b454bc9a",
+            "2bc5c572-e7e9-81d5-a98c-c068723b10ee",
+            "2bc5c572-e7e9-8133-b0df-c90ab6321aec",
+            "2bc5c572-e7e9-813f-93fb-d1994f6beec1",
+            "2bc5c572-e7e9-8136-a457-d2e865fec101",
+            "2bc5c572-e7e9-814a-bf2c-ca679d60df9d",
+            "2bc5c572-e7e9-810f-a321-d462d35b4d19",
+            "2bc5c572-e7e9-8150-9e51-ca717458c52b",
+            "2bc5c572-e7e9-8197-8d70-ebad4b3f92f5",
+            "2bc5c572-e7e9-81a9-bcb0-f8261b7f169f",
+            "2bc5c572-e7e9-8156-9ed3-ca7f47a15ae2",
+            "2bc5c572-e7e9-81b1-965c-c4663400497d",
+            "2bc5c572-e7e9-81fa-813c-d615a71f1ea7",
+            "2bc5c572-e7e9-81bb-9c1f-ea85bc069261",
+            "ce720858-10b7-4c0c-8083-906f29150a81",
+            "2bc5c572-e7e9-81fb-a3fd-c1a7d26504ec",
+            "2bc5c572-e7e9-81c9-8e8e-e1c700374421",
+            "4194acae-3f4b-4c08-98b9-907a0b5bd4b9",
+            "2bc5c572-e7e9-81ab-8706-d6577b4597a5",
+            "2bc5c572-e7e9-81c5-b014-c69568dbeac8",
+            "2bc5c572-e7e9-81a9-a4a1-ccf4c0de050f",
+            "f3550fb0-346c-4212-b57f-86433738b50b",
+            "2bc5c572-e7e9-8113-8bc5-d7e05d2901e4",
+            "2bc5c572-e7e9-81e8-827a-f957fdb532b2",
+            "2bc5c572-e7e9-8158-8646-d3fafa845520",
+            "2bc5c572-e7e9-81c0-bbfb-fc58f424fa9e",
+            "1ffb90ba-821d-4d16-8520-e46604a470d7",
+            "adc7c47b-6dd7-439f-9e06-6075256c91a7",
+            "2bc5c572-e7e9-8075-9408-c1971b64dd74",
+            "2bc5c572-e7e9-80e4-af65-ceeaa4c66af6",
+            "2bc5c572-e7e9-81d4-88f4-f0021077f493",
+            "2bc5c572-e7e9-8179-9a0d-d66a8b8f6be9",
+            "2bc5c572-e7e9-81e7-ad5a-cf576b51ac63",
+            "2bc5c572-e7e9-8183-8bfa-e177058d24f7",
+            "2bc5c572-e7e9-81b0-8439-d313d3e3cb3a",
+            "2bc5c572-e7e9-81f5-a922-c156bd90169b",
+            "2bc5c572-e7e9-8190-a45d-d1aea1043575",
+            "2bc5c572-e7e9-80ae-adf2-e05d12bc99d4",
+            "2bc5c572-e7e9-8002-8450-c68d06120c18",
+            "2be5c572-e7e9-8082-9c08-fd2dd1c44a18",
+            "2bc5c572-e7e9-81fa-add7-d9e3a76c5873",
+            "2bc5c572-e7e9-8128-b44d-db7c4d0fd616",
+            "2be5c572-e7e9-804a-8511-f8061bcb4f82",
+            "2cc5c572-e7e9-8067-b6ca-ff83db0c8d93",
+            "2be5c572-e7e9-808a-b96a-e3f3787f8ce6",
+            "2bc5c572-e7e9-808a-88bc-cab1d52ea7a7",
+            "2c85c572-e7e9-806b-a4a0-f66c790c8753",
+            "2ca5c572-e7e9-80bb-818b-d2f9def61c14",
+            "3fe5c572-e7e9-8177-a7d9-c5321a57a657",
+            "3fe5c572-e7e9-8125-beaa-d53951617ef0",
+            "3fe5c572-e7e9-81ea-bbe1-feefa98cd10a",
+            "3fe5c572-e7e9-81bd-99e6-de2c63825575",
+            "3fe5c572-e7e9-815a-b24a-e56066216f28",
+            "2c55c572-e7e9-8001-8abf-da458c637cf2",
+            "2c85c572-e7e9-800f-8c5b-fbc64041fd78",
+            "2be5c572-e7e9-80e6-804c-e97594a382b7",
+            "2be5c572-e7e9-80ec-829d-ea1c367df8a7",
+            "9e017f37-5917-4cda-afb8-92072abdbdba",
+            "8aafeb2c-85b4-4c4e-af36-3b9efacb167c",
+            "6d0e0705-57f3-4223-8745-a27295245029",
+            "dec89a30-7004-499f-a99e-05b2842cad2b",
+            "7efc83d4-2645-4578-b588-a9cffb15524a",
+            "1769e8de-bebe-4687-a28a-34c15859ed98",
+            "203f2c30-a3cd-4f70-95b3-07df9f996428",
+            "2a0b435c-6f77-4db8-be6b-831d177bd762",
+            "eac01009-c323-46fd-8339-09c282e6597e",
+            "c4b37f96-4ab0-4a0b-a16e-55bac3e32990",
+            "4ad5c69e-0dab-4d66-b548-360da7d53568",
+            "72d89744-ac04-4dd4-be8b-9d629acd7c11",
+            "32dc3358-e954-4934-9e71-cf1dfbca5b91",
+            "961e45bd-8bed-4ebc-b3d8-1f0e63736d04"
+          ],
+          "query2": {
+            "aggregations": [
+              {
+                "property": "title",
+                "aggregator": "count"
+              }
+            ]
+          },
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1765363859617,
+          "last_edited_time": 1792390936380,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59",
+          "nav_parent_table": "block",
+          "nav_parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-8195-a20b-000cf6986f4c": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8195-a20b-000cf6986f4c",
+          "version": 42,
+          "type": "table",
+          "name": "Config",
+          "format": {
+            "gallery_cover": {
+              "type": "page_content"
+            },
+            "list_properties": [
+              {
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              }
+            ],
+            "property_filters": [
+              {
+                "id": "b54a6c88-635d-4de4-946e-5a855a1f4069",
+                "filter": {
+                  "filter": {
+                    "value": [
+                      {
+                        "type": "exact",
+                        "value": "Notice"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Menu"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Config"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "SubMenu"
+                      },
+                      {
+                        "type": "exact",
+                        "value": "Page"
+                      }
+                    ],
+                    "operator": "enum_is"
+                  },
+                  "property": "`gQ~"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 116,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 118,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 326,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "gallery_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              }
+            ],
+            "table_frozen_column_index": -1,
+            "table_subitem_toggle_column": "title"
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "2bc5c572-e7e9-81c5-b014-c69568dbeac8",
+            "2bc5c572-e7e9-8002-8450-c68d06120c18",
+            "2bc5c572-e7e9-8113-8bc5-d7e05d2901e4",
+            "2bc5c572-e7e9-81e8-827a-f957fdb532b2",
+            "2bc5c572-e7e9-81fa-add7-d9e3a76c5873",
+            "2bc5c572-e7e9-8133-b0df-c90ab6321aec",
+            "2bc5c572-e7e9-8190-a45d-d1aea1043575",
+            "2bc5c572-e7e9-81f5-a922-c156bd90169b",
+            "2bc5c572-e7e9-8068-8ca8-f12c51a815d2",
+            "2bc5c572-e7e9-8158-8646-d3fafa845520",
+            "2bc5c572-e7e9-81c0-bbfb-fc58f424fa9e",
+            "2bc5c572-e7e9-8075-9408-c1971b64dd74",
+            "2bc5c572-e7e9-80e4-af65-ceeaa4c66af6",
+            "2bc5c572-e7e9-81ab-8706-d6577b4597a5",
+            "2bc5c572-e7e9-81d4-88f4-f0021077f493",
+            "2bc5c572-e7e9-8179-9a0d-d66a8b8f6be9",
+            "2bc5c572-e7e9-81e7-ad5a-cf576b51ac63",
+            "2bc5c572-e7e9-8183-8bfa-e177058d24f7",
+            "2bc5c572-e7e9-8128-b44d-db7c4d0fd616",
+            "2bc5c572-e7e9-81a9-a4a1-ccf4c0de050f"
+          ],
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764570320279,
+          "last_edited_time": 1764571845001,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-8184-90a9-000c26f0c6f6": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8184-90a9-000c26f0c6f6",
+          "version": 25,
+          "type": "gallery",
+          "name": "Post Gallery",
+          "format": {
+            "gallery_cover": {
+              "type": "page_cover"
+            },
+            "property_filters": [
+              {
+                "id": "e5e69a48-8053-4d20-9e5a-73e8b24dab16",
+                "filter": {
+                  "filter": {
+                    "value": {
+                      "type": "exact",
+                      "value": "Post"
+                    },
+                    "operator": "enum_is"
+                  },
+                  "property": "`gQ~"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 155,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_groups": [
+              {
+                "value": {
+                  "type": "select",
+                  "value": "心情随笔"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "技术分享"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "学习笔记"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "日常生活"
+                },
+                "hidden": false,
+                "property": "bB{M"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "gallery_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "bB{M"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "sD^m"
+              },
+              {
+                "visible": false,
+                "property": "`gQ~"
+              }
+            ],
+            "collection_group_by": {
+              "sort": {
+                "type": "manual"
+              },
+              "type": "select",
+              "property": "bB{M"
+            },
+            "table_subitem_toggle_column": "title",
+            "collection_group_aggregation": {
+              "aggregator": "count",
+              "enforceMaxAggregationLimit": true
+            }
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "2bc5c572-e7e9-8062-a657-d95e06790376",
+            "2bc5c572-e7e9-80ae-adf2-e05d12bc99d4",
+            "2bc5c572-e7e9-807e-a59b-e523edecf1e8",
+            "2bc5c572-e7e9-8072-977d-f62e652abc83",
+            "2bc5c572-e7e9-808a-88bc-cab1d52ea7a7",
+            "2be5c572-e7e9-8083-bf55-ffdad369fa58",
+            "2be5c572-e7e9-808a-b96a-e3f3787f8ce6"
+          ],
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764732735007,
+          "last_edited_time": 1764732821633,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-811a-8e80-000c1e21934b": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-811a-8e80-000c1e21934b",
+          "version": 13,
+          "type": "board",
+          "name": "Post Board",
+          "format": {
+            "board_columns": [
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Draft"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Invisible"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select",
+                  "value": "Published"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "value": {
+                  "type": "select"
+                },
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              }
+            ],
+            "board_columns_by": {
+              "sort": {
+                "type": "manual"
+              },
+              "type": "select",
+              "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+            },
+            "board_properties": [
+              {
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "visible": false,
+                "property": "NX\\Q"
+              },
+              {
+                "visible": false,
+                "property": "Dj]h"
+              },
+              {
+                "visible": false,
+                "property": "@NcA"
+              },
+              {
+                "visible": false,
+                "property": "d]hq"
+              },
+              {
+                "visible": false,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "visible": false,
+                "property": "`gQ~"
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 100,
+                "visible": true,
+                "property": "`gQ~"
+              },
+              {
+                "width": 116,
+                "visible": true,
+                "property": "bB{M"
+              },
+              {
+                "width": 142,
+                "visible": true,
+                "property": "sD^m"
+              },
+              {
+                "width": 219,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee"
+              },
+              {
+                "width": 155,
+                "visible": true,
+                "property": "d]hq"
+              },
+              {
+                "width": 352,
+                "visible": true,
+                "property": "wz|S"
+              },
+              {
+                "width": 111,
+                "visible": true,
+                "property": "NX\\Q"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "@NcA"
+              },
+              {
+                "width": 117,
+                "visible": true,
+                "property": "Dj]h"
+              }
+            ],
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "table_subitem_toggle_column": "title"
+          },
+          "parent_id": "2bc5c572-e7e9-81a7-9844-f7aff6126774",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "2bc5c572-e7e9-81fa-add7-d9e3a76c5873",
+            "2bc5c572-e7e9-8075-9408-c1971b64dd74",
+            "2bc5c572-e7e9-8179-9a0d-d66a8b8f6be9",
+            "2bc5c572-e7e9-81ab-8706-d6577b4597a5",
+            "2bc5c572-e7e9-8158-8646-d3fafa845520",
+            "2bc5c572-e7e9-8183-8bfa-e177058d24f7",
+            "2bc5c572-e7e9-81c5-b014-c69568dbeac8",
+            "2bc5c572-e7e9-81d4-88f4-f0021077f493",
+            "2bc5c572-e7e9-81e7-ad5a-cf576b51ac63",
+            "2bc5c572-e7e9-81f5-a922-c156bd90169b",
+            "2bc5c572-e7e9-8128-b44d-db7c4d0fd616"
+          ],
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764570862162,
+          "last_edited_time": 1764570862162,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    },
+    "2bc5c572-e7e9-8020-9bcd-000cea601509": {
+      "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+      "value": {
+        "value": {
+          "id": "2bc5c572-e7e9-8020-9bcd-000cea601509",
+          "version": 7,
+          "type": "page",
+          "name": "内容",
+          "format": {
+            "collection_pointer": {
+              "id": "2bc5c572-e7e9-819a-8c77-000b07dda17d",
+              "table": "collection",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46"
+            },
+            "page_layout_pointer": {
+              "id": "2bc5c572-e7e9-8085-bc99-006e0b045a4d",
+              "table": "layout",
+              "spaceId": "f835c572-e7e9-81ff-8b61-000304ebea46",
+              "views_main_tab_id": "view_tab_LsGP"
+            },
+            "hide_linked_collection_name": true
+          },
+          "parent_id": "2bc5c572-e7e9-80ab-bfb3-cea12fc9e3e4",
+          "parent_table": "block",
+          "alive": true,
+          "space_id": "f835c572-e7e9-81ff-8b61-000304ebea46",
+          "created_time": 1764572518655,
+          "last_edited_time": 1764572530897,
+          "created_by_table": "notion_user",
+          "created_by_id": "2bcd872b-594c-816a-a8bb-00026eed3d59"
+        },
+        "role": "reader"
+      }
+    }
+  },
+  "notion_user": {},
+  "collection_query": {},
+  "signed_urls": {}
+}

@@ -1,0 +1,75 @@
+name: 同步 Notion 内容
+
+# 把 Notion 上的文章同步到 content/，顺带把图片落到 public/images/notion/。
+# 只在有变更时提交，避免每 6 小时一次空 commit。
+#
+# 失败不影响线上：站点读的是上一次提交的内容，Action 变红即告警。
+
+on:
+  schedule:
+    # 每 6 小时一次（UTC 0/6/12/18 点）
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '忽略 lastEditedTime，全量重写'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-notion
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 同步脚本只依赖 notion-client，装全量依赖没必要（几分钟 vs 十几秒）
+      - name: 安装同步依赖
+        run: npm install notion-client@7.10.0 --no-save --no-audit --no-fund
+
+      - name: 同步内容
+        env:
+          NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+          NOTION_TOKEN_V2: ${{ secrets.NOTION_TOKEN_V2 }}
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            node scripts/sync-notion.js --force
+          else
+            node scripts/sync-notion.js
+          fi
+
+      - name: 提交变化
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain content public/images/notion)" ]; then
+            echo "内容没有变化，跳过提交"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content public/images/notion
+          git commit -m "chore(content): 同步 Notion 内容 $(date -u +%F_%H:%M)"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # 内容变了就重建搜索索引，索引本身不进 git（public/pagefind 已被忽略）
+      - name: 重建搜索索引
+        if: steps.commit.outputs.changed == 'true'
+        run: node scripts/build-search-index.js --source=md
+
+      - name: 失败告警
+        if: failure()
+        run: |
+          echo "::error::内容同步失败，线上仍读上一次提交的内容，请检查 Notion API 或 token 是否失效"

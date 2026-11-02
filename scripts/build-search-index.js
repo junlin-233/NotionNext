@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 /**
- * 构建 Pagefind 搜索索引（预热爬取方案）
+ * 构建 Pagefind 搜索索引
  *
- * 背景：站点是 ISR 渲染，没有全量预渲染 HTML，Pagefind 无法直接索引。
- * 做法：
- *   1. 启动生产服务器（standalone 或 next start）
- *   2. 读取 /sitemap.xml 得到全部 URL（此步同时把 ISR 页面全部预热）
- *   3. 并发抓取每页 HTML 到 .pagefind-cache/
- *   4. 运行 pagefind 生成索引到 public/pagefind/
+ * 两种模式：
+ * - crawl（默认）：启动服务器，从 sitemap 抓全量 HTML 再索引。
+ *   优点：覆盖所有路由（文章 + 标签 + 分类 + 归档），URL 一定和线上一致；
+ *   代价：要跑起服务、要预热 ISR，几分钟。
+ * - md（--source=md）：直接读 content 目录下的 markdown 生成 HTML stub 再索引。
+ *   优点：秒级、不依赖运行时；内容源切到 git 后尤其顺。
+ *   代价：只索引文章正文（标签/分类页不进索引），URL 取 md front matter 的 url。
  *
  * 用法：
- *   node scripts/build-search-index.js            # 默认 3939 端口
+ *   node scripts/build-search-index.js                  # 爬取模式，默认 3939 端口
+ *   node scripts/build-search-index.js --source=md       # markdown 模式
  *   node scripts/build-search-index.js --port 4000
- *   node scripts/build-search-index.js --keep-cache   # 保留临时 HTML
+ *   node scripts/build-search-index.js --keep-cache
  *   node scripts/build-search-index.js --concurrency 4
  */
 
@@ -23,6 +25,7 @@ const path = require('node:path')
 const ROOT = path.resolve(__dirname, '..')
 const CACHE_DIR = path.join(ROOT, '.pagefind-cache')
 const BUNDLE_DIR = path.join(ROOT, 'public', 'pagefind')
+const CONTENT_DIR = path.join(ROOT, 'content')
 
 const args = process.argv.slice(2)
 const getArg = (name, fallback) => {
@@ -34,6 +37,7 @@ const hasFlag = name => args.includes(`--${name}`)
 const PORT = Number(getArg('port', 3939))
 const CONCURRENCY = Number(getArg('concurrency', 4))
 const KEEP_CACHE = hasFlag('keep-cache')
+const SOURCE = getArg('source', 'crawl')
 const BASE = `http://127.0.0.1:${PORT}`
 
 const log = msg => console.log(`[search-index] ${msg}`)
@@ -184,7 +188,109 @@ function runPagefind() {
   }
 }
 
+/**
+ * markdown 模式：从 content 生成 stub HTML
+ * Pagefind 需要一个目录里的 HTML 文件来推断 URL，所以按文章 url 建目录、写 index.html
+ */
+/**
+ * 真实文章地址优先从 sitemap.xml 取（里面是线上实际路由），
+ * 匹配不上再退回 /<locale>/<slug>。站点用 URL_PREFIX 拼前缀，这里不复制那套规则。
+ */
+function loadUrlIndex() {
+  const map = new Map()
+  const file = path.join(ROOT, 'public', 'sitemap.xml')
+  if (!fs.existsSync(file)) return map
+  const xml = fs.readFileSync(file, 'utf8')
+  for (const match of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    try {
+      const pathname = new URL(match[1]).pathname.replace(/\/+$/, '')
+      const parts = pathname.split('/').filter(Boolean)
+      for (let i = 1; i < parts.length; i++) {
+        // 以 slug 结尾的地址全部登记，key 取尾部若干段
+        map.set(parts.slice(-i).join('/'), pathname)
+      }
+    } catch (e) {
+      // 非法 URL 忽略
+    }
+  }
+  return map
+}
+
+function resolveUrl(page, urlIndex) {
+  const slug = (page.slug || '').replace(/^\/+/, '')
+  if (slug && urlIndex.has(slug)) return urlIndex.get(slug)
+  if (slug) return `/${slug}`
+  return ''
+}
+
+function buildStubsFromContent() {
+  const indexFile = path.join(CONTENT_DIR, 'index.json')
+  if (!fs.existsSync(indexFile)) {
+    throw new Error('content/index.json 不存在，先跑 yarn sync:content')
+  }
+  const index = JSON.parse(fs.readFileSync(indexFile, 'utf8'))
+  const pages = index.pages || []
+  const urlIndex = loadUrlIndex()
+
+  fs.rmSync(CACHE_DIR, { recursive: true, force: true })
+  fs.mkdirSync(CACHE_DIR, { recursive: true })
+
+  const escapeHtml = str =>
+    String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+
+  const stripFrontMatter = text =>
+    text.startsWith('---')
+      ? text.replace(/^---\n[\s\S]*?\n---\n/, '')
+      : text
+
+  let written = 0
+  let skipped = 0
+
+  for (const page of pages) {
+    const mdFile = path.join(CONTENT_DIR, 'pages', `${page.file}.md`)
+    if (!fs.existsSync(mdFile)) {
+      skipped++
+      continue
+    }
+    const raw = fs.readFileSync(mdFile, 'utf8')
+    const body = stripFrontMatter(raw)
+    const url = resolveUrl(page, urlIndex)
+    // url 形如 /zh-CN/article/xxx，落成目录结构
+    const routePath = url.replace(/^\/+|\/+$/g, '')
+    if (!routePath) {
+      skipped++
+      continue
+    }
+    const dir = path.join(CACHE_DIR, routePath)
+    fs.mkdirSync(dir, { recursive: true })
+    const html = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>${escapeHtml(
+      page.title || page.slug || page.file
+    )}</title></head><body><article data-pagefind-body><h1>${escapeHtml(
+      page.title || ''
+    )}</h1><pre>${escapeHtml(body)}</pre></article></body></html>`
+    fs.writeFileSync(path.join(dir, 'index.html'), html)
+    written++
+  }
+
+  log(`markdown 模式：生成 ${written} 个 stub${skipped ? `，跳过 ${skipped} 个` : ''}`)
+  return written
+}
+
 async function main() {
+  const useMdMode = SOURCE === 'md'
+
+  if (useMdMode) {
+    const count = buildStubsFromContent()
+    if (!count) throw new Error('content 目录没有可索引的文章')
+    runPagefind()
+    const files = fs.readdirSync(BUNDLE_DIR)
+    log(`索引生成完成：public/pagefind/（${files.length} 个文件）`)
+    return
+  }
+
   if (fs.existsSync(path.join(ROOT, '.next', 'BUILD_ID')) === false) {
     console.error(
       '[search-index] 未找到 .next/BUILD_ID，请先执行 yarn build'

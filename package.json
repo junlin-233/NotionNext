@@ -50,7 +50,10 @@
     "health-check": "node scripts/health-check.js",
     "validate": "npm run health-check",
     "final-validation": "node scripts/final-validation.js",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "sync:content": "node scripts/sync-notion.js",
+    "build:embeddings": "node scripts/build-embeddings.js",
+    "build:search:md": "node scripts/build-search-index.js --source=md"
   },
   "dependencies": {
     "@clerk/localizations": "^3.17.1",
