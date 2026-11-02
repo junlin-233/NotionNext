@@ -535,7 +535,7 @@ const LayoutTagIndex = props => {
  * @returns
  */
 const LayoutHot = props => {
-  const { hotPosts = [], viewsEnabled } = props
+  const { hotPosts = [], viewsEnabled, hasViewData } = props
   const { locale } = useGlobal()
 
   return (
@@ -543,7 +543,11 @@ const LayoutHot = props => {
       <div className='flex flex-wrap items-baseline justify-between pb-4'>
         <div className='text-2xl font-extrabold dark:text-gray-100'>热门文章</div>
         <div className='text-xs text-gray-500 dark:text-gray-400'>
-          {viewsEnabled ? '按站内阅读量排序' : '阅读统计未启用，暂按更新时间排序'}
+          {!viewsEnabled
+            ? '阅读统计未启用，暂按更新时间排序'
+            : hasViewData
+              ? '按站内阅读量排序'
+              : '阅读统计已启用，暂无数据，暂按更新时间排序'}
         </div>
       </div>
 
@@ -558,7 +562,7 @@ const LayoutHot = props => {
               key={post.id}
               post={post}
               rank={index + 1}
-              showViews={viewsEnabled}
+              showViews={hasViewData}
             />
           ))
         )}

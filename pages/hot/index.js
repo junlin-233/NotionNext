@@ -42,7 +42,8 @@ export async function getStaticProps({ locale }) {
   }
 
   props.hotPosts = hotPosts
-  props.viewsEnabled = enabled && hotPosts.some(post => post.views > 0)
+  props.viewsEnabled = enabled
+  props.hasViewData = hotPosts.some(post => post.views > 0)
 
   return {
     props,
