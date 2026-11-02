@@ -3,7 +3,9 @@ import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
 import { extractLangId, extractLangPrefix } from '@/lib/utils/pageId'
-import { getServerSideSitemap } from 'next-sitemap'
+// next-sitemap v4 把 getServerSideSitemap 改成了 app router 签名（只收 fields、返回 Response），
+// pages 目录必须用 Legacy 版本，否则线上 /sitemap.xml 直接 500
+import { getServerSideSitemapLegacy } from 'next-sitemap'
 
 export const getServerSideProps = async ctx => {
   let fields = []
@@ -34,7 +36,7 @@ export const getServerSideProps = async ctx => {
     'Cache-Control',
     'public, max-age=3600, stale-while-revalidate=59'
   )
-  return getServerSideSitemap(ctx, fields)
+  return getServerSideSitemapLegacy(ctx, fields)
 }
 
 function generateLocalesSitemap(link, allPages, locale) {
