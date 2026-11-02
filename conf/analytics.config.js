@@ -37,7 +37,16 @@ module.exports = {
   // 微软 Clarity 站点分析
   CLARITY_ID: process.env.NEXT_PUBLIC_CLARITY_ID || null, // 只需要复制Clarity脚本中的ID部分，ID是一个十位的英文数字组合
 
-  // Umami 自托管统计（推荐，替代 busuanzi）
+  // 访问日志统计（默认数据源）：由 scripts/analytics/parse-access-log.js 生成 JSON
+  // 开启后在页面上展示阅读数 / 访问量，接口为 /api/stats
+  ANALYTICS_STATS_ENABLE: toBoolean(
+    process.env.NEXT_PUBLIC_ANALYTICS_STATS_ENABLE,
+    true
+  ),
+  // 统计结果文件路径，默认 <项目根>/.analytics/stats.json
+  ANALYTICS_STATS_FILE: process.env.ANALYTICS_STATS_FILE || '',
+
+  // Umami 自托管统计（可选，配置后优先于访问日志统计）
   // UMAMI_HOST 为自托管实例地址（不带末尾斜杠），如 https://umami.junlin-233.top
   UMAMI_HOST: process.env.NEXT_PUBLIC_UMAMI_HOST || '',
   // UMAMI_ID 为该实例中本站的 website ID

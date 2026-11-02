@@ -3,36 +3,15 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 /**
- * Umami 自托管统计
- * - 注入 umami 跟踪脚本并在路由切换时上报 pageview
- * - 兼容 busuanzi 的 DOM 契约：回填 .busuanzi_value_{page_pv,site_pv,site_uv}
- *   并解除 .busuanzi_container_* 的 hidden 状态，主题组件无需改动
- * 仅在配置了 UMAMI_HOST + UMAMI_ID 时生效
+ * 阅读量 / 访问量展示
+ *
+ * 数据来自 /api/stats（优先 Umami，其次访问日志统计），
+ * 兼容 busuanzi 的 DOM 契约：回填 .busuanzi_value_{page_pv,site_pv,site_uv}
+ * 并解除 .busuanzi_container_* 的 hidden 状态，主题组件无需改动。
  */
-export default function UmamiAnalytics() {
+export default function ViewStats() {
   const router = useRouter()
 
-  // 注入脚本 + 路由跟踪
-  useEffect(() => {
-    const host = siteConfig('UMAMI_HOST')
-    const websiteId = siteConfig('UMAMI_ID')
-    if (!host || !websiteId || !document.getElementById('umami-script')) {
-      return
-    }
-
-    // 脚本由 _document 或本组件注入；此处确保已存在
-    const track = () => {
-      window.umami?.track()
-    }
-    track()
-
-    router.events.on('routeChangeComplete', track)
-    return () => {
-      router.events.off('routeChangeComplete', track)
-    }
-  }, [router.events])
-
-  // 拉取统计数据并回填 busuanzi 兼容节点
   useEffect(() => {
     // 与 busuanzi 并存时，页面上的数字交给 busuanzi，避免两边抢写同一批节点
     if (siteConfig('ANALYTICS_BUSUANZI_ENABLE')) {

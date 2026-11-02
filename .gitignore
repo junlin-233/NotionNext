@@ -66,3 +66,4 @@ health-report.json
 
 # 工作区记忆/本地会话数据
 /.workbuddy/
+/.analytics/

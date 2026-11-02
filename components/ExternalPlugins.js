@@ -21,9 +21,10 @@ const ExternalPlugin = props => {
     null,
     NOTION_CONFIG
   )
-  const ANALYTICS_UMAMI_ENABLE = Boolean(
-    siteConfig('UMAMI_HOST') && siteConfig('UMAMI_ID')
-  )
+  // 阅读量展示：Umami 配了就优先用 Umami，否则用访问日志统计（默认开启）
+  const ANALYTICS_STATS_ENABLE =
+    Boolean(siteConfig('UMAMI_HOST') && siteConfig('UMAMI_ID')) ||
+    siteConfig('ANALYTICS_STATS_ENABLE', true, NOTION_CONFIG) !== false
   const CUSTOM_RIGHT_CLICK_CONTEXT_MENU = siteConfig(
     'CUSTOM_RIGHT_CLICK_CONTEXT_MENU',
     null,
@@ -76,7 +77,7 @@ const ExternalPlugin = props => {
   return (
     <>
       <GlobalStyle />
-      {ANALYTICS_UMAMI_ENABLE && <UmamiAnalytics />}
+      {ANALYTICS_STATS_ENABLE && <ViewStats />}
       {ANALYTICS_BUSUANZI_ENABLE && <Busuanzi />}
       {CUSTOM_RIGHT_CLICK_CONTEXT_MENU && <CustomContextMenu {...props} />}
       {!CAN_COPY && <DisableCopy />}
@@ -86,7 +87,7 @@ const ExternalPlugin = props => {
 }
 
 const Busuanzi = dynamic(() => import('@/components/Busuanzi'), { ssr: false })
-const UmamiAnalytics = dynamic(() => import('@/components/UmamiAnalytics'), {
+const ViewStats = dynamic(() => import('@/components/ViewStats'), {
   ssr: false
 })
 const CustomContextMenu = dynamic(

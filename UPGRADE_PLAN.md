@@ -59,7 +59,9 @@ P4 智能与体验    2–4 周    RAG 问答 + 年度报告 + PWA 离线阅读
 
 > 交付明细见 `docs/p1-delivery.md`。实际偏差：Clerk 移除延后（需确认 /dashboard 用途）；`/search` 顺带改造为客户端 Pagefind 搜索页。
 
-### 4.1 Umami 自托管统计（优先级最高，数据积累从今天开始）
+### 4.1 站点统计（优先级最高，数据积累从今天开始）
+
+> 2026-11-02 决策变更：Umami 官方云需付费、自托管维护成本不划算，数据源改为解析 Nginx / 网关访问日志。实现见 `scripts/analytics/parse-access-log.js` 与 `docs/analytics-setup.md`，口径与验收要求不变：PV/UV/页面 PV 落一份 JSON，年度报告直接读它。
 
 - **部署：** Docker Compose 起一个 Umami 实例（已有 Docker 基建），复用现有 Redis 或给 Umami 配 PostgreSQL。
 - **接入：** `conf/analytics.config.js` 的 `UMAMI_HOST`/`UMAMI_ID` 已有入口；替换 `components/Busuanzi.js` 为 Umami 脚本注入。

@@ -1,13 +1,17 @@
 import BLOG from '@/blog.config'
+import { getPageStats } from '@/lib/analytics/local-stats'
 
 /**
- * Umami 统计代理接口
+ * 站点统计接口
  * GET /api/stats?path=/article/xxx
  * 返回 { pagePv, sitePv, siteUv }
  *
- * - 服务端持 UMAMI_API_TOKEN 调用 Umami API，token 不暴露给客户端
- * - 内存缓存 10 分钟，避免高频触发 Umami 限流
- * - 未配置 Umami 时返回 204，前端静默忽略
+ * 数据源优先级：
+ * 1. Umami（配置了 HOST + ID + TOKEN 时）
+ * 2. 访问日志统计文件（scripts/analytics/parse-access-log.js 生成）
+ * 3. 都没有：204，前端静默隐藏
+ *
+ * 两种源的返回结构一致，前端组件无需区分。
  */
 
 const CACHE_TTL_MS = 10 * 60 * 1000
@@ -28,12 +32,6 @@ if (typeof setInterval === 'function') {
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=300')
 
-  const { UMAMI_HOST, UMAMI_ID, UMAMI_API_TOKEN, UMAMI_STATS_SINCE } = BLOG
-  if (!UMAMI_HOST || !UMAMI_ID || !UMAMI_API_TOKEN) {
-    res.status(204).end()
-    return
-  }
-
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET')
     res.status(405).end()
@@ -41,6 +39,22 @@ export default async function handler(req, res) {
   }
 
   const path = (req.query.path || '/').split('?')[0]
+
+  const { UMAMI_HOST, UMAMI_ID, UMAMI_API_TOKEN, UMAMI_STATS_SINCE } = BLOG
+  if (UMAMI_HOST && UMAMI_ID && UMAMI_API_TOKEN) {
+    return serveUmami({ res, path, UMAMI_HOST, UMAMI_ID, UMAMI_API_TOKEN, UMAMI_STATS_SINCE })
+  }
+
+  // 无 Umami 时走访问日志统计
+  const local = getPageStats(path)
+  if (!local) {
+    res.status(204).end()
+    return
+  }
+  res.status(200).json(local)
+}
+
+async function serveUmami({ res, path, UMAMI_HOST, UMAMI_ID, UMAMI_API_TOKEN, UMAMI_STATS_SINCE }) {
   const cacheKey = path
   const cached = cache.get(cacheKey)
   if (cached && cached.expireAt > Date.now()) {
@@ -60,8 +74,13 @@ export default async function handler(req, res) {
     cache.set(cacheKey, { data, expireAt: Date.now() + CACHE_TTL_MS })
     res.status(200).json(data)
   } catch (e) {
-    // Umami 不可用时返回 204，页面上的计数保持上一次成功值或隐藏
+    // Umami 不可用时回落到日志统计，再不行返回 204
     console.warn('[api/stats] Umami 请求失败:', e.message)
+    const local = getPageStats(path)
+    if (local) {
+      res.status(200).json(local)
+      return
+    }
     res.status(204).end()
   }
 }

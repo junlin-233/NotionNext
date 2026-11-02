@@ -31,7 +31,22 @@
 
 原问题有三处：多 worker 抢同一个锁文件互相等待；陈旧锁只在第一次获取时判定，前一个进程被 kill 后永久排队；`finally` 里无条件 `releaseLock`，可能删掉别的进程的锁。
 
-### 1.3 回滚点补齐
+### 1.3 统计数据源改为访问日志（Umami 方案取消）
+
+Umami 官方云需付费，自托管要额外维护一套 Postgres，决定不用。改成解析 Nginx / 网关访问日志，零成本、数据留在自己手里。
+
+| 文件 | 变更 |
+|---|---|
+| `scripts/analytics/parse-access-log.js` | 新增：解析 combined / JSON 行日志，支持 gz 轮转；过滤静态资源、爬虫、非 2xx；按天聚出 PV/UV、页面 PV、Top 50 |
+| `lib/analytics/local-stats.js` | 新增：读统计 JSON，按 mtime 缓存 5 分钟，文件缺失或开关关闭时返回 null |
+| `pages/api/stats.js` | 数据源改为 Umami（配了才用）→ 日志统计 → 204 三级降级，返回结构不变 |
+| `components/ViewStats.js` | 替换 `UmamiAnalytics.js`：只回填阅读数 DOM，不再注入跟踪脚本 |
+| `components/ExternalPlugins.js` | 挂载条件改为「配了 Umami 或开启统计」 |
+| `conf/analytics.config.js`、`.env.example`、`docs/analytics-setup.md` | 新增 `ANALYTICS_STATS_ENABLE` / `ANALYTICS_STATS_FILE`，附接入与验证步骤 |
+
+前端契约没变（仍是 `.busuanzi_value_*` 那批节点），主题组件零改动。
+
+### 1.4 回滚点补齐
 
 `pre-upgrade-2026.11` 之前不存在（文档写了但没建），已补在 P1 之前的 `a265fd9b` 并推到远端。
 
@@ -73,5 +88,5 @@ curl -s http://localhost:3000/api/status   # degraded:true，files>0
 | 5.2 图片自托管第一步（`NOTION_HOST` 反代） | 未开始 | 需要一台挂反代的机器（Nginx / Edge Function）+ 域名，本机无 Docker |
 | 5.3 客户端 JS 减负第二批 | 未开始 | 改动量在 `NotionPage.js` 与 heo 首屏组件，但本机无法构建，改了也没法对比 First Load JS |
 | P0.1 / P0.2 基线数字 | 仍未补齐 | `lighthouse.yml` 只挂 PR 触发，实际都是直推 main，从未跑过；需手动触发一次 |
-| Umami 实例 | 未部署 | `umami.junlin-233.top` 无响应，阅读数当前不显示 |
+| 访问日志统计接入 | 代码已就绪，未上服务器 | 需要宿主机跑 cron + 挂载 `.analytics/`，见 `docs/analytics-setup.md` |
 | Notion `LINK` 字段 | 未修 | 仍是模板域名，污染 canonical / og:url / 动态 OG 卡 |
