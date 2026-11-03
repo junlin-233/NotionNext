@@ -158,8 +158,10 @@ const Header = props => {
             ${textWhite ? 'text-white ' : 'text-black dark:text-white'}  
             ${navBgWhite ? 'bg-white dark:bg-[#18171d] shadow' : 'bg-transparent'}`}>
         <div className='flex h-full mx-auto justify-between items-center max-w-[86rem] px-6'>
-          {/* 左侧logo */}
-          <Logo {...props} />
+          {/* 左侧logo。宽度和右侧按钮组对齐（w-48），中间菜单才是真正的页面居中 */}
+          <div className='flex flex-none items-center w-10 lg:w-48'>
+            <Logo {...props} />
+          </div>
 
           {/* 中间菜单 */}
           <div

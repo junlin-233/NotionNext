@@ -1,20 +1,12 @@
-import { isBrowser } from '@/lib/utils'
 import { useEffect, useState } from 'react'
 
 /**
  * 一个swipe组件
  * 垂直方向，定时滚动
  * @param {*} param0
- * @returns
  */
 export function Swipe({ items }) {
   const [activeIndex, setActiveIndex] = useState(0)
-
-  const handleClick = item => {
-    if (isBrowser) {
-      window.open(item?.url)
-    }
-  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +19,6 @@ export function Swipe({ items }) {
     <div className='h-full relative w-full overflow-hidden'>
       {items.map((item, index) => (
         <div
-          onClick={() => handleClick(item)}
           key={index}
           className={`whitespace-nowrap absolute top-0 bottom-0 w-full h-full flex justify-center items-center line-clamp-1 transform transition-transform duration-500 ${
             index === activeIndex

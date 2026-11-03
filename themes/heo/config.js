@@ -7,9 +7,10 @@ const CONFIG = {
   HEO_SITE_CREATE_TIME: '2026-04-13', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
+  // 只做展示，不挂链接：之前每行带 url，点一下会跳走
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到我的博客', url: 'https://www.junlin-233.top' },
-    { title: 'Attention Is All You Need', url: 'https://www.junlin-233.top' }
+    { title: '欢迎来到我的博客' },
+    { title: 'Attention Is All You Need' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -45,6 +46,9 @@ const CONFIG = {
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: ['这里是', '帅气迷人的', '天赋异禀的'],
+
+  // 个人资料卡牌的签名，显示在作者名下方；留空则不显示这一行
+  HEO_INFO_CARD_TAGLINE: '永远相信美好的事情即将发生',
 
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',

@@ -1,8 +1,6 @@
 import { ArrowRightCircle } from '@/components/HeroIcons'
-import LazyImage from '@/components/LazyImage'
-import { siteConfig } from '@/lib/config'
 import SmartLink from '@/components/SmartLink'
-import { useRouter } from 'next/router'
+import { siteConfig } from '@/lib/config'
 import { useState } from 'react'
 import CONFIG from '../config'
 import Announcement from './Announcement'
@@ -14,48 +12,26 @@ import Card from './Card'
  * @returns
  */
 export function InfoCard(props) {
-  const { siteInfo, notice } = props
-  const router = useRouter()
-  // 在文章详情页特殊处理
-  const isSlugPage = router.pathname.indexOf('/[prefix]') === 0
+  const { notice } = props
   const url1 = siteConfig('HEO_INFO_CARD_URL1', null, CONFIG)
   const icon1 = siteConfig('HEO_INFO_CARD_ICON1', null, CONFIG)
   const url2 = siteConfig('HEO_INFO_CARD_URL2', null, CONFIG)
   const icon2 = siteConfig('HEO_INFO_CARD_ICON2', null, CONFIG)
+  const tagline = siteConfig('HEO_INFO_CARD_TAGLINE', '', CONFIG)
   return (
     <Card className='scroll-reveal scroll-fade-in-up bg-[#4f65f0] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'>
-      {/* 信息卡牌第一行 */}
-      <div className='flex justify-between'>
-        {/* 问候语 */}
-        <GreetingsWords />
-        {/* 头像 */}
-        <div
-          className={`${isSlugPage ? 'absolute right-0 -mt-8 -mr-6 hover:opacity-0 hover:scale-150 blur' : 'cursor-pointer'} justify-center items-center flex dark:text-gray-100 transform transitaion-all duration-200`}>
-          {/^(https?:|data:)/.test(siteInfo?.icon || '') ? (
-            <LazyImage
-              src={siteInfo.icon}
-              className='rounded-full'
-              width={isSlugPage ? 100 : 28}
-              alt={siteConfig('AUTHOR')}
-            />
-          ) : (
-            siteInfo?.icon && (
-              <span
-                className='leading-none'
-                style={{ fontSize: isSlugPage ? 72 : 22 }}>
-                {siteInfo.icon}
-              </span>
-            )
-          )}
-        </div>
-      </div>
+      {/* 问候语 */}
+      <GreetingsWords />
 
       <h2 className='text-3xl font-extrabold mt-3'>{siteConfig('AUTHOR')}</h2>
+
+      {/* 一句话签名 */}
+      {tagline && <div className='mt-2 text-sm text-white/80'>{tagline}</div>}
 
       {/* 公告栏 */}
       <Announcement post={notice} style={{ color: 'white !important' }} />
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between mt-5'>
         <div className='flex space-x-3  hover:text-black dark:hover:text-white'>
           {/* 两个社交按钮 */}
           {url1 && (
@@ -122,7 +98,7 @@ function GreetingsWords() {
   return (
     <div
       onClick={handleChangeGreeting}
-      className=' select-none cursor-pointer py-1 px-2 bg-indigo-400 hover:bg-indigo-50  hover:text-indigo-950 dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-black text-sm rounded-lg  duration-200 transition-colors'>
+      className='w-fit select-none cursor-pointer py-1 px-2 bg-indigo-400 hover:bg-indigo-50 hover:text-indigo-950 dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-black text-sm rounded-lg duration-200 transition-colors'>
       {greeting}
     </div>
   )

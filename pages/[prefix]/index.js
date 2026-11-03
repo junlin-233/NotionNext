@@ -125,8 +125,17 @@ export async function getStaticPaths() {
     }
   }
 
-  // ISR 模式：预生成最新10篇，其余按需渲染
-  const tops = getPriorityPages(allPages)
+  // ISR 模式：预生成全部文章 + 所有 Page 页面，其余按需渲染
+  //
+  // Page 类型（/about、/links 这类）走的就是这条单段动态路由。不预生成的话，
+  // 线上它们的 /_next/data 请求会被 web 层回落到页面 HTML（实测 content-type
+  // 是 text/html，x-matched-path 指向页面而不是数据路由），客户端路由拿到空
+  // props，渲染出来就是空白页 + 标题 undefined | loading。文章页也是动态路由，
+  // 但文章在下面全都预生成了，所以从来没出过这个问题。
+  const pageTypePages = (allPages ?? []).filter(
+    row => row?.type === 'Page' && row?.status === 'Published' && row?.slug
+  )
+  const tops = [...getPriorityPages(allPages), ...pageTypePages]
   await prefetchAllBlockMaps(tops)
 
   return {
