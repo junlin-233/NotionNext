@@ -181,7 +181,7 @@ export default function PagefindSearchModal({ cRef }) {
           isModalOpen ? 'opacity-100' : 'invisible opacity-0 translate-y-10'
         } max-h-[80vh] flex flex-col justify-between w-full min-h-[10rem] h-full md:h-fit max-w-xl dark:bg-hexo-black-gray dark:border-gray-800 bg-white p-5 rounded-lg z-50 shadow border hover:border-blue-600 duration-300 transition-all `}>
         <div className='flex justify-between items-center'>
-          <div className='text-2xl text-blue-600 dark:text-yellow-600 font-bold'>
+          <div className='text-2xl text-blue-600 dark:text-indigo-500 font-bold'>
             搜索
           </div>
           <div>
@@ -236,7 +236,7 @@ export default function PagefindSearchModal({ cRef }) {
               onMouseEnter={() => setActiveIndex(index)}
               onClick={() => onJumpSearchResult(index)}
               className={`cursor-pointer my-2 p-2 duration-100 rounded-lg
-              ${activeIndex === index ? 'bg-blue-600 dark:bg-yellow-600' : ''}`}>
+              ${activeIndex === index ? 'bg-blue-600 dark:bg-indigo-500' : ''}`}>
               <div
                 className={`${
                   activeIndex === index
@@ -306,7 +306,7 @@ function TagGroups() {
           className={'cursor-pointer inline-block whitespace-nowrap'}>
           <div
             className={
-              'flex items-center text-black dark:text-gray-300 hover:bg-blue-600 dark:hover:bg-yellow-600 hover:scale-110 hover:text-white rounded-lg px-2 py-0.5 duration-150 transition-all'
+              'flex items-center text-black dark:text-gray-300 hover:bg-blue-600 dark:hover:bg-indigo-500 hover:scale-110 hover:text-white rounded-lg px-2 py-0.5 duration-150 transition-all'
             }>
             <div className='text-lg'>{tag.name} </div>
             {tag.count ? (
