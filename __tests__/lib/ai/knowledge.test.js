@@ -27,3 +27,19 @@ describe('lib/ai/knowledge 文本检索模式', () => {
     expect(searchKnowledgeByText('mem0 记忆', 2).length).toBeLessThanOrEqual(2)
   })
 })
+
+describe('lib/ai/knowledge 混合检索', () => {
+  const fs = require('fs')
+  const path = require('path')
+  const file = path.join(process.cwd(), 'content', '.embeddings.json')
+
+  test('用已生成向量自查询能命中对应段落', () => {
+    if (!fs.existsSync(file)) return // 没生成向量时跳过（CI 会在同步后生成）
+    const raw = JSON.parse(fs.readFileSync(file, 'utf8'))
+    const sample = raw.chunks.find(c => Array.isArray(c.vector))
+    const { searchKnowledgeHybrid } = require('@/lib/ai/knowledge')
+    const hits = searchKnowledgeHybrid(sample.vector, sample.title, 3)
+    expect(hits.length).toBeGreaterThan(0)
+    expect(hits[0].file).toBe(sample.file)
+  })
+})

@@ -69,6 +69,28 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         run: node scripts/build-search-index.js --source=md
 
+      # 内容变了就重建 RAG 向量（增量：未变化的段落复用旧向量），一起提交部署
+      # 向量服务不可用时不阻塞内容同步，线上继续用旧向量 + 词法检索兜底
+      - name: 重建 RAG 向量
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          EMBEDDING_BASE_URL: ${{ secrets.EMBEDDING_BASE_URL }}
+          EMBEDDING_API_KEY: ${{ secrets.EMBEDDING_API_KEY }}
+          EMBEDDING_MODEL: ${{ secrets.EMBEDDING_MODEL }}
+        run: node scripts/build-embeddings.js
+
+      - name: 提交向量
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          if [ -z "$(git status --porcelain content/.embeddings.json)" ]; then
+            echo "向量没有变化，跳过提交"
+            exit 0
+          fi
+          git add content/.embeddings.json
+          git commit -m "chore(embeddings): 更新 RAG 向量 $(date -u +%F_%H:%M)"
+          git push
+
       - name: 失败告警
         if: failure()
         run: |

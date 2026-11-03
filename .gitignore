@@ -64,9 +64,6 @@ health-report.json
 # notion snapshot fallback (P2)
 /.snapshot/
 
-# RAG 向量（由 scripts/build-embeddings.js 生成）
-/content/.embeddings.json
-
 # 工作区记忆/本地会话数据
 /.workbuddy/
 /.analytics/

@@ -1,8 +1,8 @@
 import {
   buildContext,
   hasEmbeddingKnowledge,
-  searchKnowledge,
   searchKnowledgeByText,
+  searchKnowledgeHybrid,
   toCitations
 } from '@/lib/ai/knowledge'
 import { fetchGlobalAllData } from '@/lib/db/SiteDataApi'
@@ -116,7 +116,7 @@ async function embedQuestion(question) {
 }
 
 /**
- * 检索：向量模式（有 embedding 文件 + Key）优先，失败或缺失时走文本模式。
+ * 检索：向量+词法混合优先（有 embedding 文件 + Key），失败或缺失时纯文本模式。
  * 文本模式用中文二元分词覆盖率匹配，不需要 embedding 接口，
  * 兼容 DeepSeek 这类只提供 chat 的供应商。
  */
@@ -124,7 +124,7 @@ async function retrieveChunks(question) {
   if (hasEmbeddingKnowledge() && EMBEDDING_API_KEY) {
     try {
       const vector = await embedQuestion(question)
-      const chunks = searchKnowledge(vector, 5)
+      const chunks = searchKnowledgeHybrid(vector, question, 5)
       if (chunks.length) return chunks
     } catch (error) {
       console.warn('[ai-chat] 向量检索失败，降级文本检索:', error.message)

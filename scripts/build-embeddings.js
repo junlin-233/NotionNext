@@ -145,7 +145,8 @@ async function embedBatch(inputs) {
   const json = await res.json()
   return json.data
     .sort((a, b) => a.index - b.index)
-    .map(item => item.embedding)
+    // 保留 4 位小数：余弦相似度不受影响，向量文件体积减半（会随内容提交进 git）
+    .map(item => item.embedding.map(x => Math.round(x * 1e4) / 1e4))
 }
 
 async function main() {
