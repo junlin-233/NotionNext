@@ -58,6 +58,13 @@ npm run sync:content -- --dry-run # 只看要做什么
 
 `themes/heo/config.js`，头像 URL、通知条、签名、英雄区标题都在这里。
 
+### 改完必须刷新看效果
+
+构建过、lint 过都不算验证，浏览器里刷新看到才算。页面更新是"改 → 刷新 → 看"，不是"改 → 构建成功 → 收工"。
+
+- **本地**：改了 `blog.config.js`、`conf/*.js`、`themes/heo/config.js`，或者布局层、`dynamic(ssr:false)` 的懒加载组件之后，热更新经常跟不上，手动刷新页面（`cmd+shift+R`），还不对就重启 `npm run dev`
+- **线上**：部署完开无痕窗口或硬刷新；还是旧内容先看响应头 `age`，那是页面缓存没到期，不是改动没生效
+
 ## 三、推送
 
 ```bash
