@@ -17,7 +17,7 @@ export default function BlogPostHot({ post, rank, showViews = true }) {
       <div
         className={`w-5 sm:w-7 shrink-0 text-center font-extrabold ${
           isTop
-            ? 'text-indigo-600 dark:text-yellow-500'
+            ? 'text-indigo-600 dark:text-indigo-400'
             : 'text-gray-300 dark:text-gray-600'
         }`}>
         {rank}
@@ -34,7 +34,7 @@ export default function BlogPostHot({ post, rank, showViews = true }) {
       <div className='flex-1 min-w-0'>
         <SmartLink
           href={post.href}
-          className='block group-hover:text-indigo-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100 line-clamp-2 replace cursor-pointer text-base sm:text-lg font-extrabold leading-tight'>
+          className='block group-hover:text-indigo-700 dark:group-hover:text-indigo-500 text-black dark:text-gray-100 line-clamp-2 replace cursor-pointer text-base sm:text-lg font-extrabold leading-tight'>
           {post.title}
         </SmartLink>
         <div className='mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-500 dark:text-gray-400'>

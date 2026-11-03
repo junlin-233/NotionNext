@@ -62,7 +62,7 @@ export default function CategoryBar(props) {
     <div
       id='category-bar'
       className={`scroll-reveal scroll-fade-in-up flex flex-nowrap justify-between items-center h-12 mb-4 space-x-2 w-full lg:bg-white dark:lg:bg-[#1e1e1e]
-            ${border ? 'lg:border lg:hover:border dark:lg:border-gray-800 hover:border-indigo-600 dark:hover:border-yellow-600 ' : ''}  py-2 lg:px-3 rounded-xl transition-colors duration-200`}>
+            ${border ? 'lg:border lg:hover:border dark:lg:border-gray-800 hover:border-indigo-600 dark:hover:border-indigo-500 ' : ''}  py-2 lg:px-3 rounded-xl transition-colors duration-200`}>
       <div
         id='category-bar-items'
         ref={categoryBarItemsRef}
@@ -81,7 +81,7 @@ export default function CategoryBar(props) {
         <div id='category-bar-next' className='flex items-center justify-center'>
           <div
             id='right'
-            className='cursor-pointer mx-2 dark:text-gray-300 dark:hover:text-yellow-600 hover:text-indigo-600'
+            className='cursor-pointer mx-2 dark:text-gray-300 dark:hover:text-indigo-500 hover:text-indigo-600'
             onClick={handleToggleScroll}>
             {scrollRight ? (
               <ChevronDoubleLeft className={'w-5 h-5'} />
@@ -106,8 +106,8 @@ const MenuItem = ({ href, name, active }) => {
   const selected = active !== undefined ? active : category === name
   // 选中态实心，悬停态只铺浅底：两者同色的话鼠标划过就分不清当前在哪个分类
   const stateClass = selected
-    ? 'text-white bg-indigo-600 dark:bg-yellow-600'
-    : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:text-yellow-600 dark:hover:bg-yellow-600/15'
+    ? 'text-white bg-indigo-600 dark:bg-indigo-500'
+    : 'text-gray-700 dark:text-gray-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:text-indigo-500 dark:hover:bg-indigo-500/15'
   return (
     <SmartLink
       href={href}
