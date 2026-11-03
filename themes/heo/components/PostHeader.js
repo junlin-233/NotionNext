@@ -31,12 +31,12 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
           height: 100%;
           top: 0;
           left: 0;
-          box-shadow: inset 0 0 220px 40px ${isDarkMode ? '#CA8A04' : '#0060e0'};
+          box-shadow: inset 0 0 220px 40px ${isDarkMode ? '#4F46E5' : '#0060e0'};
         }
       `}</style>
 
       <div
-        className={`${isDarkMode ? 'bg-[#CA8A04]' : 'bg-[#0060e0]'} absolute top-0 w-full h-full py-10 flex justify-center items-center`}>
+        className={`${isDarkMode ? 'bg-[#4F46E5]' : 'bg-[#0060e0]'} absolute top-0 w-full h-full py-10 flex justify-center items-center`}>
         {/* 文章背景图 */}
         <div
           id='post-cover-wrapper'
