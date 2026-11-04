@@ -406,7 +406,7 @@ function TodayCard({ cRef, siteInfo }) {
           alt=''
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
-          } hover:scale-110 duration-1000 object-cover object-top cursor-pointer today-card-cover absolute w-full h-full top-0`}
+          } hover:scale-110 duration-1000 object-contain object-bottom cursor-pointer today-card-cover absolute w-full h-full top-0`}
         />
 
         {/* 底部压暗：封面图换成浅色以后，白色按钮和文字会糊成一片 */}
