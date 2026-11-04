@@ -7,9 +7,9 @@ import { useEffect, useRef, useState } from 'react'
  * 只有配置了 NEXT_PUBLIC_AI_CHAT_ENABLE 才渲染；服务端没配 Key 时
  * /api/ai-chat 返回 503，前端降级为一句提示，不弹错误框。
  *
- * 视觉：入口是能展开文字的胶囊悬浮键，面板走阅读器质感 —— 头部只留身份
- * 和口径说明，助手回答用裸文本 + 内联引用角标，用户消息用中性气泡。
- * 品牌红只做点缀，不铺大面积渐变，避免做成客服插件。
+ * 视觉：入口是能展开文字的胶囊悬浮键，面板走阅读器质感 —— 头部只留身份，
+ * 助手回答用裸文本 + 内联引用角标，用户消息用中性气泡。
+ * 品牌蓝只做点缀，不铺大面积渐变，避免做成客服插件。
  */
 
 const SUGGESTIONS = [
@@ -18,7 +18,7 @@ const SUGGESTIONS = [
   '作者的技术栈是什么？'
 ]
 
-const BRAND = 'linear-gradient(135deg, #e8584a 0%, #c0392b 100%)'
+const BRAND = 'linear-gradient(135deg, #5b78fb 0%, #3758F9 58%, #1B44C8 100%)'
 
 /* 四角星芒 + 小星：比通用对话气泡更能说明"这是 AI" */
 const Sparkle = ({ className = '' }) => (
@@ -76,13 +76,36 @@ const SendIcon = ({ className = '' }) => (
   </svg>
 )
 
+const PlusIcon = ({ className = '' }) => (
+  <svg
+    viewBox='0 0 24 24'
+    fill='none'
+    stroke='currentColor'
+    strokeWidth='2.2'
+    strokeLinecap='round'
+    aria-hidden='true'
+    className={className}>
+    <path d='M12 5v14M5 12h14' />
+  </svg>
+)
+
+const StopIcon = ({ className = '' }) => (
+  <svg
+    viewBox='0 0 24 24'
+    fill='currentColor'
+    aria-hidden='true'
+    className={className}>
+    <rect x='7' y='7' width='10' height='10' rx='2' />
+  </svg>
+)
+
 /**
  * 轻量渲染：只处理 **加粗**、行首列表符和 [1] 角标这三类，
  * 够 LLM 回答用，不为了几个星号引入 markdown 依赖。
  */
 const renderInline = (text, citations, keyPrefix) => {
   const chip =
-    'relative -top-[4px] mx-[1px] inline-flex h-[14px] min-w-[14px] items-center justify-center rounded-[3px] px-[3px] align-baseline text-[9.5px] font-semibold text-[#c0392b] transition-colors hover:bg-[#e8584a]/15 dark:text-[#f0918a] dark:hover:bg-[#e8584a]/25'
+    'relative -top-[5px] mx-[1px] inline-flex h-[14px] min-w-[14px] items-center justify-center rounded-[3px] bg-[#3758F9]/10 px-[3px] align-baseline text-[9.5px] font-semibold text-[#1B44C8] transition-colors hover:bg-[#3758F9]/20 dark:bg-[#3758F9]/25 dark:text-[#8fa4ff] dark:hover:bg-[#3758F9]/40'
 
   return String(text)
     .split(/(\*\*[^*]+\*\*|\[\d+\])/g)
@@ -104,7 +127,7 @@ const renderInline = (text, citations, keyPrefix) => {
         <a
           key={key}
           href={cite.url}
-          className={`${chip} hover:bg-[#e8584a]/15`}>
+          className={`${chip} hover:bg-[#5b78fb]/15`}>
           {match[1]}
         </a>
       ) : (
@@ -154,7 +177,7 @@ const TypingDots = () => (
     {[0, 1, 2].map(index => (
       <span
         key={index}
-        className='ai-dot h-1.5 w-1.5 rounded-full bg-gray-300 dark:bg-gray-600'
+        className='ai-dot h-1.5 w-1.5 rounded-full bg-gray-400/80 dark:bg-gray-500'
         style={{ animationDelay: `${index * 150}ms` }}
       />
     ))}
@@ -271,13 +294,31 @@ const AIChatWidget = () => {
         }
       }
     } catch (err) {
-      if (err.name !== 'AbortError') {
+      if (err.name === 'AbortError') {
+        // 手动停止：只吐了半句就留着，一个字没出就把占位块删掉
+        setMessages(prev => {
+          const last = prev[prev.length - 1]
+          if (last?.role === 'assistant' && !last.content) {
+            return prev.slice(0, -1)
+          }
+          return prev
+        })
+      } else {
         setError(err.message || '网络异常')
       }
     } finally {
       setLoading(false)
       abortRef.current = null
     }
+  }
+
+  const resetConversation = () => {
+    abortRef.current?.abort()
+    setMessages([])
+    setCitations([])
+    setError('')
+    setInput('')
+    setLoading(false)
   }
 
   const lastIndex = messages.length - 1
@@ -295,7 +336,7 @@ const AIChatWidget = () => {
         <span
           className='relative grid h-11 w-11 shrink-0 place-items-center rounded-full text-white'
           style={{ background: BRAND }}>
-          <span className='absolute inset-0 rounded-full bg-[#e8584a] opacity-0 blur-[6px] transition-opacity duration-300 group-hover:opacity-50' />
+          <span className='absolute inset-0 rounded-full bg-[#5b78fb] opacity-0 blur-[6px] transition-opacity duration-300 group-hover:opacity-50' />
           <span className='relative grid h-5 w-5 place-items-center'>
             <Sparkle
               className={`absolute h-5 w-5 transition-all duration-300 ${
@@ -337,7 +378,7 @@ const AIChatWidget = () => {
             className='h-[2px] w-full shrink-0'
             style={{
               background:
-                'linear-gradient(90deg, #e8584a 0%, #c0392b 72%, #a83226 100%)'
+                'linear-gradient(90deg, #5b78fb 0%, #3758F9 72%, #1B44C8 100%)'
             }}
           />
           <div className='flex items-center gap-2.5 border-b border-gray-200/70 px-4 pb-3 pt-3.5 dark:border-white/[0.08]'>
@@ -350,10 +391,17 @@ const AIChatWidget = () => {
               <div className='truncate text-[14px] font-semibold leading-tight text-gray-900 dark:text-gray-100'>
                 {title}
               </div>
-              <div className='mt-1 truncate text-[11.5px] leading-tight text-gray-400 dark:text-gray-400/80'>
-                只依据站内文章 · 找不到会直说
-              </div>
             </div>
+            {messages.length > 0 && (
+              <button
+                type='button'
+                aria-label='新对话'
+                title='新对话'
+                onClick={resetConversation}
+                className='grid h-7 w-7 shrink-0 place-items-center rounded-full text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-500 dark:hover:bg-white/10 dark:hover:text-gray-200'>
+                <PlusIcon className='h-4 w-4' />
+              </button>
+            )}
             <button
               type='button'
               aria-label='关闭'
@@ -382,9 +430,9 @@ const AIChatWidget = () => {
                       onClick={() => {
                         void ask(text)
                       }}
-                      className='group inline-flex max-w-full items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-[12.5px] leading-snug text-gray-600 transition-all duration-150 hover:border-[#e8584a]/40 hover:bg-[#fdf5f4] hover:text-[#b3352a] dark:border-white/[0.1] dark:bg-white/[0.05] dark:text-gray-300 dark:hover:border-[#e8584a]/40 dark:hover:bg-[#e8584a]/10 dark:hover:text-[#f0918a]'>
+                      className='group inline-flex max-w-full items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-[12.5px] leading-snug text-gray-600 transition-all duration-150 hover:border-[#5b78fb]/40 hover:bg-[#f3f6ff] hover:text-[#1B44C8] dark:border-white/[0.12] dark:bg-white/[0.07] dark:text-gray-300 dark:hover:border-[#5b78fb]/50 dark:hover:bg-[#3758F9]/15 dark:hover:text-[#8fa4ff]'>
                       <span className='min-w-0 truncate'>{text}</span>
-                      <ArrowIcon className='h-3 w-3 shrink-0 -translate-x-0.5 text-[#e8584a] opacity-0 transition-all duration-150 group-hover:translate-x-0 group-hover:opacity-100' />
+                      <ArrowIcon className='h-3 w-3 shrink-0 -translate-x-0.5 text-[#5b78fb] opacity-0 transition-all duration-150 group-hover:translate-x-0 group-hover:opacity-100' />
                     </button>
                   ))}
                 </div>
@@ -435,14 +483,14 @@ const AIChatWidget = () => {
                   {citations.map((item, index) => {
                     const body = (
                       <>
-                        <span className='tabular-nums text-gray-300 transition-colors group-hover:text-[#e8584a] dark:text-gray-600'>
+                        <span className='tabular-nums text-gray-300 transition-colors group-hover:text-[#5b78fb] dark:text-gray-600'>
                           {index + 1}
                         </span>
                         <span className='truncate'>{item.title}</span>
                       </>
                     )
                     const cls =
-                      'group inline-flex max-w-full items-center gap-1.5 rounded-md bg-white px-2 py-1 text-[11.5px] leading-tight text-gray-500 ring-1 ring-gray-200/80 transition-colors hover:bg-[#fdf5f4] hover:text-[#b3352a] hover:ring-[#e8584a]/30 dark:bg-white/[0.07] dark:text-gray-300 dark:ring-white/[0.12] dark:hover:bg-[#e8584a]/10 dark:hover:text-[#f0918a]'
+                      'group inline-flex max-w-full items-center gap-1.5 rounded-md bg-white px-2 py-1 text-[11.5px] leading-tight text-gray-500 ring-1 ring-gray-200/80 transition-colors hover:bg-[#f3f6ff] hover:text-[#1B44C8] hover:ring-[#5b78fb]/30 dark:bg-white/[0.07] dark:text-gray-300 dark:ring-white/[0.12] dark:hover:bg-[#5b78fb]/10 dark:hover:text-[#8fa4ff]'
                     return item.url ? (
                       <a key={index} href={item.url} className={cls}>
                         {body}
@@ -464,7 +512,7 @@ const AIChatWidget = () => {
               event.preventDefault()
               void ask()
             }}>
-            <div className='flex items-center gap-1.5 rounded-full bg-[#f2f3f5] py-1 pl-4 pr-1 transition-all duration-200 focus-within:bg-white focus-within:shadow-[0_0_0_1.5px_rgba(232,88,74,0.35)] dark:bg-white/[0.06] dark:focus-within:bg-[#26262a] dark:focus-within:shadow-[0_0_0_1.5px_rgba(232,88,74,0.45)]'>
+            <div className='flex items-center gap-1.5 rounded-full bg-[#f2f3f5] py-1 pl-4 pr-1 transition-all duration-200 focus-within:bg-white focus-within:shadow-[0_0_0_1.5px_rgba(55, 88, 249, 0.35)] dark:bg-white/[0.08] dark:focus-within:bg-[#26262a] dark:focus-within:shadow-[0_0_0_1.5px_rgba(55, 88, 249, 0.5)]'>
               <input
                 value={input}
                 onChange={event => setInput(event.target.value)}
@@ -474,12 +522,14 @@ const AIChatWidget = () => {
                 className='h-9 min-w-0 flex-grow bg-transparent text-[13.5px] text-gray-800 outline-none placeholder:text-gray-400 dark:text-gray-100 dark:placeholder:text-gray-500'
               />
               <button
-                type='submit'
-                aria-label='发送'
-                disabled={loading || !input.trim()}
-                className='grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#cf4536] text-white transition-all duration-150 hover:bg-[#b3352a] disabled:bg-gray-200 disabled:text-gray-400 dark:disabled:bg-white/[0.12] dark:disabled:text-gray-500'>
+                type={loading ? 'button' : 'submit'}
+                aria-label={loading ? '停止生成' : '发送'}
+                title={loading ? '停止生成' : '发送'}
+                onClick={loading ? () => abortRef.current?.abort() : undefined}
+                disabled={!loading && !input.trim()}
+                className='grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#3758F9] text-white transition-all duration-150 hover:bg-[#1B44C8] disabled:bg-gray-200 disabled:text-gray-400 dark:disabled:bg-white/[0.12] dark:disabled:text-gray-500'>
                 {loading ? (
-                  <span className='ai-spin h-3.5 w-3.5 rounded-full border-[1.8px] border-white/40 border-t-white' />
+                  <StopIcon className='h-3.5 w-3.5' />
                 ) : (
                   <SendIcon className='h-4 w-4' />
                 )}
@@ -512,7 +562,7 @@ const AIChatWidget = () => {
           margin-left: 2px;
           border-radius: 1px;
           vertical-align: -2px;
-          background: #c0392b;
+          background: #3758f9;
           animation: ai-blink 1s steps(2, start) infinite;
         }
         @keyframes ai-blink {
@@ -537,14 +587,6 @@ const AIChatWidget = () => {
             transform: none;
           }
         }
-        .ai-spin {
-          animation: ai-rot 0.7s linear infinite;
-        }
-        @keyframes ai-rot {
-          to {
-            transform: rotate(360deg);
-          }
-        }
         .ai-scroll {
           scrollbar-width: thin;
           scrollbar-color: rgba(0, 0, 0, 0.14) transparent;
@@ -566,13 +608,12 @@ const AIChatWidget = () => {
           background: rgba(255, 255, 255, 0.16);
         }
         :global(.dark) .ai-caret {
-          background: #f0918a;
+          background: #8fa4ff;
         }
         @media (prefers-reduced-motion: reduce) {
           .ai-enter,
           .ai-dot,
-          .ai-caret,
-          .ai-spin {
+          .ai-caret {
             animation: none;
           }
         }
