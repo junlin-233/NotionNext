@@ -434,15 +434,12 @@ const AIChatWidget = () => {
 
           <div
             ref={scrollRef}
-            className='ai-scroll min-h-[132px] flex-1 space-y-4 overflow-y-auto bg-[#fafafa] px-4 py-4 dark:bg-[#1f1f23]'>
+            className='ai-scroll flex min-h-[132px] flex-1 flex-col space-y-4 overflow-y-auto bg-[#fafafa] px-4 py-4 dark:bg-[#1f1f23]'>
             {messages.length === 0 && (
-              <div className='flex h-full min-h-[180px] flex-col justify-center'>
+              <div className='my-auto'>
                 <h3 className='text-[15px] font-semibold text-gray-900 dark:text-gray-100'>
                   想找点什么？
                 </h3>
-                <p className='mt-1 text-[12px] text-gray-400 dark:text-gray-500'>
-                  站内文章都读过，直接问就行。
-                </p>
                 <div className='mt-4 flex flex-wrap gap-1.5'>
                   {SUGGESTIONS.map(text => (
                     <button
