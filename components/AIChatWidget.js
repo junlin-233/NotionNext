@@ -123,7 +123,15 @@ const renderInline = (text, citations, keyPrefix) => {
       const match = /^\[(\d+)\]$/.exec(part)
       if (!match) return <span key={key}>{part}</span>
       const cite = citations[Number(match[1]) - 1]
-      return cite?.url ? (
+      // 编号在引用列表里不存在：模型自己编的，别伪装成能点的引用
+      if (!cite) {
+        return (
+          <span key={key} className='text-gray-400 dark:text-gray-500'>
+            {match[1]}
+          </span>
+        )
+      }
+      return cite.url ? (
         <a
           key={key}
           href={cite.url}
@@ -227,6 +235,15 @@ const AIChatWidget = () => {
 
   if (!enabled) return null
 
+  const patchLast = patch => {
+    setMessages(prev => {
+      if (!prev.length) return prev
+      const next = [...prev]
+      next[next.length - 1] = { ...next[next.length - 1], ...patch }
+      return next
+    })
+  }
+
   const appendToLast = piece => {
     setMessages(prev => {
       if (!prev.length) return prev
@@ -248,7 +265,7 @@ const AIChatWidget = () => {
     setMessages(prev => [
       ...prev,
       { role: 'user', content: text },
-      { role: 'assistant', content: '' }
+      { role: 'assistant', content: '', citations: [] }
     ])
 
     const controller = new AbortController()
@@ -286,8 +303,12 @@ const AIChatWidget = () => {
           try {
             const event = JSON.parse(payload)
             if (event.type === 'delta') appendToLast(event.data)
-            else if (event.type === 'citations') setCitations(event.data || [])
-            else if (event.type === 'error') setError(event.data)
+            else if (event.type === 'citations') {
+              // 同时挂到这条回答上，多轮时旧回答的角标不会被新一轮引用改写
+              const list = event.data || []
+              setCitations(list)
+              patchLast({ citations: list })
+            } else if (event.type === 'error') setError(event.data)
           } catch (e) {
             // 非 JSON 行忽略
           }
@@ -378,7 +399,7 @@ const AIChatWidget = () => {
             className='h-[2px] w-full shrink-0'
             style={{
               background:
-                'linear-gradient(90deg, #5b78fb 0%, #3758F9 72%, #1B44C8 100%)'
+                'linear-gradient(90deg, #3758F9 0%, #5b78fb 55%, #3758F9 100%)'
             }}
           />
           <div className='flex items-center gap-2.5 border-b border-gray-200/70 px-4 pb-3 pt-3.5 dark:border-white/[0.08]'>
@@ -458,7 +479,7 @@ const AIChatWidget = () => {
                   {message.content ? (
                     <AnswerBody
                       text={message.content}
-                      citations={citations}
+                      citations={message.citations || []}
                       caret={streaming}
                     />
                   ) : streaming ? (

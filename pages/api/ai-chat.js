@@ -29,10 +29,9 @@ export const config = {
   }
 }
 
-const BASE_URL = (process.env.AI_CHAT_BASE_URL || 'https://api.openai.com/v1').replace(
-  /\/+$/,
-  ''
-)
+const BASE_URL = (
+  process.env.AI_CHAT_BASE_URL || 'https://api.openai.com/v1'
+).replace(/\/+$/, '')
 const API_KEY = process.env.AI_CHAT_API_KEY || ''
 const CHAT_MODEL = process.env.AI_CHAT_MODEL || 'gpt-4o-mini'
 const EMBEDDING_BASE_URL = (
@@ -42,8 +41,7 @@ const EMBEDDING_BASE_URL = (
 ).replace(/\/+$/, '')
 const EMBEDDING_API_KEY =
   process.env.EMBEDDING_API_KEY || process.env.AI_CHAT_API_KEY || ''
-const EMBEDDING_MODEL =
-  process.env.EMBEDDING_MODEL || 'text-embedding-3-small'
+const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'text-embedding-3-small'
 
 const RATE_LIMIT = 6
 const RATE_WINDOW = 60 * 1000
@@ -76,7 +74,8 @@ const SYSTEM_PROMPT = `你是这个博客的站内助手，只根据提供的文
 1. 只用给出的片段作答，不要引入片段之外的知识
 2. 片段不足以回答时，直接说「站内文章没有写到这一点」，不要编造
 3. 回答用中文，简洁分段，不超过 300 字
-4. 提到某个观点时用 [1] [2] 标注来源编号`
+4. 提到某个观点时用 [1] [2] 标注来源编号
+5. 编号只能取片段开头方括号里的数字，同一篇文章的多个片段是同一个编号，不要自己另编号，也不要超出片段范围`
 
 let hrefCache = { at: 0, map: new Map() }
 
@@ -89,7 +88,10 @@ async function loadHrefMap() {
     const map = new Map()
     for (const post of props.allPages || []) {
       if (!post?.id) continue
-      map.set(post.id, post.href ? `/${String(post.href).replace(/^\/+/, '')}` : '')
+      map.set(
+        post.id,
+        post.href ? `/${String(post.href).replace(/^\/+/, '')}` : ''
+      )
     }
     hrefCache = { at: Date.now(), map }
     return map
@@ -208,14 +210,18 @@ export default async function handler(req, res) {
     return
   }
 
-  const question = String(req.body?.question || '').trim().slice(0, QUESTION_MAX)
+  const question = String(req.body?.question || '')
+    .trim()
+    .slice(0, QUESTION_MAX)
   if (!question) {
     res.status(400).json({ error: 'question 不能为空' })
     return
   }
 
   const ip = getClientIp(req)
-  if (globalRateLimiter.isRateLimited(`ai-chat:${ip}`, RATE_LIMIT, RATE_WINDOW)) {
+  if (
+    globalRateLimiter.isRateLimited(`ai-chat:${ip}`, RATE_LIMIT, RATE_WINDOW)
+  ) {
     res.status(429).json({ error: '问得太快了，休息一下再来' })
     return
   }
