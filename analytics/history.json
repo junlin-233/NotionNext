@@ -2,7 +2,7 @@
  "version": 1,
  "source": "busuanzi",
  "note": "sitePv/siteUv 为 busuanzi 累计值；pvDelta/uvDelta 由相邻两天相减得出，归档首日为空",
- "updatedAt": "2026-11-27T00:04:39.199Z",
+ "updatedAt": "2026-11-27T23:45:48.468Z",
  "points": [
   {
    "date": "2026-11-02",
@@ -171,6 +171,13 @@
    "siteUv": 985,
    "pvDelta": 3,
    "uvDelta": 2
+  },
+  {
+   "date": "2026-11-28",
+   "sitePv": 1530,
+   "siteUv": 988,
+   "pvDelta": 4,
+   "uvDelta": 3
   }
  ]
 }
